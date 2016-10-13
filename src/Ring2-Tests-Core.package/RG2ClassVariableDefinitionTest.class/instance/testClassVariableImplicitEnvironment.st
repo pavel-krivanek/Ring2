@@ -1,15 +1,15 @@
 tests
 testClassVariableImplicitEnvironment
 
-	| layout |
+	| classVariable |
 	
-	layout := RG2ClassVariableDefinition unnamed.
-	self assert: (layout unresolvedProperties includesAll: #(name)).
-	self checkImplicitSingleClassEnvironmentOf: layout parent.
+	classVariable := RG2ClassVariableDefinition unnamed.
+	self assert: (classVariable hasUnresolved: #name).
+	self checkImplicitSingleClassEnvironmentOf: classVariable parent.
 	
-	layout := RG2ClassVariableDefinition named: #SomeClassVariable.
-	self assert: (layout resolvedProperties includesAll: #(name)).
-	self checkImplicitSingleClassEnvironmentOf: layout parent.
+	classVariable := RG2ClassVariableDefinition named: #SomeClassVariable.
+	self assert: (classVariable hasResolved: #name).
+	self checkImplicitSingleClassEnvironmentOf: classVariable parent.
 	
 	
 	
