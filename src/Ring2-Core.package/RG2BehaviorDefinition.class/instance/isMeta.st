@@ -1,5 +1,5 @@
 queries - testing
 isMeta
-	"By default is considered a non-meta class"
+	"By default a non-meta class is considered"
 
 	^false

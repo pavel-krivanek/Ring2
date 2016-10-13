@@ -2,4 +2,5 @@ testing
 addoptToParentStub
 
 	super addoptToParentStub.
-	self parent addClassVariable: self.
+
+	self environment backend createUnresolvedClassGroupFor: self parent

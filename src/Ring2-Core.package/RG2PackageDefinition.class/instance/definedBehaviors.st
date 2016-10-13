@@ -1,8 +1,8 @@
-accessing - model
+queries - behaviors
 definedBehaviors
-	"Retrieves the traits defined in the receiver"
 
-	| allBehaviors |
-	allBehaviors := IdentitySet new.
-	self definedBehaviorsDo: [ :each | allBehaviors add: each].
-	^ allBehaviors asArray
+	| allDefinedBehaviors |
+	allDefinedBehaviors := IdentitySet new.
+	self definedBehaviorsDo: [ :each | allDefinedBehaviors add: each].
+	^ allDefinedBehaviors asArray
+	

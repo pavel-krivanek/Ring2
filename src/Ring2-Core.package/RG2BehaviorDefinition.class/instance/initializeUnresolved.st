@@ -3,7 +3,7 @@ initializeUnresolved
 
 	super initializeUnresolved.
 
-	superclass := self.
+	superclass := self. "will be set later"
 	localMethods := self unresolvedValue: self defaultLocalMethods.
 	protocols := self unresolvedValue: self defaultProtocols.
 	traitComposition := self unresolvedValue: self defaultTraitComposition.

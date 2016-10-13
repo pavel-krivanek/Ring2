@@ -6,7 +6,7 @@ chooseFrom: aRG2Definition1 and: aRG2Definition2
 	"(aRG2Definition1 canMergeSimplyWithoutName: aRG2Definition2)
 		ifFalse: [ RG2JoiningError signal]."
 
-	(aRG2Definition1 canMergeWith:	aRG2Definition2)	
+	(aRG2Definition1 canMergeWith:	aRG2Definition2 visited: IdentitySet new)	
 		ifFalse: [ RG2JoiningError signal].
 	"
 	(aRG2Definition1 canBeJoined not and: [ aRG2Definition2 canBeJoined not ])

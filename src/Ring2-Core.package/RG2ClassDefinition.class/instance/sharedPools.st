@@ -1,4 +1,4 @@
-queries - variables
+queries - shared pools
 sharedPools
 
 	| allSharedPools |
