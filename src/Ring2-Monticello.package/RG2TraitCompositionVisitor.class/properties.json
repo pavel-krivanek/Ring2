@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "PavelKrivanek 10/5/2016 17:35",
+	"super" : "RBProgramNodeVisitor",
+	"category" : "Ring2-Monticello",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"traitComposition"
+	],
+	"name" : "RG2TraitCompositionVisitor",
+	"type" : "normal"
+}
