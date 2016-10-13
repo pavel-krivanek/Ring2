@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "RG2ReadOnlyBackend",
+	"category" : "Ring2-Core-Environment",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"environment1",
+		"environment2",
+		"providedDefinitions"
+	],
+	"name" : "RG2ReadOnlyJoinBackend",
+	"type" : "normal"
+}

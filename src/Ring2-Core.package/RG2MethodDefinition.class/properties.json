@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "VeronicaUquillas 9/18/2011 16:00",
+	"super" : "RG2ElementDefinition",
+	"category" : "Ring2-Core-Kernel",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"protocol",
+		"sourceCode",
+		"package",
+		"author",
+		"time"
+	],
+	"name" : "RG2MethodDefinition",
+	"type" : "normal"
+}

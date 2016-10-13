@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "cyrilledelaunay 1/18/2011 14:43",
+	"super" : "RG2MethodAnnouncement",
+	"category" : "Ring2-Core-Announcements-Methods",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RG2MethodRemoved",
+	"type" : "normal"
+}

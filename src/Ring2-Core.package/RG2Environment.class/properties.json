@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "",
+	"super" : "RG2Definition",
+	"category" : "Ring2-Core-Environment",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"announcer",
+		"behaviors",
+		"packages",
+		"globalVariables",
+		"backend",
+		"queryInterface"
+	],
+	"name" : "RG2Environment",
+	"type" : "normal"
+}

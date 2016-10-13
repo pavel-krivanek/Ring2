@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "BenjaminVanRyseghem 4/1/2011 16:04",
+	"super" : "RG2MethodAnnouncement",
+	"category" : "Ring2-Core-Announcements-Methods",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RG2MethodModified",
+	"type" : "normal"
+}

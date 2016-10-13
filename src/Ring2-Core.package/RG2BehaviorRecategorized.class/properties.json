@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "cyrilledelaunay 1/18/2011 10:42",
+	"super" : "RG2BehaviorAnnouncement",
+	"category" : "Ring2-Core-Announcements-Classes",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RG2BehaviorRecategorized",
+	"type" : "normal"
+}

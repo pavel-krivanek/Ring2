@@ -1,0 +1,4 @@
+trait composition
+addTransformation: aRG2TraitTransformationDefinition to: aRG2TraitCompositionDefinition
+
+	self readOnlyError 

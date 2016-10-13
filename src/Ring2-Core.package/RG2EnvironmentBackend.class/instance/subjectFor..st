@@ -1,0 +1,4 @@
+trait transormation
+subjectFor: aRG2TraitCompositionDefinition
+
+	^  aRG2TraitCompositionDefinition pvtSubject

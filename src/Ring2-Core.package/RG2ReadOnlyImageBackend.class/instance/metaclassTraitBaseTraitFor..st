@@ -1,0 +1,4 @@
+metaclass trait
+metaclassTraitBaseTraitFor: aRG2MetaclassTraitDefinition
+
+	^ (self realBehaviorFor: aRG2MetaclassTraitDefinition) baseTrait asRing2MinimalDefinitionIn: aRG2MetaclassTraitDefinition environment.

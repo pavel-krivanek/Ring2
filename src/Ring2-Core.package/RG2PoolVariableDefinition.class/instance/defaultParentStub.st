@@ -1,0 +1,4 @@
+testing
+defaultParentStub
+
+	^ self defaultClassStub

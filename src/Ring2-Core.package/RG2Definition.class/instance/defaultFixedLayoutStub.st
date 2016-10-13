@@ -1,0 +1,4 @@
+hierarchy-defaults
+defaultFixedLayoutStub
+
+	^ RG2FixedLayoutDefinition unresolved

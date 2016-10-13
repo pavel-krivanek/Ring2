@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "CamilleTeruel 9/4/2014 14:33",
+	"super" : "RG2Announcement",
+	"category" : "Ring2-Core-Announcements-Methods",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"method"
+	],
+	"name" : "RG2MethodAnnouncement",
+	"type" : "normal"
+}

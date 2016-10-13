@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "VeronicaUquillas 4/19/2011 16:03",
+	"super" : "RG2TraitDescriptionDefinition",
+	"category" : "Ring2-Core-Kernel",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"classTrait",
+		"comment",
+		"category",
+		"package"
+	],
+	"name" : "RG2TraitDefinition",
+	"type" : "normal"
+}

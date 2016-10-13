@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "RG2ProtocolAnnouncement",
+	"category" : "Ring2-Core-Announcements",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RG2ProtocolAdded",
+	"type" : "normal"
+}

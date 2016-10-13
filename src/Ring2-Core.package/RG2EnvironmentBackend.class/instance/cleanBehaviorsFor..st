@@ -1,0 +1,4 @@
+environment
+cleanBehaviorsFor: aRG2Environment
+
+	aRG2Environment pvtCleanBehaviors.

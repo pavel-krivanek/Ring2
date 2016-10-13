@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "BenjaminVanRyseghem 1/23/2014 11:53",
+	"super" : "RG2Announcement",
+	"category" : "Ring2-Core-Announcements-Classes",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"behavior"
+	],
+	"name" : "RG2BehaviorAnnouncement",
+	"type" : "normal"
+}
