@@ -4,9 +4,17 @@ ensureRing2DefinitionIn: aRG2Environment
 	^ aRG2Environment backend definitionFor: self ifAbsentRegister: [
 		| def classDef metaclassDef parent protocol |
 		classDef := aRG2Environment ensureClassNamed: self className asSymbol.
-		metaclassDef := aRG2Environment ensureClassNamed: (self className, ' class') asSymbol.
-		classDef metaclass: metaclassDef.
-		metaclassDef baseClass: classDef.
+		
+		classDef isTrait 
+			ifFalse: [ 
+				metaclassDef := aRG2Environment ensureClassNamed: (self className, ' class') asSymbol.
+				classDef metaclass: metaclassDef.
+				metaclassDef baseClass: classDef.]
+			ifTrue: [ 
+				metaclassDef := aRG2Environment ensureMetaclassTraitNamed: (self className, ' classTrait') asSymbol.
+				classDef classTrait: metaclassDef.
+				metaclassDef baseTrait. classDef.].
+				
 		parent := self classIsMeta 
 			ifFalse: [ classDef ]
 			ifTrue: [ metaclassDef ].

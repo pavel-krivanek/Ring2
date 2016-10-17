@@ -6,8 +6,8 @@ ensureRing2DefinitionIn: aRG2Environment
 		def := aRG2Environment ensureClassNamed: self className asSymbol.
 		metaclassDef := aRG2Environment ensureClassNamed: (self className, ' class') asSymbol.
 		def metaclass: metaclassDef.
-		def traitComposition: (self traitCompositionFrom: self traitComposition parent: def).
-		metaclassDef traitComposition: (self traitCompositionFrom: self classTraitComposition parent: metaclassDef).		
+		def traitComposition: (self traitCompositionFrom: self traitComposition parent: def).			
+		metaclassDef traitComposition: (self traitCompositionFrom: self classTraitComposition parent: metaclassDef).			
 		(self superclassName = #nil)
 			ifTrue: [ def superclass: def ]
 			ifFalse: [ Transcript show: superclassName; cr.def superclass: (aRG2Environment ensureClassNamed: superclassName ) ].
