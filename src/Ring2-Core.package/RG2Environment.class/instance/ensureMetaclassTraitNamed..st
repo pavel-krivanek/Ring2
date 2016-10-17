@@ -1,22 +1,70 @@
 as yet unclassified
 ensureMetaclassTraitNamed: aSymbol
 
-	| found newTrait newMetaclassTrait |
-
-	found := self ask behaviors 
-		detect: [:each | each name = aSymbol] 
-		ifNone: [ | behaviorClass newBehavior |
-				behaviorClass := RG2MetaclassTraitDefinition.
-				newBehavior := behaviorClass named: aSymbol parent: self.
-				self addBehavior: newBehavior.
-				newBehavior ].
-			
-	found isTrait ifTrue: [ ^ found ].
-
-	"it is possible that we created the this metaclass trait before as a metaclass because correct behavior type was not known."
+	| found newTrait newMetaclassTrait similarMetaclass similarMetaclassName siblingName sibling |
 	
-	newMetaclassTrait := found pvtAsMetaclassTrait.
-	newTrait := found baseTrait.
-	found becomeForward: newMetaclassTrait.
-	found metaclass becomeForward: newMetaclassTrait.
-	^ found 		
+	self assert: (aSymbol endsWith: ' class') not.
+	self assert: (aSymbol endsWith: ' classTrait').
+
+	found := self ask behaviors detect: [:each | each name = aSymbol] ifNone: [ nil ].
+	(found notNil and: [ found isMetaclassTrait ]) ifTrue: [ ^ found ].		
+
+	^ found 
+		ifNil: [ 
+			"trait not found, check if the environment contains already a correspoinding trait"
+			siblingName := (aSymbol withoutSuffix: ' classTrait') asSymbol.
+			sibling := self ask behaviors detect: [ :each | each name = siblingName ] ifNone: [nil].
+			sibling 
+				ifNotNil: [ 
+					"resolve and return existing corresponding trait"
+					| existing |
+					sibling isTrait
+						ifTrue: [ 
+							existing := sibling classTrait.
+							existing name: aSymbol.
+							existing propertyNamed: #resolved put: true.
+							existing ]
+						ifFalse: [ 
+							newTrait := sibling pvtAsTrait.
+							newMetaclassTrait := sibling metaclass pvtAsMetaclassTrait.
+							sibling metaclass becomeForward: newMetaclassTrait.
+							sibling becomeForward: newTrait.
+							sibling classTrait: newMetaclassTrait.
+							newMetaclassTrait baseTrait: sibling.
+							newMetaclassTrait name: (aSymbol, ' classTrait') asSymbol.
+							newMetaclassTrait propertyNamed: #resolved put: true.
+							newMetaclassTrait
+							]]
+				ifNil: [ 
+					similarMetaclassName := ((aSymbol withoutSuffix: ' classTrait'), ' class') asSymbol.
+					similarMetaclass := self ask behaviors detect: [ :each | each name = similarMetaclassName] ifNone: [nil].
+	
+					similarMetaclass 
+						ifNotNil: [
+							"environment already contains metaclass of the similar name. It was probably 
+							created because correct type was not known. Convert it to classTrait"
+							| similarClass |
+							newMetaclassTrait := similarMetaclass pvtAsMetaclassTrait.
+							similarClass := similarMetaclass baseClass.
+							newTrait := similarClass pvtAsTrait.
+							similarMetaclass becomeForward: newMetaclassTrait.
+							similarClass becomeForward: newTrait.
+							similarClass classTrait: similarMetaclass.
+							similarClass name: (aSymbol withoutSuffix: ' classTrait') asSymbol.
+							similarMetaclass baseTrait: similarClass.
+							similarMetaclass ]
+						ifNil: [ 
+							"we need to create new behavior"
+							| newBehavior |
+							newBehavior := RG2MetaclassTraitDefinition named: aSymbol parent: self.
+							self addBehavior: newBehavior.
+							newBehavior ] ] ]
+		ifNotNil: [
+			"some non-trait behavior found. We created this trait before as a class because correct behavior type was not known."
+			newTrait := found pvtAsTrait.
+			newMetaclassTrait := found metaclass pvtAsMetaclassTrait.
+			found becomeForward: newTrait.
+			found metaclass becomeForward: newMetaclassTrait.
+			found ].
+	
+				

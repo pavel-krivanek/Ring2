@@ -1,25 +1,43 @@
 as yet unclassified
 ensureTraitNamed: aSymbol
 
-	| found newTrait newMetaclassTrait |
+	| found newTrait newMetaclassTrait siblingName sibling |
 	
-	found := self ask behaviors 
-		detect: [:each | each name = aSymbol] 
-		ifNone: [ | behaviorClass newBehavior |
-				behaviorClass := (aSymbol endsWith: ' classTrait') 
-					ifFalse: [ RG2TraitDefinition ]
-					ifTrue: [ RG2MetaclassTraitDefinition ].
-				newBehavior := behaviorClass named: aSymbol parent: self.
-				self addBehavior: newBehavior.
-				newBehavior ].
-			
-	found isTrait ifTrue: [ ^ found ].
-	
-	"it is possible that we created the this trait before as a class because correct behavior type
-	was not known."
+	self assert: (aSymbol endsWith: ' class') not.
 
-	newTrait := found pvtAsTrait.
-	newMetaclassTrait := found metaclass pvtAsMetaclassTrait.
-	found becomeForward: newTrait.
-	found metaclass becomeForward: newMetaclassTrait.
+	"process classTraits"
+	(aSymbol endsWith: ' classTrait') ifTrue: [ 
+		^ self ensureMetaclassTraitNamed: aSymbol ].
+	
+	"a trait with the same name already exists"
+	found := self ask behaviors detect: [:each | each name = aSymbol] ifNone: [ nil ].
+	(found notNil and: [ found isTrait ]) ifTrue: [ ^ found ].
+	
 	^ found 
+		ifNil: [ 
+			"trait not found, check if the environment contains already a correspoinding metaclass trait"
+			siblingName := (aSymbol, ' classTrait') asSymbol.
+			sibling := self ask behaviors detect: [ :each | each name = siblingName ] ifNone: [nil].
+			sibling 
+				ifNotNil: [ 
+					"resolve and return existing corresponding trait"
+					| existing |
+					existing := sibling baseTrait.
+					existing name: aSymbol.
+					existing propertyNamed: #resolved put: true.
+					existing ]
+				ifNil: [ 
+					"we need to create new behavior"
+					| newBehavior |
+					newBehavior := RG2TraitDefinition named: aSymbol parent: self.
+					self addBehavior: newBehavior.
+					newBehavior ] ]
+		ifNotNil: [
+			"some non-trait behavior found. We created this trait before as a class because correct behavior type was not known."
+			newTrait := found pvtAsTrait.
+			newMetaclassTrait := found metaclass pvtAsMetaclassTrait.
+			found becomeForward: newTrait.
+			found metaclass becomeForward: newMetaclassTrait.
+			found ].
+	
+	

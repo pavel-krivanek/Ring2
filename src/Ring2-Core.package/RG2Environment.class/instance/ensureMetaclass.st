@@ -10,9 +10,6 @@ ensureMetaclass
 		(each propertyNamed: #Metaclass ifAbsent: [ false ]) ] ifNone: [ nil ].
 	aMetaclass ifNotNil: [ ^ aMetaclass ].
 
-"	aMetaclass := RG2ClassDefinition parent: self.
-	self addBehavior: aMetaclass.
-"
 	aMetaclass := self ensureClassNamed: #Metaclass.	
 	
 	aMetaclass propertyNamed: #Metaclass put: true.	

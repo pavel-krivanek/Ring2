@@ -7,8 +7,9 @@ pvtAsMetaclassTrait
 		ifTrue: [self error: 'This class cannot be converted to trait'].
 		
 	"TODO: check empty layout"
-	newMetaclassTrait := RG2TraitDefinition parent: self parent.
-	newMetaclassTrait pvtName: name.
+	newMetaclassTrait := RG2MetaclassTraitDefinition parent: self parent.
+	(self hasResolved: #name)
+		ifTrue: [ newMetaclassTrait pvtName: ((name withoutSuffix: ' class'), ' classTrait') asSymbol ].
 	newMetaclassTrait pvtLocalMethods: localMethods.
 	
 	^ newMetaclassTrait
