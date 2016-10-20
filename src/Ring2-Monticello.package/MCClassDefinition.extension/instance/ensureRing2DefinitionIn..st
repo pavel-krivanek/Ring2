@@ -32,7 +32,7 @@ ensureRing2DefinitionIn: aRG2Environment
 			(each class type = #class) ifTrue: [ 
 				def addClassVariable: (RG2ClassVariableDefinition named: each name parent: def)].
 			(each class type = #classInstance) ifTrue: [ 
-				metaclassDef layout addSlot: (RG2SlotDefinition named: each name parent: metaclassDef layout)].
+				metaclassDef layout addSlot: (RG2InstanceVariableSlotDefinition named: each name parent: metaclassDef layout)].
 			(each class type = #pool) ifTrue: [ 
 				def addSharedPool: (RG2PoolVariableDefinition named: each name parent: def)]. ]. 
 		def]. 
