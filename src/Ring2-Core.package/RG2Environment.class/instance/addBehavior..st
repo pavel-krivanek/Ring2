@@ -10,7 +10,10 @@ addBehavior: aRG2BehaviorDefinition
 				self backend forEnvironment
 					addPackage: aRG2BehaviorDefinition package
 					to: self ].
-		self backend forEnvironment
+		"self backend forEnvironment
 					addGlobalVariable: (RG2GlobalVariableDefinition named: aRG2BehaviorDefinition name parent: self)
-					to: self ].
+					to: self" ].
+
+	(aRG2BehaviorDefinition hasResolved: #name)
+		ifTrue: [ self queryInterface behaviorsDictionary at: aRG2BehaviorDefinition name asSymbol put: aRG2BehaviorDefinition ].
 				

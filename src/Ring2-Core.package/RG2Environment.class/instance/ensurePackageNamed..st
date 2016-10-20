@@ -5,6 +5,6 @@ ensurePackageNamed: aSymbol
 		detect: [:each | each name = aSymbol] 
 		ifNone: [ | newPackage |
 				newPackage := RG2PackageDefinition named: aSymbol parent: self.
-				self addBehavior: newPackage.
+				self addPackage: newPackage.
 				newPackage ].
 			

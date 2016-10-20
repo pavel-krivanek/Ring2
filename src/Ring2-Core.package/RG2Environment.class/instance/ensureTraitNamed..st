@@ -10,14 +10,14 @@ ensureTraitNamed: aSymbol
 		^ self ensureMetaclassTraitNamed: aSymbol ].
 	
 	"a trait with the same name already exists"
-	found := self ask behaviors detect: [:each | each name = aSymbol] ifNone: [ nil ].
+	found := self ask behaviorNamed: aSymbol.
 	(found notNil and: [ found isTrait ]) ifTrue: [ ^ found ].
 	
 	^ found 
 		ifNil: [ 
 			"trait not found, check if the environment contains already a correspoinding metaclass trait"
 			siblingName := (aSymbol, ' classTrait') asSymbol.
-			sibling := self ask behaviors detect: [ :each | each name = siblingName ] ifNone: [nil].
+			sibling := self ask behaviorNamed: siblingName.
 			sibling 
 				ifNotNil: [ 
 					"resolve and return existing corresponding trait"

@@ -1,4 +1,5 @@
 accessing
 ast
+	"Answer my AST with semantic analysis. See #parseTree."
 
-	^ self backend forMethod astFor: self
+	^ self parseTree doSemanticAnalysisIn: self methodClass

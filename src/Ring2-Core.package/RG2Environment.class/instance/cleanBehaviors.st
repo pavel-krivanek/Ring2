@@ -8,4 +8,6 @@ cleanBehaviors
 	self backend forPackage cleanBehaviorsFor: self.
 	
 	oldBehaviors do: [ :each |
-		self announcer behaviorRemoved: each ]
+		self announcer behaviorRemoved: each ].
+	
+	self queryInterface resetBehaviorsDictionary.

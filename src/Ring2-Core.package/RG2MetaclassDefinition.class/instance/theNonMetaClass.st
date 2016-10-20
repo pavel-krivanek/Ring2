@@ -1,4 +1,3 @@
 accessing
 theNonMetaClass
-
-	^baseClass
+	^self baseClass

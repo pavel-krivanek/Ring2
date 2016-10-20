@@ -1,4 +1,3 @@
-accessing
+as yet unclassified
 theNonMetaClass
-
-	^baseClass
+	^self baseTrait

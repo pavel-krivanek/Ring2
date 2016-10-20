@@ -6,7 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"environment"
+		"environment",
+		"behaviorsDictionary"
 	],
 	"name" : "RG2EnvironmentQueryInterface",
 	"type" : "normal"

@@ -1,4 +1,4 @@
 testing types
 isVariable
 
-	^false
+	^ false

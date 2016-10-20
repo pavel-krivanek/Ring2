@@ -6,3 +6,4 @@ clean
 	self unifyClassTrait.
 	self cleanSuperclassesOfMetaclasses.
 	self cleanUnusedUnreferencedBehaviors.
+	self cleanUnusedUnreferencedPackages.
