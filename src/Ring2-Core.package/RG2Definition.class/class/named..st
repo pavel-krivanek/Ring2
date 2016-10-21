@@ -1,8 +1,8 @@
 instance creation
-named: aName
+named: aString
 
 	"create model in its own environment"
 
 	^self new
-		pvtName: aName;
+		pvtName: aString;
 		yourself

@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "VeronicaUquillas 5/9/2011 14:30",
-	"super" : "RG2GlobalDefinition",
+	"super" : "RG2Definition",
 	"category" : "Ring2-Core-Kernel",
 	"classinstvars" : [ ],
 	"pools" : [ ],
