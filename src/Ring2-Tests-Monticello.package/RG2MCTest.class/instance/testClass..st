@@ -18,7 +18,7 @@ testClass: aClass
 		self assert: (def layout slots collect: #name) equals: aClass instVarNames.].
 	self assert: (def metaclass layout slots collect: #name) equals: aClass class instVarNames.	
 	self assert: (def classVariables collect: #name) equals: aClass classVarNames.	
-	self assert: (def sharedPools collect: #name) equals: aClass sharedPoolNames.	
+	self assert: (def sharedPoolNames collect: #name) equals: aClass sharedPoolNames.	
 	
 	"Monticello class definition still use only class categories, packages are unresolved"
 	self assert: (def unresolvedProperties includes: #package).
