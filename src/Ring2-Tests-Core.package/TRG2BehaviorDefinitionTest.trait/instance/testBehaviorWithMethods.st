@@ -7,7 +7,7 @@ testBehaviorWithMethods
 	self assert: (newBehavior unresolvedProperties includesAll: #(localMethods protocols)).
 	newBehavior isTrait ifFalse: [  
 		self assert: (newBehavior unresolvedProperties includesAll: #(superclass)).].
-	self assert: (newBehavior methods isEmpty).
+	self assert: (newBehavior localMethods isEmpty).
 
 	1 to: 10 do: [ :i |
 		| m |
@@ -16,10 +16,10 @@ testBehaviorWithMethods
 	
 	self assert: (newBehavior resolvedProperties includes: #localMethods).
 
-	self assert: (newBehavior methods allSatisfy: [:each | each environment = newBehavior environment]).
+	self assert: (newBehavior localMethods allSatisfy: [:each | each environment = newBehavior environment]).
 	
-	self assert: (newBehavior methods size = 10).
-	(newBehavior methods first: 4) do: [:each | newBehavior removeLocalMethod: each ].
-	self assert: (newBehavior methods size = 6).
+	self assert: (newBehavior localMethods size = 10).
+	(newBehavior localMethods first: 4) do: [:each | newBehavior removeLocalMethod: each ].
+	self assert: (newBehavior localMethods size = 6).
 	newBehavior cleanLocalMethods.
-	self assert: (newBehavior methods isEmpty).
+	self assert: (newBehavior localMethods isEmpty).
