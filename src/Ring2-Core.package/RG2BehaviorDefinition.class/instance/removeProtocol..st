@@ -3,7 +3,7 @@ removeProtocol: aRG2ProtocolDefinition
 
 	| protocolUsers |  
 	self backend forBehavior removeProtocol: aRG2ProtocolDefinition from: self.
-	protocolUsers := self methods select: [ :each | each protocol == aRG2ProtocolDefinition ].
+	protocolUsers := self localMethods select: [ :each | each protocol == aRG2ProtocolDefinition ].
 	protocolUsers ifNotEmpty: [ 
 		| asYetUnclassified |
 		asYetUnclassified := self ensureAsYetUnclassifiedProtocol.
