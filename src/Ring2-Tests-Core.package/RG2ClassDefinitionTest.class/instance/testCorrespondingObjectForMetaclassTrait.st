@@ -1,18 +1,17 @@
 tests
-testCorrespondingObjectForMetaclass
+testCorrespondingObjectForMetaclassTrait
 
 	| def1 def2 def3 |
 	
-	def1 := RG2MetaclassDefinition named: 'SomeClass class'.
-	def2 := RG2MetaclassDefinition named: 'SomeClass class'.
-	def3 := RG2MetaclassDefinition named: 'SomeClass1 class'.
+	def1 := RG2MetaclassTraitDefinition named: 'SomeTrait classTrait'.
+	def2 := RG2MetaclassTraitDefinition named: 'SomeTrait classTrait'.
+	def3 := RG2MetaclassTraitDefinition named: 'SomeTrait1 classTrait'.
 	
 	self assert: (def1 correspondingObjectIn: def2 environment) equals: def2.
 	self assert: (def1 correspondingObjectIn: def3 environment) equals: nil.
 
-	"TODO: FIX!!!"
-	self assert: (def1 baseClass correspondingObjectIn: def2 environment) equals: def2 baseClass.
+	self assert: (def1 baseTrait correspondingObjectIn: def2 environment) equals: def2 baseTrait.
+
 	self assert: (def1 superclass correspondingObjectIn: def2 environment) equals: def2 superclass.
 	self assert: (def1 metaclass correspondingObjectIn: def2 environment) equals: def2 metaclass.
-	self assert: (def1 superclass metaclass correspondingObjectIn: def2 environment) equals: def2 superclass metaclass.
 	self assert: (def1 superclass metaclass correspondingObjectIn: def2 environment) equals: def2 superclass metaclass.

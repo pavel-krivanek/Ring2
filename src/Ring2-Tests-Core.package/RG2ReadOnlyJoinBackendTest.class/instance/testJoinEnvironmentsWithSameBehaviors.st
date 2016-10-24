@@ -5,9 +5,9 @@ testJoinEnvironmentsWithSameBehaviors
 	
 	class1 := RG2ClassDefinition named: #SomeClass.
 	class1 category: 'SomeCategory'. 
-	"...to have something more than only name resolved"
 	
 	class2 := RG2ClassDefinition named: #SomeClass.
+	class2 category: 'SomeCategory2'. 
 
 	joinEnv := self joinedEnvironmentFor: class1 environment and: class2 environment.
 	

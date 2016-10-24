@@ -9,6 +9,8 @@ testJoinWithImageEnvironment
 	class1 := RG2ClassDefinition named: #SomeClass.
 	superclass1 := class1 environment ensureClassNamed: #Object.
 	class1 superclass: superclass1.
+	self halt.
+	class1 environment clean.
 
 	joinEnv := RG2Environment new.
 	joinEnv backend: (RG2ReadOnlyJoinBackend for: joinEnv).
