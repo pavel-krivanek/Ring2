@@ -16,7 +16,7 @@ testJoinWithImageEnvironment
 	joinEnv backend environment1: env.
 	joinEnv backend environment2: class1 environment.
 
-	found := joinEnv ask behaviorNamed: #SomeClass.
+	self shouldnt: [found := joinEnv ask behaviorNamed: #SomeClass ] raise: RG2JoiningError.
 	
 	self assert: found notNil.
 	self assert: found superclass name equals: #Object.

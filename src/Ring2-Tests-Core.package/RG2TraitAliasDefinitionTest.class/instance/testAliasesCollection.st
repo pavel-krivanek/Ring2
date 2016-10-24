@@ -7,13 +7,13 @@ testAliasesCollection
 	env := traitAlias environment.
 
 	self assert: traitAlias aliases isEmpty.
-	self assert: (traitAlias unresolvedProperties includes: #aliases).
+	self assert: (traitAlias hasUnresolved: #aliases).
 	
 	alias1 := (#m2 -> #m1).
 	traitAlias addAlias: alias1.
 	self assert: traitAlias aliases size equals: 1.
 
-	self assert: (traitAlias resolvedProperties includes: #aliases).
+	self assert: (traitAlias hasResolved: #aliases).
 	
 	alias2 := (#m4 -> #m3).
 	traitAlias addAlias: alias2.
@@ -28,4 +28,4 @@ testAliasesCollection
 
 	traitAlias cleanAliases.
 	self assert: traitAlias aliases isEmpty.
-	self assert: (traitAlias resolvedProperties includes: #aliases).
+	self assert: (traitAlias hasResolved: #aliases).

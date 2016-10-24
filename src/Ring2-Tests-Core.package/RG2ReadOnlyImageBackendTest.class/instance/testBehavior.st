@@ -17,6 +17,6 @@ testBehavior
 	self assert: (point == method parent).
 	
 	self assert: (point unresolvedProperties size) equals: 0.
-	self assert: (point ask localMethods size = Point localMethods size).
+	self assert: point ask localMethods size equals: Point localMethods size.
 	
 	

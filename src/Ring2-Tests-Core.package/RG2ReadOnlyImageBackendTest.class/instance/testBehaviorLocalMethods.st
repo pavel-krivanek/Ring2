@@ -8,7 +8,7 @@ testBehaviorLocalMethods
 
 	point := Point asRing2DefinitionIn: env1.
 	
-	self assert: (point ask localMethods size = Point localMethods size).
+	self assert: point ask localMethods size equals: Point localMethods size.
 	self assert: (point ask localMethods 
 		allSatisfy: [:each | each isKindOf: RG2MethodDefinition]).
 	selectors := point ask localMethods collect: [ :each | each ask selector ].

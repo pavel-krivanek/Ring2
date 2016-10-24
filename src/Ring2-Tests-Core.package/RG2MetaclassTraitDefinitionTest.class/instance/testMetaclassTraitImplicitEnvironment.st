@@ -4,7 +4,7 @@ testMetaclassTraitImplicitEnvironment
 	| trait |
 	
 	trait := RG2MetaclassTraitDefinition unnamed.
-	self assert: (trait unresolvedProperties includesAll: #(name)).
+	self assert: (trait hasUnresolved: #name).
 	self checkImplicitSingleTraitEnvironmentOf: trait baseTrait.
 	
 	

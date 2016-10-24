@@ -6,7 +6,7 @@ testAddingPackage
 	newPackage addPackageNamed: #'Collections-Sequenceable'.
 		
 	self assert: (newPackage includesPackageNamed: #'Collections-Sequenceable').
-	self assert: (newPackage packages size = 1).
+	self assert: newPackage packages size equals: 1.
 	
 	childPackage:= newPackage packageNamed: #'Collections-Sequenceable'.
 	self assert: (childPackage parent = newPackage parent).

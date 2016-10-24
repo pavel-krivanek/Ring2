@@ -7,13 +7,13 @@ testExclusionsCollection
 	env := traitExclusion environment.
 
 	self assert: traitExclusion exclusions isEmpty.
-	self assert: (traitExclusion unresolvedProperties includes: #exclusions).
+	self assert: (traitExclusion hasUnresolved: #exclusions).
 	
 	exclusion1 := #m1.
 	traitExclusion addExclusion: exclusion1.
 	self assert: traitExclusion exclusions size equals: 1.
 
-	self assert: (traitExclusion resolvedProperties includes: #exclusions).
+	self assert: (traitExclusion hasResolved: #exclusions).
 	
 	exclusion2 := #m2.
 	traitExclusion addExclusion: exclusion2.
@@ -28,4 +28,4 @@ testExclusionsCollection
 
 	traitExclusion cleanExclusions.
 	self assert: traitExclusion exclusions isEmpty.
-	self assert: (traitExclusion resolvedProperties includes: #exclusions).
+	self assert: (traitExclusion hasResolved: #exclusions).

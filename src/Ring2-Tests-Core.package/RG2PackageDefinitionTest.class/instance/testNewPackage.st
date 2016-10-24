@@ -10,11 +10,11 @@ testNewPackage
 	self assert: (newPackage name = 'Collections-Sequenceable').
 	self assert: (newPackage definedBehaviors isEmpty).
 	self assert: (newPackage extensionMethods isEmpty).
-	self assert: (newPackage unresolvedProperties includesAll: #(#definedBehaviors #extensionMethods)).
+	self assert: (newPackage hasUnresolvedAll: #(#definedBehaviors #extensionMethods)).
 	
 	newPackage cleanDefinedBehaviors.
 	
-	self assert: (newPackage unresolvedProperties includesAll: #(#extensionMethods)).
+	self assert: (newPackage hasUnresolved: #extensionMethods).
 	self assert: (newPackage definedBehaviors isEmpty).
 	self assert: (newPackage extensionMethods isEmpty).
 

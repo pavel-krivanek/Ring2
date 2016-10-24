@@ -6,7 +6,7 @@ testNewProtocol
 	
 	self assert: (protocol isRing2Resolved).
 	
-	self assert: (protocol unresolvedProperties includesAll: #(name)).
+	self assert: (protocol hasUnresolved: #name).
 
 	self assert: protocol name equals: 'as yet unclassified'.
 	protocol name: 'someProtocol'.

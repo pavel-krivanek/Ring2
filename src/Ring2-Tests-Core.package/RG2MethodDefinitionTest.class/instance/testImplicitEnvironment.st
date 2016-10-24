@@ -9,7 +9,7 @@ testImplicitEnvironment
 	self checkImplicitSingleClassEnvironmentOf: def parent.	
 	self assert: def parent localMethods size equals: 1.
 	self assert: def parent protocols size equals: 1.
-	self assert: (def parent resolvedProperties includes: #protocols).
+	self assert: (def parent hasResolved: #protocols).
 	self assert: def parent protocols anyOne isRing2Resolved not.
 	self assert: def parent protocols anyOne name equals: 'as yet unclassified'.
 

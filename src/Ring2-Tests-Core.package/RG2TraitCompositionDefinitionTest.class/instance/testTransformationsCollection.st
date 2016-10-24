@@ -7,14 +7,14 @@ testTransformationsCollection
 	env := traitComposition environment.
 
 	self assert: traitComposition transformations isEmpty.
-	self assert: (traitComposition unresolvedProperties includes: #transformations).
+	self assert: (traitComposition hasUnresolved: #transformations).
 	
 	transformation1 := RG2TraitCompositionDefinition parent: env.
 	env addBehavior: transformation1.
 	traitComposition addTransformation: transformation1.
 	self assert: traitComposition transformations size equals: 1.
 
-	self assert: (traitComposition resolvedProperties includes: #transformations).
+	self assert: (traitComposition hasResolved: #transformations).
 	
 	transformation2 := RG2TraitAliasDefinition parent: traitComposition.
 	traitComposition addTransformation: transformation2.
@@ -29,4 +29,4 @@ testTransformationsCollection
 
 	traitComposition cleanTransformations.
 	self assert: traitComposition transformations isEmpty.
-	self assert: (traitComposition resolvedProperties includes: #transformations).
+	self assert: (traitComposition hasResolved: #transformations).
