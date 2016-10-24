@@ -21,9 +21,9 @@ testClass: aClass
 	self assert: (def sharedPoolNames collect: #name) equals: aClass sharedPoolNames.	
 	
 	"Monticello class definition still use only class categories, packages are unresolved"
-	self assert: (def unresolvedProperties includes: #package).
+	self assert: (def hasUnresolved: #package).
 	
-	self assert: (def resolvedProperties includes: #traitComposition).
+	self assert: (def hasResolved: #traitComposition).
 	
 	self compareTraitComposition: aClass traitComposition with: def traitComposition.
 	self compareTraitComposition: aClass class traitComposition with: def metaclass traitComposition.

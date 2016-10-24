@@ -11,7 +11,7 @@ testAliasWithMultipleAliases
 	self assert: (result allSatisfy: #isRing2Object).
 	self assert: result size equals: 1.
 	self assert: result first subject isTrait.	
-	self assert: result first subject name = #Trait2.
+	self assert: result first subject name equals: #Trait2.
 	self assert: result first aliases isCollection.
 	self assert: result first aliases size equals: 2.
 	self assert: result first aliases first equals: (#a -> #b).
