@@ -9,7 +9,7 @@ cleanUnusedUnreferencedBehaviors
 	self ask behaviorsDo: [ :each |
 		(each hasResolved: #name) ifTrue: [ 
 			referenced add: each.
-			referenced addAll: (each referencedBehaviors copyWithout: each) ]  ].
+			referenced addAll: (each referencedBehaviors copyWithoutAll: {each. nil}) ]  ].
 	[	newelyAdded := IdentitySet new.
 		referenced do: [ :each | 
 			each referencedBehaviors do: [ :ref |
