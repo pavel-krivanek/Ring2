@@ -5,7 +5,7 @@ cleanProtocols
 
 	self backend forBehavior cleanProtocolsFor: self.
 	
-	self localMethods isEmpty ifTrue: [ ^ true ].
+	self localMethods isEmpty ifTrue: [ ^ self ].
 	newProtocol := self ensureAsYetUnclassifiedProtocol.
 	
 	self localMethodsDo: [ :method |
