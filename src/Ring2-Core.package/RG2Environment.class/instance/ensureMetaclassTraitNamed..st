@@ -6,14 +6,14 @@ ensureMetaclassTraitNamed: aSymbol
 	self assert: (aSymbol endsWith: ' class') not.
 	self assert: (aSymbol endsWith: ' classTrait').
 
-	found := self ask behaviorNamed: aSymbol.
+	found := self ask behaviorNamedExactlyAs: aSymbol.
 	(found notNil and: [ found isMetaclassTrait ]) ifTrue: [ ^ found ].		
 
 	^ found 
 		ifNil: [ 
 			"trait not found, check if the environment contains already a correspoinding trait"
 			siblingName := (aSymbol withoutSuffix: ' classTrait') asSymbol.
-			sibling := self ask behaviorNamed: siblingName.
+			sibling := self ask behaviorNamedExactlyAs: siblingName.
 			sibling 
 				ifNotNil: [ 
 					"resolve and return existing corresponding trait"

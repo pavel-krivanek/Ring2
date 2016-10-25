@@ -1,10 +1,15 @@
 as yet unclassified
 behaviorNamed: aSymbol ifAbsent: aBlock
 
-	^ self behaviorsDictionary at: aSymbol asSymbol ifAbsent: aBlock
-	"	
-	self behaviorsDo: [:each |
-		(each name = aSymbol) ifTrue: [ ^ each ] ].
+	| found | 
 	
-	^ nil
-	"
+	found := self behaviorNamedExactlyAs: aSymbol ifAbsent: [nil].
+	found ifNotNil: [ ^ found ].
+	
+	found := self behaviorNamedExactlyAs: (aSymbol, ' class') asSymbol ifAbsent: [nil].
+		found ifNotNil: [ ^ found baseClass ].
+	
+	found := self behaviorNamedExactlyAs: (aSymbol, ' classTrait') asSymbol ifAbsent: [nil].
+		found ifNotNil: [ ^ found baseTrait ].
+		
+	^ aBlock value.

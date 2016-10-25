@@ -3,7 +3,7 @@ ensureClassNamed: aSymbol
 
 	self assert: (aSymbol endsWith: ' classTrait') not.
 
-	^ self ask behaviorNamed: aSymbol ifAbsent: [ 
+	^ self ask behaviorNamedExactlyAs: aSymbol ifAbsent: [ 
 		 | behaviorClass newBehavior sibling siblingName |
 		siblingName := (aSymbol endsWith: ' class') 
 			ifTrue: [ aSymbol withoutSuffix: ' class' ]

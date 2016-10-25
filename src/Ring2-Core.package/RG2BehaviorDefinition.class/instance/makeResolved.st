@@ -4,7 +4,7 @@ makeResolved
 	super makeResolved.
 	
 	superclass := self superclass.
-	localMethods := self localMethods.
+	localMethods := self localMethods asSet.
 	protocols := self protocols.
 	traitComposition := self traitComposition.
 	metaclass := self metaclass.
