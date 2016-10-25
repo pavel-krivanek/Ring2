@@ -1,16 +1,16 @@
 visitor
 visitMethodChunk: aChunk
 
-	| theClass theMethod |
-	theClass:= self classNamed: aChunk behaviorName.
-	theMethod := (RGMethodDefinition
-						class: theClass
-						selector: aChunk methodSelector)
-							protocol: aChunk category;
-							sourceCode: aChunk contents;
-							stamp: aChunk stamp.
-	aChunk isMeta 
-		ifTrue: [ 
-			theMethod isMetaSide: true.
-			theClass theMetaClass addMethod: theMethod. ] 
-		ifFalse:[ theClass addMethod: theMethod ]
+	| theClass theMethod theProtocol |
+
+	theClass := self classNamed: aChunk behaviorName. 
+	aChunk isMeta ifTrue: [ 
+		theClass := theClass theMetaClass makeResolved].
+	
+	theMethod := RG2MethodDefinition named: aChunk methodSelector asSymbol parent: theClass.
+	theClass addLocalMethod: theMethod.
+	theProtocol := theClass ensureProtocolNamed: aChunk category asSymbol.
+	theMethod protocol: theProtocol.
+	theMethod sourceCode: aChunk contents.
+	theMethod author: (theMethod authorForStamp: aChunk stamp).
+	theMethod time: (theMethod timeForStamp: aChunk stamp).

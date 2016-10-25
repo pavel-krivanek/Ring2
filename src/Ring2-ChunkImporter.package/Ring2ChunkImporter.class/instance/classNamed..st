@@ -1,4 +1,8 @@
 private
 classNamed: className
 
-	^ self environment ensureClassNamed: className asSymbol.
+	| behavior |
+	behavior := self environment ask behaviorNamed: className.
+	^ behavior 
+		ifNotNil: [ behavior ]
+		ifNil: [ self environment ensureClassNamed: className asSymbol. ]
