@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "RG2Test",
+	"category" : "Ring2-Tests-ChunkImporter",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "Ring2ChunkImporterTest",
+	"type" : "normal"
+}
