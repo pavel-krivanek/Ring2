@@ -3,14 +3,18 @@ classDefinition: aString with: chgRec
 	| tokens theClass superclass |
 	
 	tokens := self scannedSource: aString.
+
 	theClass := self classNamed: tokens third.
 	theClass metaclass makeResolved.
 	superclass := self classNamed: tokens first.
 	superclass metaclass makeResolved.
 	theClass superclass: superclass.
 	theClass metaclass superclass: superclass metaclass.
-
-	theClass definitionSource: aString.
+	
+	theClass cleanClassVariables.
+	theClass cleanSharedPools.
+	
+	"theClass definitionSource: aString."
 	
 	theClass category: tokens last.
 	
