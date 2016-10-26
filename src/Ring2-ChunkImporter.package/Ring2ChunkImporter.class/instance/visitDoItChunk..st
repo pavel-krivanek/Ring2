@@ -1,20 +1,96 @@
 visitor
 visitDoItChunk: aChunk
 
-	| contents |
-	contents := aChunk contents.
-	('*ubclass:*instanceVariableNames:*classVariableNames:*poolDictionaries:*category:*'
-		match: contents) ifTrue:[^self classDefinition: contents with: aChunk].
-	('* class*instanceVariableNames:*'
-		match: contents) ifTrue:[^self metaClassDefinition: contents with: aChunk].		
-	('Trait*named:*uses:*category:*'
-		match: contents) ifTrue:[^self traitDefinition: contents with: aChunk].
-	('* classTrait*uses:*'
-		match: contents) ifTrue:[^self metaTraitDefinition: contents with: aChunk].	
-	('* removeSelector:*'
-		match: contents) ifTrue:[^self removedMethod: contents with: aChunk].
-	('* comment:*'
-		match: contents) ifTrue:[^self msgClassComment: contents with: aChunk].
-	('* initialize'
-		match: contents) ifTrue:[^self]. "Initialization is done based on class>>initialize"
-	doIts add: aChunk.
+	| contents ast layoutClass selectorParts superclassName subclassName instanceVariableNames classVariableNames categoryName packageName poolDictionariesNames layoutDefinition slotsDefinition traitsDefinition isTrait |
+
+	contents := aChunk contents trimBoth.
+	(contents endsWith: '!') ifTrue: [ contents := contents allButLast ].
+	
+	ast := RBParser parseExpression: contents.
+	
+	layoutClass := selectorParts := superclassName := subclassName := instanceVariableNames := 
+		classVariableNames := categoryName := packageName := poolDictionariesNames := layoutDefinition := 
+		slotsDefinition := traitsDefinition := nil.
+		
+	isTrait := false.
+	
+	(ast isMessage and: [self allowedSelectors includes: ast selector]) ifTrue: [ 
+		superclassName := ast receiver printString.
+		self assert: ast arguments size >= 1.
+		selectorParts := ast selector findBetweenSubstrings: {$:}.
+		
+		"TODO: handle removeSelector:, comment:"
+
+		self if: selectorParts in: ast includes: #subclass do: [:argument |
+			subclassName := argument value. 
+			layoutClass := RG2FixedLayoutDefinition. ].
+
+		self if: selectorParts in: ast includes: #named do: [:argument |
+			subclassName := argument value. 
+			isTrait := true.
+			layoutClass := RG2FixedLayoutDefinition. ].
+
+		self if: selectorParts in: ast includes: #immediateSubclass do: [:argument |
+			superclassName := argument printString.
+			layoutClass := RG2ImmediateLayoutDefinition ].
+
+		self if: selectorParts in: ast includes: #variableSubclass do: [:argument |
+			superclassName := argument printString.
+			layoutClass := RG2VariableLayoutDefinition ].
+
+		self if: selectorParts in: ast includes: #variableByteSubclass do: [:argument |
+			superclassName := argument printString.
+			layoutClass := RG2ByteLayoutDefinition ].
+		
+		self if: selectorParts in: ast includes: #variableWordSubclass do: [:argument |
+			superclassName := argument printString.
+			layoutClass := RG2WordLayoutDefinition ].
+
+		self if: selectorParts in: ast includes: #weakSubclass do: [:argument |
+			superclassName := argument printString.
+			layoutClass := RG2WeakLayoutDefinition ].
+		
+		self if: selectorParts in: ast includes: #ephemeronSubclass do: [:argument |
+			superclassName := argument printString.
+			layoutClass := RG2ElementDefinition ].
+		
+		self if: selectorParts in: ast includes: #instanceVariableNames do: [:argument |
+			instanceVariableNames := argument printString. ].
+
+		self if: selectorParts in: ast includes: #classVariableNames do: [:argument |
+			classVariableNames := argument printString. ].
+		
+		self if: selectorParts in: ast includes: #category do: [:argument |
+			categoryName := argument printString. ].
+
+		self if: selectorParts in: ast includes: #package do: [:argument |
+			packageName := argument printString. ].
+		
+		self if: selectorParts in: ast includes: #poolDictionaries do: [:argument |
+			poolDictionariesNames := argument printString. ].
+
+		self if: selectorParts in: ast includes: #layout do: [:argument |
+			layoutDefinition := argument printString. ].
+
+		self if: selectorParts in: ast includes: #slots do: [:argument |
+			slotsDefinition := argument printString. ].
+
+		self if: selectorParts in: ast includes: #uses do: [:argument |
+			traitsDefinition := argument printString. ].
+		
+		^ self createBehavior: subclassName
+			superclassName: superclassName 
+			instanceVariableNames: instanceVariableNames 
+			classVariableNames: classVariableNames 
+			categoryName: categoryName 
+			packageName: packageName 
+			poolDictionariesNames: poolDictionariesNames 
+			layoutClass: layoutClass 
+			layoutDefinition: layoutDefinition 
+			slotsDefinition: slotsDefinition 
+			traits: traitsDefinition 
+			isTrait: isTrait.
+
+	].
+
+	doIts add: aChunk. 

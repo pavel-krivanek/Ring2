@@ -5,5 +5,4 @@ metaClassDefinition: string with: chgRec
 	tokens := self scannedSource: string.
 	
 	theClass := self classNamed: tokens first.
-	theClass theMetaClass definitionSource: string;
-			  instanceVariables: (tokens fourth findTokens: ' ')
+	theClass theMetaClass instanceVariables: (tokens fourth findTokens: ' ')
