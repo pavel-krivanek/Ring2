@@ -1,6 +1,6 @@
 as yet unclassified
 authorForStamp: stamp
 	
-	^ stamp
-		ifNil: [ '<historical>']
-		ifNotNil: [ stamp substrings first].
+	^ stamp isEmptyOrNil
+		ifTrue: [ '<historical>']
+		ifFalse: [ stamp substrings first].
