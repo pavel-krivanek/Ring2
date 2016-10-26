@@ -1,20 +1,19 @@
 tests
-testStandardMethodInExistingMetaclassTrait
+testStandardMethodExistingClass
 
-	| importer trait method code | 
+	| importer class method code | 
 	
 	importer := Ring2ChunkImporter new.
-
-	trait := importer environment ensureMetaclassTraitNamed: #'SomeTrait classTrait'.
-
-	code := '!SomeTrait classTrait methodsFor: ''some protocol'' stamp: ''GuillermoPolito 5/2/2012 13:35''!someMethod
+	class := importer environment ensureClassNamed: #SomeClass.
+	
+	code := '!SomeClass methodsFor: ''some protocol'' stamp: ''GuillermoPolito 5/2/2012 13:35''!someMethod
 	^true'.
 	
 	importer fileInFrom: code readStream.
 
-	method := trait methodNamed: #someMethod.
+	method := class methodNamed: #someMethod.
 	
-	self assert: (trait isMetaclassTrait).
+	self assert: class isClass.
 	self assert: method notNil.
 	self assert: method isRing2Resolved.
 	self assert: (method hasResolvedAll: #(name protocol sourceCode author time)).
