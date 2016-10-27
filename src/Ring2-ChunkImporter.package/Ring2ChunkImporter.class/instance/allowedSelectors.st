@@ -67,4 +67,7 @@ allowedSelectors
 #named:
 #named:uses:category:
 #named:uses:package:
+
+instanceVariableNames:
+#uses:
 )

@@ -23,6 +23,9 @@ visitDoItChunk: aChunk
 		self assert: ast arguments isNotEmpty.
 		selectorParts := ast selector findBetweenSubstrings: {$:}.
 		
+		(superclassName endsWith: ' classTrait') 
+			ifTrue: [isTrait := true]. "for usage of #uses:"
+		
 		"TODO: handle removeSelector:, comment:"
 
 		self if: selectorParts in: ast includes: #subclass do: [:argument |
@@ -84,6 +87,10 @@ visitDoItChunk: aChunk
 		
 		hasNilSuperclass ifTrue: [superclassName := nil].
 		
+		(#(#instanceVariableNames: uses:) includes: ast selector) ifTrue: [ 
+			subclassName := ast receiver formattedCode asSymbol.
+			superclassName := nil ].
+		
 		^ self createBehavior: subclassName
 			superclassName: superclassName 
 			instanceVariableNames: instanceVariableNames 
@@ -95,7 +102,8 @@ visitDoItChunk: aChunk
 			layoutDefinition: layoutDefinition 
 			slotsDefinition: slotsDefinition 
 			traits: traitsDefinition 
-			isTrait: isTrait.
+			isTrait: isTrait
+			hasNilSuperclass: hasNilSuperclass.
 	].
 
 	doIts add: aChunk. 
