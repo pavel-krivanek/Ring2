@@ -1,7 +1,7 @@
 visitor
 visitDoItChunk: aChunk
 
-	| contents ast layoutClass selectorParts superclassName subclassName instanceVariableNames classVariableNames categoryName packageName poolDictionariesNames layoutDefinition slotsDefinition traitsDefinition isTrait |
+	| contents ast layoutClass selectorParts superclassName subclassName instanceVariableNames classVariableNames categoryName packageName poolDictionariesNames layoutDefinition slotsDefinition traitsDefinition isTrait hasNilSuperclass |
 
 	contents := aChunk contents trimBoth.
 	(contents endsWith: '!') ifTrue: [ contents := contents allButLast ].
@@ -14,9 +14,13 @@ visitDoItChunk: aChunk
 		
 	isTrait := false.
 	
+	hasNilSuperclass := self isNilSuperclassDefinition: ast.
+	hasNilSuperclass 
+		ifTrue: [ ast := ast statements first ].	
+	
 	(ast isMessage and: [self allowedSelectors includes: ast selector]) ifTrue: [ 
-		superclassName := ast receiver printString.
-		self assert: ast arguments size >= 1.
+		superclassName := ast receiver formattedCode.
+		self assert: ast arguments isNotEmpty.
 		selectorParts := ast selector findBetweenSubstrings: {$:}.
 		
 		"TODO: handle removeSelector:, comment:"
@@ -31,52 +35,54 @@ visitDoItChunk: aChunk
 			layoutClass := RG2FixedLayoutDefinition. ].
 
 		self if: selectorParts in: ast includes: #immediateSubclass do: [:argument |
-			superclassName := argument printString.
+			superclassName := argument formattedCode. 
 			layoutClass := RG2ImmediateLayoutDefinition ].
 
 		self if: selectorParts in: ast includes: #variableSubclass do: [:argument |
-			superclassName := argument printString.
+			superclassName := argument formattedCode.
 			layoutClass := RG2VariableLayoutDefinition ].
 
 		self if: selectorParts in: ast includes: #variableByteSubclass do: [:argument |
-			superclassName := argument printString.
+			superclassName := argument formattedCode.
 			layoutClass := RG2ByteLayoutDefinition ].
 		
 		self if: selectorParts in: ast includes: #variableWordSubclass do: [:argument |
-			superclassName := argument printString.
+			superclassName := argument formattedCode.
 			layoutClass := RG2WordLayoutDefinition ].
 
 		self if: selectorParts in: ast includes: #weakSubclass do: [:argument |
-			superclassName := argument printString.
+			superclassName := argument formattedCode.
 			layoutClass := RG2WeakLayoutDefinition ].
 		
 		self if: selectorParts in: ast includes: #ephemeronSubclass do: [:argument |
-			superclassName := argument printString.
+			superclassName := argument formattedCode.
 			layoutClass := RG2ElementDefinition ].
 		
 		self if: selectorParts in: ast includes: #instanceVariableNames do: [:argument |
-			instanceVariableNames := argument printString. ].
+			instanceVariableNames := argument value. ].
 
 		self if: selectorParts in: ast includes: #classVariableNames do: [:argument |
-			classVariableNames := argument printString. ].
+			classVariableNames := argument value. ].
 		
 		self if: selectorParts in: ast includes: #category do: [:argument |
-			categoryName := argument printString. ].
+			categoryName := argument value. ].
 
 		self if: selectorParts in: ast includes: #package do: [:argument |
-			packageName := argument printString. ].
+			packageName := argument value. ].
 		
 		self if: selectorParts in: ast includes: #poolDictionaries do: [:argument |
-			poolDictionariesNames := argument printString. ].
+			poolDictionariesNames := argument value. ].
 
 		self if: selectorParts in: ast includes: #layout do: [:argument |
-			layoutDefinition := argument printString. ].
+			layoutDefinition := argument formattedCode. ].
 
 		self if: selectorParts in: ast includes: #slots do: [:argument |
-			slotsDefinition := argument printString. ].
+			slotsDefinition := argument formattedCode. ].
 
 		self if: selectorParts in: ast includes: #uses do: [:argument |
-			traitsDefinition := argument printString. ].
+			traitsDefinition := argument formattedCode. ].
+		
+		hasNilSuperclass ifTrue: [superclassName := nil].
 		
 		^ self createBehavior: subclassName
 			superclassName: superclassName 
@@ -90,7 +96,6 @@ visitDoItChunk: aChunk
 			slotsDefinition: slotsDefinition 
 			traits: traitsDefinition 
 			isTrait: isTrait.
-
 	].
 
 	doIts add: aChunk. 

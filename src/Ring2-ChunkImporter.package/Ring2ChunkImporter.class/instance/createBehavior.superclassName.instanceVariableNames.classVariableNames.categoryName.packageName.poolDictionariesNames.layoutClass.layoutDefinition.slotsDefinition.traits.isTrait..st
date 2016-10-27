@@ -3,9 +3,8 @@ createBehavior: subclassName superclassName: superclassName instanceVariableName
 
 	| behavior superclass |
 	
-	self assert: superclassName notNil.
 	self assert: subclassName notNil.	
-
+		
 	isTrait 
 		ifTrue: [ 
 			superclass := nil.
@@ -16,12 +15,21 @@ createBehavior: subclassName superclassName: superclassName instanceVariableName
 					self assert: (superclassName = #Trait).
 					behavior := self environment ensureTraitNamed: superclassName ]]
 		ifFalse: [ 
-			superclass := self environment ensureClassNamed: superclassName.
+			superclass := superclassName 
+				ifNotNil: [ self environment ensureClassNamed: superclassName. ]
+				ifNil: [ nil ].			
 			behavior := self environment ensureClassNamed: subclassName. 
 			behavior superclass: superclass. ].
-		
+
+	layoutClass ifNotNil: [ 
+		behavior layout: (layoutClass parent: behavior).
+		"TODO: unknown layout definition"].
+
+	slotsDefinition ifNotNil: [ 
+		"TODO: unknown slots definition"].
+
+	"process instance variables after layout and slots"
 	instanceVariableNames ifNotNil: [ 
-		self halt.
 		behavior instanceVariables: (instanceVariableNames substrings collect: #asSymbol)].
 
 	classVariableNames ifNotNil: [ 
@@ -36,16 +44,8 @@ createBehavior: subclassName superclassName: superclassName instanceVariableName
 	packageName ifNotNil: [ 
 		| pkg |
 		pkg := environment ensurePackageNamed: packageName.
-		behavior package: package ].
-	
-	layoutClass ifNotNil: [ 
-		behavior layout: (layoutClass parent: behavior).
-		"TODO: unknown layout definition"].
+		behavior package: pkg ].
 
-	slotsDefinition ifNotNil: [ 
-		behavior layout layout: (layoutClass parent: behavior).
-		"TODO: unknown slots definition"].
-	
 	traitsDefinition ifNotNil: [ 
 		| composition transformations |
 		composition := RG2TraitCompositionDefinition parent: behavior.
