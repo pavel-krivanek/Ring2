@@ -5,7 +5,9 @@ instanceVariables: aCollectionOfSymbols
 	
 	(self hasUnresolved: #layout)
 		ifTrue: [ self layout: (RG2FixedLayoutDefinition parent: self)]
-		ifFalse: [ self ensure: (self layout isPointerLayout) ].
-	
+		ifFalse: [ self assert: (self layout isPointerLayout) ].
+		
+	self layout cleanSlots.
+
 	aCollectionOfSymbols do: [ :instVarName |
 		layout addSlot: (RG2InstanceVariableSlotDefinition named: instVarName asSymbol parent: self)].
