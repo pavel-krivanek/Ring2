@@ -1,5 +1,5 @@
 tests
-testStandardClass
+testStandardClassWithPackage
 
 	| importer class | 
 	
@@ -9,7 +9,7 @@ testStandardClass
 			instanceVariableNames: ''''
 			classVariableNames: ''''
 			poolDictionaries: ''''
-			category: ''SomePackage''!' readStream.
+			package: ''SomePackage''!' readStream.
 
 	class := importer environment ask behaviorNamed: #SomeClass.
 	self assert: class instVarNames isEmpty.
@@ -19,4 +19,4 @@ testStandardClass
 	self assert: (class classVariables isEmpty).
 	self assert: (class hasResolved: #sharedPools).
 	self assert: (class sharedPoolNames isEmpty).
-	self assert: class category equals: #SomePackage.
+	self assert: class package name equals: #SomePackage.
