@@ -20,7 +20,7 @@ createBehavior: subclassName superclassName: superclassName instanceVariableName
 				ifTrue: [ behavior superclass: nil. ]
 				ifFalse: [
 					superclassName ifNotNil: [ 
-						| theSuperclass |
+						| theSuperclass | 
 						theSuperclass := self environment ensureClassNamed: superclassName. 
 						behavior superclass: theSuperclass ] ] ].
 
@@ -30,7 +30,18 @@ createBehavior: subclassName superclassName: superclassName instanceVariableName
 			"TODO: unknown layout definition"]].
 
 	slotsDefinition ifNotNil: [ 
-		"TODO: unknown slots definition"].
+		behavior layout: (layoutClass parent: behavior).
+		slotsDefinition children do: [:child |
+			| newSlot | 
+			newSlot := (child isLiteralNode and: [ child value isSymbol ])
+				ifTrue: [ RG2InstanceVariableSlotDefinition named: child value parent: behavior layout ]
+				ifFalse: [
+					"TODO: probably needs more robust analysis"
+					self assert: child isMessage.
+					(RG2UnknownSlotDefinition named: (self slotNameFor: child) parent: behavior layout)
+						expression: child formattedCode;
+						yourself].
+			behavior layout addSlot: newSlot] .].
 
 	"process instance variables after layout and slots"
 	instanceVariableNames ifNotNil: [ 
