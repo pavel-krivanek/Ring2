@@ -2,10 +2,12 @@ as yet unclassified
 instanceVariables: aCollectionOfSymbols
 
 	"specify instance variable names"
-	
+
 	(self hasUnresolved: #layout)
-		ifTrue: [ self layout: (RG2FixedLayoutDefinition parent: self)]
-		ifFalse: [ self assert: (self layout isPointerLayout) ].
+		ifTrue: [ self layout: (RG2FixedLayoutDefinition parent: self)].
+		
+	(self layout isPointerLayout not and: [ aCollectionOfSymbols isEmpty ])
+		ifTrue: [ ^ self ].
 		
 	self layout cleanSlots.
 
