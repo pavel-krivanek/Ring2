@@ -70,5 +70,4 @@ allowedSelectors
 
 instanceVariableNames:
 #uses:
-#uses:instanceVariableNames:
 )

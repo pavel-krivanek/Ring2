@@ -6,9 +6,7 @@ visitDoItChunk: aChunk
 	contents := aChunk contents trimBoth.
 	(contents endsWith: '!') ifTrue: [ contents := contents allButLast ].
 	
-	ast := RBParser parseExpression: contents onError: [ 
-		doIts add: aChunk.
-		^ self ].
+	ast := RBParser parseExpression: contents.
 	
 	layoutClass := selectorParts := superclassName := subclassName := instanceVariableNames := 
 		classVariableNames := categoryName := packageName := poolDictionariesNames := layoutDefinition := 
@@ -40,28 +38,28 @@ visitDoItChunk: aChunk
 			layoutClass := RG2FixedLayoutDefinition. ].
 
 		self if: selectorParts in: ast includes: #immediateSubclass do: [:argument |
-			subclassName := argument value. 
+			superclassName := argument formattedCode. 
 			layoutClass := RG2ImmediateLayoutDefinition ].
 
 		self if: selectorParts in: ast includes: #variableSubclass do: [:argument |
-			subclassName := argument value. 
+			superclassName := argument formattedCode.
 			layoutClass := RG2VariableLayoutDefinition ].
 
 		self if: selectorParts in: ast includes: #variableByteSubclass do: [:argument |
-			subclassName := argument value. 
+			superclassName := argument formattedCode.
 			layoutClass := RG2ByteLayoutDefinition ].
 		
 		self if: selectorParts in: ast includes: #variableWordSubclass do: [:argument |
-			subclassName := argument value. 
+			superclassName := argument formattedCode.
 			layoutClass := RG2WordLayoutDefinition ].
 
 		self if: selectorParts in: ast includes: #weakSubclass do: [:argument |
-			subclassName := argument value. 
+			superclassName := argument formattedCode.
 			layoutClass := RG2WeakLayoutDefinition ].
 		
 		self if: selectorParts in: ast includes: #ephemeronSubclass do: [:argument |
-			subclassName := argument value. 
-			layoutClass := RG2EphemeronLayoutDefinition ].
+			superclassName := argument formattedCode.
+			layoutClass := RG2ElementDefinition ].
 		
 		self if: selectorParts in: ast includes: #instanceVariableNames do: [:argument |
 			instanceVariableNames := argument value. ].
@@ -89,11 +87,9 @@ visitDoItChunk: aChunk
 		
 		hasNilSuperclass ifTrue: [superclassName := nil].
 		
-		(#(#instanceVariableNames: uses: uses:instanceVariableNames:) includes: ast selector) ifTrue: [ 			subclassName := ast receiver formattedCode asSymbol.
+		(#(#instanceVariableNames: uses:) includes: ast selector) ifTrue: [ 
+			subclassName := ast receiver formattedCode asSymbol.
 			superclassName := nil ].
-		
-		(#(CompiledBlock CompiledCode CompiledMethod) includes: subclassName) ifTrue: [ 
-			layoutClass := RG2CompiledMethodLayoutDefinition ].
 		
 		^ self createBehavior: subclassName
 			superclassName: superclassName 
