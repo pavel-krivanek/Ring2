@@ -1,4 +1,4 @@
 metaclass
-baseClassFor: aRG2Behavior
+baseClassFor: aRG2MetaclassTraitDefinition
 
-	^  aRG2Behavior pvtBaseClass
+	^ (self realBehaviorFor: aRG2MetaclassTraitDefinition) baseClass asRing2MinimalDefinitionIn: aRG2MetaclassTraitDefinition environment.
