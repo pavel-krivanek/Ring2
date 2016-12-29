@@ -1,4 +1,4 @@
 accessing - backend
 tags
 
-	^ { category }
+	^ { self category withoutPrefix: (self package name, '-') }
