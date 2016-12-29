@@ -1,4 +1,4 @@
 accessing - backend
 tags
 
-	^ { self category withoutPrefix: (self package name, '-') }
+	^ { (self category withoutPrefix: (self package name, '-')) asSymbol }
