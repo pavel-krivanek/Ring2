@@ -9,6 +9,7 @@ pvtResolvableProperties
 		#category -> category. 
 		#package -> package. 
 		#sharedPools -> sharedPools. 
+		#tagsForMethods -> tagsForMethods. 
 	}
 	
 	

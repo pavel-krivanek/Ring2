@@ -10,7 +10,9 @@
 		"classVariables",
 		"category",
 		"package",
-		"sharedPools"
+		"sharedPools",
+		"tags",
+		"tagsForMethods"
 	],
 	"name" : "RG2ClassDefinition",
 	"type" : "normal"

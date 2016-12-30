@@ -14,3 +14,4 @@ makeResolved
 	category := self category.
 	package := self package.
 	sharedPools := self sharedPools.
+	tagsForMethods := self tagsForMethods.
