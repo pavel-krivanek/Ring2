@@ -13,6 +13,7 @@ testEnvironmentWithNamespace
 	self deny: (newPackage isRing2FullyResolved).
 	newPackage cleanDefinedBehaviors.
 	newPackage cleanExtensionMethods.
+	newPackage cleanTagsForClasses.
 	self assert: (newPackage isRing2Resolved).
 	self assert: (newPackage isRing2FullyResolved).
 	

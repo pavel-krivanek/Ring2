@@ -19,6 +19,7 @@ testNewPackage
 	self assert: (newPackage extensionMethods isEmpty).
 
 	newPackage cleanExtensionMethods.
+	newPackage cleanTagsForClasses.
 
 	self assert: (newPackage unresolvedProperties isEmpty).
 	self assert: (newPackage definedBehaviors isEmpty).
