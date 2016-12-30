@@ -10,7 +10,8 @@
 		"localMethods",
 		"protocols",
 		"traitComposition",
-		"metaclass"
+		"metaclass",
+		"tagsForMethods"
 	],
 	"name" : "RG2BehaviorDefinition",
 	"type" : "normal"

@@ -11,8 +11,7 @@
 		"category",
 		"package",
 		"sharedPools",
-		"tags",
-		"tagsForMethods"
+		"tags"
 	],
 	"name" : "RG2ClassDefinition",
 	"type" : "normal"

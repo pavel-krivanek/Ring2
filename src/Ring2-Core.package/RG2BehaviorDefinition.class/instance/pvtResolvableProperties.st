@@ -7,6 +7,7 @@ pvtResolvableProperties
 		#protocols -> protocols. 
 		#traitComposition -> traitComposition.  
 		#metaclass -> metaclass.  
+		#tagsForMethods -> tagsForMethods. 
      	}
 	
 	

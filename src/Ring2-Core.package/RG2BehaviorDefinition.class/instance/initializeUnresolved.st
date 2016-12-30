@@ -7,3 +7,4 @@ initializeUnresolved
 	localMethods := self unresolvedValue: self defaultLocalMethods.
 	protocols := self unresolvedValue: self defaultProtocols.
 	traitComposition := self unresolvedValue: self defaultTraitComposition.
+	tagsForMethods := self unresolvedValue: self defaultTagsForMethods.	
