@@ -5,3 +5,4 @@ makeResolved
 	
 	definedBehaviors := self definedBehaviors.
 	extensionMethods := self extensionMethods.
+	tagsForClasses := self tagsForClasses.

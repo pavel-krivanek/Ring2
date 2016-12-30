@@ -3,7 +3,8 @@ pvtResolvableProperties
 
 	^ super pvtResolvableProperties, { 
 		#definedBehaviors -> definedBehaviors. 
-		#extensionMethods -> extensionMethods 
+		#extensionMethods -> extensionMethods. 
+		#tagsForClasses -> tagsForClasses
 	}
 	
 	
