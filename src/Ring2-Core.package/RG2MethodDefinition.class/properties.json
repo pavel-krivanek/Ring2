@@ -10,7 +10,8 @@
 		"sourceCode",
 		"package",
 		"author",
-		"time"
+		"time",
+		"tags"
 	],
 	"name" : "RG2MethodDefinition",
 	"type" : "normal"

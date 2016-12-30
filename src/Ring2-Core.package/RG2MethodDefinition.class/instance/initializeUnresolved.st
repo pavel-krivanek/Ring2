@@ -1,7 +1,7 @@
 initialization
-initialize
+initializeUnresolved
 
-	super initialize.
+	super initializeUnresolved.
 
 	protocol := self unresolvedValue: self defaultProtocol.
 	sourceCode := self unresolvedValue: self defaultSourceCode.

@@ -7,4 +7,5 @@ makeResolved
 	sourceCode := self sourceCode.
 	package := self package.	
 	author := self author.	
-	time := self time.
+	time := self time.	
+	tags := self tags.

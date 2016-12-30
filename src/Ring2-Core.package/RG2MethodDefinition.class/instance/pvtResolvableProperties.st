@@ -7,6 +7,7 @@ pvtResolvableProperties
 		#package -> package. 
 		#author -> author. 
 		#time -> time. 
+		#tags -> tags. 
 	}
 	
 	
