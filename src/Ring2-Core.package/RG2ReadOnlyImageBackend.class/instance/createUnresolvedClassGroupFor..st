@@ -1,5 +1,4 @@
-as yet unclassified
-"protocol: unresolved objects"
+unresolved objects
 createUnresolvedClassGroupFor: aRG2BehaviorDefinition 
 
 	^ 	aRG2BehaviorDefinition isMeta
