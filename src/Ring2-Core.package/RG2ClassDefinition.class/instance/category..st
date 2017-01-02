@@ -1,7 +1,9 @@
 accessing - backend
-category: aaString
+category: aString
 
-	self backend forBehavior setCategoryFor: self to: aaString.
+	self tagWith: aString asSymbol.
+
+"	self backend forBehavior setCategoryFor: self to: aaString.
 	
 	self announcer behaviorDefinitionModified: self.
-	self announcer behaviorRecategorized: self.
+	self announcer behaviorRecategorized: self."

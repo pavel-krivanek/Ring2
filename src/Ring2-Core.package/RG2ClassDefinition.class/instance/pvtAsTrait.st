@@ -11,8 +11,8 @@ pvtAsTrait
 	newTrait pvtName: name.
 	newTrait pvtLocalMethods: localMethods.
 	newTrait pvtComment: comment.
-	newTrait pvtCategory: category.
 	newTrait pvtPackage: package.
+	newTrait pvtTags: tags.
 	
 	^ newTrait
 	

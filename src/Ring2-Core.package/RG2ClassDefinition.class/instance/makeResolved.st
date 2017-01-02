@@ -11,7 +11,5 @@ makeResolved
 	
 	comment := self comment.
 	classVariables := self classVariables.
-	category := self category.
 	package := self package.
 	sharedPools := self sharedPools.
-	tags := self tags.

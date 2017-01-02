@@ -8,3 +8,4 @@ initialize
 	protocols := self unresolvedValue: self defaultProtocols.
 	traitComposition := self unresolvedValue: self defaultTraitComposition.
 	tagsForMethods := self unresolvedValue: self defaultTagsForMethods.	
+	tags := self unresolvedValue: self defaultTags.	

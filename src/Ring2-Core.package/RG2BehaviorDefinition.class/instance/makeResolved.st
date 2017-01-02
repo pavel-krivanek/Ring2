@@ -9,4 +9,4 @@ makeResolved
 	traitComposition := self traitComposition.
 	metaclass := self metaclass.
 	tagsForMethods := self tagsForMethods.
-	
+	tags := self tags.	

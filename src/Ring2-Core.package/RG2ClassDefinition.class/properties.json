@@ -8,10 +8,8 @@
 	"instvars" : [
 		"comment",
 		"classVariables",
-		"category",
 		"package",
-		"sharedPools",
-		"tags"
+		"sharedPools"
 	],
 	"name" : "RG2ClassDefinition",
 	"type" : "normal"

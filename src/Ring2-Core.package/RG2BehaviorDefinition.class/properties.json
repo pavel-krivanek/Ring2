@@ -11,7 +11,8 @@
 		"protocols",
 		"traitComposition",
 		"metaclass",
-		"tagsForMethods"
+		"tagsForMethods",
+		"tags"
 	],
 	"name" : "RG2BehaviorDefinition",
 	"type" : "normal"

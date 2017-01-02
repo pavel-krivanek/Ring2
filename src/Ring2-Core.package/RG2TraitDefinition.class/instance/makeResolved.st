@@ -10,6 +10,5 @@ makeResolved
 	super makeResolved.
 	classTrait := self classTrait.
 	comment := self comment.
-	category := self category.
 	package := self package.
 	

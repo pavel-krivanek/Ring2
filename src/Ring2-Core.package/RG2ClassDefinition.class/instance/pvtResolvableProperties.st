@@ -6,10 +6,8 @@ pvtResolvableProperties
 		#localMethods -> localMethods. 
 		#comment -> comment. 
 		#classVariables -> classVariables. 
-		#category -> category. 
 		#package -> package. 
 		#sharedPools -> sharedPools. 
-		#tags -> tags. 
 	}
 	
 	
