@@ -20,7 +20,7 @@ testNewTrait
 
 	category  := #'SomeCategory'.
 	trait category: category.
-	self assert: (trait hasResolved: #category).
+	self assert: (trait hasResolved: #tags).
 	self assert: (trait category == category).
 
 	package  := RG2PackageDefinition parent: trait environment.
