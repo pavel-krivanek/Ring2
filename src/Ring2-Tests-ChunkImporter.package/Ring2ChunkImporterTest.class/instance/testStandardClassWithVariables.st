@@ -26,6 +26,5 @@ testStandardClassWithVariables
 	self assert: class sharedPoolNames equals: #(Pool1 Pool2 Pool3).
 	self assert: (class sharedPoolNames allSatisfy: #isSymbol).
 
-	self assert: (class hasResolved: #category).
 	self assert: class category equals: #SomePackage.
 	

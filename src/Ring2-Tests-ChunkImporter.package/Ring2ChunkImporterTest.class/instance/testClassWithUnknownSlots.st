@@ -17,4 +17,3 @@ testClassWithUnknownSlots
 	self assert: class classVarNames isEmpty.
 	self assert: class category equals: 'Slot-Tests-Associations'.
 	self assert: ((class slots last: 2) allSatisfy: [ :each | each isKindOf: RG2UnknownSlotDefinition  ]).
-	class inspect.
