@@ -1,4 +1,4 @@
 backward compatibility
 category
 
-	^ self protocol
+	^ self protocol name
