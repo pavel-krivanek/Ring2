@@ -7,8 +7,7 @@ visitMethodChunk: aChunk
 	aChunk isMeta ifTrue: [ 
 		theClass := theClass theMetaClass makeResolved].
 	
-	theMethod := RG2MethodDefinition named: aChunk methodSelector asSymbol parent: theClass.
-	theClass addLocalMethod: theMethod.
+	theMethod := theClass ensureLocalMethodNamed: aChunk methodSelector asSymbol.
 	theProtocol := theClass ensureProtocolNamed: aChunk category asSymbol.
 	theMethod protocol: theProtocol.
 	theMethod sourceCode: aChunk contents.

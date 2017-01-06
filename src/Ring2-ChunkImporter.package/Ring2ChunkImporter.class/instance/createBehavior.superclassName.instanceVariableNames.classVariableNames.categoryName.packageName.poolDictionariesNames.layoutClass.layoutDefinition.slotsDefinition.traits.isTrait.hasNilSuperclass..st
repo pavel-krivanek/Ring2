@@ -20,7 +20,7 @@ createBehavior: subclassName superclassName: superclassName instanceVariableName
 				ifTrue: [ behavior superclass: nil. ]
 				ifFalse: [
 					superclassName ifNotNil: [ 
-						| theSuperclass |
+						| theSuperclass | 
 						theSuperclass := self environment ensureClassNamed: superclassName. 
 						behavior superclass: theSuperclass ] ] ].
 
