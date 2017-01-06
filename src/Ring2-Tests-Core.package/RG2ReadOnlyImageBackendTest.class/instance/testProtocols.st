@@ -8,9 +8,8 @@ testProtocols
 	
 	point := Point asRing2DefinitionIn: env1.
 	self assert: (point protocols notEmpty).
-	protocol := point protocols detect: [ :each | each name = 'accessing' ].
-	self assert: (protocol isRing2Object).
-	self assert: (protocol isProtocol).
+	protocol := point protocols detect: [ :each | each = 'accessing' ].
+	self assert: (protocol isSymbol).
 	
 	method := (Point>>#x) asRing2DefinitionIn: env1.
 	protocol := method protocol.
@@ -18,8 +17,7 @@ testProtocols
 	protocol2 := method2 protocol.
 	
 	self assert: (protocol == protocol2).
-	self assert: (protocol isRing2Object).
-	self assert: (protocol isProtocol).	
-	self assert: protocol name equals: 'accessing'.
+	self assert: (protocol isSymbol).
+	self assert: protocol equals: 'accessing'.
 	
 	self should: [ (Protocol name: 'aProtocol') asRing2MinimalDefinitionIn: RG2Environment new ] raise: Error.

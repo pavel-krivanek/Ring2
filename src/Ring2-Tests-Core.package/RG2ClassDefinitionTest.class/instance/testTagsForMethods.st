@@ -12,7 +12,7 @@ testTagsForMethods
 	method2 := class ensureLocalMethodNamed: #method2.
 	
 	self assert: class tagsForMethods isEmpty.
-	self assert: (class hasUnresolved: #tagsForMethods).
+	self assert: (class hasResolved: #tagsForMethods).
 
 	self assert: (class methodsTaggedWith: #tag1) isEmpty.
 	

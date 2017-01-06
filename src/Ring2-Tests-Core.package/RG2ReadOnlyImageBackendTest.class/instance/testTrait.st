@@ -15,7 +15,7 @@ testTrait
 	self assert: (trait superclass == trait). "cycle, nil in reality"
 	self assert: trait comment content equals: TBehavior organization comment.
 	self assert: trait localMethods size equals: TBehavior localMethods size.
-	self assert: (trait protocols collect: #name) asSortedCollection equals: TBehavior protocols asSortedCollection.
+	self assert: trait protocols asSortedCollection equals: TBehavior protocols asSortedCollection.
 	self assert: trait metaclass name equals: #Trait.
 	self assert: trait package name equals: #Traits.
 	

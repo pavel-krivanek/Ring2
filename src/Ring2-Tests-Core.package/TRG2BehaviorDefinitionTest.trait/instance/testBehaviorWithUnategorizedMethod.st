@@ -13,13 +13,13 @@ testBehaviorWithUnategorizedMethod
 	method := RG2MethodDefinition named: #someMethod parent: newBehavior. 
 	newBehavior addLocalMethod: method.
 	
-	self assert: (newBehavior hasResolved: #protocols).
+	self assert: (newBehavior hasResolved: #tagsForMethods).
 	self assert: newBehavior protocols size equals: 1.
-	self assert: newBehavior protocols first name equals: 'as yet unclassified'.
+	self assert: newBehavior protocols first equals: 'as yet unclassified'.
 	newBehavior cleanProtocols.
 
 	self assert: newBehavior protocols size equals: 1.
-	self assert: newBehavior protocols first name equals: 'as yet unclassified'.
+	self assert: newBehavior protocols first equals: 'as yet unclassified'.
 	
 	newBehavior cleanLocalMethods.
 	self assert: (newBehavior protocols isEmpty).

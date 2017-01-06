@@ -13,12 +13,8 @@ testBehaviorWithCategorizedMethods
 	protocol := RG2ProtocolDefinition named: #someProtocol parent: method.
 	method protocol: protocol.
 	newBehavior addLocalMethod: method.
-	self assert: (newBehavior hasResolved: #protocols).
-	self assert: newBehavior ask protocols size equals: 2.
-	newBehavior removeAsYetUnclassifiedIfPossible.
+	self assert: (newBehavior hasResolved: #tagsForMethods).
 	self assert: newBehavior ask protocols size equals: 1.
 	newBehavior cleanProtocols.
 	self assert: newBehavior ask protocols size equals: 1.
-	self
-		assert: newBehavior ask protocols first name
-		equals: 'as yet unclassified'
+	self assert: newBehavior ask protocols first equals: 'as yet unclassified'

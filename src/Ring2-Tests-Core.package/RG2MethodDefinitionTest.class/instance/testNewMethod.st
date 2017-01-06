@@ -8,7 +8,7 @@ testNewMethod
 	
 	self assert: (method hasUnresolvedAll: #(name protocol sourceCode package author time)).
 
-	self assert: method protocol name equals: 'as yet unclassified'.
+	self assert: method protocol equals: 'as yet unclassified'.
 	method protocol: (RG2ProtocolDefinition named: 'someProtocol' parent: method parent).
 	self assert: (method hasUnresolvedAll: #(name sourceCode package author time)).
 	self assert: method protocol name equals: 'someProtocol'.
