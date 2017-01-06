@@ -15,10 +15,10 @@ testStandardMetaclassMethod
 	
 	self assert: class isMetaclass.
 	self assert: method isRing2Resolved.
-	self assert: (method hasResolvedAll: #(name protocol sourceCode author time)).
+	self assert: (method hasResolvedAll: #(name tags sourceCode author time)).
 	
 	self assert: method name equals: #someMethod.
-	self assert: method protocol name equals: 'some protocol'.
+	self assert: method protocol equals: 'some protocol'.
 	self assert: method author equals: 'GuillermoPolito'.
 	self assert: method time equals: ('5/2/2012 13:35' asDateAndTime).
 	self assert: method sourceCode equals: 'someMethod
