@@ -8,4 +8,3 @@ clean
 	self cleanSuperclassesOfMetaclasses.
 	self cleanUnusedUnreferencedBehaviors.
 	self cleanUnusedUnreferencedPackages.
-	self removeAsYetUnclassifiedIfPossible.

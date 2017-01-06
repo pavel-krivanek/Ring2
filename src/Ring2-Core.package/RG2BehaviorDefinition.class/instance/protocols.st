@@ -1,8 +1,13 @@
 queries - protocols
 protocols
 
-	| result |
-
-	result := OrderedCollection new.
-	self protocolsDo: [ :each | result add: each ].
-	^ result
+	| methodTags |
+	
+	methodTags := self tagsForMethods.
+	^	methodTags
+		ifEmpty: [ 
+			self methods 
+				ifEmpty: [ OrderedCollection new ]
+				ifNotEmpty: [  OrderedCollection with: self class asYetUnclassifiedProtocolName   ].
+			]
+		ifNotEmpty: [ methodTags  ]

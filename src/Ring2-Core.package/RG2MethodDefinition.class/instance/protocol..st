@@ -1,7 +1,9 @@
 accessing - backend
-protocol: aRG2ProtocolDefinition
+protocol: aSymbol
 
-	self backend forBehavior setProtocolFor: self to: aRG2ProtocolDefinition.
-	self parent addProtocol: aRG2ProtocolDefinition
+	"for compatiblity with the old protocols"
+
+	self cleanTags.
+	self tagWith: aSymbol.
 	
 	

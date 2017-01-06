@@ -1,4 +1,9 @@
 accessing - backend
 protocol
 
-	^ self backend forBehavior protocolFor: self
+	| methodTags |
+	
+	methodTags := self tags.
+	^	methodTags
+		ifEmpty: [  self class asYetUnclassifiedProtocolName]
+		ifNotEmpty: [ methodTags sorted first ]

@@ -8,5 +8,5 @@ makeResolved
 	protocols := self protocols.
 	traitComposition := self traitComposition.
 	metaclass := self metaclass.
-	tagsForMethods := self tagsForMethods.
-	tags := self tags.	
+	tagsForMethods := self tagsForMethods asSet.
+	tags := self tags asSet.	

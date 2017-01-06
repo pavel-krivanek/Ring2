@@ -1,6 +1,4 @@
 accessing - backend
-addProtocol: aRG2ProtocolDefinition 
+addProtocol: aSymbol 
 
-	self backend forBehavior addProtocol: aRG2ProtocolDefinition to: self.
-	
-	self announcer behaviorReorganized: self.
+	self addMethodTag: aSymbol
