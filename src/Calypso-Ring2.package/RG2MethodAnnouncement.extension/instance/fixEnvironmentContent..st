@@ -1,0 +1,3 @@
+*Calypso-Ring2
+fixEnvironmentContent: anEnvironmentContent
+	anEnvironmentContent handleMethodChange: self
