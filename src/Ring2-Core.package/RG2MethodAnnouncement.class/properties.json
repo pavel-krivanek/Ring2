@@ -6,7 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"method"
+		"method",
+		"methodPackage"
 	],
 	"name" : "RG2MethodAnnouncement",
 	"type" : "normal"

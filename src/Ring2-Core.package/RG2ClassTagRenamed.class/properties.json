@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "RG2ClassTagAnnouncement",
+	"category" : "Ring2-Core-Announcements",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RG2ClassTagRenamed",
+	"type" : "normal"
+}

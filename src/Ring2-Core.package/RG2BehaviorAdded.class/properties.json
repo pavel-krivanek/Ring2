@@ -5,9 +5,7 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"classAdded"
-	],
+	"instvars" : [ ],
 	"name" : "RG2BehaviorAdded",
 	"type" : "normal"
 }
