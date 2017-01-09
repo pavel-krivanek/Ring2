@@ -1,4 +1,4 @@
 *Calypso-Ring2
->> aMessageName
+>> aSymbol
 
-	^ self methods detect: [ :each | each selector = aMessageName ]
+	^ self methodNamed: aSymbol
