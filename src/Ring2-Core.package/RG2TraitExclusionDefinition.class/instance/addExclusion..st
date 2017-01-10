@@ -1,6 +1,5 @@
 accessing - backend
 addExclusion: aSymbol 
 
-	self backend forBehavior addExclusion: aSymbol to: self.
-	
-	self announcer behaviorDefinitionModified: self parent parent.
+	self parent parent announceDefinitionChangeDuring: [ 
+		self backend forBehavior addExclusion: aSymbol to: self. ].

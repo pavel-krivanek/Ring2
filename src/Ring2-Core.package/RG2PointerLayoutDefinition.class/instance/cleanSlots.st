@@ -1,6 +1,7 @@
 accessing - backend
 cleanSlots
 
-	self backend forBehavior cleanSlotsFor: self.
+	self parent announceDefinitionChangeDuring: [ 
+		self backend forBehavior cleanSlotsFor: self ].
 	
-	self announcer behaviorDefinitionModified: self parent.
+	

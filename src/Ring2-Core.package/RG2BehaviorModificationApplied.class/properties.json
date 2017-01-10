@@ -1,13 +1,11 @@
 {
-	"commentStamp" : "MartinDias 1/31/2014 16:31",
+	"commentStamp" : "PavelKrivanek 1/10/2017 09:42",
 	"super" : "RG2BehaviorAnnouncement",
 	"category" : "Ring2-Core-Announcements-Classes",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"oldDefinition"
-	],
-	"name" : "RG2BehaviorDefinitionModified",
+	"instvars" : [ ],
+	"name" : "RG2BehaviorModificationApplied",
 	"type" : "normal"
 }

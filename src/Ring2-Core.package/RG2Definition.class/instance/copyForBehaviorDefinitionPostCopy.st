@@ -1,0 +1,8 @@
+copying
+copyForBehaviorDefinitionPostCopy
+
+	super postCopy.
+	
+	
+	
+	

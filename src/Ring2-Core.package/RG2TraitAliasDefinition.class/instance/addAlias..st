@@ -1,6 +1,5 @@
 accessing - backend
 addAlias: aSymbol 
 
-	self backend forBehavior addAlias: aSymbol to: self.
-	
-	self announcer behaviorDefinitionModified: self parent parent.
+	self parent parent announceDefinitionChangeDuring: [ 
+		self backend forBehavior addAlias: aSymbol to: self ].

@@ -1,6 +1,5 @@
 accessing - backend
 cleanTags
 
-	self backend forBehavior cleanClassTagsFor: self.
-	
-	self announcer behaviorDefinitionModified: self.
+	self announceDefinitionChangeDuring: [ 
+		self backend forBehavior cleanClassTagsFor: self ].

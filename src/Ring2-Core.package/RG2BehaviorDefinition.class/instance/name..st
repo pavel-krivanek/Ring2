@@ -1,12 +1,19 @@
 accessing - backend
 name: aString
 
-	super name: aString.
+	| oldName subclassesWithOldDefinitions |
 	
-	self announcer behaviorDefinitionModified: self.
-	self announcer behaviorRenamed: self.
+	oldName := self name.
 	
-	self subclasses do: [ :subclass |
-		subclass isMeta ifFalse: [ 
-			self announcer behaviorDefinitionModified: subclass.
-			self announcer behaviorParentRenamed: subclass.]]
+	subclassesWithOldDefinitions := (self subclasses reject: #isMeta) collect: [ :each | 
+		each -> each copyForBehaviorDefinition ].
+	
+	self announceDefinitionChangeDuring: [ 
+		super name: aString ].
+	
+	self announcer behaviorRenamed: self from: oldName.
+
+	subclassesWithOldDefinitions do: [ :assoc |
+		self announcer behaviorDefinitionChangedFrom: assoc value to: assoc key.
+		self announcer behaviorModificationAppliedTo: assoc key.
+		self announcer behaviorParentRenamed: assoc key from: oldName ].

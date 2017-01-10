@@ -1,6 +1,5 @@
 accessing - backend
 cleanClassVariables
 
-	self backend forBehavior cleanClassVariablesFor: self.
-	
-	self announcer behaviorDefinitionModified: self.
+	self announceDefinitionChangeDuring: [ 
+		self backend forBehavior cleanClassVariablesFor: self ].
