@@ -15,11 +15,11 @@ testSharedPoolsCollection
 
 	self assert: (class hasResolved: #sharedPools).
 	
-	sharedPool2 := RG2PoolVariableDefinition named: #SharedPool3 parent: class.
+	sharedPool2 := RG2PoolVariableDefinition named: #SharedPool2 parent: class.
 	class addSharedPool: sharedPool2.
 	self assert: class sharedPools size equals: 2.
 	
-	sharedPool3 := RG2PoolVariableDefinition named: #SharedPool2 parent: class.
+	sharedPool3 := RG2PoolVariableDefinition named: #SharedPool3 parent: class.
 	class addSharedPool: sharedPool3.
 	self assert: class sharedPools size equals: 3.
 
