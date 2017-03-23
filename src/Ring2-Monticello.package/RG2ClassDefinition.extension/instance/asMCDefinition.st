@@ -1,0 +1,16 @@
+*Ring2-Monticello
+asMCDefinition
+
+	^ MCClassDefinition 
+		name: self name
+		superclassName: self superclass name
+		traitComposition: self traitCompositionString 
+		classTraitComposition: self metaclass traitCompositionString
+		category: self category 
+		instVarNames: self instVarNames
+		classVarNames: self classVarNames
+		poolDictionaryNames: self sharedPoolNames
+		classInstVarNames: self metaclass instVarNames
+		type: self mcType
+		comment: self comment
+		commentStamp: ''
