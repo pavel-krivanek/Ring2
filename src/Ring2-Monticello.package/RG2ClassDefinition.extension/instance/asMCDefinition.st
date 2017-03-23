@@ -12,5 +12,5 @@ asMCDefinition
 		poolDictionaryNames: self sharedPoolNames
 		classInstVarNames: self metaclass instVarNames
 		type: self mcType
-		comment: self comment
+		comment: self comment content
 		commentStamp: ''
