@@ -3,7 +3,7 @@ asMCDefinition
 
 	^ MCClassDefinition 
 		name: self name
-		superclassName: self superclass name
+		superclassName: (self superclass ifNil: [ 'nil' ] ifNotNil: [ :aSuperclass | aSuperclass name ])
 		traitComposition: self traitCompositionString 
 		classTraitComposition: self metaclass traitCompositionString
 		category: self category 
