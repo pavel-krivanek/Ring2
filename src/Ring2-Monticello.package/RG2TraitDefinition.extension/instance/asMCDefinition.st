@@ -1,5 +1,5 @@
 *Ring2-Monticello
-asMCDefinition self halt.
+asMCDefinition
 
 	^ MCTraitDefinition 
 		name: self name
