@@ -1,5 +1,5 @@
 {
-	"commentStamp" : "<historical>",
+	"commentStamp" : "",
 	"super" : "Object",
 	"category" : "Calypso-Ring2",
 	"classinstvars" : [ ],
@@ -7,8 +7,9 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"environment",
-		"name"
+		"definitionString",
+		"requestor"
 	],
-	"name" : "ClyRing2Environment",
+	"name" : "RG2ClassDefinitionCompiler",
 	"type" : "normal"
 }
