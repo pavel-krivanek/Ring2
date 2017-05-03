@@ -1,7 +1,7 @@
 public access
 evaluate
 	
-	| importer class |
+	| importer class createdClass |
 	
 	importer := Ring2ChunkImporter new.
 	
@@ -13,7 +13,10 @@ evaluate
 	importer := Ring2ChunkImporter new.
 	importer environment: environment.
 	importer fileInFrom: (definitionString, '!') readStream.
-
-	^ environment ask behaviorNamed: class name.
-		
 	
+	createdClass := environment ask behaviorNamed: class name.
+
+	createdClass superclass metaclass metaclass isRing2Resolved ifTrue: [ 
+		environment cleanWithMetaclassNamed: createdClass superclass metaclass metaclass name
+		].
+	^createdClass
