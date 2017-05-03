@@ -1,4 +1,4 @@
-as yet unclassified
+public access
 evaluate
 	
 	| importer class |
@@ -13,7 +13,7 @@ evaluate
 	importer := Ring2ChunkImporter new.
 	importer environment: environment.
 	importer fileInFrom: (definitionString, '!') readStream.
-	
+
 	^ environment ask behaviorNamed: class name.
 		
 	
