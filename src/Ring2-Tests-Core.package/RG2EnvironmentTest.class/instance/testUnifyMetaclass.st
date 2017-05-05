@@ -9,7 +9,7 @@ testUnifyMetaclass
 	self assert: env ask behaviors size equals: 8. "only pre-check"
 	
 	self deny: (class1 metaclass metaclass == class2 metaclass metaclass).
-	env unifyMetaclass: nil.
+	env unifyMetaclass.
 	self assert: (class1 metaclass metaclass == class2 metaclass metaclass).
 
 	
