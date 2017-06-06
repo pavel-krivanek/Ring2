@@ -3,11 +3,12 @@ testCopyForBehaviorDefinitionForClass
 
 	"test copying for instance variables from RG2ClassDefinition"
 	
-	| env aClass copy classVariable1 sharedPool |
+	| env aClass copy classVariable1 sharedPool sharedPool2 |
 	
 	env := RG2Environment new.
 	aClass := env ensureClassNamed: #SomeClass.
 	sharedPool := env ensureClassNamed: #SomePool.
+	sharedPool2 := env ensureClassNamed: #SomePool2.
 
 	classVariable1 := RG2ClassVariableDefinition named: #ClassVariable1 parent: aClass.
 	aClass addClassVariable: classVariable1.
@@ -18,7 +19,8 @@ testCopyForBehaviorDefinitionForClass
 	copy := aClass copyForBehaviorDefinition.
 
 	classVariable1 name: #ChangedClassVariable1.
-	aClass sharedPools anyOne name: #ChangedSharedPool.
+	aClass cleanSharedPools.
+	aClass addSharedPool: sharedPool2.
 	
 	self deny: copy == aClass. 
 	self assert: copy classVarNames asArray equals: #(ClassVariable1).
