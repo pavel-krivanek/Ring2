@@ -12,6 +12,5 @@ pvtAddLocalMethod: aRG2MethodDefinition
 	aRG2MethodDefinition tags do: [ :aTag |
 		self pvtAddMethodTag: aTag ].
 
-	aRG2MethodDefinition parent: self. 
 	localMethods add: aRG2MethodDefinition.	
 	
