@@ -4,6 +4,8 @@ canMergeWith: aRG2Definition visited: visitedDefinitions
 	| newVisited |
 
 	(visitedDefinitions includes: self) ifTrue: [ ^ true ].
+	
+	(self isRing2FullyResolved or: [ aRG2Definition isRing2FullyResolved]) ifTrue: [^ true].
 
 	(super canMergeWith: aRG2Definition visited: visitedDefinitions) ifFalse: [ ^ false ].
 
