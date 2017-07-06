@@ -27,4 +27,5 @@ testNewPackage
 	
 	self assert: (newPackage isRing2Resolved).
 	self assert: (newPackage isRing2FullyResolved).
+	self deny: (newPackage isRing2FullyUnresolved).
 		

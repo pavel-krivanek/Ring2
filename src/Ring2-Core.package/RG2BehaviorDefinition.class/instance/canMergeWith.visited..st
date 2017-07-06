@@ -1,4 +1,4 @@
-as yet unclassified
+merging
 canMergeWith: aRG2Definition visited: visitedDefinitions
 
 	| newVisited |
