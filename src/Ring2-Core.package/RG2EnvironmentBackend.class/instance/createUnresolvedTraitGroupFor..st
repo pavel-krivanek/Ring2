@@ -30,6 +30,7 @@ createUnresolvedTraitGroupFor: aRG2BehaviorDefinition
 	packageStub1 := RG2PackageDefinition unresolvedWithParent: self environment.
 	packageStub1 propertyNamed: #creator put: aRG2BehaviorDefinition.
 	packageStub1 propertyNamed: #role put: #traitMetaclassPackage.
+	packageStub1 pvtAddDefinedBehavior: traitStub.
 
 	traitStub pvtPackage: packageStub1.
 	traitStub pvtSuperclass: traitStub.
