@@ -1,4 +1,4 @@
-as yet unclassified
+*Ring2-Compatibility
 theNonMetaParentName
 	"Rejects the prefix ' class' or ' classTrait' of the parentName"
 	| index |
