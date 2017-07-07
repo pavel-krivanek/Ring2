@@ -1,4 +1,4 @@
 accessing
 definedClassNames
 
-	^ self definedClasses collect: #name 
+	^ self definedClassesOnly collect: #name 

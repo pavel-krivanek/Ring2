@@ -2,4 +2,4 @@ accessing
 classes
 	"Retrieves a collection of classes defined in the receiver and classes holding extension methods"
 		
-	^self definedClasses, self extendedClasses 
+	^self definedClassesOnly, self extendedClasses 
