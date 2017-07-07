@@ -1,6 +1,6 @@
-as yet unclassified
+binding
 bindingOf: varName
 	"Answer the binding of some variable resolved in the scope of the receiver"
-	^ (self superclass == self or: [ self superclass isNil ])
+	^ self isRootInEnvironment
 		ifFalse: [self superclass bindingOf: varName]
 		ifTrue: [ nil ]

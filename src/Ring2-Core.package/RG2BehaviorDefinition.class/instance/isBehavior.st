@@ -1,0 +1,4 @@
+queries - testing
+isBehavior
+
+	^ true
