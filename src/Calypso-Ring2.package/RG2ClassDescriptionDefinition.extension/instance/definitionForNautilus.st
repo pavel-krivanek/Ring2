@@ -13,7 +13,7 @@ definitionForNautilus
 	aStream := (String new: 800) writeStream.
 	superclass
 		ifNil: [ aStream nextPutAll: 'ProtoObject' ]
-		ifNotNil: [ aStream nextPutAll: superclass name ].
+		ifNotNil: [ aStream nextPutAll: self superclass name ].
 	aStream
 		nextPutAll: self layout kindOfSubclassDefinitionString;
 		store: self name.
