@@ -1,0 +1,14 @@
+SmalltalkCISpec {
+  #loading : [
+    SCIMetacelloLoadSpec {
+      #baseline : 'Ring2',
+      #directory : 'src',
+      #platforms : [ #pharo ]
+    }
+  ].
+  #testing : {
+    #include : {
+      #projects : [ 'BaselineOfRing2' ]
+    }
+  
+}
