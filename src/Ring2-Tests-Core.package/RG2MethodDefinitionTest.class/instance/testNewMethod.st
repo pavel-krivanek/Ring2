@@ -3,6 +3,7 @@ testNewMethod
 	| method time |
 	
 	method := RG2MethodDefinition unnamed.
+	self assert: method isMethod. 
 	
 	self assert: (method isRing2Resolved).
 	
