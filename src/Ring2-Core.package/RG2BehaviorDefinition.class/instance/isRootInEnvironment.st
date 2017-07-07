@@ -1,4 +1,4 @@
-*Calypso-Ring2
+queries - testing
 isRootInEnvironment
 
 	^ self superclass == self or: [ self superclass isNil ]
