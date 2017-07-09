@@ -1,3 +1,3 @@
 as yet unclassified
 instanceSide
-	^ self baseClass 
+	^ self baseTrait
