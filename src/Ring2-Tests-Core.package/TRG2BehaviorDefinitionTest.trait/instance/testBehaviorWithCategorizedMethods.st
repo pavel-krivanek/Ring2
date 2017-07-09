@@ -1,6 +1,6 @@
 tests
 testBehaviorWithCategorizedMethods
-	| newBehavior method protocol |
+	| newBehavior method |
 	newBehavior := self behaviorClass named: #SomeClass.
 	self assert: newBehavior name equals: #SomeClass.
 	self
@@ -10,11 +10,5 @@ testBehaviorWithCategorizedMethods
 	self assert: newBehavior ask methods isEmpty.
 	self assert: newBehavior ask protocols isEmpty.
 	method := RG2MethodDefinition named: #someMethod parent: newBehavior.
-	protocol := RG2ProtocolDefinition named: #someProtocol parent: method.
-	method protocol: protocol.
 	newBehavior addLocalMethod: method.
 	self assert: (newBehavior hasResolved: #tagsForMethods).
-	self assert: newBehavior ask protocols size equals: 1.
-	newBehavior cleanProtocols.
-	self assert: newBehavior ask protocols size equals: 1.
-	self assert: newBehavior ask protocols first equals: 'as yet unclassified'
