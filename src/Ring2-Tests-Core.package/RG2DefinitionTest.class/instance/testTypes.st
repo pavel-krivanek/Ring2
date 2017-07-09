@@ -1,4 +1,4 @@
-as yet unclassified
+tests
 testTypes
 
 	| def | 
@@ -24,3 +24,4 @@ testTypes
 	self deny: def isTraitComposition.
 	self deny: def isTraitExclusion.
 	self deny: def isTraitTransformation.
+	self deny: def isVariableDefinition.
