@@ -5,16 +5,16 @@ exportAllMczTo: aDirectory
 	environment announcer suspendAllWhile: [ 
 	directory := aDirectory asFileReference ensureCreateDirectory.
 	repository := MCDirectoryRepository new directory: directory.
-	self withMczDo: [ :mcz | 
+	self packageNames do: [ :packageName | 
 		| snap defs package |
-		Stdio stdout nextPutAll: mcz asString; lf.
-		package := environment ensurePackageNamed: mcz package name.
-		snap := mcz snapshot.
+		Stdio stdout nextPutAll: packageName asString; lf.
+		package := environment ensurePackageNamed: packageName.
+		snap := packageName asPackage mcWorkingCopy snapshot.
 		defs := snap definitions.
 		defs do: [ :each |
 			each ensureRing2DefinitionIn: environment package: package ].
 		
-		"repository basicStoreVersion: mcz "] group: group.
+		"repository basicStoreVersion: mcz "] 
 	]
 	
 	
