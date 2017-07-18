@@ -8,7 +8,7 @@ metaclassClass
 	environment at: #Metaclass ifPresent: [ :aClass | ^ aClass ].
 	aClassMapping := systemDefinition classNamed: #Metaclass.
 	classFormat := self formatOfClass: aClassMapping.	
-	metaclassFormat := self formatOfClass: aClassMapping classSide.
+	metaclassFormat := self formatOfClass: aClassMapping metaclass.
 	
 	metaclassIndex := self newClassIndex.
 	classIndex := self newClassIndex.
