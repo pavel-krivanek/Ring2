@@ -1,1 +1,0 @@
-RG2ProtocolDefinition is a first-class representation of method's protocol
