@@ -4,7 +4,7 @@ pvtAddExtensionMethod: aMethodDefinition
 	self environment verifyOwnership: aMethodDefinition.
 	
 	extensionMethods isRing2Resolved ifFalse: [ 
-		self pvtCleanDefinedBehaviors  ].
+		self pvtCleanExtensionMethods  ].
 	
 	extensionMethods add: aMethodDefinition.
 	
