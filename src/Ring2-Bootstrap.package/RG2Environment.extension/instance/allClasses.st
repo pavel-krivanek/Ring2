@@ -1,4 +1,4 @@
-*Ring2-Bootstrap
+*RIng2-Bootstrap
 allClasses
 
 	^ self ask behaviors

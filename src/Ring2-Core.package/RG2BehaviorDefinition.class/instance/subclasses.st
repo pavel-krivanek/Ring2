@@ -1,9 +1,4 @@
 queries - hierarchy
 subclasses
 
-	| result |
-	result := IdentitySet new.
-	self environment behaviorsDo: [ :each |
-		(each superclass == self) ifTrue: [ result add: each] ].
-	^ result asArray
-	
+	^ self environment ask behaviors select: [ :each | each superclass == self ]

@@ -1,4 +1,4 @@
-*Ring2-Bootstrap
+*RIng2-Bootstrap
 allClassesAndTraits
 
 	^ self ask allClassesAndTraits

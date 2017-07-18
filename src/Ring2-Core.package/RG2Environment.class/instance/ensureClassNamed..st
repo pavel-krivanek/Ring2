@@ -9,7 +9,7 @@ ensureClassNamed: aSymbol
 			ifTrue: [ aSymbol withoutSuffix: ' class' ]
 			ifFalse: [ (aSymbol, 'class') asSymbol ].
 				
-			sibling := self ask behaviorsDetect: [ :each | each name = siblingName ] ifNone: nil.
+			sibling := self ask behaviors detect: [ :each | each name = siblingName ] ifNone: nil.
 			sibling ifNotNil: [ 
 				| result |
 				result := sibling isMetaclass 

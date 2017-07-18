@@ -3,9 +3,7 @@ announceDefinitionChangeDuring: aBlock
 
 	| oldVersion |
 
-	self announcer isSuspended ifTrue: [ 
-		aBlock value. 
-		^ self ]	.
+	self announcer isSuspended ifTrue: [ ^ self ]	.
 		
 	self announcer  suspendAllWhile: [ 
 		oldVersion := self copyForBehaviorDefinition.].
