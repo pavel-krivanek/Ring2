@@ -1,3 +1,4 @@
-as yet unclassified
-argumentNames
-	^self ast argumentNames
+accessing
+argumentNames		
+
+	^ self ast argumentNames

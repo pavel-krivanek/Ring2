@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 comment
 
 	^ self baseClass comment

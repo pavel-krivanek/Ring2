@@ -1,4 +1,5 @@
 resolving
-isRing2FullyUnresolved
+isRing2FullyUnresolved		
+	
+	^ self backend hasFullyUnresolved: self 		
 
-	^ self backend hasFullyUnresolved: self

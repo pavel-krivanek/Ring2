@@ -1,4 +1,0 @@
-queries - testing
-isBehavior
-
-	^ true

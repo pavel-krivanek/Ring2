@@ -1,4 +1,4 @@
-enumerating
+environment
 packagesFor: aRG2Environment do: aBlock
 
 	| enumerated |

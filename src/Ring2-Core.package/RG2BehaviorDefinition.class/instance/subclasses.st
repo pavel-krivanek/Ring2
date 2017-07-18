@@ -1,4 +1,4 @@
-queries - hierarchy
+accessing class hierarchy
 subclasses
 
 	| result |
@@ -6,4 +6,3 @@ subclasses
 	self environment behaviorsDo: [ :each |
 		(each superclass == self) ifTrue: [ result add: each] ].
 	^ result asArray
-	

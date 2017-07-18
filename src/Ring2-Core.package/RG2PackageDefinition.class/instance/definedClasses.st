@@ -1,4 +1,4 @@
 accessing
 definedClasses
 
-	^ self definedBehaviors 
+	^ self definedBehaviors select: #isClass

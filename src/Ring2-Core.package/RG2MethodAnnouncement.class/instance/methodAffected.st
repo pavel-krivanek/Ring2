@@ -1,3 +1,4 @@
-as yet unclassified
-methodAffected
-	^self method
+accessing
+methodAffected		
+
+	^self method 

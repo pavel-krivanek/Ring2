@@ -7,8 +7,9 @@ addBehavior: aRG2BehaviorDefinition
 	aRG2BehaviorDefinition isMeta ifFalse: [
 		aRG2BehaviorDefinition package
 			ifNotNil: [ :package | 
-				self backend forEnvironment	addPackage: package to: self.
-				package addDefinedBehavior: aRG2BehaviorDefinition.].
+				self backend forEnvironment
+					addPackage: aRG2BehaviorDefinition package
+					to: self ].
 		"self backend forEnvironment
 					addGlobalVariable: (RG2GlobalVariableDefinition named: aRG2BehaviorDefinition name parent: self)
 					to: self" ].
