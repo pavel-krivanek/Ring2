@@ -7,7 +7,8 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"environment1",
-		"environment2"
+		"environment2",
+		"providedDefinitions"
 	],
 	"name" : "RG2ReadOnlyJoinBackend",
 	"type" : "normal"

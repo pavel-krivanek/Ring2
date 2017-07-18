@@ -1,4 +1,4 @@
 testing
 hasComment
 
-	^self comment isEmptyOrNil not
+	^comment isEmptyOrNil not

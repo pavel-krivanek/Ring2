@@ -1,7 +1,8 @@
 accessing - model
 extensionMethods
+	"Retrieves the traits defined in the receiver"
 
-	| allMethods |
-	allMethods := IdentitySet new.
-	self extensionMethodsDo: [ :each | allMethods add: each].
-	^ allMethods asArray
+	| allBehaviors |
+	allBehaviors := IdentitySet new.
+	self extensionMethodsDo: [ :each | allBehaviors add: each].
+	^ allBehaviors asArray

@@ -6,8 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"environment",
-		"providedDefinitions"
+		"environment"
 	],
 	"name" : "RG2EnvironmentBackend",
 	"type" : "normal"

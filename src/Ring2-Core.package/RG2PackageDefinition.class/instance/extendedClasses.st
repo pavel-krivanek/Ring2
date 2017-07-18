@@ -1,4 +1,4 @@
 accessing
 extendedClasses
 	
-	^ self extendedBehaviors
+	^ ((self extensionMethods collect: #parent) select: #isClass) collect: #baseClass
