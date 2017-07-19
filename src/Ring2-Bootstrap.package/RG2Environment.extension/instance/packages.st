@@ -1,4 +1,4 @@
-*RIng2-Bootstrap
+*Ring2-Bootstrap
 packages
 
 	^ self ask packages
