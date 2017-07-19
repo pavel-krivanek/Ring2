@@ -1,4 +1,4 @@
-as yet unclassified
+binding
 bindingOf: varName
 
 	| aSymbol |

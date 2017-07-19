@@ -1,4 +1,4 @@
-accessing
 slots
-
-	^ self layout slots
+slots		
+		
+	^ self layout slots 

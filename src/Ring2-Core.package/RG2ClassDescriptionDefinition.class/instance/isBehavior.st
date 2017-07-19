@@ -1,4 +1,4 @@
-queries - testing
+testing
 isBehavior
 
 	^ true

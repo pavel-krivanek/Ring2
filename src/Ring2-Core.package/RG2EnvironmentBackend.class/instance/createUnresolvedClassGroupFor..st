@@ -29,7 +29,6 @@ createUnresolvedClassGroupFor: aRG2BehaviorDefinition
 	packageStub1 pvtAddDefinedBehavior: classStub.
 	packageStub1 propertyNamed: #creator put: aRG2BehaviorDefinition.
 	packageStub1 propertyNamed: #role put: #package.
-
 	
 	packageStub2 := RG2PackageDefinition unresolvedWithParent: self environment.
 	superclassStub pvtPackage: packageStub2.

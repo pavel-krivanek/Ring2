@@ -1,4 +1,4 @@
-as yet unclassified
+accesing
 definitionFor: anObject ifAbsentRegister: aDefinitionOrBlock
 
 	^ providedDefinitions at: anObject 

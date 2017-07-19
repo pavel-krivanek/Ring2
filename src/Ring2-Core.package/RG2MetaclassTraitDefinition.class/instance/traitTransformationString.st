@@ -1,4 +1,4 @@
 as yet unclassified
-traitTransformationString
-
-	^ self name
+traitTransformationString		
+		
+	^ self name 

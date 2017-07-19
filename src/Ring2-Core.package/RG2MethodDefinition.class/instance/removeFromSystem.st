@@ -1,3 +1,4 @@
-as yet unclassified
+removing
 removeFromSystem
+
 	^ self parent removeLocalMethod: self

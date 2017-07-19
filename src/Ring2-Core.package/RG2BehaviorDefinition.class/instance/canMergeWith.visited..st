@@ -1,4 +1,4 @@
-merging
+testing
 canMergeWith: aRG2Definition visited: visitedDefinitions
 
 	| newVisited |

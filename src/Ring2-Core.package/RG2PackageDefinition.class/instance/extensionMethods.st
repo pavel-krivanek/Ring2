@@ -1,4 +1,4 @@
-accessing - model
+accessing
 extensionMethods
 
 	| allMethods |

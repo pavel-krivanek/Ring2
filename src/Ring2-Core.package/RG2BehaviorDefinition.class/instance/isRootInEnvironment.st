@@ -1,4 +1,4 @@
 queries - testing
-isRootInEnvironment
-
-	^ self superclass == self or: [ self superclass isNil ]
+isRootInEnvironment		
+		
+	^ self superclass == self or: [ self superclass isNil ] 

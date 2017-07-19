@@ -1,4 +1,4 @@
 testing
-hasResolvedName
-
+hasResolvedName		
+	
 	^ self hasResolved: #name

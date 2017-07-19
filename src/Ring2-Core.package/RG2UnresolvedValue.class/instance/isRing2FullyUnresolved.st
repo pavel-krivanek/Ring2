@@ -1,4 +1,4 @@
-as yet unclassified
+testing
 isRing2FullyUnresolved
 
 	^ true
