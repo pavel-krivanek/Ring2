@@ -32,6 +32,7 @@ createUnresolvedTraitGroupFor: aRG2BehaviorDefinition
 	packageStub1 propertyNamed: #role put: #traitMetaclassPackage.
 
 	traitStub pvtPackage: packageStub1.
+	packageStub1 pvtAddDefinedBehavior: traitStub.
 	traitStub pvtSuperclass: traitStub.
 	traitStub pvtMetaclass: traitMetaclassStub.
 	traitStub pvtClassTrait: classTraitStub.

@@ -1,4 +1,6 @@
 accesing
 definitionFor: anObject ifAbsentRegister: aDefinitionOrBlock
 
-	^ aDefinitionOrBlock value
+	^ providedDefinitions at: anObject 
+		ifPresent: [:definition | definition ]
+		ifAbsentPut: [ aDefinitionOrBlock value ].
