@@ -56,5 +56,5 @@ packageNames
 			'UIManager' 
 			'Zinc-Character-Encoding-Core' 
 			'Zinc-Resource-Meta-Core'
-			'Hermes' ). 
+			"'Hermes' "). 
 	
