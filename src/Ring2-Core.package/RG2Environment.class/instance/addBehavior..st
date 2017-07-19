@@ -8,7 +8,7 @@ addBehavior: aRG2BehaviorDefinition
 		aRG2BehaviorDefinition package
 			ifNotNil: [ :package | 
 				self backend forEnvironment addPackage: aRG2BehaviorDefinition package	to: self.
-					package addDefinedBehavior: aRG2BehaviorDefinition. ].
+				package addDefinedBehavior: aRG2BehaviorDefinition. ].
 		"self backend forEnvironment
 					addGlobalVariable: (RG2GlobalVariableDefinition named: aRG2BehaviorDefinition name parent: self)
 					to: self" ].
