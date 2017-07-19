@@ -19,7 +19,7 @@ initializeImage
 		createProcessWithPriority: 40 
 		"doing: self bootstrapInitialProcessCode."
 		doing: ('	Smalltalk primitiveGarbageCollect.
-			Smalltalk exit: 42').
+			PharoBootstrapInitialization initializeCommandLineHandlerAndErrorHandling.').
  	objectSpace installAsActiveProcess: process.
 	
 	self followForwardingPointers.
