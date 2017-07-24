@@ -6,10 +6,10 @@ traitTransformationString
 			nextPut: $(;
 			nextPutAll: self subject name;
 			space;
-			nextPut: $-;
+			nextPut: $@;
 			space;
 			nextPut: ${.
-	self exclusions do: [:each | aStream print: each]
+	self aliases do: [:each | aStream print: each]
 		separatedBy: [aStream nextPutAll: '. '].
 	aStream nextPut: $}.
-	aStream nextPut: $).].
+	aStream nextPut: $)].

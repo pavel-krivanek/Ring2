@@ -1,4 +1,4 @@
-as yet unclassified
+traits
 traitCompositionString
 
 	^ String streamContents: [:aStream |	
@@ -8,6 +8,6 @@ traitCompositionString
 			nextPut: $-;
 			space;
 			nextPut: ${.
-	self aliases do: [:each | aStream print: each]
+	self exclusions do: [:each | aStream print: each]
 		separatedBy: [aStream nextPutAll: '. '].
 	aStream nextPut: $}].
