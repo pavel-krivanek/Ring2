@@ -1,4 +1,4 @@
 *Calypso-Ring2
 binding
 
-	^ self
+	^ self environment bindingOf: self name
