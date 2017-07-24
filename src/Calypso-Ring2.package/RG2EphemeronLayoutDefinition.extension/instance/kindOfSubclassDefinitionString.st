@@ -1,3 +1,3 @@
 *Calypso-Ring2
 kindOfSubclassDefinitionString
-	^ ' subclass: '
+	^ ' ephemeronSubclass: '
