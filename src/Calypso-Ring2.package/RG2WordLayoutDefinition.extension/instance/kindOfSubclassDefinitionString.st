@@ -1,3 +1,4 @@
 *Calypso-Ring2
 kindOfSubclassDefinitionString
-	^ ' subclass: '
+	^ ' variableWordSubclass: '
+
