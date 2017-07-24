@@ -3,7 +3,7 @@ category: aString
 
 	| aTag |
 		
-	self cleanTags.
+	self cleanTagsWithoutAnnouncemnt.
 	aTag := self package 
 		ifNotNil: [ 
 			self package name = aString
