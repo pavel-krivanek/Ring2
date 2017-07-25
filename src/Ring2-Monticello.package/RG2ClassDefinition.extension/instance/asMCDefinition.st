@@ -13,4 +13,4 @@ asMCDefinition
 		classInstVarNames: self metaclass instVarNames
 		type: self mcType
 		comment: self comment content
-		commentStamp: ''
+		commentStamp: self comment stamp
