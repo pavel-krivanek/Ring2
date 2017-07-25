@@ -10,8 +10,8 @@ testBehaviorParentRenamed
 	class superclass: superclass.
 	
 	announcements := OrderedCollection new.
-	env announcer when: RG2BehaviorParentRenamed do: [ :announcement |
-		(announcement behavior == class) ifTrue: [ 
+	env announcer when: ClassParentRenamed do: [ :announcement |
+		(announcement classAffected == class) ifTrue: [ 
 			announcements add: announcement]].
 	
 	class name: #NewName.
