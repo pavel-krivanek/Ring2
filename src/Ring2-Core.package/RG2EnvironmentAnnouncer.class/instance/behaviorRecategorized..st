@@ -1,6 +1,7 @@
 triggering
-behaviorRecategorized: aRG2BehaviorDefinition
+behaviorRecategorized: aRG2BehaviorDefinition 
 
-	self announce: (RG2BehaviorRecategorized new 
-		behavior: aRG2BehaviorDefinition;
-		yourself)
+	self announce: (ClassRecategorized 
+		class: aRG2BehaviorDefinition 
+		recategorizedFrom: nil 
+		to: aRG2BehaviorDefinition category)

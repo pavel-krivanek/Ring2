@@ -1,3 +1,4 @@
 accessing
 category
-	^ self theNonMetaClass category
+
+	^ self baseClass category

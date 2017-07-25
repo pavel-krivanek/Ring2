@@ -1,4 +1,5 @@
 triggering
 behaviorRemoved: aRG2BehaviorDefinition
 
-	self announce: (RG2BehaviorRemoved new behavior: aRG2BehaviorDefinition)
+	self announce: (ClassRemoved 
+		class: aRG2BehaviorDefinition category: aRG2BehaviorDefinition category)

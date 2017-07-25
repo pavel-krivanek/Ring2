@@ -1,4 +1,8 @@
 triggering
 behaviorRenamed: aRG2BehaviorDefinition from: oldName
 
-	self announce: (RG2BehaviorRenamed new behavior: aRG2BehaviorDefinition)
+	self announce: (ClassRenamed 
+		class: aRG2BehaviorDefinition 
+		category: aRG2BehaviorDefinition category 
+		oldName: oldName 
+		newName: aRG2BehaviorDefinition name)
