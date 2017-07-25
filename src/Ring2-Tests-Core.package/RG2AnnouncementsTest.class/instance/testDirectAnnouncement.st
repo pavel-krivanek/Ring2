@@ -5,8 +5,8 @@ testDirectAnnouncement
 	
 	def := RG2BehaviorDefinition new.
 	announcements := OrderedCollection new.
-	def environment announcer when: RG2BehaviorAdded do: [ :announcement | announcements add: announcement ].
-	def announce: (RG2BehaviorAdded new behavior: def).
+	def environment announcer when: ClassAdded do: [ :announcement | announcements add: announcement ].
+	def announce: (ClassAdded class: def category: nil).
 	
 	self assert: announcements size equals: 1.
-	self assert: (announcements first behavior == def).
+	self assert: (announcements first classAffected == def).

@@ -1,6 +1,4 @@
 triggering
 behaviorCommentModified: aRG2BehaviorDefinition
 
-	self announce: (RG2BehaviorCommentModified new 
-		behavior: aRG2BehaviorDefinition;
-		yourself)
+	self announce: (ClassCommented classCommented: aRG2BehaviorDefinition)

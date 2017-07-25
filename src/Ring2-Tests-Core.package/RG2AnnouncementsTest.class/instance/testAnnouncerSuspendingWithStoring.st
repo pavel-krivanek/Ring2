@@ -5,7 +5,7 @@ testAnnouncerSuspendingWithStoring
 	
 	env := RG2Environment new.
 	announcements := OrderedCollection new.
-	env announcer when: RG2BehaviorAdded do: [ :announcement | announcements add: announcement ].
+	env announcer when: ClassAdded do: [ :announcement | announcements add: announcement ].
 	
 	stored := env announcer suspendAllWhileStoring: [ 
 		behavior := env ensureClassNamed: #SomeClass.].

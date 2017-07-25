@@ -5,7 +5,7 @@ testBehaviorCommentModified
 	
 	env := RG2Environment new.
 	announcements := OrderedCollection new.
-	env announcer when: RG2BehaviorCommentModified do: [ :announcement | announcements add: announcement ].
+	env announcer when: ClassCommented do: [ :announcement | announcements add: announcement ].
 	
 	behavior := env ensureClassNamed: #SomeClass.
 	self assert: announcements isEmpty.
@@ -14,7 +14,7 @@ testBehaviorCommentModified
 	behavior comment author: 'SomeAuthor'.
 	behavior comment time: DateAndTime new.
 	self assert: announcements size equals: 3.
-	self assert: (announcements allSatisfy: [:each | each behavior == behavior ]).
+	self assert: (announcements allSatisfy: [:each | each classCommented == behavior ]).
 	
 	
 	
