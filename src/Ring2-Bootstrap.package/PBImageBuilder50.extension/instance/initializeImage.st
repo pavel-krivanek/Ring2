@@ -19,7 +19,8 @@ initializeImage
 		createProcessWithPriority: 40 
 		"doing: self bootstrapInitialProcessCode."
 		doing: ('Smalltalk primitiveGarbageCollect.
-		Smalltalk exit: 16').
+		Smalltalk snapshotPrimitive.
+		Smalltalk exit: 42').
  	objectSpace installAsActiveProcess: process.
 	
 	self followForwardingPointers.

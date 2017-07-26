@@ -11,7 +11,7 @@ cleanUnusedUnreferencedBehaviors
 			referenced add: each.
 			referenced addAll: (each referencedBehaviors copyWithoutAll: {each. nil}) ]  ].
 	[	newelyAdded := IdentitySet new.
-		referenced do: [ :each | 
+		(referenced copyWithout: nil) do: [ :each | 
 			each referencedBehaviors do: [ :ref |
 				(referenced includes: ref) ifFalse: [
 					referenced add: ref.
