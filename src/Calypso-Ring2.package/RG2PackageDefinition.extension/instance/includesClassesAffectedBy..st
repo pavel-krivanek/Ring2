@@ -1,5 +1,5 @@
 *Calypso-Ring2
-includesClassesAffectedBy: aClassAnnouncement
+includesClassesAffectedBy: aSystemAnnouncement
 
-	^(aClassAnnouncement packagesAffected includes: self)
-		or: [ self extendsClass: aClassAnnouncement classAffected ]
+	^(aSystemAnnouncement affectsClassesDefinedInPackage: self)
+		or: [ aSystemAnnouncement affectsClassesExtendedInPackage: self ]

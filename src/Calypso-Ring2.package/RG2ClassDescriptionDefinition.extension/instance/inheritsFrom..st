@@ -3,6 +3,7 @@ inheritsFrom: aClass
 
 	| aSuperclass |
 	aSuperclass := self superclass.
+	aSuperclass ifNil: [ ^ false ].
 	[aSuperclass isRootInEnvironment ]
 		whileFalse: 
 			[aSuperclass == aClass ifTrue: [^true].
