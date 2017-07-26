@@ -28,6 +28,7 @@ ensureMetaclassTraitNamed: aSymbol
 							newTrait := sibling pvtAsTrait.
 							originalMetaclass := sibling metaclass.
 							newMetaclassTrait := originalMetaclass pvtAsMetaclassTrait.
+							self ask replaceName: originalMetaclass name with: newMetaclassTrait name.
 							sibling metaclass becomeForward: newMetaclassTrait.
 							originalMetaclass becomeForward: newMetaclassTrait.
 							sibling becomeForward: newTrait.
@@ -48,6 +49,7 @@ ensureMetaclassTraitNamed: aSymbol
 							newMetaclassTrait := similarMetaclass pvtAsMetaclassTrait.
 							similarClass := similarMetaclass baseClass.
 							newTrait := similarClass pvtAsTrait.
+							self ask replaceName: similarMetaclass name with: newMetaclassTrait name.
 							similarMetaclass becomeForward: newMetaclassTrait.
 							similarClass becomeForward: newTrait.
 							similarClass classTrait: similarMetaclass.
@@ -65,6 +67,7 @@ ensureMetaclassTraitNamed: aSymbol
 			newTrait := found pvtAsTrait.
 			originalMetaclass := found metaclass.
 			newMetaclassTrait := originalMetaclass pvtAsMetaclassTrait.
+			self ask replaceName: originalMetaclass name with: newMetaclassTrait name.
 			found becomeForward: newTrait.
 			found metaclass becomeForward: newMetaclassTrait.
 			originalMetaclass becomeForward: newMetaclassTrait.

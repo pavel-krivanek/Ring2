@@ -18,8 +18,8 @@ initializeImage
 	process := objectSpace
 		createProcessWithPriority: 40 
 		"doing: self bootstrapInitialProcessCode."
-		doing: ('	Smalltalk primitiveGarbageCollect.
-			PharoBootstrapInitialization initializeCommandLineHandlerAndErrorHandling.').
+		doing: ('Smalltalk primitiveGarbageCollect.
+		Smalltalk exit: 32').
  	objectSpace installAsActiveProcess: process.
 	
 	self followForwardingPointers.

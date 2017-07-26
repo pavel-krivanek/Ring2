@@ -37,6 +37,7 @@ ensureTraitNamed: aSymbol
 			newTrait := found pvtAsTrait.
 			originalMetaclass := found metaclass.
 			newMetaclassTrait := originalMetaclass pvtAsMetaclassTrait.
+			self ask replaceName: originalMetaclass name with: newMetaclassTrait name.
 			found becomeForward: newTrait.
 			found classTrait becomeForward: newMetaclassTrait.
 			originalMetaclass becomeForward: newMetaclassTrait.
