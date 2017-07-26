@@ -1,7 +1,7 @@
 as yet unclassified
 ensureMetaclassTraitNamed: aSymbol
 
-	| found newTrait newMetaclassTrait similarMetaclass similarMetaclassName siblingName sibling |
+	| found newTrait newMetaclassTrait similarMetaclass similarMetaclassName siblingName sibling originalMetaclass |
 	
 	self assert: (aSymbol endsWith: ' class') not.
 	self assert: (aSymbol endsWith: ' classTrait').
@@ -26,8 +26,11 @@ ensureMetaclassTraitNamed: aSymbol
 							existing ]
 						ifFalse: [ 
 							newTrait := sibling pvtAsTrait.
-							newMetaclassTrait := sibling metaclass pvtAsMetaclassTrait.
+							originalMetaclass := sibling metaclass.
+							newMetaclassTrait := originalMetaclass pvtAsMetaclassTrait.
+							self ask replaceName: originalMetaclass name with: newMetaclassTrait name.
 							sibling metaclass becomeForward: newMetaclassTrait.
+							originalMetaclass becomeForward: newMetaclassTrait.
 							sibling becomeForward: newTrait.
 							sibling classTrait: newMetaclassTrait.
 							newMetaclassTrait baseTrait: sibling.
@@ -46,6 +49,7 @@ ensureMetaclassTraitNamed: aSymbol
 							newMetaclassTrait := similarMetaclass pvtAsMetaclassTrait.
 							similarClass := similarMetaclass baseClass.
 							newTrait := similarClass pvtAsTrait.
+							self ask replaceName: similarMetaclass name with: newMetaclassTrait name.
 							similarMetaclass becomeForward: newMetaclassTrait.
 							similarClass becomeForward: newTrait.
 							similarClass classTrait: similarMetaclass.
@@ -61,9 +65,12 @@ ensureMetaclassTraitNamed: aSymbol
 		ifNotNil: [
 			"some non-trait behavior found. We created this trait before as a class because correct behavior type was not known."
 			newTrait := found pvtAsTrait.
-			newMetaclassTrait := found metaclass pvtAsMetaclassTrait.
+			originalMetaclass := found metaclass.
+			newMetaclassTrait := originalMetaclass pvtAsMetaclassTrait.
+			self ask replaceName: originalMetaclass name with: newMetaclassTrait name.
 			found becomeForward: newTrait.
 			found metaclass becomeForward: newMetaclassTrait.
+			originalMetaclass becomeForward: newMetaclassTrait.
 			found ].
 	
 				

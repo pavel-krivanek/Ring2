@@ -1,4 +1,5 @@
 triggering
 methodRemoved: aMethod 
 
-	self announce: (RG2MethodRemoved new method: aMethod)
+	"TODO:"
+	self announce: (MethodRemoved methodRemoved: aMethod protocol: nil origin: nil)
