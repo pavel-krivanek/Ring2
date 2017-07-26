@@ -6,7 +6,7 @@ testAnnouncementTimestamps
 	start := DateAndTime now.
 	env := RG2Environment new.
 	announcements := OrderedCollection new.
-	env announcer when: RG2BehaviorAdded do: [ :announcement | announcements add: announcement ].
+	env announcer when: ClassAdded do: [ :announcement | announcements add: announcement ].
 	
 	env ensureClassNamed: #SomeClass1.
 	10 milliSeconds wait.

@@ -11,8 +11,8 @@ testBehaviorDefinitionModifiedForSuperclass
 	class superclass: superclass1.
 	
 	announcements := OrderedCollection new.
-	env announcer when: RG2BehaviorDefinitionModified do: [ :announcement |
-		(announcement behavior == class) ifTrue: [ 
+	env announcer when: ClassModifiedClassDefinition do: [ :announcement |
+		(announcement classAffected == class) ifTrue: [ 
 			announcements add: announcement]].
 	
 	class name: #NewName.
