@@ -18,9 +18,7 @@ initializeImage
 	process := objectSpace
 		createProcessWithPriority: 40 
 		"doing: self bootstrapInitialProcessCode."
-		doing: ('Smalltalk primitiveGarbageCollect.
-		Smalltalk snapshotPrimitive.
-		Smalltalk exit: 42').
+		doing: ('Smalltalk run').
  	objectSpace installAsActiveProcess: process.
 	
 	self followForwardingPointers.

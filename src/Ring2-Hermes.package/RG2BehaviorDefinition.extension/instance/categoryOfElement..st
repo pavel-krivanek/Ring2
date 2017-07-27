@@ -1,4 +1,7 @@
 *Ring2-Hermes
-categoryOfElement: element 
+categoryOfElement: aSymbol 
 	
-	^ element protocol
+	| aMethod |
+	
+	aMethod := (self localMethodNamed: aSymbol ifAbsent: nil).
+	^ aMethod ifNotNil: [ aMethod protocol ] 
