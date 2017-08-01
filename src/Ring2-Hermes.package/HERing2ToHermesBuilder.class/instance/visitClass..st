@@ -7,10 +7,15 @@ visitClass: aClass
 
 	aHEClass className: aClass name.
 	aHEClass superclass: aClass superclass name.
-	aHEClass instanceVariables: (aClass instanceVariables joinUsing: ' ').
-	aHEClass classInstancevariables: (aClass theMetaClass instanceVariables joinUsing: ' ').
+	aHEClass instanceVariables: ((aClass slots collect: #name) joinUsing: ' ').
+	aHEClass classInstancevariables: ((aClass metaclass slots collect: #name) joinUsing: ' ').
 	aHEClass classVariables: (aClass classPool keys joinUsing: ' ').
 	aHEClass sharedPools: ((aClass sharedPools collect: #name) joinUsing: ' ').
 	aHEClass layoutClass: aClass layout layoutName.
+
+	aHEClass category: aClass category.
+	aHEClass traitComposition: aClass traitComposition asExportedLiteral.
+	aHEClass classTraitComposition: aClass theMetaClass traitComposition asExportedLiteral.
+
 
 	^ aHEClass.
