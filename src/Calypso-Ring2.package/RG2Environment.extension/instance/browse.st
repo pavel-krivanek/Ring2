@@ -13,4 +13,4 @@ browse
 	        showEnvironment: clyNavEnv.
 	browser addPlugin: ClyStandardBrowserPlugin new.
 
-	browser open.
+	^ browser open.
