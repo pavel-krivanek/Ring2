@@ -1,4 +1,4 @@
 accessing
 fullName
 	
-	^ (self parent name, ' ', self name) asSymbol
+	^ (self parent name, ' comment') asSymbol
