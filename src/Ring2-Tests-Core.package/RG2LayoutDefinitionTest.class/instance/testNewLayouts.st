@@ -7,5 +7,7 @@ testNewLayouts
 		self assert: (layout isRing2Resolved).
 		self assert: (layout hasUnresolved: #name).
 		self assert: (layout isLayout).
-		
+		self assert: (layout isLayout).
+		self assert: (layout allSlots isEmpty).
+		self assert: (layout instVarNames isEmpty).
 		 ]
