@@ -1,3 +1,3 @@
-as yet unclassified
+testing
 isFromTrait
 	^ self parent isTrait

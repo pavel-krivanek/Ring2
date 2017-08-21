@@ -1,4 +1,4 @@
-as yet unclassified
+managing container
 defaultParentStub
 
 	^ self defaultFixedLayoutStub

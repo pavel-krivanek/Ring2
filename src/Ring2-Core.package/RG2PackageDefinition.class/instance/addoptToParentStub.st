@@ -1,4 +1,4 @@
-as yet unclassified
+managing container
 addoptToParentStub
 
 	self isRing2Resolved ifFalse: [ ^ self ].

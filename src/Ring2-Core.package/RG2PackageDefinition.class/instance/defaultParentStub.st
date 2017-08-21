@@ -1,4 +1,4 @@
-accessing
+managing container
 defaultParentStub
 
 	^ RG2Environment new

@@ -1,4 +1,4 @@
-testing
+managing container
 defaultParentStub
 
 	^ self defaultClassStub

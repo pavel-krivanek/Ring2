@@ -1,4 +1,4 @@
-testing
+managing container
 addoptToParentStub
 
 	super addoptToParentStub.

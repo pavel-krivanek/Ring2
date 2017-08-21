@@ -1,4 +1,4 @@
-default model values
+managing container
 defaultParentStub
 
 	^ self defaultTraitCompositionStub
