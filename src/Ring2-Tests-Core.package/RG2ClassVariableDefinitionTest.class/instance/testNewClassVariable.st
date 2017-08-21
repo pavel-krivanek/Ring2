@@ -7,6 +7,7 @@ testNewClassVariable
 	self assert: (classVariable hasUnresolved: #name).
 	self assert: (classVariable isVariableDefinition).
 	self assert: (classVariable isClassVariable).	
+	self deny: (classVariable isPoolVariable).	
 
 	classVariable  := RG2ClassVariableDefinition named: #SomeClassVariable.
 	self assert: (classVariable isRing2Resolved).

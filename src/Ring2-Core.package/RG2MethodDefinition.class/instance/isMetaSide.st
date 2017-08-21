@@ -1,4 +1,4 @@
-as yet unclassified
+testing
 isMetaSide
 
 	^ self parent isMeta

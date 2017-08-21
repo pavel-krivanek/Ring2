@@ -12,7 +12,9 @@ testSharedPoolsCollection
 	sharedPool1 := RG2PoolVariableDefinition named: #SharedPool1 parent: class.
 	class addSharedPool: sharedPool1.
 	self assert: class sharedPools size equals: 1.
-
+	self deny: sharedPool1 isClassVariable.
+	self assert: sharedPool1 isPoolVariable.
+	
 	self assert: (class hasResolved: #sharedPools).
 	
 	sharedPool2 := RG2PoolVariableDefinition named: #SharedPool2 parent: class.

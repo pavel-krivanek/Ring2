@@ -13,3 +13,4 @@ testNewNamedMethod
 	self assert: method selector equals: 'someMessage'.
 	self assert: method sourceCode lines first equals: 'someMessage'.
 
+	self deny: method isMetaSide.
