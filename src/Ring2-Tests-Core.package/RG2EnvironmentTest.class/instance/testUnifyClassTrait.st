@@ -1,5 +1,5 @@
 tests
-testunifyClassTrait
+testUnifyClassTrait
 
 	| env trait1 trait2 classTrait| 
 	
