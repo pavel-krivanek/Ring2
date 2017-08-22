@@ -18,6 +18,7 @@ testImplicitEnvironment
 	
 	def2 := RG2MethodDefinition named: #someMethod parent: def parent.
 	def2 parent addLocalMethod: def2.
+	self assert: def parent localSelectors sorted equals: #(someMethod unresolved).
 	self checkImplicitSingleClassEnvironmentOf: def parent.	
 
 	self assert: def parent protocols size equals: 1.

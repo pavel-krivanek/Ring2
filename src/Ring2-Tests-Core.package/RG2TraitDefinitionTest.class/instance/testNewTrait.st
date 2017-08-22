@@ -7,6 +7,7 @@ testNewTrait
 	self assert: (trait isRing2Resolved).
 	self assert: (trait hasUnresolvedAll: #(classTrait comment category package)).
 	self assert: (trait isTrait).
+	self assert: (trait trait == trait).
 
 	metaclassTrait  := RG2MetaclassTraitDefinition parent: trait environment.
 	trait classTrait: metaclassTrait.
@@ -32,5 +33,7 @@ testNewTrait
 	trait package:  package.
 	self assert: (trait hasResolved: #package).
 	self assert: (trait package == package).
-
+	
+	trait classVarNames isEmpty.
+	trait sharedPools isEmpty.
 		

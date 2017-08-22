@@ -8,6 +8,10 @@ testNewPackage
 	
 	self assert: (newPackage isPackage).
 	self assert: (newPackage name = 'Collections-Sequenceable').
+
+	newPackage name: 'NewCollections'.
+	self assert: newPackage name equals: 'NewCollections'.
+
 	self assert: (newPackage definedBehaviors isEmpty).
 	self assert: (newPackage extensionMethods isEmpty).
 	self assert: (newPackage hasUnresolvedAll: #(#definedBehaviors #extensionMethods)).
@@ -28,4 +32,8 @@ testNewPackage
 	self assert: (newPackage isRing2Resolved).
 	self assert: (newPackage isRing2FullyResolved).
 	self deny: (newPackage isRing2FullyUnresolved).
+
+	self assert: (newPackage package = newPackage).
+	
+		self assert: (newPackage traits isEmpty).
 		

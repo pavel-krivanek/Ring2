@@ -1,5 +1,5 @@
 tests
-testAst
+testAST
 	
 	| method ast |
 

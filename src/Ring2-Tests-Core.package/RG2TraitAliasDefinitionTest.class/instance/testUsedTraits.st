@@ -10,3 +10,5 @@ testUsedTraits
 	
 	self assert: usedTraits size equals: 1.
 	self assert: usedTraits anyOne equals: trait.
+	
+	self assert:  traitAlias trait equals: trait.
