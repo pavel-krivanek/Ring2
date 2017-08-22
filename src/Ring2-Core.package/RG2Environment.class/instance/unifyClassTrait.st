@@ -1,7 +1,7 @@
 cleaning
 unifyClassTrait
 
-	"set all metaclasses of metaclasses to the same object (Metaclass) "
+	"set all metaclasses of classTraits to the same object (ClassTrait) "
 
 	| aTrait |
 

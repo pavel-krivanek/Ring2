@@ -1,4 +1,4 @@
-as yet unclassified
+testing
 isWords
 
 	^ self layout isWordLayout 

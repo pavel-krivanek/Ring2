@@ -12,11 +12,16 @@ testNewTrait
 	trait classTrait: metaclassTrait.
 	self assert: (trait hasResolved: #classTrait).
 	self assert: (trait classTrait == metaclassTrait).
+	self assert: (trait theMetaClass == metaclassTrait).
 
-	comment := RG2CommentDefinition parent: metaclassTrait.
+	comment := RG2CommentDefinition parent: metaclassTrait. 
+	self deny: (trait hasComment).
 	trait comment:  comment.
 	self assert: (trait hasResolved: #comment).
 	self assert: (trait comment == comment).
+	self deny: (trait hasComment). "the comment has no content"
+	comment content: 'some comment'.
+	self assert: (trait hasComment).
 
 	category  := #'SomeCategory'.
 	trait category: category.

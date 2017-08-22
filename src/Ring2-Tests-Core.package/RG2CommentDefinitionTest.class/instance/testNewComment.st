@@ -5,6 +5,7 @@ testNewComment
 	comment := RG2CommentDefinition unnamed.
 	
 	self assert: (comment isRing2Resolved).
+	self assert: (comment isComment).
 	
 	self assert: (comment hasUnresolvedAll: #(content author time name)).
 	

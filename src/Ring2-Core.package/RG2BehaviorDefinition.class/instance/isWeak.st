@@ -1,4 +1,4 @@
-as yet unclassified
+testing
 isWeak
 
 	^ self layout isWeakLayout

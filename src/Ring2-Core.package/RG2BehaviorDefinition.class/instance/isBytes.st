@@ -1,4 +1,4 @@
-as yet unclassified
+testing
 isBytes
 
 	^ self layout isByteLayout 

@@ -1,4 +1,4 @@
-as yet unclassified
+testing
 isPointers
 
 	^ self isBits not
