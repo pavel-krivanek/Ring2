@@ -1,4 +1,4 @@
-bootstrap
+*Ring2-Bootstrap
 index
 
 	"TODO!"

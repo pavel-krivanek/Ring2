@@ -1,4 +1,4 @@
-as yet unclassified
+*Ring2-Bootstrap
 emitValue: aMethodBuilder
 	aMethodBuilder
 		pushLiteralVariable: #slot -> self;

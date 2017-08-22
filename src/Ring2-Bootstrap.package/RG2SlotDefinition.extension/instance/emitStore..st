@@ -1,4 +1,4 @@
-as yet unclassified
+*Ring2-Bootstrap
 emitStore: aMethodBuilder
 	| tempName |
 	tempName := Object new.
