@@ -1,7 +1,7 @@
 tests
 testCreationOfDefinitions
 
-	| env1 method method2 |
+	| env1 method |
 	
 	env1 := RG2Environment new.
 	
@@ -12,9 +12,4 @@ testCreationOfDefinitions
 	self assert: method parent name equals: #Object.
 	self assert: (method environment == env1).
 	
-	method2 := (Object>>#isRing2Object) asRing2Definition.
-	self assert: method2 class equals: RG2MethodDefinition.	
-	self assert: method2 selector equals: #isRing2Object.
-	self assert: method2 parent name equals: #Object.
 
-	self deny: (method2 environment == env1).
