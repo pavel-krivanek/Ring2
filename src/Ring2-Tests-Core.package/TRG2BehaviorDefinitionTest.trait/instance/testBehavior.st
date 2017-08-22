@@ -14,5 +14,5 @@ testBehavior
 	
 	self deny: (newBehavior isRing2FullyUnresolved).
 
-	self assert: newBehavior hasTraitComposition.	
+	self deny: newBehavior hasTraitComposition.	
 	
