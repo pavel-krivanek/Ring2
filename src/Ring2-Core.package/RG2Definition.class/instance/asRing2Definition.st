@@ -1,4 +1,4 @@
-*Ring2-Compatibility
+converting
 asRing2Definition
 
 	^ self
