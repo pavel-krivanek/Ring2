@@ -1,4 +1,4 @@
-as yet unclassified
+caching
 invalidateName: aSymbol
 
 	behaviorsDictionary removeKey: aSymbol

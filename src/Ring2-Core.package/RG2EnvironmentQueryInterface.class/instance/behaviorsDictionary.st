@@ -1,4 +1,4 @@
-accessing
+caching
 behaviorsDictionary
 
 	^ behaviorsDictionary ifNil: [ 

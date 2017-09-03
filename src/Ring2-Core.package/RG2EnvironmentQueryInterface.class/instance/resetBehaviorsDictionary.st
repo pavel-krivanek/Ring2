@@ -1,4 +1,4 @@
-accessing
+caching
 resetBehaviorsDictionary
 
 	behaviorsDictionary := IdentityDictionary new

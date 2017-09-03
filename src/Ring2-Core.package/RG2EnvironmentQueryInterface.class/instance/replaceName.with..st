@@ -1,4 +1,4 @@
-as yet unclassified
+caching
 replaceName: aSymbol with: aNewSymbol
 
 	| aRG2Behavior |

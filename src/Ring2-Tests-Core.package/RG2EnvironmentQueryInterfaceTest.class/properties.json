@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "RG2Test",
+	"category" : "Ring2-Tests-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RG2EnvironmentQueryInterfaceTest",
+	"type" : "normal"
+}

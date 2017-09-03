@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 behaviorNamed: aSymbol
 
 	^ self behaviorNamed: aSymbol ifAbsent: [ nil]
