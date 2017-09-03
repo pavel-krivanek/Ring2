@@ -1,4 +1,4 @@
-*Ring2-Core
+*Ring2-Compatibility
 asRing2DefinitionIn: aRG2Environment
 
 	^ (self methodClass asRing2DefinitionIn: aRG2Environment) methods detect: [:each | 
