@@ -6,14 +6,14 @@ testProtocols
 	env1 := RG2Environment new.
 	env1 backend: (RG2ReadOnlyImageBackend for: env1).
 	
-	point := Point asRing2DefinitionIn: env1.
+	point := Point asRing2MinimalDefinitionIn: env1.
 	self assert: (point protocols notEmpty).
 	protocol := point protocols detect: [ :each | each = 'accessing' ].
 	self assert: (protocol isSymbol).
 	
-	method := (Point>>#x) asRing2DefinitionIn: env1.
+	method := (Point>>#x) asRing2MinimalDefinitionIn: env1.
 	protocol := method protocol.
-	method2 := (Point>>#y) asRing2DefinitionIn: env1.
+	method2 := (Point>>#y) asRing2MinimalDefinitionIn: env1.
 	protocol2 := method2 protocol.
 	
 	self assert: (protocol == protocol2).

@@ -6,7 +6,7 @@ testMethod
 	env := RG2Environment new.
 	env backend: (RG2ReadOnlyImageBackend for: env).
 	
-	method := (Point>>#x) asRing2DefinitionIn: env.
+	method := (Point>>#x) asRing2MinimalDefinitionIn: env.
 	
 	method author notEmpty.
 	method time > DateAndTime new.
