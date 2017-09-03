@@ -16,4 +16,6 @@ testMethod
 	self assert: (method package isRing2Object and: [method package isPackage]).
 	self assert: method package name equals: 'Kernel'.
 	self assert: (method package == method parent package).
-	self assert: method sourceCode equals: (Point>>#x) sourceCode.
+	self assert: method sourceCode equals: (Point>>#x) sourceCode.	
+	self assert: method ast equals: (Point>>#x) ast.
+		

@@ -13,4 +13,5 @@ testTraitComposition
 	self assert: traitComposition transformations first isTrait.
 	self assert: traitComposition transformations first isRing2Object.
 	
+	self assert: traitComposition parent traitComposition equals: traitComposition.
 	
