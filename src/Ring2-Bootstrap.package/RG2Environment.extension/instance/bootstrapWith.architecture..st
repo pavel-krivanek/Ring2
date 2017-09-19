@@ -1,9 +1,9 @@
 *Ring2-Bootstrap
-bootstrapWith: aPBRing2GitFetcher
+bootstrapWith: aPBRing2GitFetcher architecture: anArchitectureString
 
 	| builder |
 
-	builder := PBImageBuilderSpur5032bit new.
+	builder := PBImageBuilderSpur50 forArchitecture: anArchitectureString.
 	builder definitionFetcher: aPBRing2GitFetcher.
 	builder buildNumber: aPBRing2GitFetcher buildNumber.
 	builder instVarNamed: #systemDefinition put: self.

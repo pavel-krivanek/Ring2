@@ -7,4 +7,4 @@ bootstrap
 	fetcher commitHash: 'UNKNOWN'.
 	fetcher buildNumber: '1'.
 	
-	self bootstrapWith: fetcher.
+	self bootstrapWith: fetcher architecture: '32'.
