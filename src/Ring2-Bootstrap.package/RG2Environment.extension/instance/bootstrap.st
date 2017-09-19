@@ -7,4 +7,4 @@ bootstrap
 	fetcher commitHash: 'UNKNOWN'.
 	fetcher buildNumber: '1'.
 	
-	self bootstrapWith: fetcher architecture: '32'.
+	self bootstrapWith: fetcher architecture: '32' to: 'bootstrap.image' asFileReference.
