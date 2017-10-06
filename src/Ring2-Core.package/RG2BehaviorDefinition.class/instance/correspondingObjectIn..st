@@ -30,7 +30,6 @@ correspondingObjectIn: aRG2Environment
 				"for superclass and superclass metaclass we are not sure which subclass is the right one. Skip next roles."
 				self isTrait ifTrue: [ 
 					self classTrait = creator ifTrue: [ ^ correspondingCreator baseTrait ] ]
-				
 		]]].
 		
 
