@@ -1,4 +1,4 @@
 accesing
 definitionFor: anObject 
 
-	^ self definitionFor: anObject ifAbsentRegister: [ anObject asRing2DefinitionIn: self environment ]
+	^ self definitionFor: anObject ifAbsentRegister: [ anObject ensureRing2DefinitionIn: self environment ]
