@@ -10,7 +10,7 @@ ensureRing2DefinitionIn: aRG2Environment
 		metaclassDef traitComposition: (self traitCompositionFrom: self classTraitComposition parent: metaclassDef).			
 		(self superclassName = #nil)
 			ifTrue: [ def superclass: def ]
-			ifFalse: [ Transcript show: superclassName; cr.def superclass: (aRG2Environment ensureClassNamed: superclassName ) ].
+			ifFalse: [ def superclass: (aRG2Environment ensureClassNamed: superclassName ) ].
 		def category: self category.
 		def layout: (self ring2LayoutType parent: def).
 		metaclassDef layout: (RG2FixedLayoutDefinition parent: metaclassDef). 
