@@ -1,16 +1,16 @@
 *Calypso-Ring2
 browse
 
-	 | clyEnv clyNavEnv browser |
+	 | clyEnv clyNavEnv |
 
 	clyEnv := ClyRing2Environment new.
 	clyEnv environment: self.
 
-	clyNavEnv := (ClySystemNavigationEnvironment over: clyEnv)
+	clyNavEnv := (ClyNavigationEnvironment over: clyEnv)
+		addPlugin: ClyDefaultSystemEnvironmentPlugin new;
 	    attachToSystem.
 
-	browser := ClySystemBrowser new 
-	        showEnvironment: clyNavEnv.
-	browser addPlugin: ClyStandardBrowserPlugin new.
-
-	^ browser open.
+	^ClyFullBrowser new 
+		navigationEnvironment: clyNavEnv;
+		addPlugin: ClyStandardBrowserPlugin new;
+		open
