@@ -9,6 +9,8 @@ definitionForNautilus
 
 	| aStream poolString |
 	
+	(self slots anySatisfy: [ :slot | slot isSpecial ]) ifTrue: [ ^ self definitionForNautilusWithSlots ].
+	
 	poolString := self sharedPoolsString.
 	aStream := (String new: 800) writeStream.
 	superclass
