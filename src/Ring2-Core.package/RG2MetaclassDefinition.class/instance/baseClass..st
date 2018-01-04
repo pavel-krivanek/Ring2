@@ -1,4 +1,4 @@
 accessing - backend
-baseClass: aaRG2ClassDefinition
+baseClass: aRG2ClassDefinition
 
-	self backend forBehavior setBaseClassFor: self to: aaRG2ClassDefinition
+	self backend forBehavior setBaseClassFor: self to: aRG2ClassDefinition

@@ -1,11 +1,7 @@
 resolving
 makeResolved
 
-	
-	"try to set the correct name before resolving of it"
-	((self hasUnresolved: #name) and: [ self classTrait isRing2Resolved and: [ self classTrait hasResolved: #name ] ]) ifTrue: [ 
-		name := (self classTrait name withoutSuffix: ' classTrait') asSymbol.
-		 ].
+	self resolveName.
 	
 	super makeResolved.
 	classTrait := self classTrait.
