@@ -1,3 +1,3 @@
 accessing
 classes
-	^ package classes values
+	^ package definedClasses 
