@@ -1,4 +1,8 @@
 *Ring2-Compatibility
 asActive
 
-	^ self
+	| aMethod |
+	
+	aMethod := self copy makeResolved.
+	aMethod environment backend: RG2ReadOnlyImageBackend new. 
+	^ aMethod. 
