@@ -1,9 +1,9 @@
 *Ring2-Compatibility
 realClass: aClass selector: aString
 
-	| env |
+	| env aMethod |
 	
 	env := RG2Environment new.
-	(aClass>>aString asSymbol) ensureRing2DefinitionIn: env.
+	aMethod := (aClass>>aString asSymbol) ensureRing2DefinitionIn: env.
 	env backend: (RG2ReadOnlyImageBackend for: env).
-	^ env
+	^ aMethod
