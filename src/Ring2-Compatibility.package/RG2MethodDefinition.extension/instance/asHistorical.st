@@ -5,4 +5,4 @@ asHistorical
 	
 	aMethod := self copy makeResolved.
 	aMethod environment backend: RG2EnvironmentBackend new. 
-	^ aMethod.
+	^ aMethod. 
