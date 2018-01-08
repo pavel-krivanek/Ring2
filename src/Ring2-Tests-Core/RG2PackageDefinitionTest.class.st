@@ -4,7 +4,7 @@ SUnit tests for packages
 Class {
 	#name : #RG2PackageDefinitionTest,
 	#superclass : #RG2Test,
-	#category : 'Ring2-Tests-Core'
+	#category : #'Ring2-Tests-Core'
 }
 
 { #category : #testing }

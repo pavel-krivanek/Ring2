@@ -84,7 +84,7 @@ Class {
 		'time',
 		'tags'
 	],
-	#category : 'Ring2-Core-Kernel'
+	#category : #'Ring2-Core-Kernel'
 }
 
 { #category : #'managing container' }

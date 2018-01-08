@@ -1,7 +1,7 @@
 Class {
 	#name : #RG2SlotDefinition,
 	#superclass : #RG2ElementDefinition,
-	#category : 'Ring2-Core-Kernel'
+	#category : #'Ring2-Core-Kernel'
 }
 
 { #category : #bootstrap }

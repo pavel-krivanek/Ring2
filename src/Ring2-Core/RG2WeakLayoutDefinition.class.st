@@ -1,7 +1,7 @@
 Class {
 	#name : #RG2WeakLayoutDefinition,
 	#superclass : #RG2PointerLayoutDefinition,
-	#category : 'Ring2-Core-Kernel'
+	#category : #'Ring2-Core-Kernel'
 }
 
 { #category : #'testing types' }

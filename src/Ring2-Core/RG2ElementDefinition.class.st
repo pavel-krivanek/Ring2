@@ -78,7 +78,7 @@ Example:
 Class {
 	#name : #RG2ElementDefinition,
 	#superclass : #RG2Definition,
-	#category : 'Ring2-Core-Kernel'
+	#category : #'Ring2-Core-Kernel'
 }
 
 { #category : #'parsing stamp' }

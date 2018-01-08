@@ -1,7 +1,7 @@
 Class {
 	#name : #RG2BackendTest,
 	#superclass : #RG2Test,
-	#category : 'Ring2-Tests-Core'
+	#category : #'Ring2-Tests-Core'
 }
 
 { #category : #'as yet unclassified' }

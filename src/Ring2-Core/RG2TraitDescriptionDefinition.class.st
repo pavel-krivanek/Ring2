@@ -4,7 +4,7 @@ RG2TraitDescriptionDefinition is the common parent for traits and metatraits tha
 Class {
 	#name : #RG2TraitDescriptionDefinition,
 	#superclass : #RG2BehaviorDefinition,
-	#category : 'Ring2-Core-Kernel'
+	#category : #'Ring2-Core-Kernel'
 }
 
 { #category : #variables }

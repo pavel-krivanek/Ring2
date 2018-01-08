@@ -1,7 +1,7 @@
 Class {
 	#name : #RG2ReadOnlyImageBackend,
 	#superclass : #RG2ReadOnlyBackend,
-	#category : 'Ring2-Core-Environment'
+	#category : #'Ring2-Core-Environment'
 }
 
 { #category : #'as yet unclassified' }
@@ -256,8 +256,12 @@ RG2ReadOnlyImageBackend >> metaclassTraitBaseTraitFor: aRG2MetaclassTraitDefinit
 
 { #category : #method }
 RG2ReadOnlyImageBackend >> methodPackageFor: aRG2MethodDefinition [
-
-	^ (self realMethodFor: aRG2MethodDefinition) package asRing2MinimalDefinitionIn: aRG2MethodDefinition environment.
+	
+	| realMethod |
+	
+	realMethod := self realMethodFor: aRG2MethodDefinition.
+	^ realMethod 
+		ifNotNil: [ realMethod package asRing2MinimalDefinitionIn: aRG2MethodDefinition environment ]
 ]
 
 { #category : #general }

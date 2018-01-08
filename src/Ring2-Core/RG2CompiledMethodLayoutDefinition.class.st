@@ -1,7 +1,7 @@
 Class {
 	#name : #RG2CompiledMethodLayoutDefinition,
 	#superclass : #RG2ObjectLayoutDefinition,
-	#category : 'Ring2-Core-Kernel'
+	#category : #'Ring2-Core-Kernel'
 }
 
 { #category : #'testing types' }

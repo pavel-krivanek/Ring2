@@ -1,7 +1,7 @@
 Class {
 	#name : #RG2MCTest,
 	#superclass : #RG2Test,
-	#category : 'Ring2-Tests-Monticello'
+	#category : #'Ring2-Tests-Monticello'
 }
 
 { #category : #tests }

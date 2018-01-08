@@ -4,7 +4,7 @@ I'm a nice comment!, treat me well :).
 Class {
 	#name : #Ring2ChunkImporterTest,
 	#superclass : #RG2Test,
-	#category : 'Ring2-Tests-ChunkImporter'
+	#category : #'Ring2-Tests-ChunkImporter'
 }
 
 { #category : #'expected failures' }

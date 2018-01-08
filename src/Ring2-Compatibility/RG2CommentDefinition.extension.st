@@ -39,7 +39,7 @@ RG2CommentDefinition >> realClass [
 ]
 
 { #category : #'*Ring2-Compatibility' }
-RG2CommentDefinition classSide >> realClass: aClass [
+RG2CommentDefinition class >> realClass: aClass [
 	"Creates a ring comment definition from a Smalltalk class"
 	
 	| env aDefinition |

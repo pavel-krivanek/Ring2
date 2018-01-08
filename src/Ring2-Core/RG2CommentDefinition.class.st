@@ -9,7 +9,7 @@ Class {
 		'author',
 		'time'
 	],
-	#category : 'Ring2-Core-Kernel'
+	#category : #'Ring2-Core-Kernel'
 }
 
 { #category : #'managing container' }

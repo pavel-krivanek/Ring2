@@ -34,17 +34,19 @@ RG2MethodDefinition >> asHistorical [
 ]
 
 { #category : #'*Ring2-Compatibility' }
-RG2MethodDefinition >> asStandalone [
+RG2MethodDefinition >> asStandaloneWithPackage [
 
-	| aMethod |
+	| aDefinition |
 	
-	aMethod := self copy makeResolved.
-	aMethod environment backend: RG2EnvironmentBackend new. 
-	^ aMethod. 
+	aDefinition := self copy.
+	aDefinition environment backend: (RG2ReadOnlyImageBackend for: aDefinition environment). 
+	aDefinition makeResolved.
+	aDefinition environment backend: RG2EnvironmentBackend new. 
+	^ aDefinition. 
 ]
 
 { #category : #'*Ring2-Compatibility' }
-RG2MethodDefinition classSide >> className: aString selector: aString2 isMetaSide: isMeta [
+RG2MethodDefinition class >> className: aString selector: aString2 isMetaSide: isMeta [
 
 	| aClass env |
 	env := RG2Environment new.
@@ -97,7 +99,7 @@ RG2MethodDefinition >> realClass [
 ]
 
 { #category : #'*Ring2-Compatibility' }
-RG2MethodDefinition classSide >> realClass: aClass selector: aString [
+RG2MethodDefinition class >> realClass: aClass selector: aString [
 
 	| env aMethod |
 	

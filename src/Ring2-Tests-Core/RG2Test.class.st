@@ -1,7 +1,7 @@
 Class {
 	#name : #RG2Test,
 	#superclass : #TestCase,
-	#category : 'Ring2-Tests-Core'
+	#category : #'Ring2-Tests-Core'
 }
 
 { #category : #utilities }

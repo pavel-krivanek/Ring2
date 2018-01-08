@@ -1,7 +1,7 @@
 Class {
 	#name : #RG2InstanceVariableSlotDefinition,
 	#superclass : #RG2IndexedSlotDefinition,
-	#category : 'Ring2-Core-Kernel'
+	#category : #'Ring2-Core-Kernel'
 }
 
 { #category : #testing }

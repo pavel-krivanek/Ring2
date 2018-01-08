@@ -3,7 +3,7 @@ Class {
 	#superclass : #RG2Test,
 	#traits : 'TRG2BehaviorDefinitionTest',
 	#classTraits : 'TRG2BehaviorDefinitionTest classTrait',
-	#category : 'Ring2-Tests-Core'
+	#category : #'Ring2-Tests-Core'
 }
 
 { #category : #'as yet unclassified' }

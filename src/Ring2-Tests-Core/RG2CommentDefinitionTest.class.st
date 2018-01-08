@@ -1,7 +1,7 @@
 Class {
 	#name : #RG2CommentDefinitionTest,
 	#superclass : #RG2Test,
-	#category : 'Ring2-Tests-Core'
+	#category : #'Ring2-Tests-Core'
 }
 
 { #category : #tests }

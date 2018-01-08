@@ -4,7 +4,7 @@ Unfinished experiment
 Class {
 	#name : #RG2FilteredReadOnlyImageBackend,
 	#superclass : #RG2ReadOnlyImageBackend,
-	#category : 'Ring2-Core-Environment'
+	#category : #'Ring2-Core-Environment'
 }
 
 { #category : #'as yet unclassified' }
