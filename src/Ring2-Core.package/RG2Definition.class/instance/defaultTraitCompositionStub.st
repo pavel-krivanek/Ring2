@@ -1,4 +1,0 @@
-hierarchy-defaults
-defaultTraitCompositionStub
-
-	^ RG2TraitCompositionDefinition unresolved

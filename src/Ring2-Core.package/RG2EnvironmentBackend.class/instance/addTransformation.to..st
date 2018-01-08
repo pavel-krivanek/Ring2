@@ -1,4 +1,0 @@
-trait composition
-addTransformation: aRG2TraitTransformationDefinition to: aRG2TraitCompositionDefinition
-
-	^ aRG2TraitCompositionDefinition pvtAddTransformation: aRG2TraitTransformationDefinition

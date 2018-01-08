@@ -1,4 +1,0 @@
-environment
-addGlobalVariable: aRG2GlobalVariableDefinition to: aRG2Environment
-
-	^ aRG2Environment pvtAddGlobalVariable: aRG2GlobalVariableDefinition

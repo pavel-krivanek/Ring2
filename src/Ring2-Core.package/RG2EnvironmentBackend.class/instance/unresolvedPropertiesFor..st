@@ -1,4 +1,0 @@
-resolving
-unresolvedPropertiesFor: aRG2Definition
-
-	^ aRG2Definition pvtUnresolvedProperties

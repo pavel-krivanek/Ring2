@@ -1,4 +1,0 @@
-resolving
-setNameFromSiblingIfNeeded
-
-	self subclassResponsibility 

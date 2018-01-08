@@ -1,1 +1,0 @@
-RG2ClassDefinition is the concrete representation of a class (no trait)

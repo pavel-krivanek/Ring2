@@ -1,4 +1,0 @@
-package
-cleanTagsForClassesFor: aRG2Package
-
-	aRG2Package pvtCleanTagsForClasses.
