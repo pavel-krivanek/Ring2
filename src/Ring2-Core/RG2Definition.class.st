@@ -554,7 +554,7 @@ RG2Definition >> makeResolved [
 
 	self propertyNamed: #resolved put: true.
 	
-	name := self name.
+	self resolveName
 ]
 
 { #category : #merging }
@@ -748,6 +748,12 @@ RG2Definition >> removePropertyNamed: propertyName [
 	
 	(self hasPropertyNamed: propertyName)
 		ifTrue:[ properties removeKey: propertyName ]
+]
+
+{ #category : #resolving }
+RG2Definition >> resolveName [
+
+	name := self name.
 ]
 
 { #category : #resolving }

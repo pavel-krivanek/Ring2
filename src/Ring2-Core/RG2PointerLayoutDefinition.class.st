@@ -79,7 +79,7 @@ RG2PointerLayoutDefinition >> makeResolved [
 
 	super makeResolved.
 	
-	slots := self slots asOrderedCollection.
+	self resolveSlots.
 
 ]
 
@@ -131,6 +131,13 @@ RG2PointerLayoutDefinition >> removeSlot: aRG2SlotDefinition [
 
 	self parent announceDefinitionChangeDuring: [ 
 		self backend forBehavior removeSlot: aRG2SlotDefinition from: self ].
+]
+
+{ #category : #resolving }
+RG2PointerLayoutDefinition >> resolveSlots [
+	
+	slots := self slots asOrderedCollection.
+
 ]
 
 { #category : #'queries - slots' }

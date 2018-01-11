@@ -128,9 +128,9 @@ RG2CommentDefinition >> makeResolved [
 
 	super makeResolved.
 	
-	content := self content.
-	author := self author.
-	time := self time.
+	self resolveContent.
+	self resolveAuthor.
+	self resolveTime.
 ]
 
 { #category : #printing }
@@ -188,6 +188,24 @@ RG2CommentDefinition >> pvtTime [
 RG2CommentDefinition >> pvtTime: aDateAndTime [
 
 	^ time := aDateAndTime
+]
+
+{ #category : #resolving }
+RG2CommentDefinition >> resolveAuthor [
+
+	author := self author.
+]
+
+{ #category : #resolving }
+RG2CommentDefinition >> resolveContent [
+
+	content := self content.
+]
+
+{ #category : #resolving }
+RG2CommentDefinition >> resolveTime [
+
+	time := self time.
 ]
 
 { #category : #'backward compatibility' }

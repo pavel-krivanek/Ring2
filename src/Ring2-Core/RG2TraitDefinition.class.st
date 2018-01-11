@@ -169,9 +169,10 @@ RG2TraitDefinition >> makeResolved [
 	self resolveName.
 	
 	super makeResolved.
-	classTrait := self classTrait.
-	comment := self comment.
-	package := self package.
+	
+	self resolveClassTrait.
+	self resolveComment.
+	self resolvePackage.
 	
 ]
 
@@ -254,6 +255,24 @@ RG2TraitDefinition >> referencedBehaviors [
 RG2TraitDefinition >> referencedPackages [
 
 	^ Array with: package
+]
+
+{ #category : #resolving }
+RG2TraitDefinition >> resolveClassTrait [
+
+	classTrait := self classTrait.
+]
+
+{ #category : #resolving }
+RG2TraitDefinition >> resolveComment [
+
+	comment := self comment.
+]
+
+{ #category : #resolving }
+RG2TraitDefinition >> resolvePackage [
+
+	package := self package.
 ]
 
 { #category : #resolving }

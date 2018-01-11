@@ -52,7 +52,7 @@ RG2UnknownSlotDefinition >> makeResolved [
 
 	super makeResolved.
 	
-	expression := self expression.
+	self resolveExpression.
 
 ]
 
@@ -82,4 +82,11 @@ RG2UnknownSlotDefinition >> pvtResolvableProperties [
 	}
 	
 	
+]
+
+{ #category : #resolving }
+RG2UnknownSlotDefinition >> resolveExpression [
+	
+	expression := self expression.
+
 ]
