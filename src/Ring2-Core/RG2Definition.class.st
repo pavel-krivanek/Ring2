@@ -403,6 +403,13 @@ RG2Definition >> isBehavior [
 	^ false
 ]
 
+{ #category : #resolving }
+RG2Definition >> isBehaviorInformationResolved [
+
+	^ self propertyNamed: #behaviorInformationResolved ifAbsent: [ false ].
+
+]
+
 { #category : #'testing types' }
 RG2Definition >> isClass [
 
@@ -753,7 +760,12 @@ RG2Definition >> removePropertyNamed: propertyName [
 { #category : #resolving }
 RG2Definition >> resolveBehaviorInformation [
 
-	"Resolve basic information about this definition related to the behavior domain (information needed for full class definition etc.)"
+	"Resolve basic information about this definition related to the behavior domain (information needed for full class definition etc.). 
+	
+	We need to avoid cycles so we store information about resolving into a property named #behaviorInformationResolved."
+	
+	self propertyNamed: #behaviorInformationResolved put: true.
+
 ]
 
 { #category : #resolving }

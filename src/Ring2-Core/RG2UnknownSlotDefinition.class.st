@@ -87,7 +87,9 @@ RG2UnknownSlotDefinition >> pvtResolvableProperties [
 { #category : #resolving }
 RG2UnknownSlotDefinition >> resolveBehaviorInformation [
 
+	self isBehaviorInformationResolved ifTrue: [ ^ self ].
 	super resolveBehaviorInformation.
+	
 	self resolveExpression.
 ]
 

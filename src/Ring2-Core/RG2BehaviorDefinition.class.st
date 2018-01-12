@@ -857,6 +857,21 @@ RG2BehaviorDefinition >> removeProtocol: aSymbol [
 ]
 
 { #category : #resolving }
+RG2BehaviorDefinition >> resolveBehaviorInformation [
+
+	self isBehaviorInformationResolved ifTrue: [ ^ self ].
+	super resolveBehaviorInformation.
+	
+	self resolveSuperclassName.
+	
+	self resolveTraitComposition.
+	self traitComposition resolveBehaviorInformation.
+	
+	self resolveSibling.
+	self resolveTags.
+]
+
+{ #category : #resolving }
 RG2BehaviorDefinition >> resolveLocalMethods [
 
 	localMethods := self localMethods asSet.
@@ -888,10 +903,23 @@ RG2BehaviorDefinition >> resolveProtocols [
 ]
 
 { #category : #resolving }
+RG2BehaviorDefinition >> resolveSibling [
+
+	self subclassResponsibility.
+]
+
+{ #category : #resolving }
 RG2BehaviorDefinition >> resolveSuperclass [
 
 	superclass := self superclass.
 	
+]
+
+{ #category : #resolving }
+RG2BehaviorDefinition >> resolveSuperclassName [
+
+	self resolveSuperclass.
+	self superclass resolveName.	
 ]
 
 { #category : #resolving }

@@ -481,6 +481,15 @@ RG2PackageDefinition >> removeExtensionMethod: aRG2MethodDefinition [
 ]
 
 { #category : #resolving }
+RG2PackageDefinition >> resolveBehaviorInformation [
+
+	self isBehaviorInformationResolved ifTrue: [ ^ self ].
+	super resolveBehaviorInformation.
+	
+	self resolveName.
+]
+
+{ #category : #resolving }
 RG2PackageDefinition >> resolveDefinedBehaviors [
 
 	definedBehaviors := self definedBehaviors.

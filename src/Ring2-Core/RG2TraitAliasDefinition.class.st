@@ -144,7 +144,9 @@ RG2TraitAliasDefinition >> resolveAliases [
 { #category : #resolving }
 RG2TraitAliasDefinition >> resolveBehaviorInformation [
 
+	self isBehaviorInformationResolved ifTrue: [ ^ self ].
 	super resolveBehaviorInformation.
+	
 	self resolveAliases.
 ]
 

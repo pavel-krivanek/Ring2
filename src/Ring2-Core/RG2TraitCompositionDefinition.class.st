@@ -149,7 +149,9 @@ RG2TraitCompositionDefinition >> removeTransformation: aRG2TraitTransformationDe
 { #category : #resolving }
 RG2TraitCompositionDefinition >> resolveBehaviorInformation [
 
+	self isBehaviorInformationResolved ifTrue: [ ^ self ].
 	super resolveBehaviorInformation.
+	
 	self resolveTransformations.
 	self transformationsDo: [ :each | each resolveBehaviorInformation ].
 ]

@@ -107,7 +107,9 @@ RG2TraitTransformationDefinition >> pvtSubject: aRG2TraitDefinition [
 { #category : #resolving }
 RG2TraitTransformationDefinition >> resolveBehaviorInformation [
 
+	self isBehaviorInformationResolved ifTrue: [ ^ self ].
 	super resolveBehaviorInformation.
+	
 	self resolveSubject.
 	self subject resolveName.
 

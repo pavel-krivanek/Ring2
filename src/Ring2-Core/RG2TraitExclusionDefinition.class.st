@@ -139,7 +139,9 @@ RG2TraitExclusionDefinition >> removeExclusion: aSymbol [
 { #category : #resolving }
 RG2TraitExclusionDefinition >> resolveBehaviorInformation [
 
+	self isBehaviorInformationResolved ifTrue: [ ^ self ].
 	super resolveBehaviorInformation.
+	
 	self resolveExclusions.
 ]
 

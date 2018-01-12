@@ -61,6 +61,33 @@ RG2ResolveBehaviorInformationTest >> testInstanceVariableSlotDefinition [
 ]
 
 { #category : #tests }
+RG2ResolveBehaviorInformationTest >> testLayout [
+
+	| layout realLayout |
+	
+	realLayout := RG2TestClassE classLayout.
+	layout := realLayout asRing2MinimalDefinitionIn: env.
+	layout resolveBehaviorInformation.
+	self detachFromImage.	
+	self assert: layout slots size equals: 2.
+	self assert: layout slots first name equals: #var1.
+	self assert: layout slots second name equals: #var2.
+]
+
+{ #category : #tests }
+RG2ResolveBehaviorInformationTest >> testPackage [
+
+	| package realPackage packageName |
+	
+	packageName := #'Ring2-Tests-Core'.
+	realPackage := packageName asPackage.
+	package := realPackage asRing2MinimalDefinitionIn: env.
+	package resolveBehaviorInformation.
+	self detachFromImage.	
+	self assert: package name equals: packageName.
+]
+
+{ #category : #tests }
 RG2ResolveBehaviorInformationTest >> testSharedPoolVariable [
 
 	| var realClass |

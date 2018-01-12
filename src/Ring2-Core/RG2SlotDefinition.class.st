@@ -44,6 +44,8 @@ RG2SlotDefinition >> name: aString [
 { #category : #resolving }
 RG2SlotDefinition >> resolveBehaviorInformation [
 
+	self isBehaviorInformationResolved ifTrue: [ ^ self ].
 	super resolveBehaviorInformation.
+	
 	self resolveName.
 ]

@@ -205,6 +205,13 @@ RG2MetaclassDefinition >> resolveBaseClass [
 ]
 
 { #category : #resolving }
+RG2MetaclassDefinition >> resolveSibling [
+
+	self resolveMetaclass.
+	self baseClass resolveBehaviorInformation.
+]
+
+{ #category : #resolving }
 RG2MetaclassDefinition >> setNameFromSiblingIfNeeded [
 
 	(self hasUnresolved: #name)

@@ -134,6 +134,16 @@ RG2PointerLayoutDefinition >> removeSlot: aRG2SlotDefinition [
 ]
 
 { #category : #resolving }
+RG2PointerLayoutDefinition >> resolveBehaviorInformation [
+
+	self isBehaviorInformationResolved ifTrue: [ ^ self ].
+	super resolveBehaviorInformation.
+	
+	self resolveSlots.
+	self slotsDo: #resolveBehaviorInformation.
+]
+
+{ #category : #resolving }
 RG2PointerLayoutDefinition >> resolveSlots [
 	
 	slots := self slots asOrderedCollection.

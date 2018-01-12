@@ -199,7 +199,9 @@ RG2CommentDefinition >> resolveAuthor [
 { #category : #resolving }
 RG2CommentDefinition >> resolveBehaviorInformation [
 
+	self isBehaviorInformationResolved ifTrue: [ ^ self ].
 	super resolveBehaviorInformation.
+	
 	self resolveContent.
 	self resolveAuthor.
 	self resolveTime.
