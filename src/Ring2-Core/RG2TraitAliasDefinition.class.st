@@ -141,6 +141,13 @@ RG2TraitAliasDefinition >> resolveAliases [
 	aliases := self aliases.
 ]
 
+{ #category : #resolving }
+RG2TraitAliasDefinition >> resolveBehaviorInformation [
+
+	super resolveBehaviorInformation.
+	self resolveAliases.
+]
+
 { #category : #'as yet unclassified' }
 RG2TraitAliasDefinition >> traitCompositionString [
 

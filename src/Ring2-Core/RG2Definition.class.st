@@ -751,6 +751,12 @@ RG2Definition >> removePropertyNamed: propertyName [
 ]
 
 { #category : #resolving }
+RG2Definition >> resolveBehaviorInformation [
+
+	"Resolve basic information about this definition related to the behavior domain (information needed for full class definition etc.)"
+]
+
+{ #category : #resolving }
 RG2Definition >> resolveName [
 
 	name := self name.
