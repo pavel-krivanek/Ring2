@@ -85,6 +85,13 @@ RG2UnknownSlotDefinition >> pvtResolvableProperties [
 ]
 
 { #category : #resolving }
+RG2UnknownSlotDefinition >> resolveBehaviorInformation [
+
+	super resolveBehaviorInformation.
+	self resolveExpression.
+]
+
+{ #category : #resolving }
 RG2UnknownSlotDefinition >> resolveExpression [
 	
 	expression := self expression.

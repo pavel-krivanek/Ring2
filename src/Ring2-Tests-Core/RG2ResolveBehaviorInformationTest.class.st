@@ -22,6 +22,58 @@ RG2ResolveBehaviorInformationTest >> setUp [
 ]
 
 { #category : #tests }
+RG2ResolveBehaviorInformationTest >> testClassComment [
+
+	| comment realClass |
+	
+	realClass := RG2TestClassE.
+	comment := realClass asRing2MinimalCommentDefinitionIn: env.
+	comment resolveBehaviorInformation.
+	self detachFromImage.	
+	self assert: comment content = realClass comment.	
+	self assert: comment stamp equals: realClass organization commentStamp
+]
+
+{ #category : #tests }
+RG2ResolveBehaviorInformationTest >> testClassVariable [
+
+	| var realVar |
+	
+	realVar := RG2TestClassE classVariableNamed: #classVar1.
+	var := realVar asRing2MinimalDefinitionIn: env.
+	var resolveBehaviorInformation.
+	self detachFromImage.	
+	self assert: var name equals: #classVar1.
+
+]
+
+{ #category : #tests }
+RG2ResolveBehaviorInformationTest >> testInstanceVariableSlotDefinition [
+
+	| slot realSlot |
+	
+	realSlot := RG2TestClassE slotNamed: #var1.
+	slot := realSlot asRing2MinimalDefinitionIn: env.
+	slot resolveBehaviorInformation.
+	self detachFromImage.	
+	self assert: slot name equals: #var1.
+
+]
+
+{ #category : #tests }
+RG2ResolveBehaviorInformationTest >> testSharedPoolVariable [
+
+	| var realClass |
+	
+	realClass := RG2TestPoolUser.
+	var := (realClass asRing2MinimalDefinitionIn: env) sharedPools first.
+	var resolveBehaviorInformation.
+	self detachFromImage.	
+	self assert: var name equals: #RG2TestPool.
+
+]
+
+{ #category : #tests }
 RG2ResolveBehaviorInformationTest >> testTraitAlias [
 
 	| alias realAlias |
@@ -34,5 +86,55 @@ RG2ResolveBehaviorInformationTest >> testTraitAlias [
 	self assert: alias subject isTrait.
 	self assert: alias subject isRing2Object.
 	self assertCollection: (alias aliases ) hasSameElements: { #c3->#c2 }.
+
+]
+
+{ #category : #tests }
+RG2ResolveBehaviorInformationTest >> testTraitComposition [
+
+	| composition realComposition transformation1 transformation2 |
+	
+	realComposition := RG2TestClassB traitComposition.
+	composition := realComposition asRing2MinimalDefinitionIn: env.
+	composition resolveBehaviorInformation.
+	self detachFromImage.	
+	self assert: composition transformations size equals: 2.	
+	transformation1 := composition transformations first.
+	transformation2 := composition transformations second.
+	self assert: transformation1 isTrait.
+	self assert: transformation1 isRing2Object.
+	self assert: transformation1 name equals: #RG2TestTraitA.
+	self assert: transformation2 isTraitExclusion.
+	self assert: transformation2 subject name equals: #RG2TestTraitB.
+	self assertCollection: transformation2 exclusions hasSameElements: { #c }.
+]
+
+{ #category : #tests }
+RG2ResolveBehaviorInformationTest >> testTraitExclusions [
+
+	| exclusion realExclusion |
+	
+	realExclusion := RG2TestClassB traitComposition transformations second.
+	exclusion := realExclusion asRing2MinimalDefinitionIn: env.
+	exclusion resolveBehaviorInformation.
+	self detachFromImage.	
+	self assert: exclusion subject name equals: #RG2TestTraitB.	
+	self assert: exclusion subject isTrait.
+	self assert: exclusion subject isRing2Object.
+	self assertCollection: (exclusion exclusions) hasSameElements: { #c }.
+
+]
+
+{ #category : #tests }
+RG2ResolveBehaviorInformationTest >> testUnknownSlot [
+
+	| slot realSlot |
+	
+	realSlot := RG2TestSlotUser slotNamed: #unknown.
+	slot := realSlot asRing2MinimalDefinitionIn: env.
+	slot resolveBehaviorInformation.
+	self detachFromImage.	
+	self assert: slot name equals: #unknown.
+	self assert: slot expression equals: 'RG2TestSlot forTesting' 
 
 ]

@@ -1,3 +1,6 @@
+"
+A supporting behavior for Ring tests.
+"
 Class {
 	#name : #RG2TestClassA,
 	#superclass : #Object,

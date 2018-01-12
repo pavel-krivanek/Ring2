@@ -1,3 +1,6 @@
+"
+A supporting behavior for Ring tests.
+"
 Trait {
 	#name : #RG2TestTraitC,
 	#traits : 'RG2TestTraitB',

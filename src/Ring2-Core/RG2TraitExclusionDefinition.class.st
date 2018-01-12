@@ -137,6 +137,13 @@ RG2TraitExclusionDefinition >> removeExclusion: aSymbol [
 ]
 
 { #category : #resolving }
+RG2TraitExclusionDefinition >> resolveBehaviorInformation [
+
+	super resolveBehaviorInformation.
+	self resolveExclusions.
+]
+
+{ #category : #resolving }
 RG2TraitExclusionDefinition >> resolveExclusions [
 	
 	exclusions := self exclusions.

@@ -197,6 +197,15 @@ RG2CommentDefinition >> resolveAuthor [
 ]
 
 { #category : #resolving }
+RG2CommentDefinition >> resolveBehaviorInformation [
+
+	super resolveBehaviorInformation.
+	self resolveContent.
+	self resolveAuthor.
+	self resolveTime.
+]
+
+{ #category : #resolving }
 RG2CommentDefinition >> resolveContent [
 
 	content := self content.
@@ -212,6 +221,17 @@ RG2CommentDefinition >> resolveTime [
 RG2CommentDefinition >> sourceCode [
 
 	^ self content   
+]
+
+{ #category : #accessing }
+RG2CommentDefinition >> stamp [
+
+	| timeString |
+	
+	timeString := String new: 8 streamContents: [ :aStream | 
+		self time asTime print24: true showSeconds: false on: aStream ].
+
+	^ self author asString, ' ', self time asDate mmddyyyy, ' ', timeString
 ]
 
 { #category : #'accessing - backend' }

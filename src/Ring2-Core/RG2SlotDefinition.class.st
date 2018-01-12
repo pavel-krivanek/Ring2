@@ -40,3 +40,10 @@ RG2SlotDefinition >> name: aString [
 	self parent parent announceDefinitionChangeDuring: [ 
 		super name: aString ].
 ]
+
+{ #category : #resolving }
+RG2SlotDefinition >> resolveBehaviorInformation [
+
+	super resolveBehaviorInformation.
+	self resolveName.
+]

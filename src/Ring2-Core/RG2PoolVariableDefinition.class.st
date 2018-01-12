@@ -26,3 +26,10 @@ RG2PoolVariableDefinition >> isPoolVariable [
 
 	^true
 ]
+
+{ #category : #resolving }
+RG2PoolVariableDefinition >> resolveBehaviorInformation [
+
+	super resolveBehaviorInformation.
+	self resolveName.
+]

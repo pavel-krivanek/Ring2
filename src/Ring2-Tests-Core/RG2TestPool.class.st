@@ -2,9 +2,10 @@
 A supporting behavior for Ring tests.
 "
 Class {
-	#name : #RG2TestClassD,
+	#name : #RG2TestPool,
 	#superclass : #Object,
-	#traits : 'RG2TestTraitB @ {#c3->#c2}',
-	#classTraits : 'RG2TestTraitB classTrait',
+	#classVars : [
+		'poolVar1'
+	],
 	#category : #'Ring2-Tests-Core-Support'
 }
