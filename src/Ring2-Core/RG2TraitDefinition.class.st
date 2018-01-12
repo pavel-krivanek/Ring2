@@ -258,6 +258,20 @@ RG2TraitDefinition >> referencedPackages [
 ]
 
 { #category : #resolving }
+RG2TraitDefinition >> resolveBehaviorInformation [
+
+	self isBehaviorInformationResolved ifTrue: [ ^ self ].
+	super resolveBehaviorInformation.
+
+	self resolveComment. 
+	self comment resolveBehaviorInformation.
+
+	self resolvePackage.
+	self package resolveBehaviorInformation.
+
+]
+
+{ #category : #resolving }
 RG2TraitDefinition >> resolveClassTrait [
 
 	classTrait := self classTrait.
@@ -273,6 +287,13 @@ RG2TraitDefinition >> resolveComment [
 RG2TraitDefinition >> resolvePackage [
 
 	package := self package.
+]
+
+{ #category : #resolving }
+RG2TraitDefinition >> resolveSibling [
+
+	self resolveClassTrait.
+	self classTrait resolveBehaviorInformation.
 ]
 
 { #category : #resolving }

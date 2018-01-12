@@ -53,7 +53,9 @@ RG2ResolveBehaviorInformationClassTest >> testMetaclass [
 
 	self assert: class metaclass isRing2Object.	
 	self assert: class metaclass isMeta.	
-	self assert: class metaclass name equals: #Object.
+	self assert: class metaclass name equals: #'RG2TestClassE class'.
+	self assert: class metaclass instVarNames equals: #(classInstVar1).
+	
 ]
 
 { #category : #tests }

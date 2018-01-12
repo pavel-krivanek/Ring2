@@ -139,6 +139,13 @@ RG2MetaclassTraitDefinition >> resolveBaseTrait [
 ]
 
 { #category : #resolving }
+RG2MetaclassTraitDefinition >> resolveSibling [
+
+	self resolveBaseTrait.
+	self baseTrait resolveBehaviorInformation.
+]
+
+{ #category : #resolving }
 RG2MetaclassTraitDefinition >> setNameFromSiblingIfNeeded [
 
 	(self hasUnresolved: #name)
