@@ -1,3 +1,4 @@
 *Ring2-Hermes
 asExportedLiteral
-	^ HETraitComposition for:self.
+	
+	^ HETraitCompositionExporter export: self traitCompositionString
