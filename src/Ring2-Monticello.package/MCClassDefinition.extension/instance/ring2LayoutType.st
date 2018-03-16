@@ -2,13 +2,13 @@
 ring2LayoutType
 
 	^ (Dictionary newFrom: {	
-		#compiledMethod -> RG2CompiledMethodLayoutDefinition. 
-		#bytes -> RG2ByteLayoutDefinition. 
-		#immediate -> RG2ImmediateLayoutDefinition. 
-		#words -> RG2WordLayoutDefinition. 
-		#week -> RG2WeakLayoutDefinition.
-		#variable -> RG2VariableLayoutDefinition.
-		#ephemeron -> RG2EphemeronLayoutDefinition.
-		#normal -> RG2FixedLayoutDefinition.
-		#weak -> RG2WeakLayoutDefinition.
+		#compiledMethod -> RG2CompiledMethodLayout. 
+		#bytes -> RG2ByteLayout. 
+		#immediate -> RG2ImmediateLayout. 
+		#words -> RG2WordLayout. 
+		#week -> RG2WeakLayout.
+		#variable -> RG2VariableLayout.
+		#ephemeron -> RG2EphemeronLayout.
+		#normal -> RG2FixedLayout.
+		#weak -> RG2WeakLayout.
 	}) at: type.		

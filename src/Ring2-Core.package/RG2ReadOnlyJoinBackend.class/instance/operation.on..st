@@ -1,11 +1,11 @@
 behavior
-operation: aBlock on: aRG2BehaviorDefinition
+operation: aBlock on: aRG2Behavior
 
 	"aBlock accepts backend and definition as arguments"
 
 	| originalDefinition originalEnvironment otherEnvironment result1 result2 |
 
-	originalDefinition := aRG2BehaviorDefinition propertyNamed: #originalDefinition.
+	originalDefinition := aRG2Behavior propertyNamed: #originalDefinition.
 	originalEnvironment := originalDefinition environment.
 	otherEnvironment := (originalEnvironment == environment1)
 		ifTrue: [ environment2  ]

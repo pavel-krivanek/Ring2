@@ -8,13 +8,13 @@ testGlobalVariablesCollection
 	self assert: env ask globalVariables isEmpty.
 	self assert: (env hasUnresolved: #globalVariables).
 	
-	globalVariable := RG2GlobalVariableDefinition named: #SomeGlobal parent: env.
+	globalVariable := RG2GlobalVariable named: #SomeGlobal parent: env.
 	env addGlobalVariable: globalVariable.
 	self assert: env ask globalVariables size equals: 1.
 
 	self assert: (env hasResolved: #globalVariables).
 	
-	globalVariable2 := RG2GlobalVariableDefinition named: #SomeGlobal2 parent: env.
+	globalVariable2 := RG2GlobalVariable named: #SomeGlobal2 parent: env.
 	env addGlobalVariable: globalVariable2.
 	self assert: env ask globalVariables size equals: 2.
 	

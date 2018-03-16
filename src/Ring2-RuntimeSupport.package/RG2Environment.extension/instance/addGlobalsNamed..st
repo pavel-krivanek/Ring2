@@ -2,4 +2,4 @@
 addGlobalsNamed: anArrayOfSymbols
 
 	anArrayOfSymbols do: [ :each |
-		self addGlobalVariable: (RG2GlobalVariableDefinition named: each parent: self)].
+		self addGlobalVariable: (RG2GlobalVariable named: each parent: self)].

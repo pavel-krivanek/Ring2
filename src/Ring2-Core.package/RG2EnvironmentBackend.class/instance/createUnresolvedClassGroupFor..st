@@ -1,40 +1,40 @@
 unresolved objects
-createUnresolvedClassGroupFor: aRG2BehaviorDefinition 
+createUnresolvedClassGroupFor: aRG2Behavior 
 
 	| classStub metaclassStub superclassStub superclassMetaclassStub packageStub1 packageStub2 |
 
-	classStub := aRG2BehaviorDefinition isMeta
-		ifFalse: [ aRG2BehaviorDefinition ]
-		ifTrue: [ RG2ClassDefinition unresolvedWithParent: self environment ].
-	classStub propertyNamed: #creator put: aRG2BehaviorDefinition.
+	classStub := aRG2Behavior isMeta
+		ifFalse: [ aRG2Behavior ]
+		ifTrue: [ RG2Class unresolvedWithParent: self environment ].
+	classStub propertyNamed: #creator put: aRG2Behavior.
 	classStub propertyNamed: #role put: #class.
 		
-	metaclassStub := aRG2BehaviorDefinition isMeta
-		ifFalse: [ RG2MetaclassDefinition unresolvedWithParent: self environment ]
-		ifTrue: [ aRG2BehaviorDefinition ].
-	metaclassStub propertyNamed: #creator put: aRG2BehaviorDefinition.
+	metaclassStub := aRG2Behavior isMeta
+		ifFalse: [ RG2Metaclass unresolvedWithParent: self environment ]
+		ifTrue: [ aRG2Behavior ].
+	metaclassStub propertyNamed: #creator put: aRG2Behavior.
 	metaclassStub propertyNamed: #role put: #metaclass.
 
-	superclassStub := RG2ClassDefinition unresolvedWithParent: self environment.
-	superclassStub propertyNamed: #creator put: aRG2BehaviorDefinition.
+	superclassStub := RG2Class unresolvedWithParent: self environment.
+	superclassStub propertyNamed: #creator put: aRG2Behavior.
 	superclassStub propertyNamed: #role put: #superclass.
 
-	superclassMetaclassStub := RG2MetaclassDefinition unresolvedWithParent: self environment.
-	superclassMetaclassStub propertyNamed: #creator put: aRG2BehaviorDefinition.
+	superclassMetaclassStub := RG2Metaclass unresolvedWithParent: self environment.
+	superclassMetaclassStub propertyNamed: #creator put: aRG2Behavior.
 	superclassMetaclassStub propertyNamed: #role put: #superclassMetaclass.
 	
-	packageStub1 := RG2PackageDefinition unresolvedWithParent: self environment.
+	packageStub1 := RG2Package unresolvedWithParent: self environment.
 	classStub pvtPackage: packageStub1.
 	self environment pvtAddPackage: packageStub1.
 	packageStub1 pvtAddDefinedBehavior: classStub.
-	packageStub1 propertyNamed: #creator put: aRG2BehaviorDefinition.
+	packageStub1 propertyNamed: #creator put: aRG2Behavior.
 	packageStub1 propertyNamed: #role put: #package.
 	
-	packageStub2 := RG2PackageDefinition unresolvedWithParent: self environment.
+	packageStub2 := RG2Package unresolvedWithParent: self environment.
 	superclassStub pvtPackage: packageStub2.
 	self environment pvtAddPackage: packageStub2.
 	packageStub2 pvtAddDefinedBehavior: superclassStub.
-	packageStub2 propertyNamed: #creator put: aRG2BehaviorDefinition.
+	packageStub2 propertyNamed: #creator put: aRG2Behavior.
 	packageStub2 propertyNamed: #role put: #superclassPackage.
 
 	classStub pvtSuperclass: superclassStub.
@@ -57,6 +57,6 @@ createUnresolvedClassGroupFor: aRG2BehaviorDefinition
 	self environment pvtAddBehavior: superclassMetaclassStub.
 	
 
-	^ 	aRG2BehaviorDefinition isMeta
+	^ 	aRG2Behavior isMeta
 		ifFalse: [ metaclassStub ]
 		ifTrue: [ classStub ].

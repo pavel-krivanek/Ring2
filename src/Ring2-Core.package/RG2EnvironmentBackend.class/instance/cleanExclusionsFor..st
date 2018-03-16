@@ -1,4 +1,4 @@
 trait exclusion
-cleanExclusionsFor: aRG2TraitExclusionDefinition
+cleanExclusionsFor: aRG2TraitExclusion
 
-	^ aRG2TraitExclusionDefinition pvtCleanExclusions
+	^ aRG2TraitExclusion pvtCleanExclusions

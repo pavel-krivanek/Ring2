@@ -1,1 +1,1 @@
-SystemOrganization addCategory: #'Ring2-Tests-ChunkImporter'!
+SystemOrganization addCategory: #'Ring2-Tests-ChunkImporter'!

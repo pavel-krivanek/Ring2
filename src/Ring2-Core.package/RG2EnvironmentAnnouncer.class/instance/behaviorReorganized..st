@@ -1,4 +1,4 @@
 triggering
-behaviorReorganized: aRG2BehaviorDefinition
+behaviorReorganized: aRG2Behavior
 
-	self announce: (ClassReorganized class: aRG2BehaviorDefinition)
+	self announce: (ClassReorganized class: aRG2Behavior)

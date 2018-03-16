@@ -1,4 +1,4 @@
 environment
-addBehavior: aRG2BehaviorDefinition to: aRG2Environment
+addBehavior: aRG2Behavior to: aRG2Environment
 
 	self readOnlyError.

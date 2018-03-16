@@ -1,4 +1,4 @@
 method
-tagMethod: aRG2MethodDefinition with: aSymbol
+tagMethod: aRG2Method with: aSymbol
 
-	^ aRG2MethodDefinition pvtTagWith: aSymbol
+	^ aRG2Method pvtTagWith: aSymbol

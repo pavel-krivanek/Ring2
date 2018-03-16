@@ -1,4 +1,4 @@
 pointer layout
-cleanSlotsFor: aRG2LayoutDefinition
+cleanSlotsFor: aRG2Layout
 
 	self readOnlyError 

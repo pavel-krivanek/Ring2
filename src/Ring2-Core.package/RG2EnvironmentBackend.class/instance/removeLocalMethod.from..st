@@ -1,4 +1,4 @@
 behavior
-removeLocalMethod: aRG2MethodDefinition from: aRG2Behavior
+removeLocalMethod: aRG2Method from: aRG2Behavior
 
-	^ aRG2Behavior pvtRemoveLocalMethod: aRG2MethodDefinition
+	^ aRG2Behavior pvtRemoveLocalMethod: aRG2Method

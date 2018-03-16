@@ -1,4 +1,4 @@
 environment
-removeGlobalVariable: aRG2GlobalVariableDefinition from: aRG2Environment
+removeGlobalVariable: aRG2GlobalVariable from: aRG2Environment
 
 	self readOnlyError.

@@ -1,4 +1,4 @@
 method
-setMethodStampFor: aRG2MethodDefinition to: anObject
+setMethodStampFor: aRG2Method to: anObject
 
 	self readOnlyError.

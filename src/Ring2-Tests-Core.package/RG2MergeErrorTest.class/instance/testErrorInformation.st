@@ -4,8 +4,8 @@ testErrorInformation
 	| error def1 def2 |
 
 	error := nil.
-	def1 := RG2BehaviorDefinition named: #SomeDefinition1.
-	def2 := RG2BehaviorDefinition named: #SomeDefinition2.
+	def1 := RG2Behavior named: #SomeDefinition1.
+	def2 := RG2Behavior named: #SomeDefinition2.
 
 	[def1 merge: def2] on: RG2MergeError do: [ :exception | error := exception ].
 

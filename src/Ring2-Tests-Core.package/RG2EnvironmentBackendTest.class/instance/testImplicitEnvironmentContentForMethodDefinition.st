@@ -3,7 +3,7 @@ testImplicitEnvironmentContentForMethodDefinition
 	
 	| def def2 env |
 
-	def := RG2MethodDefinition named: #someMethod.
+	def := RG2Method named: #someMethod.
 	env := def environment.
 
 	"we have SomeClass, SomeClass class, SomeClass superclass, SomeClass superclass class"

@@ -1,16 +1,16 @@
 utilities
-checkImplicitSingleClassEnvironmentOf: aRG2ClassDefinition
+checkImplicitSingleClassEnvironmentOf: aRG2Class
 	
-	self deny: (aRG2ClassDefinition isRing2Resolved).
+	self deny: (aRG2Class isRing2Resolved).
 
 	"we have SomeClass, SomeClass class, SomeClass superclass, SomeClass superclass class"
-	self assert: aRG2ClassDefinition environment ask behaviors size equals: 4.
+	self assert: aRG2Class environment ask behaviors size equals: 4.
 
 	"we have one package for SomeClass and SomeClass class, other for SomeClass superclass 
 	and SomeClass superclass class"	
-	self assert: aRG2ClassDefinition environment ask packages size equals: 2.
+	self assert: aRG2Class environment ask packages size equals: 2.
 
-	self checkHierarchyConsistencyOf: aRG2ClassDefinition.
+	self checkHierarchyConsistencyOf: aRG2Class.
 	
 	
 	

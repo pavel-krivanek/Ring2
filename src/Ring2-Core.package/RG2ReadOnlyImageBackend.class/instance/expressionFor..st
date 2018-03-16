@@ -1,8 +1,8 @@
 slot
-expressionFor: aRG2UnknownSlotDefinition
+expressionFor: aRG2UnknownSlot
 
 	| realClass realSlot |
 	
-	realClass := self realBehaviorFor: aRG2UnknownSlotDefinition parent parent.
-	realSlot := realClass slotNamed: aRG2UnknownSlotDefinition name.
+	realClass := self realBehaviorFor: aRG2UnknownSlot parent parent.
+	realSlot := realClass slotNamed: aRG2UnknownSlot name.
 	^ (realSlot printString copyAfter: $>) trimBoth

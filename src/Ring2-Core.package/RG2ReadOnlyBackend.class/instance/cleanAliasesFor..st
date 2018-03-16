@@ -1,4 +1,4 @@
 trait alias
-cleanAliasesFor: aRG2TraitAliasDefinition
+cleanAliasesFor: aRG2TraitAlias
 
 	self readOnlyError 

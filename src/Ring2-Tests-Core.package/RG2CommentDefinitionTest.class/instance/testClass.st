@@ -7,7 +7,7 @@ testClass
 	aClass := environment ensureClassNamed: #SomeClass.
 	aPackage := environment ensurePackageNamed: #SomePackage.
 	aClass package: aPackage.
-	aComment := RG2CommentDefinition parent: aClass.
+	aComment := RG2Comment parent: aClass.
 	aComment content: 'some comment'.
 	self deny: aClass hasComment.
 	aClass comment: aComment.

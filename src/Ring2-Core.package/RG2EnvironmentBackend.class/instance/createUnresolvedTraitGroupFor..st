@@ -1,34 +1,34 @@
 unresolved objects
-createUnresolvedTraitGroupFor: aRG2BehaviorDefinition 
+createUnresolvedTraitGroupFor: aRG2Behavior 
 
 	| traitStub classTraitStub traitMetaclassStub classTraitMetaclassStub packageStub1  |
 
-	traitStub := aRG2BehaviorDefinition isMeta
-		ifFalse: [ aRG2BehaviorDefinition ]
-		ifTrue: [ RG2TraitDefinition unresolvedWithParent: self environment ].
-	traitStub propertyNamed: #creator put: aRG2BehaviorDefinition.
+	traitStub := aRG2Behavior isMeta
+		ifFalse: [ aRG2Behavior ]
+		ifTrue: [ RG2Trait unresolvedWithParent: self environment ].
+	traitStub propertyNamed: #creator put: aRG2Behavior.
 	traitStub propertyNamed: #role put: #trait.
 		
-	classTraitStub := aRG2BehaviorDefinition isMeta
-		ifFalse: [ RG2MetaclassTraitDefinition unresolvedWithParent: self environment ]
-		ifTrue: [ aRG2BehaviorDefinition ].
-	classTraitStub propertyNamed: #creator put: aRG2BehaviorDefinition.
+	classTraitStub := aRG2Behavior isMeta
+		ifFalse: [ RG2MetaclassTrait unresolvedWithParent: self environment ]
+		ifTrue: [ aRG2Behavior ].
+	classTraitStub propertyNamed: #creator put: aRG2Behavior.
 	classTraitStub propertyNamed: #role put: #classTrait.
 
 	"Trait"
-	traitMetaclassStub := RG2ClassDefinition unresolvedWithParent: self environment.
+	traitMetaclassStub := RG2Class unresolvedWithParent: self environment.
 	self createUnresolvedClassGroupFor: traitMetaclassStub.
-	traitMetaclassStub propertyNamed: #creator put: aRG2BehaviorDefinition.
+	traitMetaclassStub propertyNamed: #creator put: aRG2Behavior.
 	traitMetaclassStub propertyNamed: #role put: #traitMetaclass.
 	
 	"ClassTrait"
-	classTraitMetaclassStub := RG2ClassDefinition unresolvedWithParent: self environment.
+	classTraitMetaclassStub := RG2Class unresolvedWithParent: self environment.
 	self createUnresolvedClassGroupFor: classTraitMetaclassStub.
-	classTraitMetaclassStub propertyNamed: #creator put: aRG2BehaviorDefinition.
+	classTraitMetaclassStub propertyNamed: #creator put: aRG2Behavior.
 	classTraitMetaclassStub propertyNamed: #role put: #classTraitMetaclass.
 
-	packageStub1 := RG2PackageDefinition unresolvedWithParent: self environment.
-	packageStub1 propertyNamed: #creator put: aRG2BehaviorDefinition.
+	packageStub1 := RG2Package unresolvedWithParent: self environment.
+	packageStub1 propertyNamed: #creator put: aRG2Behavior.
 	packageStub1 propertyNamed: #role put: #traitMetaclassPackage.
 
 	traitStub pvtPackage: packageStub1.
@@ -47,6 +47,6 @@ createUnresolvedTraitGroupFor: aRG2BehaviorDefinition
 	self environment pvtAddBehavior: classTraitMetaclassStub.
 	self environment pvtAddPackage: packageStub1.
 
-	^ 	aRG2BehaviorDefinition isMeta
+	^ 	aRG2Behavior isMeta
 		ifFalse: [ traitStub ]
 		ifTrue: [ classTraitStub ].

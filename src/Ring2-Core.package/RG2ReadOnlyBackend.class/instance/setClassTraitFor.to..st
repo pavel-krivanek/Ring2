@@ -1,4 +1,4 @@
 trait
-setClassTraitFor: aRG2TraitDefinition to: aRG2MetatraitDefinition
+setClassTraitFor: aRG2Trait to: aRG2MetatraitDefinition
 
 	self readOnlyError 

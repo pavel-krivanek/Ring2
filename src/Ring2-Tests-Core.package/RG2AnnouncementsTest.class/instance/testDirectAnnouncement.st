@@ -3,7 +3,7 @@ testDirectAnnouncement
 
 	| def announcements  |
 	
-	def := RG2BehaviorDefinition new.
+	def := RG2Behavior new.
 	announcements := OrderedCollection new.
 	def environment announcer when: ClassAdded do: [ :announcement | announcements add: announcement ].
 	def announce: (ClassAdded class: def category: nil).

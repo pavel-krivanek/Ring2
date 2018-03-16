@@ -1,4 +1,4 @@
 behavior
-addLocalMethod: aRG2MethodDefinition to: aRG2Behavior
+addLocalMethod: aRG2Method to: aRG2Behavior
 
 	self readOnlyError.

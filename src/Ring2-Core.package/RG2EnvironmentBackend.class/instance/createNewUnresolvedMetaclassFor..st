@@ -1,11 +1,11 @@
 unresolved objects
-createNewUnresolvedMetaclassFor: aRG2BehaviorDefinition
+createNewUnresolvedMetaclassFor: aRG2Behavior
 
 	| metaclassStub superclassMetaclass |
 	
-	metaclassStub := RG2MetaclassDefinition unresolvedWithParent: self environment.
+	metaclassStub := RG2Metaclass unresolvedWithParent: self environment.
 
-	superclassMetaclass := aRG2BehaviorDefinition pvtSuperclass pvtMetaclass.
+	superclassMetaclass := aRG2Behavior pvtSuperclass pvtMetaclass.
 	superclassMetaclass 
 		ifNotNil: [ 
 			metaclassStub pvtSuperclass: superclassMetaclass.

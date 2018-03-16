@@ -3,7 +3,7 @@ testMakeReslolved
 
 	| comment |
 
-	comment := RG2CommentDefinition unnamed.
+	comment := RG2Comment unnamed.
 	comment makeResolved.
 	self assert: comment unresolvedProperties isEmpty.
 	self assert: comment content equals: ''.

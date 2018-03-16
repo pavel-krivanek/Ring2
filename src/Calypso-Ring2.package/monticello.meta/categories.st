@@ -1,1 +1,1 @@
-SystemOrganization addCategory: #'Calypso-Ring2'!
+SystemOrganization addCategory: #'Calypso-Ring2'!

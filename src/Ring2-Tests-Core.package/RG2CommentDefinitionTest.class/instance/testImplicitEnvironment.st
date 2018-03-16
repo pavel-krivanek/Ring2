@@ -3,12 +3,12 @@ testImplicitEnvironment
 	
 	| def def2 env |
 
-	def := RG2CommentDefinition unnamed.
+	def := RG2Comment unnamed.
 	env := def environment.
 
 	self checkImplicitSingleClassEnvironmentOf: def parent.	
 
 	self assert: (def isRing2Resolved).
 	
-	def2 := RG2CommentDefinition parent: def parent .
+	def2 := RG2Comment parent: def parent .
 	self checkImplicitSingleClassEnvironmentOf: def parent.	

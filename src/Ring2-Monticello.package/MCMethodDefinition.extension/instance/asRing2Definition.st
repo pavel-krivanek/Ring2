@@ -2,7 +2,7 @@
 asRing2Definition
 
 "	method2 := (Object>>#isRing2Object) asRing2Definition.
-	self assert: method2 class equals: RG2MethodDefinition.	
+	self assert: method2 class equals: RG2Method.	
 	self assert: method2 selector equals: #isRing2Object.
 	self assert: method2 parent name equals: #Object.
 

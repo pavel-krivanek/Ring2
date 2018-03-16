@@ -1,4 +1,4 @@
 package
-addDefinedBehavior: aRG2BehaviorDefinition to: aRG2Package
+addDefinedBehavior: aRG2Behavior to: aRG2Package
 
 	self readOnlyError.

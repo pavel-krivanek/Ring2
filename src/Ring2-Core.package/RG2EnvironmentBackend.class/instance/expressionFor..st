@@ -1,4 +1,4 @@
 slot
-expressionFor: aRG2UnknownSlotDefinition
+expressionFor: aRG2UnknownSlot
 
-	^  aRG2UnknownSlotDefinition pvtExpression
+	^  aRG2UnknownSlot pvtExpression

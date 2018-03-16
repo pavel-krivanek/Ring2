@@ -3,7 +3,7 @@ testExclusionsCollection
 	
 	| traitExclusion env exclusion1 exclusion2 exclusion3 |
 
-	traitExclusion := RG2TraitExclusionDefinition unnamed.
+	traitExclusion := RG2TraitExclusion unnamed.
 	env := traitExclusion environment.
 
 	self assert: traitExclusion exclusions isEmpty.

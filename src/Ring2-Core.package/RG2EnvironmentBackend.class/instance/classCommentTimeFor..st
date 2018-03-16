@@ -1,4 +1,4 @@
 class comment
-classCommentTimeFor: aRG2CommentDefinition
+classCommentTimeFor: aRG2Comment
 
-	^  aRG2CommentDefinition pvtTime
+	^  aRG2Comment pvtTime

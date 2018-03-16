@@ -10,7 +10,7 @@ testBehaviorLocalMethods
 	
 	self assert: point ask localMethods size equals: Point localMethods size.
 	self assert: (point ask localMethods 
-		allSatisfy: [:each | each isKindOf: RG2MethodDefinition]).
+		allSatisfy: [:each | each isKindOf: RG2Method]).
 	selectors := point ask localMethods collect: [ :each | each ask selector ].
 	self assert: (selectors allSatisfy: #isSymbol).
 	self assert: selectors asSortedCollection equals: Point localSelectors asSortedCollection.

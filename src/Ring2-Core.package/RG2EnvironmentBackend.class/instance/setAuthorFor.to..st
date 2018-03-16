@@ -1,4 +1,4 @@
 method
-setAuthorFor: aRG2MethodDefinition to: aDateAndTime
+setAuthorFor: aRG2Method to: aDateAndTime
 
-	^  aRG2MethodDefinition pvtAuthor: aDateAndTime
+	^  aRG2Method pvtAuthor: aDateAndTime

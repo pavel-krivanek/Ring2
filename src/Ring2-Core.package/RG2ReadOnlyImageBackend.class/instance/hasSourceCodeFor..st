@@ -1,4 +1,4 @@
 method
-hasSourceCodeFor: aRG2MethodDefinition 
+hasSourceCodeFor: aRG2Method 
 
-	^ (self realMethodFor: aRG2MethodDefinition) sourceCode
+	^ (self realMethodFor: aRG2Method) sourceCode

@@ -1,1 +1,1 @@
-SystemOrganization addCategory: #'Ring2-Bootstrap'!
+SystemOrganization addCategory: #'Ring2-Bootstrap'!

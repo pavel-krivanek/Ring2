@@ -6,7 +6,7 @@ asRing2MinimalDefinitionIn: aRG2Environment
 		ifAbsentRegister: [ | definingClass |
 			definingClass := Smalltalk environment allBehaviors detect: [ :b | b traitComposition == self or: [b traitComposition transformations includes: self]].
 
-			def := RG2TraitCompositionDefinition parent: (definingClass asRing2MinimalDefinitionIn: aRG2Environment).
+			def := RG2TraitComposition parent: (definingClass asRing2MinimalDefinitionIn: aRG2Environment).
 
 			def propertyNamed: #realObject put: self.
 

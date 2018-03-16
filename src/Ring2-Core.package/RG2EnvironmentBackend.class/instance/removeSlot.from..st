@@ -1,4 +1,4 @@
 pointer layout
-removeSlot: aRG2SlotDefinition from: aRG2LayoutDefinition
+removeSlot: aRG2Slot from: aRG2Layout
 
-	^ aRG2LayoutDefinition pvtRemoveSlot: aRG2SlotDefinition
+	^ aRG2Layout pvtRemoveSlot: aRG2Slot

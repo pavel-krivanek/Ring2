@@ -3,7 +3,7 @@ testImplicitEnvironmentContentForMetaclassDefinition
 	
 	| def def2 env baseClass|
 
-	def := RG2MetaclassDefinition named: #'SomeClass class'.
+	def := RG2Metaclass named: #'SomeClass class'.
 	env := def environment.
 
 	"we have SomeClass, SomeClass class, SomeClass superclass, SomeClass superclass class"

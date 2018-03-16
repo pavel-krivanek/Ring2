@@ -1,6 +1,6 @@
 tests
 testIsCompiledMethodLayout
 
-	self assert: (RG2CompiledMethodLayoutDefinition unnamed isCompiledMethodLayout).
-	self deny: (RG2FixedLayoutDefinition unnamed isCompiledMethodLayout).
+	self assert: (RG2CompiledMethodLayout unnamed isCompiledMethodLayout).
+	self deny: (RG2FixedLayout unnamed isCompiledMethodLayout).
 	

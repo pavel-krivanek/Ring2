@@ -19,7 +19,7 @@ ensureRing2DefinitionIn: aRG2Environment
 			ifFalse: [ classDef ]
 			ifTrue: [ metaclassDef ].
 		
-		def := RG2MethodDefinition named: self selector parent: parent.
+		def := RG2Method named: self selector parent: parent.
 		parent addLocalMethod: def.
 			
 		def sourceCode: self source.

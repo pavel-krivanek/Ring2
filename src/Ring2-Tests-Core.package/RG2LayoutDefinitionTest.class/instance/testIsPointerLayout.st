@@ -1,6 +1,6 @@
 tests
 testIsPointerLayout
 
-	self assert: (RG2FixedLayoutDefinition unnamed isPointerLayout).
-	self deny: (RG2EmptyLayoutDefinition unnamed isPointerLayout).
+	self assert: (RG2FixedLayout unnamed isPointerLayout).
+	self deny: (RG2EmptyLayout unnamed isPointerLayout).
 	

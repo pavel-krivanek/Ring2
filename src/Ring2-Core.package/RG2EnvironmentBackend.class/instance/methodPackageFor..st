@@ -1,4 +1,4 @@
 method
-methodPackageFor: aRG2MethodDefinition
+methodPackageFor: aRG2Method
 
-	^  aRG2MethodDefinition pvtPackage
+	^  aRG2Method pvtPackage

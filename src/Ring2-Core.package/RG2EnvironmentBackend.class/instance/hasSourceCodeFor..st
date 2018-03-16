@@ -1,4 +1,4 @@
 method
-hasSourceCodeFor: aRG2MethodDefinition 
+hasSourceCodeFor: aRG2Method 
 
-	^ aRG2MethodDefinition pvtSourceCode notNil
+	^ aRG2Method pvtSourceCode notNil

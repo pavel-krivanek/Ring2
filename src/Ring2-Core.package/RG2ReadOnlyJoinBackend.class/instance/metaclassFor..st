@@ -1,7 +1,7 @@
 behavior
-metaclassFor: aRG2BehaviorDefinition
+metaclassFor: aRG2Behavior
 
 	^ self operation: [ :backend :definition |
 			backend metaclassFor: definition ]
-		on: aRG2BehaviorDefinition
+		on: aRG2Behavior
 	

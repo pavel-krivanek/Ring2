@@ -1,4 +1,4 @@
 method
-cleanMethodTagsFor: aRG2MethodDefinition
+cleanMethodTagsFor: aRG2Method
 
 	self readOnlyError.

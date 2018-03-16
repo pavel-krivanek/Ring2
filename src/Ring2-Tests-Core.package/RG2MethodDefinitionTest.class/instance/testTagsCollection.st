@@ -3,7 +3,7 @@ testTagsCollection
 	
 	| method env tag1 tag2 tag3 |
 
-	method := RG2MethodDefinition unnamed.
+	method := RG2Method unnamed.
 	env := method environment.
 
 	self assert: method tags isEmpty.

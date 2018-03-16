@@ -1,4 +1,4 @@
 class comment
-setClassCommentContentFor: aRG2CommentDefinition to: anObject
+setClassCommentContentFor: aRG2Comment to: anObject
 
 	self readOnlyError.

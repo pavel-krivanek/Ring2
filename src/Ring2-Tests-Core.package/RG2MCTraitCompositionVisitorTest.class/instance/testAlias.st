@@ -3,7 +3,7 @@ testAlias
 
 	| composition result |
 
-	composition := RG2TraitCompositionDefinition unnamed.
+	composition := RG2TraitComposition unnamed.
 	result := RG2TraitCompositionVisitor new parse: 'Trait2 @ {#a -> #c}' for: composition.
 	
 	self assert: result isCollection.

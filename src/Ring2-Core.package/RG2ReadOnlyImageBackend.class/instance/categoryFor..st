@@ -1,4 +1,4 @@
 class
-categoryFor: aRG2BehaviorDefinition
+categoryFor: aRG2Behavior
 
-	^ (self realBehaviorFor: aRG2BehaviorDefinition) category
+	^ (self realBehaviorFor: aRG2Behavior) category

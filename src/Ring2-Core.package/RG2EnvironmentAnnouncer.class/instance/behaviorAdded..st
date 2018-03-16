@@ -1,4 +1,4 @@
 triggering
-behaviorAdded: aRG2BehaviorDefinition
+behaviorAdded: aRG2Behavior
 
-	self announce: (ClassAdded class: aRG2BehaviorDefinition category: nil)
+	self announce: (ClassAdded class: aRG2Behavior category: nil)

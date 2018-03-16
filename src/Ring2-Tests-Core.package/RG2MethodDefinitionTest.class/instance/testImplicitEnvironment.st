@@ -3,7 +3,7 @@ testImplicitEnvironment
 	
 	| def def2 env |
 
-	def := RG2MethodDefinition unnamed.
+	def := RG2Method unnamed.
 	env := def environment.
 
 	self checkImplicitSingleClassEnvironmentOf: def parent.	
@@ -16,7 +16,7 @@ testImplicitEnvironment
 
 	self assert: (def isRing2Resolved).
 	
-	def2 := RG2MethodDefinition named: #someMethod parent: def parent.
+	def2 := RG2Method named: #someMethod parent: def parent.
 	def2 parent addLocalMethod: def2.
 	self assert: def parent localSelectors sorted equals: #(someMethod unresolved).
 	self checkImplicitSingleClassEnvironmentOf: def parent.	

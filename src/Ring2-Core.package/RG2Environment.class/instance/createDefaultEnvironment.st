@@ -3,19 +3,19 @@ createDefaultEnvironment
 
 	| protoobject protoobjectClass object objectClass class classClass classDescription classDescriptionClass behavior behaviorClass metaclass metaclassClass kernelPackage |
 	
-	protoobject := RG2ClassDefinition unresolvedNamed: #'ProtoObject' withParent: self.
-	protoobjectClass := RG2MetaclassDefinition unresolvedNamed: #'ProtoObject class' withParent: self.
-	object := RG2ClassDefinition unresolvedNamed: #'Object' withParent: self.
-	objectClass := RG2MetaclassDefinition unresolvedNamed: #'Object class' withParent: self.
-	class := RG2ClassDefinition unresolvedNamed: #'Class' withParent: self.
-	classClass := RG2MetaclassDefinition unresolvedNamed: #'Class class' withParent: self.
-	classDescription := RG2ClassDefinition unresolvedNamed: #'ClassDescription' withParent: self.
-	classDescriptionClass := RG2MetaclassDefinition unresolvedNamed: #'ClassDescription class' withParent: self.
-	behavior := RG2ClassDefinition unresolvedNamed: #'Behavior' withParent: self.
-	behaviorClass := RG2MetaclassDefinition unresolvedNamed: #'Behavior class' withParent: self.
-	metaclass := RG2ClassDefinition unresolvedNamed: #'Metaclass' withParent: self.
-	metaclassClass := RG2MetaclassDefinition unresolvedNamed: #'Metaclass class' withParent: self.
-	kernelPackage := RG2PackageDefinition unresolvedNamed: #'Kernel' withParent: self.
+	protoobject := RG2Class unresolvedNamed: #'ProtoObject' withParent: self.
+	protoobjectClass := RG2Metaclass unresolvedNamed: #'ProtoObject class' withParent: self.
+	object := RG2Class unresolvedNamed: #'Object' withParent: self.
+	objectClass := RG2Metaclass unresolvedNamed: #'Object class' withParent: self.
+	class := RG2Class unresolvedNamed: #'Class' withParent: self.
+	classClass := RG2Metaclass unresolvedNamed: #'Class class' withParent: self.
+	classDescription := RG2Class unresolvedNamed: #'ClassDescription' withParent: self.
+	classDescriptionClass := RG2Metaclass unresolvedNamed: #'ClassDescription class' withParent: self.
+	behavior := RG2Class unresolvedNamed: #'Behavior' withParent: self.
+	behaviorClass := RG2Metaclass unresolvedNamed: #'Behavior class' withParent: self.
+	metaclass := RG2Class unresolvedNamed: #'Metaclass' withParent: self.
+	metaclassClass := RG2Metaclass unresolvedNamed: #'Metaclass class' withParent: self.
+	kernelPackage := RG2Package unresolvedNamed: #'Kernel' withParent: self.
 	
 	{ protoobject. protoobjectClass. object. objectClass. class. classClass. classDescription. classDescriptionClass. behavior. behaviorClass. metaclass. metaclassClass } do: [ :each |
 		kernelPackage pvtAddDefinedBehavior: each.

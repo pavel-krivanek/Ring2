@@ -3,7 +3,7 @@ testAliasesCollection
 	
 	| traitAlias env alias1 alias2 alias3 |
 
-	traitAlias := RG2TraitAliasDefinition unnamed.
+	traitAlias := RG2TraitAlias unnamed.
 	env := traitAlias environment.
 
 	self assert: traitAlias aliases isEmpty.

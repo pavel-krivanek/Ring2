@@ -1,17 +1,17 @@
 accessing - backend
-removeBehavior: aRG2BehaviorDefinition
+removeBehavior: aRG2Behavior
 
-	self backend forEnvironment removeBehavior: aRG2BehaviorDefinition from: self.
+	self backend forEnvironment removeBehavior: aRG2Behavior from: self.
 	
 	"remove extensions methods deleted with the behavior from owning packages"
-	aRG2BehaviorDefinition extensions do: [ :each |
+	aRG2Behavior extensions do: [ :each |
 		each package removeExtensionMethod: each ].
 	
-	(aRG2BehaviorDefinition package notNil and: [aRG2BehaviorDefinition package  definedBehaviors includes: aRG2BehaviorDefinition]) ifTrue: [ 
-	aRG2BehaviorDefinition package removeDefinedBehavior: aRG2BehaviorDefinition.
+	(aRG2Behavior package notNil and: [aRG2Behavior package  definedBehaviors includes: aRG2Behavior]) ifTrue: [ 
+	aRG2Behavior package removeDefinedBehavior: aRG2Behavior.
 	].
 	
-	self announcer behaviorRemoved: aRG2BehaviorDefinition.
+	self announcer behaviorRemoved: aRG2Behavior.
 	
-	(aRG2BehaviorDefinition hasResolved: #name) ifTrue: [ 
-		self queryInterface behaviorsDictionary removeKey: aRG2BehaviorDefinition name ifAbsent: []].
+	(aRG2Behavior hasResolved: #name) ifTrue: [ 
+		self queryInterface behaviorsDictionary removeKey: aRG2Behavior name ifAbsent: []].

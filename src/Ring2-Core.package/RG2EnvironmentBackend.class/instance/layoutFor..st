@@ -1,4 +1,4 @@
 behavior
-layoutFor: aRG2BehaviorDefinition
+layoutFor: aRG2Behavior
 
-	^  aRG2BehaviorDefinition pvtLayout
+	^  aRG2Behavior pvtLayout

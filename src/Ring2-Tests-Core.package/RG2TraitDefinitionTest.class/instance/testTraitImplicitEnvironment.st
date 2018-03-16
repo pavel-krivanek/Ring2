@@ -3,7 +3,7 @@ testTraitImplicitEnvironment
 
 	| trait |
 	
-	trait := RG2TraitDefinition unnamed.
+	trait := RG2Trait unnamed.
 	self assert: (trait hasUnresolved: #name).
 	self checkImplicitSingleTraitEnvironmentOf: trait.
 	

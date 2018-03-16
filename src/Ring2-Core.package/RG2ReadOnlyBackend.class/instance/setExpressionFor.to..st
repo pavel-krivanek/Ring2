@@ -1,4 +1,4 @@
 slot
-setExpressionFor: aRG2UnknownSlotDefinition to: aString
+setExpressionFor: aRG2UnknownSlot to: aString
 
 	self readOnlyError

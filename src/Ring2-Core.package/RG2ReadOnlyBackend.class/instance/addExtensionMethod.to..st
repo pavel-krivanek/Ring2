@@ -1,4 +1,4 @@
 package
-addExtensionMethod: aRG2MethodDefinition to: aRG2Package
+addExtensionMethod: aRG2Method to: aRG2Package
 
 	self readOnlyError.

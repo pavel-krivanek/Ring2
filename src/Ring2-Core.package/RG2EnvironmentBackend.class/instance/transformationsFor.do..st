@@ -1,4 +1,4 @@
 trait composition
-transformationsFor: aRG2TraitCompositionDefinition do: aBlock
+transformationsFor: aRG2TraitComposition do: aBlock
 
-	^ aRG2TraitCompositionDefinition pvtTransformationsDo: aBlock
+	^ aRG2TraitComposition pvtTransformationsDo: aBlock

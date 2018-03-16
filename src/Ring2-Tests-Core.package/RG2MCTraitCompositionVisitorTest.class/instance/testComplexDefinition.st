@@ -3,7 +3,7 @@ testComplexDefinition
 
 	| composition result |
 
-	composition := RG2TraitCompositionDefinition unnamed.
+	composition := RG2TraitComposition unnamed.
 	result := RG2TraitCompositionVisitor new parse: 'Trait1 + (Trait2 @ {#a -> #b. #c: -> #d:}) + (Trait3 - {#e. #f:})' for: composition.
 	
 	self assert: result isCollection.

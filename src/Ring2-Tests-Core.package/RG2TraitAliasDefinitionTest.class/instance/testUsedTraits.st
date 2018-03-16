@@ -3,7 +3,7 @@ testUsedTraits
 
 	| traitAlias trait usedTraits | 
 	
-	traitAlias := RG2TraitAliasDefinition unnamed.
+	traitAlias := RG2TraitAlias unnamed.
 	trait := traitAlias environment ensureTraitNamed: #SomeTrait.
 	traitAlias subject: trait.
 	usedTraits := traitAlias usedTraits.

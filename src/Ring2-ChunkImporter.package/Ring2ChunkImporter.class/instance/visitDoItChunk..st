@@ -32,36 +32,36 @@ visitDoItChunk: aChunk
 
 		self if: selectorParts in: ast includes: #subclass do: [:argument |
 			subclassName := argument value. 
-			layoutClass := RG2FixedLayoutDefinition. ].
+			layoutClass := RG2FixedLayout. ].
 
 		self if: selectorParts in: ast includes: #named do: [:argument |
 			subclassName := argument value. 
 			isTrait := true.
-			layoutClass := RG2FixedLayoutDefinition. ].
+			layoutClass := RG2FixedLayout. ].
 
 		self if: selectorParts in: ast includes: #immediateSubclass do: [:argument |
 			subclassName := argument value. 
-			layoutClass := RG2ImmediateLayoutDefinition ].
+			layoutClass := RG2ImmediateLayout ].
 
 		self if: selectorParts in: ast includes: #variableSubclass do: [:argument |
 			subclassName := argument value. 
-			layoutClass := RG2VariableLayoutDefinition ].
+			layoutClass := RG2VariableLayout ].
 
 		self if: selectorParts in: ast includes: #variableByteSubclass do: [:argument |
 			subclassName := argument value. 
-			layoutClass := RG2ByteLayoutDefinition ].
+			layoutClass := RG2ByteLayout ].
 		
 		self if: selectorParts in: ast includes: #variableWordSubclass do: [:argument |
 			subclassName := argument value. 
-			layoutClass := RG2WordLayoutDefinition ].
+			layoutClass := RG2WordLayout ].
 
 		self if: selectorParts in: ast includes: #weakSubclass do: [:argument |
 			subclassName := argument value. 
-			layoutClass := RG2WeakLayoutDefinition ].
+			layoutClass := RG2WeakLayout ].
 		
 		self if: selectorParts in: ast includes: #ephemeronSubclass do: [:argument |
 			subclassName := argument value. 
-			layoutClass := RG2EphemeronLayoutDefinition ].
+			layoutClass := RG2EphemeronLayout ].
 		
 		self if: selectorParts in: ast includes: #instanceVariableNames do: [:argument |
 			instanceVariableNames := argument value. ].
@@ -93,7 +93,7 @@ visitDoItChunk: aChunk
 			superclassName := nil ].
 		
 		(#(CompiledBlock CompiledCode CompiledMethod) includes: subclassName) ifTrue: [ 
-			layoutClass := RG2CompiledMethodLayoutDefinition ].
+			layoutClass := RG2CompiledMethodLayout ].
 		
 		^ self createBehavior: subclassName
 			superclassName: superclassName 

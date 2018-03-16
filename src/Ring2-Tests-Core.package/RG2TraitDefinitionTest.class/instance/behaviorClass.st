@@ -1,4 +1,4 @@
 as yet unclassified
 behaviorClass
 
-	^ RG2TraitDefinition
+	^ RG2Trait

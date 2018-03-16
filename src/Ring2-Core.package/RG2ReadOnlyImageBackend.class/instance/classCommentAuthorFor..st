@@ -1,4 +1,4 @@
 class comment
-classCommentAuthorFor: aRG2CommentDefinition
+classCommentAuthorFor: aRG2Comment
 
-	^ aRG2CommentDefinition authorForStamp: (self realBehaviorFor: aRG2CommentDefinition parent) organization commentStamp.
+	^ aRG2Comment authorForStamp: (self realBehaviorFor: aRG2Comment parent) organization commentStamp.

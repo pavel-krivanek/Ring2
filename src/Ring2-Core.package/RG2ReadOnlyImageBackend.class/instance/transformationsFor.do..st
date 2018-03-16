@@ -1,14 +1,14 @@
 trait composition
-transformationsFor: aRG2TraitCompositionDefinition do: aBlock
+transformationsFor: aRG2TraitComposition do: aBlock
 
 	| realBehavior realTraitComposition |
-	"^ aRG2TraitCompositionDefinition pvtTransformationsDo: aBlock"
+	"^ aRG2TraitComposition pvtTransformationsDo: aBlock"
 
-	realBehavior := self realBehaviorFor: aRG2TraitCompositionDefinition parent.
+	realBehavior := self realBehaviorFor: aRG2TraitComposition parent.
 	realTraitComposition := realBehavior traitComposition.
 
 	realTraitComposition transformations do: [:transformation |
 		| def |
 		def := self definitionFor: transformation ifAbsentRegister: [
-			transformation asRing2MinimalDefinitionIn: aRG2TraitCompositionDefinition environment].
+			transformation asRing2MinimalDefinitionIn: aRG2TraitComposition environment].
 		aBlock value: def]

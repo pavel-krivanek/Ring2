@@ -1,4 +1,4 @@
 method
-timeFor: aRG2MethodDefinition
+timeFor: aRG2Method
 
-	^  aRG2MethodDefinition pvtTime
+	^  aRG2Method pvtTime

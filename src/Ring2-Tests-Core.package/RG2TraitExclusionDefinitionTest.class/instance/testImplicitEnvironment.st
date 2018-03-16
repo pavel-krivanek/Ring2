@@ -3,7 +3,7 @@ testImplicitEnvironment
 	
 	| def def2 env |
 
-	def := RG2TraitExclusionDefinition unnamed.
+	def := RG2TraitExclusion unnamed.
 	env := def environment.
 
 	self assert: (def isRing2Resolved).
@@ -18,7 +18,7 @@ testImplicitEnvironment
 
 	self checkImplicitSingleClassEnvironmentOf: def parent parent.	
 
-	def2 := RG2TraitExclusionDefinition parent: def parent.
+	def2 := RG2TraitExclusion parent: def parent.
 	def parent addTransformation: def2.
 	
 	self checkImplicitSingleClassEnvironmentOf: def parent parent.	

@@ -1,4 +1,4 @@
 class comment
-classCommentContentFor: aRG2CommentDefinition
+classCommentContentFor: aRG2Comment
 
-	^ aRG2CommentDefinition pvtContent
+	^ aRG2Comment pvtContent

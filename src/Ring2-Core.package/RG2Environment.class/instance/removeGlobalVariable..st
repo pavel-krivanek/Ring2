@@ -1,4 +1,4 @@
 accessing - backend
-removeGlobalVariable: aRG2GlobalVariableDefinition
+removeGlobalVariable: aRG2GlobalVariable
 
-	self backend forBehavior removeGlobalVariable: aRG2GlobalVariableDefinition from: self
+	self backend forBehavior removeGlobalVariable: aRG2GlobalVariable from: self

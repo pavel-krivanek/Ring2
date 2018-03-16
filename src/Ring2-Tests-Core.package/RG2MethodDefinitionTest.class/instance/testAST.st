@@ -3,7 +3,7 @@ testAST
 	
 	| method ast |
 
-	method := RG2MethodDefinition named: #someMethod.
+	method := RG2Method named: #someMethod.
 	ast := method ast.
 	self assert: ast isMethod.
 	self assert: ast selector equals: #someMethod.

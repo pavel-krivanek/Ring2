@@ -1,0 +1,1 @@
+RG2Trait is the concrete representation of a trait (no class)

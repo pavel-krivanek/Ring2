@@ -1,6 +1,6 @@
 hierarchy-defaults
-defaultCommentStubIn: aRG2BehaviorDefinition
+defaultCommentStubIn: aRG2Behavior
 
-	^ RG2CommentDefinition unresolved
-		parent: aRG2BehaviorDefinition;
+	^ RG2Comment unresolved
+		parent: aRG2Behavior;
 		yourself.

@@ -1,4 +1,4 @@
 method
-setSourceCodeFor: aRG2MethodDefinition to: anObject
+setSourceCodeFor: aRG2Method to: anObject
 
 	self readOnlyError.

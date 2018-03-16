@@ -1,9 +1,9 @@
 class
-classVariablesFor: aRG2BehaviorDefinition do: aBlock
+classVariablesFor: aRG2Behavior do: aBlock
 
 	| realClass |
-	realClass := self realBehaviorFor: aRG2BehaviorDefinition.
+	realClass := self realBehaviorFor: aRG2Behavior.
 	realClass classVariables do: [ :classVariable | 
 		| def |
-		def := RG2ClassVariableDefinition named: classVariable key parent: aRG2BehaviorDefinition.
+		def := RG2ClassVariable named: classVariable key parent: aRG2Behavior.
 		aBlock value: def. ]

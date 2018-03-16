@@ -1,4 +1,4 @@
 trait alias
-removeAlias: aSymbol from: aRG2TraitAliasDefinition
+removeAlias: aSymbol from: aRG2TraitAlias
 
 	self readOnlyError 

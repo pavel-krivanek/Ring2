@@ -1,4 +1,4 @@
 class comment
-setClassCommentContentFor: aRG2CommentDefinition to: anObject
+setClassCommentContentFor: aRG2Comment to: anObject
 
-	aRG2CommentDefinition pvtContent: anObject.
+	aRG2Comment pvtContent: anObject.

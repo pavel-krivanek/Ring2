@@ -1,4 +1,4 @@
 metaclass trait
-setMetaclassTraitBaseTraitFor: aRG2MetaclassTraitDefinition to: aRG2TraitDefinition
+setMetaclassTraitBaseTraitFor: aRG2MetaclassTrait to: aRG2Trait
 
-	^  aRG2MetaclassTraitDefinition pvtBaseTrait: aRG2TraitDefinition
+	^  aRG2MetaclassTrait pvtBaseTrait: aRG2Trait

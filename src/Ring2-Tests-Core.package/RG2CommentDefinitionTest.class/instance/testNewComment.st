@@ -2,7 +2,7 @@ tests
 testNewComment
 	| comment time |
 	
-	comment := RG2CommentDefinition unnamed.
+	comment := RG2Comment unnamed.
 	
 	self assert: (comment isRing2Resolved).
 	self assert: (comment isComment).

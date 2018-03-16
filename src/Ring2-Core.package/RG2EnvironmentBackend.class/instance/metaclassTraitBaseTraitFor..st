@@ -1,4 +1,4 @@
 metaclass trait
-metaclassTraitBaseTraitFor: aRG2MetaclassTraitDefinition
+metaclassTraitBaseTraitFor: aRG2MetaclassTrait
 
-	^  aRG2MetaclassTraitDefinition pvtBaseTrait
+	^  aRG2MetaclassTrait pvtBaseTrait

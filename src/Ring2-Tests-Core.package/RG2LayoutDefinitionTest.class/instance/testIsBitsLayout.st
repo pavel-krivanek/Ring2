@@ -1,8 +1,8 @@
 tests
 testIsBitsLayout
 
-	self assert: (RG2ByteLayoutDefinition unnamed isBitsLayout).
-	self assert: (RG2WordLayoutDefinition unnamed isBitsLayout).
-	self assert: (RG2CompiledMethodLayoutDefinition unnamed isBitsLayout).
-	self deny: (RG2FixedLayoutDefinition unnamed isBitsLayout).
+	self assert: (RG2ByteLayout unnamed isBitsLayout).
+	self assert: (RG2WordLayout unnamed isBitsLayout).
+	self assert: (RG2CompiledMethodLayout unnamed isBitsLayout).
+	self deny: (RG2FixedLayout unnamed isBitsLayout).
 	

@@ -1,4 +1,4 @@
 class comment
-setClassCommentTimeFor: aRG2CommentDefinition to: aDateAndTime
+setClassCommentTimeFor: aRG2Comment to: aDateAndTime
 
 	self readOnlyError.

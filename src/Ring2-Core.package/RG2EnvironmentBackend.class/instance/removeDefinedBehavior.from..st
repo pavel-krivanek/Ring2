@@ -1,4 +1,4 @@
 package
-removeDefinedBehavior: aRG2BehaviorDefinition from: aRG2Package
+removeDefinedBehavior: aRG2Behavior from: aRG2Package
 
-	^ aRG2Package pvtRemoveDefinedBehavior: aRG2BehaviorDefinition
+	^ aRG2Package pvtRemoveDefinedBehavior: aRG2Behavior

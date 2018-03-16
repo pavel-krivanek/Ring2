@@ -1,4 +1,4 @@
 method
-tagsForMethod: aRG2MethodDefinition do: aBlock
+tagsForMethod: aRG2Method do: aBlock
 
-	^  aRG2MethodDefinition pvtTagsDo: aBlock
+	^  aRG2Method pvtTagsDo: aBlock

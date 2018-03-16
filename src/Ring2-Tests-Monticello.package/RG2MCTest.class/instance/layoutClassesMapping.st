@@ -2,12 +2,12 @@ tests
 layoutClassesMapping
 
 	^ Dictionary newFrom: { 
-		CompiledMethodLayout -> RG2CompiledMethodLayoutDefinition. 
-		ByteLayout -> RG2ByteLayoutDefinition. 
-		ImmediateLayout -> RG2ImmediateLayoutDefinition. 
-		WordLayout -> RG2WordLayoutDefinition. 
-		WeakLayout -> RG2WeakLayoutDefinition.
-		VariableLayout -> RG2VariableLayoutDefinition.
-		EphemeronLayout -> RG2EphemeronLayoutDefinition.
-		FixedLayout -> RG2FixedLayoutDefinition.
+		CompiledMethodLayout -> RG2CompiledMethodLayout. 
+		ByteLayout -> RG2ByteLayout. 
+		ImmediateLayout -> RG2ImmediateLayout. 
+		WordLayout -> RG2WordLayout. 
+		WeakLayout -> RG2WeakLayout.
+		VariableLayout -> RG2VariableLayout.
+		EphemeronLayout -> RG2EphemeronLayout.
+		FixedLayout -> RG2FixedLayout.
 	}

@@ -1,14 +1,1 @@
-{
-	"commentStamp" : "<historical>",
-	"super" : "Object",
-	"category" : "Calypso-Ring2",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [
-		"environment",
-		"name"
-	],
-	"name" : "ClyRing2Environment",
-	"type" : "normal"
-}
+{	"commentStamp" : "<historical>",	"super" : "Object",	"category" : "Calypso-Ring2",	"classinstvars" : [ ],	"pools" : [ ],	"classvars" : [ ],	"instvars" : [		"environment",		"name"	],	"name" : "ClyRing2Environment",	"type" : "normal"}

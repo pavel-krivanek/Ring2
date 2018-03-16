@@ -1,4 +1,4 @@
 class
-tagMethod: aRG2MethodDefinition with: aSymbol
+tagMethod: aRG2Method with: aSymbol
 
 	self readOnlyError.

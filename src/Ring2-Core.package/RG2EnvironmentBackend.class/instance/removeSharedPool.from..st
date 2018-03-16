@@ -1,4 +1,4 @@
 class
-removeSharedPool: aRG2PoolVariableDefinition from: aRG2Behavior
+removeSharedPool: aRG2PoolVariable from: aRG2Behavior
 
-	^ aRG2Behavior pvtRemoveSharedPool: aRG2PoolVariableDefinition
+	^ aRG2Behavior pvtRemoveSharedPool: aRG2PoolVariable

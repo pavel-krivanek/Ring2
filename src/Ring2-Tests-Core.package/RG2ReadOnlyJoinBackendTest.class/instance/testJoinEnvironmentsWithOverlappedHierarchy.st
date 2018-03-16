@@ -3,11 +3,11 @@ testJoinEnvironmentsWithOverlappedHierarchy
 
 	| class1 superclass1 class2 joinEnv found1 found2 |
 	
-	class1 := RG2ClassDefinition named: #SomeClass.
+	class1 := RG2Class named: #SomeClass.
 	superclass1 := class1 environment ensureClassNamed: #Object.
 	class1 superclass: superclass1.
 	
-	class2 := RG2MetaclassDefinition named: #Object.
+	class2 := RG2Metaclass named: #Object.
 
 	joinEnv := self joinedEnvironmentFor: class1 environment and: class2 environment.
 

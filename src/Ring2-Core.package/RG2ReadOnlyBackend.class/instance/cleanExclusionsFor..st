@@ -1,4 +1,4 @@
 trait exclusion
-cleanExclusionsFor: aRG2TraitExclusionDefinition
+cleanExclusionsFor: aRG2TraitExclusion
 
 	self readOnlyError 

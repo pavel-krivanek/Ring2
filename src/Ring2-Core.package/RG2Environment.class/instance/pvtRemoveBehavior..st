@@ -1,9 +1,9 @@
 private - backend interface
-pvtRemoveBehavior: aRG2BehaviorDefinition
+pvtRemoveBehavior: aRG2Behavior
 
-	self verifyOwnership: aRG2BehaviorDefinition.
+	self verifyOwnership: aRG2Behavior.
 	
-	behaviors remove: aRG2BehaviorDefinition.
+	behaviors remove: aRG2Behavior.
 	
 	"TODO:Announce"
 	

@@ -2,7 +2,7 @@ tests
 testUnknownSlot
 
 	| slot expression | 
-	slot  := RG2UnknownSlotDefinition unnamed.
+	slot  := RG2UnknownSlot unnamed.
 	self assert: (slot isRing2Resolved).
 	self assert: (slot hasUnresolvedAll: #(name expression)).
 	self assert: (slot isSlot).

@@ -59,7 +59,7 @@ ensureMetaclassTraitNamed: aSymbol
 						ifNil: [ 
 							"we need to create new behavior"
 							| newBehavior |
-							newBehavior := RG2MetaclassTraitDefinition named: aSymbol parent: self.
+							newBehavior := RG2MetaclassTrait named: aSymbol parent: self.
 							self addBehavior: newBehavior.
 							newBehavior ] ] ]
 		ifNotNil: [

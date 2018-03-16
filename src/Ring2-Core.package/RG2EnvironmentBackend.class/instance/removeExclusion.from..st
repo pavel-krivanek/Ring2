@@ -1,4 +1,4 @@
 trait exclusion
-removeExclusion: aSymbol from: aRG2TraitExclusionDefinition
+removeExclusion: aSymbol from: aRG2TraitExclusion
 
-	^ aRG2TraitExclusionDefinition pvtRemoveExclusion: aSymbol
+	^ aRG2TraitExclusion pvtRemoveExclusion: aSymbol

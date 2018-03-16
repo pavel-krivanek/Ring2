@@ -1,4 +1,4 @@
 tests
 behaviorClass
 
-	^ RG2BehaviorDefinition
+	^ RG2Behavior

@@ -1,4 +1,4 @@
 class comment
-classCommentAuthorFor: aRG2CommentDefinition
+classCommentAuthorFor: aRG2Comment
 
-	^  aRG2CommentDefinition pvtAuthor
+	^  aRG2Comment pvtAuthor

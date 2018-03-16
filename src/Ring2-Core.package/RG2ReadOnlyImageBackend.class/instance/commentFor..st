@@ -1,4 +1,4 @@
 class
-commentFor: aRG2BehaviorDefinition
+commentFor: aRG2Behavior
 
-	^  (self realBehaviorFor: aRG2BehaviorDefinition) asRing2MinimalCommentDefinitionIn: self environment
+	^  (self realBehaviorFor: aRG2Behavior) asRing2MinimalCommentDefinitionIn: self environment

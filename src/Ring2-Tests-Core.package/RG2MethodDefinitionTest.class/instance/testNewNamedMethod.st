@@ -3,7 +3,7 @@ testNewNamedMethod
 
 	| method |
 	
-	method := RG2MethodDefinition named: #someMessage.
+	method := RG2Method named: #someMessage.
 	
 	self assert: (method isRing2Resolved).
 	

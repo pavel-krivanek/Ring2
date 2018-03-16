@@ -3,7 +3,7 @@ testUsedTraits
 
 	| traitExclusion trait usedTraits | 
 	
-	traitExclusion := RG2TraitExclusionDefinition unnamed.
+	traitExclusion := RG2TraitExclusion unnamed.
 	trait := traitExclusion environment ensureTraitNamed: #SomeTrait.
 	traitExclusion subject: trait.
 	usedTraits := traitExclusion usedTraits.

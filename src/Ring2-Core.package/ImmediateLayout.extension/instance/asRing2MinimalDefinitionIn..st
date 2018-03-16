@@ -2,4 +2,4 @@
 asRing2MinimalDefinitionIn: aRG2Environment
 
 	^ aRG2Environment backend definitionFor: self ifAbsentRegister: [
-		RG2ImmediateLayoutDefinition parent: (self host asRing2MinimalDefinitionIn: aRG2Environment)]
+		RG2ImmediateLayout parent: (self host asRing2MinimalDefinitionIn: aRG2Environment)]

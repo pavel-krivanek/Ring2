@@ -1,4 +1,4 @@
 trait alias
-cleanAliasesFor: aRG2TraitAliasDefinition
+cleanAliasesFor: aRG2TraitAlias
 
-	^ aRG2TraitAliasDefinition pvtCleanAliases
+	^ aRG2TraitAlias pvtCleanAliases

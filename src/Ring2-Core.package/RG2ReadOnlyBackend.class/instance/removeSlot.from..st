@@ -1,4 +1,4 @@
 pointer layout
-removeSlot: aRG2SlotDefinition from: aRG2LayoutDefinition
+removeSlot: aRG2Slot from: aRG2Layout
 
 	self readOnlyError 

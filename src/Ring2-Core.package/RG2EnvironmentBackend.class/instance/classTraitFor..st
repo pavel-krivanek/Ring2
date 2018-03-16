@@ -1,4 +1,4 @@
 trait
-classTraitFor: aRG2TraitDefinition
+classTraitFor: aRG2Trait
 
-	^  aRG2TraitDefinition pvtClassTrait
+	^  aRG2Trait pvtClassTrait

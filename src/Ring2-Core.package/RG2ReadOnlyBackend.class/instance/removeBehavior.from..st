@@ -1,4 +1,4 @@
 environment
-removeBehavior: aRG2BehaviorDefinition from: aRG2Environment
+removeBehavior: aRG2Behavior from: aRG2Environment
 
 	self readOnlyError.

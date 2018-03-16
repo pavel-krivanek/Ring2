@@ -1,6 +1,6 @@
 tests
 testIsWeakLayout
 
-	self assert: (RG2WeakLayoutDefinition unnamed isWeakLayout).
-	self deny: (RG2EmptyLayoutDefinition unnamed isWeakLayout).
+	self assert: (RG2WeakLayout unnamed isWeakLayout).
+	self deny: (RG2EmptyLayout unnamed isWeakLayout).
 	

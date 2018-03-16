@@ -1,4 +1,4 @@
 method
-timeFor: aRG2MethodDefinition
+timeFor: aRG2Method
 
-	^ aRG2MethodDefinition timeForStamp: (self realMethodFor: aRG2MethodDefinition) stamp
+	^ aRG2Method timeForStamp: (self realMethodFor: aRG2Method) stamp

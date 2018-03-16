@@ -1,4 +1,4 @@
 behavior
-traitCompositionFor: aRG2BehaviorDefinition
+traitCompositionFor: aRG2Behavior
 
-	^  aRG2BehaviorDefinition pvtTraitComposition
+	^  aRG2Behavior pvtTraitComposition

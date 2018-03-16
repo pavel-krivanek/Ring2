@@ -1,6 +1,6 @@
 hierarchy-defaults
 defaultPackageStubIn: aRG2Environment
 
-	^ RG2PackageDefinition unresolved
+	^ RG2Package unresolved
 		parent: aRG2Environment;
 		yourself.

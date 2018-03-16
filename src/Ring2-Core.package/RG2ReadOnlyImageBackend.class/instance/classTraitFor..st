@@ -1,4 +1,4 @@
 trait
-classTraitFor: aRG2TraitDefinition
+classTraitFor: aRG2Trait
 
-	^ (self realBehaviorFor: aRG2TraitDefinition) classTrait asRing2MinimalDefinitionIn: aRG2TraitDefinition environment.
+	^ (self realBehaviorFor: aRG2Trait) classTrait asRing2MinimalDefinitionIn: aRG2Trait environment.

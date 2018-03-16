@@ -1,6 +1,6 @@
 unresolved objects
-createUnresolvedClassGroupFor: aRG2BehaviorDefinition 
+createUnresolvedClassGroupFor: aRG2Behavior 
 
-	^ 	aRG2BehaviorDefinition isMeta
-		ifFalse: [ aRG2BehaviorDefinition ]
-		ifTrue: [ aRG2BehaviorDefinition metaclass].
+	^ 	aRG2Behavior isMeta
+		ifFalse: [ aRG2Behavior ]
+		ifTrue: [ aRG2Behavior metaclass].

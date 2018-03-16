@@ -3,7 +3,7 @@ testImplicitEnvironmentContentForClassDefinition
 	
 	| def def2 env |
 
-	def := RG2ClassDefinition named: #SomeClass.
+	def := RG2Class named: #SomeClass.
 	env := def environment.
 
 	"we have SomeClass, SomeClass class, SomeClass superclass, SomeClass superclass class"
@@ -21,7 +21,7 @@ testImplicitEnvironmentContentForClassDefinition
 	self deny: (def metaclass isRing2Resolved).
 	self deny: (def superclass metaclass isRing2Resolved).
 	
-	def2 := RG2ClassDefinition named: #SomeOtherClass parent: env.
+	def2 := RG2Class named: #SomeOtherClass parent: env.
 	self assert: env ask behaviors size equals: 8. 
 	self assert: env ask packages size equals: 4.
 	

@@ -1,0 +1,1 @@
+{	"commentStamp" : "PavelKrivanek 3/16/2018 16:07",	"super" : "RG2ClassDescription",	"category" : "Ring2-Core-Kernel",	"classinstvars" : [ ],	"pools" : [ ],	"classvars" : [ ],	"instvars" : [		"baseClass"	],	"name" : "RG2Metaclass",	"type" : "normal"}

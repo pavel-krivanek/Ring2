@@ -1,5 +1,5 @@
 environment
-removeBehavior: aRG2BehaviorDefinition from: aRG2Environment
+removeBehavior: aRG2Behavior from: aRG2Environment
 
-	aRG2Environment pvtRemoveBehavior: aRG2BehaviorDefinition.
+	aRG2Environment pvtRemoveBehavior: aRG2Behavior.
 	

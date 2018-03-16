@@ -1,6 +1,6 @@
 hierarchy-defaults
-defaultFixedLayoutStubIn: aRG2BehaviorDefinition
+defaultFixedLayoutStubIn: aRG2Behavior
 
-	^ RG2FixedLayoutDefinition unresolved
-		parent: aRG2BehaviorDefinition;
+	^ RG2FixedLayout unresolved
+		parent: aRG2Behavior;
 		yourself.

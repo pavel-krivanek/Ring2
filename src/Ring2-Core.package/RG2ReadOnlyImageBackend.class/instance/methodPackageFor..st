@@ -1,4 +1,4 @@
 method
-methodPackageFor: aRG2MethodDefinition
+methodPackageFor: aRG2Method
 
-	^ (self realMethodFor: aRG2MethodDefinition) package asRing2MinimalDefinitionIn: aRG2MethodDefinition environment.
+	^ (self realMethodFor: aRG2Method) package asRing2MinimalDefinitionIn: aRG2Method environment.

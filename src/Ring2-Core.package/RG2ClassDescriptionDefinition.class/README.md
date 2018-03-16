@@ -1,1 +1,0 @@
-RG2ClassDescriptionDefinition is the common parent for classes and metaclasses defining instance variables

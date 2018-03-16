@@ -1,4 +1,4 @@
 package
-removeExtensionMethod: aRG2MethodDefinition from: aRG2Package
+removeExtensionMethod: aRG2Method from: aRG2Package
 
 	self readOnlyError.

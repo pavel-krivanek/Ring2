@@ -1,4 +1,4 @@
 tests
 behaviorClass
 
-	^ RG2ClassDescriptionDefinition
+	^ RG2ClassDescription

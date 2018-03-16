@@ -1,4 +1,4 @@
 method
-astFor: aRG2MethodDefinition
+astFor: aRG2Method
 
-	^  aRG2MethodDefinition astFromSource
+	^  aRG2Method astFromSource

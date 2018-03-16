@@ -2,7 +2,7 @@ unpackaged
 unpackagedPackage
 
 	| aProtocol |
-	aProtocol := RG2PackageDefinition unresolvedWithParent: self.
+	aProtocol := RG2Package unresolvedWithParent: self.
 	aProtocol pvtName: self unpackagedPackageName.
 	
 	^ aProtocol

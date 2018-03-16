@@ -1,4 +1,4 @@
 trait transormation
-setSubjectFor: aRG2TraitCompositionDefinition to: aRG2TraitDefinition
+setSubjectFor: aRG2TraitComposition to: aRG2Trait
 
 	self readOnlyError 

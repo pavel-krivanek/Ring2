@@ -3,7 +3,7 @@ testClasses
 	
 	| package env class1 class2 trait1 |
 
-	package := RG2PackageDefinition named: 'SomePackage'.
+	package := RG2Package named: 'SomePackage'.
 	env := package environment.
 	
 	self assert: package classes isEmpty.

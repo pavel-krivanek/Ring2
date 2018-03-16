@@ -3,19 +3,19 @@ testNewTrait
 
 	| trait metaclassTrait comment category package | 
 	
-	trait  := RG2TraitDefinition unnamed.
+	trait  := RG2Trait unnamed.
 	self assert: (trait isRing2Resolved).
 	self assert: (trait hasUnresolvedAll: #(classTrait comment category package)).
 	self assert: (trait isTrait).
 	self assert: (trait trait == trait).
 
-	metaclassTrait  := RG2MetaclassTraitDefinition parent: trait environment.
+	metaclassTrait  := RG2MetaclassTrait parent: trait environment.
 	trait classTrait: metaclassTrait.
 	self assert: (trait hasResolved: #classTrait).
 	self assert: (trait classTrait == metaclassTrait).
 	self assert: (trait theMetaClass == metaclassTrait).
 
-	comment := RG2CommentDefinition parent: metaclassTrait. 
+	comment := RG2Comment parent: metaclassTrait. 
 	self deny: (trait hasComment).
 	trait comment:  comment.
 	self assert: (trait hasResolved: #comment).
@@ -29,7 +29,7 @@ testNewTrait
 	self assert: (trait hasResolved: #tags).
 	self assert: (trait category == category).
 
-	package  := RG2PackageDefinition parent: trait environment.
+	package  := RG2Package parent: trait environment.
 	trait package:  package.
 	self assert: (trait hasResolved: #package).
 	self assert: (trait package == package).

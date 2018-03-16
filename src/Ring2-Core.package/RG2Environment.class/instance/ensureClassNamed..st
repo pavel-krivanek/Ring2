@@ -20,8 +20,8 @@ ensureClassNamed: aSymbol
 				^ result ].
 			
 			behaviorClass := (aSymbol endsWith: ' class') 
-				ifFalse: [ RG2ClassDefinition ]
-				ifTrue: [ RG2MetaclassDefinition ].
+				ifFalse: [ RG2Class ]
+				ifTrue: [ RG2Metaclass ].
 			newBehavior := behaviorClass named: aSymbol parent: self.
 			self addBehavior: newBehavior.
 			newBehavior ] 

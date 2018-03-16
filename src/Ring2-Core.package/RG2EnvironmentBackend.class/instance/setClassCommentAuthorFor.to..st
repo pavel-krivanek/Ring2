@@ -1,4 +1,4 @@
 class comment
-setClassCommentAuthorFor: aRG2CommentDefinition to: aString
+setClassCommentAuthorFor: aRG2Comment to: aString
 
-	^  aRG2CommentDefinition pvtAuthor: aString
+	^  aRG2Comment pvtAuthor: aString

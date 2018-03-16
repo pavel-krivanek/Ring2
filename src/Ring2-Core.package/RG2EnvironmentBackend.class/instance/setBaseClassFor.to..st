@@ -1,4 +1,4 @@
 metaclass
-setBaseClassFor: aRG2Behavior to: aaRG2ClassDefinition
+setBaseClassFor: aRG2Behavior to: aRG2Class
 
-	^  aRG2Behavior pvtBaseClass: aaRG2ClassDefinition
+	^  aRG2Behavior pvtBaseClass: aRG2Class

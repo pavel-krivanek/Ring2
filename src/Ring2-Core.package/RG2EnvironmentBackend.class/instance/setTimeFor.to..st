@@ -1,4 +1,4 @@
 method
-setTimeFor: aRG2MethodDefinition to: aDateAndTime
+setTimeFor: aRG2Method to: aDateAndTime
 
-	^  aRG2MethodDefinition pvtTime: aDateAndTime
+	^  aRG2Method pvtTime: aDateAndTime

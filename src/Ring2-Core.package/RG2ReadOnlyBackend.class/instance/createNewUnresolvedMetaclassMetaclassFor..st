@@ -1,5 +1,5 @@
 unresolved objects
-createNewUnresolvedMetaclassMetaclassFor: aRG2BehaviorDefinition
+createNewUnresolvedMetaclassMetaclassFor: aRG2Behavior
 
 	self readOnlyError 
 	"| unresolvedValue |

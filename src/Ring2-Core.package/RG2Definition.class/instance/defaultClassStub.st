@@ -1,4 +1,4 @@
 hierarchy-defaults
 defaultClassStub
 
-	^ RG2ClassDefinition unresolved
+	^ RG2Class unresolved

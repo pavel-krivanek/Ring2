@@ -3,7 +3,7 @@ traitCompositionFrom: aStringOrNil parent: aBehavior
 	
 	| composition transformations |
 	
-	composition := RG2TraitCompositionDefinition parent: aBehavior.
+	composition := RG2TraitComposition parent: aBehavior.
 
 	aStringOrNil ifNil: [ ^ composition ].
 

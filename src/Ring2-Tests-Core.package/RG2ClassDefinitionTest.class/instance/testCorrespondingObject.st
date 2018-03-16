@@ -3,9 +3,9 @@ testCorrespondingObject
 
 	| def1 def2 def3 |
 	
-	def1 := RG2ClassDefinition named: #SomeClass.
-	def2 := RG2ClassDefinition named: #SomeClass.
-	def3 := RG2ClassDefinition named: #SomeClass1.
+	def1 := RG2Class named: #SomeClass.
+	def2 := RG2Class named: #SomeClass.
+	def3 := RG2Class named: #SomeClass1.
 	
 	self assert: (def1 correspondingObjectIn: def2 environment) equals: def2.
 	self assert: (def1 correspondingObjectIn: def3 environment) equals: nil.

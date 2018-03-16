@@ -1,13 +1,1 @@
-{
-	"classtraitcomposition" : "TRG2BehaviorDefinitionTest classTrait + TRG2ClassDescriptionDefinitionTest classTrait",
-	"classvars" : [ ],
-	"instvars" : [ ],
-	"name" : "RG2ClassDefinitionTest",
-	"commentStamp" : "",
-	"super" : "RG2Test",
-	"traitcomposition" : "TRG2BehaviorDefinitionTest + TRG2ClassDescriptionDefinitionTest",
-	"type" : "normal",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"category" : "Ring2-Tests-Core"
-}
+{	"classtraitcomposition" : "TRG2BehaviorDefinitionTest classTrait + TRG2ClassDescriptionDefinitionTest classTrait",	"classvars" : [ ],	"instvars" : [ ],	"name" : "RG2ClassDefinitionTest",	"commentStamp" : "",	"super" : "RG2Test",	"traitcomposition" : "TRG2BehaviorDefinitionTest + TRG2ClassDescriptionDefinitionTest",	"type" : "normal",	"classinstvars" : [ ],	"pools" : [ ],	"category" : "Ring2-Tests-Core"}

@@ -1,4 +1,4 @@
 trait alias
-removeAlias: aSymbol from: aRG2TraitAliasDefinition
+removeAlias: aSymbol from: aRG2TraitAlias
 
-	^ aRG2TraitAliasDefinition pvtRemoveAlias: aSymbol
+	^ aRG2TraitAlias pvtRemoveAlias: aSymbol

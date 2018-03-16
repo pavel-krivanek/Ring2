@@ -4,7 +4,7 @@ ast := (RBParser parseExpression: 'Trait1 + (Trait2 - {#c})').
 ast := (RBParser parseExpression: 'Trait1 + (Trait2 - {#c}) + Trait3').
 ast := (RBParser parseExpression: 'Trait1 + (Trait2 - #(c ahoj bla: bla:bla:)) + Trait3').
 
-composition := RG2TraitCompositionDefinition unnamed.
+composition := RG2TraitComposition unnamed.
 
 visitor := RG2TraitCompositionVisitor new.
 visitor traitComposition: composition.

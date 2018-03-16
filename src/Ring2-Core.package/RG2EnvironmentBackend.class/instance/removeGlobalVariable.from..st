@@ -1,4 +1,4 @@
 environment
-removeGlobalVariable: aRG2GlobalVariableDefinition from: aRG2Environment
+removeGlobalVariable: aRG2GlobalVariable from: aRG2Environment
 
-	^ aRG2Environment pvtRemoveGlobalVariable: aRG2GlobalVariableDefinition
+	^ aRG2Environment pvtRemoveGlobalVariable: aRG2GlobalVariable

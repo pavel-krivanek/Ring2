@@ -3,7 +3,7 @@ testClassTrait
 
 	| composition result |
 
-	composition := RG2TraitCompositionDefinition unnamed.
+	composition := RG2TraitComposition unnamed.
 	result := RG2TraitCompositionVisitor new parse: 'Trait1 classTrait + Trait2 classTrait' for: composition.
 	
 	self assert: result isCollection.

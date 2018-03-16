@@ -1,4 +1,4 @@
 method
-sourceCodeFor: aRG2MethodDefinition 
+sourceCodeFor: aRG2Method 
 
-	^ aRG2MethodDefinition pvtSafeSourceCode
+	^ aRG2Method pvtSafeSourceCode

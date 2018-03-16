@@ -13,7 +13,7 @@ visitMessageNode: aMessageNode
 	
 	(aMessageNode selector = #-) ifTrue: [ 
 		| exclusion | 
-		exclusion := RG2TraitExclusionDefinition parent: self traitComposition.
+		exclusion := RG2TraitExclusion parent: self traitComposition.
 		exclusion pvtSubject: rec.
 		exclusion pvtCleanExclusions.
 		args first do: [:each | exclusion pvtAddExclusion: each ]. 
@@ -22,7 +22,7 @@ visitMessageNode: aMessageNode
 	"an Array(Trait2 @ {#c3->#c2})"
 	(aMessageNode selector = #@) ifTrue: [ 
 		| exclusion | 
-		exclusion := RG2TraitAliasDefinition parent: self traitComposition.
+		exclusion := RG2TraitAlias parent: self traitComposition.
 		exclusion pvtSubject: rec.
 		exclusion pvtCleanAliases.
 		args first do: [:each | exclusion pvtAddAlias: each ]. 

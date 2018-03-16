@@ -6,8 +6,8 @@ asRing2MinimalDefinitionIn: aRG2Environment
 			definingClass := Smalltalk environment allBehaviors detect: [ :b | b traitComposition transformations includes: self ].
 
 			definingClass traitComposition == self
-				ifTrue: [ def := RG2TraitAliasDefinition parent: (definingClass asRing2MinimalDefinitionIn: aRG2Environment) ]
-				ifFalse: [ def := RG2TraitAliasDefinition parent: (definingClass traitComposition asRing2MinimalDefinitionIn: aRG2Environment) ].
+				ifTrue: [ def := RG2TraitAlias parent: (definingClass asRing2MinimalDefinitionIn: aRG2Environment) ]
+				ifFalse: [ def := RG2TraitAlias parent: (definingClass traitComposition asRing2MinimalDefinitionIn: aRG2Environment) ].
 
 
 			"we need to set real object because we cannot simply identify the real object from the model data"

@@ -3,7 +3,7 @@ testFullName
 	
 	| method |
 
-	method := RG2MethodDefinition named: #someMethod.
+	method := RG2Method named: #someMethod.
 	method parent: (method environment ensureClassNamed: #SomeClass).
 	self assert: method fullName equals: 'SomeClass>>#someMethod'.
 

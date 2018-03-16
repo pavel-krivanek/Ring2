@@ -1,4 +1,4 @@
 method
-setProtocolFor: aRG2MethodDefinition to: anObject
+setProtocolFor: aRG2Method to: anObject
 
 	self readOnlyError.

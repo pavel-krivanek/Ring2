@@ -1,18 +1,18 @@
 accessing - backend
-addBehavior: aRG2BehaviorDefinition
+addBehavior: aRG2Behavior
 
 	self backend forEnvironment
-		addBehavior: aRG2BehaviorDefinition
+		addBehavior: aRG2Behavior
 		to: self.
-	aRG2BehaviorDefinition isMeta ifFalse: [
-		aRG2BehaviorDefinition package
+	aRG2Behavior isMeta ifFalse: [
+		aRG2Behavior package
 			ifNotNil: [ :package | 
-				self backend forEnvironment addPackage: aRG2BehaviorDefinition package	to: self.
-				package addDefinedBehavior: aRG2BehaviorDefinition. ].
+				self backend forEnvironment addPackage: aRG2Behavior package	to: self.
+				package addDefinedBehavior: aRG2Behavior. ].
 		"self backend forEnvironment
-					addGlobalVariable: (RG2GlobalVariableDefinition named: aRG2BehaviorDefinition name parent: self)
+					addGlobalVariable: (RG2GlobalVariable named: aRG2Behavior name parent: self)
 					to: self" ].
 
-	(aRG2BehaviorDefinition hasResolved: #name)
-		ifTrue: [ self queryInterface behaviorsDictionary at: aRG2BehaviorDefinition name asSymbol put: aRG2BehaviorDefinition ].
+	(aRG2Behavior hasResolved: #name)
+		ifTrue: [ self queryInterface behaviorsDictionary at: aRG2Behavior name asSymbol put: aRG2Behavior ].
 				

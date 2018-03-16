@@ -3,7 +3,7 @@ testDefinedBehaviorsCollection
 	
 	| package env behavior1 behavior2 behavior3 |
 
-	package := RG2PackageDefinition unnamed.
+	package := RG2Package unnamed.
 	env := package environment.
 
 	self assert: package definedBehaviors isEmpty.

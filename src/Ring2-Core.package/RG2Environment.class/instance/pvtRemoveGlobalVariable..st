@@ -1,6 +1,6 @@
 private - backend access
-pvtRemoveGlobalVariable: aRG2GlobalVariableDefinition
+pvtRemoveGlobalVariable: aRG2GlobalVariable
 
-	self environment verifyOwnership: aRG2GlobalVariableDefinition.
+	self environment verifyOwnership: aRG2GlobalVariable.
 	
-	globalVariables remove: aRG2GlobalVariableDefinition.
+	globalVariables remove: aRG2GlobalVariable.

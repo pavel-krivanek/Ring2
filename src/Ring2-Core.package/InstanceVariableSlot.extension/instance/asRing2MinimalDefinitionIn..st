@@ -4,7 +4,7 @@ asRing2MinimalDefinitionIn: aRG2Environment
 	^ self class == InstanceVariableSlot 
 		ifTrue: [
 			aRG2Environment backend definitionFor: self ifAbsentRegister: [
-				RG2InstanceVariableSlotDefinition
+				RG2InstanceVariableSlot
 					named: self name asSymbol
 					parent:
 						(self definingClass classLayout asRing2MinimalDefinitionIn: aRG2Environment)]]

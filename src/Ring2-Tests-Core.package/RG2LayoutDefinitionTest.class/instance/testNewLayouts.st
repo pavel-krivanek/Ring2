@@ -1,7 +1,7 @@
 tests
 testNewLayouts
 
-	RG2LayoutDefinition allSubclasses do: [ :layoutClass |
+	RG2Layout allSubclasses do: [ :layoutClass |
 		| layout | 
 		layout  := layoutClass unnamed.
 		self assert: (layout isRing2Resolved).

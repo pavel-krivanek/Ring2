@@ -1,4 +1,4 @@
 method
-setMethodPackageFor: aRG2MethodDefinition to: aRG2PackageDefinition
+setMethodPackageFor: aRG2Method to: aRG2Package
 
-	^  aRG2MethodDefinition pvtPackage: aRG2PackageDefinition
+	^  aRG2Method pvtPackage: aRG2Package

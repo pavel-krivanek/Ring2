@@ -1,4 +1,4 @@
 pointer layout
-addSlot: aRG2SlotDefinition to: aRG2LayoutDefinition
+addSlot: aRG2Slot to: aRG2Layout
 
-	^ aRG2LayoutDefinition pvtAddSlot: aRG2SlotDefinition
+	^ aRG2Layout pvtAddSlot: aRG2Slot

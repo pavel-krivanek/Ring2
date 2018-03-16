@@ -1,5 +1,5 @@
 method
-untagMethod: aRG2MethodDefinition from: aSymbol
+untagMethod: aRG2Method from: aSymbol
 
-	^ aRG2MethodDefinition pvtUntagFrom: aSymbol
+	^ aRG2Method pvtUntagFrom: aSymbol
 	

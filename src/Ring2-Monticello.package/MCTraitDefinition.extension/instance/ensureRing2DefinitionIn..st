@@ -14,7 +14,7 @@ ensureRing2DefinitionIn: aRG2Environment
 			ifFalse: [ def superclass: (aRG2Environment ensureClassNamed: superclassName ) ].
 		def category: self category.
 		def comment: (
-			(RG2CommentDefinition parent: def) 
+			(RG2Comment parent: def) 
 				content: self comment;
 				author: (self authorForStamp: self commentStamp);
 				time: (self timeForStamp: self commentStamp);

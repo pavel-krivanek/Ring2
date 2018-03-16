@@ -8,4 +8,4 @@ asRing2MinimalDefinitionIn: aRG2Environment
 		ifNil: [ self error: 'Cannot create model for an empty layout without a host'].
 
 	^ aRG2Environment backend definitionFor: self ifAbsentRegister: [
-		RG2EmptyLayoutDefinition parent: aHost]
+		RG2EmptyLayout parent: aHost]

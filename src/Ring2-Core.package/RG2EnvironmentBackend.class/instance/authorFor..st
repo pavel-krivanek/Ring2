@@ -1,4 +1,4 @@
 method
-authorFor: aRG2MethodDefinition
+authorFor: aRG2Method
 
-	^  aRG2MethodDefinition pvtAuthor
+	^  aRG2Method pvtAuthor

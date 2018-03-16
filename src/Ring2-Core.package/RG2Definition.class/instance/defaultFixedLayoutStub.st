@@ -1,4 +1,4 @@
 hierarchy-defaults
 defaultFixedLayoutStub
 
-	^ RG2FixedLayoutDefinition unresolved
+	^ RG2FixedLayout unresolved

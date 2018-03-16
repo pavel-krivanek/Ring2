@@ -1,10 +1,10 @@
 behavior
-metaclassFor: aRG2BehaviorDefinition
+metaclassFor: aRG2Behavior
 
 	| realBehavior realMetaclass def |
 	
-	realBehavior := self realBehaviorFor: aRG2BehaviorDefinition.
+	realBehavior := self realBehaviorFor: aRG2Behavior.
 	realMetaclass := realBehavior class.
 	def := self 	definitionFor: realMetaclass ifAbsentRegister: [ 
-			realMetaclass asRing2MinimalDefinitionIn: aRG2BehaviorDefinition environment ].
+			realMetaclass asRing2MinimalDefinitionIn: aRG2Behavior environment ].
 	^ def

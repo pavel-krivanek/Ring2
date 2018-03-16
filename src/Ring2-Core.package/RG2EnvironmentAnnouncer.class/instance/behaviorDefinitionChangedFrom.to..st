@@ -1,6 +1,6 @@
 triggering
-behaviorDefinitionChangedFrom: oldRG2BehaviorDefinition to: newRG2BehaviorDefinition
+behaviorDefinitionChangedFrom: oldRG2Behavior to: newRG2Behavior
 
 	self announce: (ClassModifiedClassDefinition  
-		classDefinitionChangedFrom:  oldRG2BehaviorDefinition
-		to: newRG2BehaviorDefinition)
+		classDefinitionChangedFrom:  oldRG2Behavior
+		to: newRG2Behavior)

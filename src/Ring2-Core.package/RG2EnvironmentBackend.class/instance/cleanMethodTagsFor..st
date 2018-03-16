@@ -1,4 +1,4 @@
 method
-cleanMethodTagsFor: aRG2MethodDefinition
+cleanMethodTagsFor: aRG2Method
 
-	aRG2MethodDefinition pvtCleanTags.
+	aRG2Method pvtCleanTags.
