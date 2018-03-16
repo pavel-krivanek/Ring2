@@ -16,6 +16,7 @@ testTrait
 	self assert: trait comment content equals: RG2TestTrait organization comment.
 	self assert: trait localMethods size equals: RG2TestTrait localMethods size.
 	self assert: trait protocols asSortedCollection equals: RG2TestTrait protocols asSortedCollection.
-	self assert: trait metaclass name equals: #Trait.
+	self assert: trait metaclass name equals: 'RG2TestTrait classTrait'.
+	self assert: trait metaclass superclass name equals: 'Trait'.
 	self assert: trait package name equals: 'Ring2-Tests-Core'.
 	
