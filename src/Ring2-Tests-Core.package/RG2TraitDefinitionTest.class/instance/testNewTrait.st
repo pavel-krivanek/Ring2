@@ -3,13 +3,13 @@ testNewTrait
 
 	| trait metaclassTrait comment category package | 
 	
-	trait  := RG2Trait unnamed.
+	trait  := RG2TraitOld unnamed.
 	self assert: (trait isRing2Resolved).
 	self assert: (trait hasUnresolvedAll: #(classTrait comment category package)).
 	self assert: (trait isTrait).
 	self assert: (trait trait == trait).
 
-	metaclassTrait  := RG2MetaclassTrait parent: trait environment.
+	metaclassTrait  := RG2MetaclassTraitOld parent: trait environment.
 	trait classTrait: metaclassTrait.
 	self assert: (trait hasResolved: #classTrait).
 	self assert: (trait classTrait == metaclassTrait).

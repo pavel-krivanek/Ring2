@@ -3,7 +3,7 @@ testSharedPoolsCollection
 	
 	| class env sharedPool1 sharedPool2 sharedPool3 |
 
-	class := RG2Class unnamed.
+	class := RG2ClassOld unnamed.
 	env := class environment.
 
 	self assert: class sharedPools isEmpty.

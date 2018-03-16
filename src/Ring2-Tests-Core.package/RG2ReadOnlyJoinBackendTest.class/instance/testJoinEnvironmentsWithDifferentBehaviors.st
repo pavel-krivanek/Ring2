@@ -3,8 +3,8 @@ testJoinEnvironmentsWithDifferentBehaviors
 
 	| class1 class2 joinEnv |
 	
-	class1 := RG2Class named: #SomeClass1.
-	class2 := RG2Class named: #SomeClass2.
+	class1 := RG2ClassOld named: #SomeClass1.
+	class2 := RG2ClassOld named: #SomeClass2.
 
 	joinEnv := self joinedEnvironmentFor: class1 environment and: class2 environment.
 

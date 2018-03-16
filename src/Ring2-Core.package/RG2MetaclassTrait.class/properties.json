@@ -1,1 +1,1 @@
-{	"commentStamp" : "VeronicaUquillas 4/19/2011 16:04",	"super" : "RG2TraitDescription",	"category" : "Ring2-Core-Kernel",	"classinstvars" : [ ],	"pools" : [ ],	"classvars" : [ ],	"instvars" : [		"baseTrait"	],	"name" : "RG2MetaclassTrait",	"type" : "normal"}
+{	"commentStamp" : "",	"super" : "RG2BehaviorFactory",	"category" : "Ring2-Core-Kernel",	"classinstvars" : [ ],	"pools" : [ ],	"classvars" : [ ],	"instvars" : [ ],	"name" : "RG2MetaclassTrait",	"type" : "normal"}

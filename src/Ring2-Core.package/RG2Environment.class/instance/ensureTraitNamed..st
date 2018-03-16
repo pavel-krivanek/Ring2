@@ -29,7 +29,7 @@ ensureTraitNamed: aSymbol
 				ifNil: [ 
 					"we need to create new behavior"
 					| newBehavior |
-					newBehavior := RG2Trait named: aSymbol parent: self.
+					newBehavior := RG2TraitOld named: aSymbol parent: self.
 					self addBehavior: newBehavior.
 					newBehavior ] ]
 		ifNotNil: [

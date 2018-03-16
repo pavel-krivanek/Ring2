@@ -5,21 +5,21 @@ createUnresolvedClassGroupFor: aRG2Behavior
 
 	classStub := aRG2Behavior isMeta
 		ifFalse: [ aRG2Behavior ]
-		ifTrue: [ RG2Class unresolvedWithParent: self environment ].
+		ifTrue: [ RG2ClassOld unresolvedWithParent: self environment ].
 	classStub propertyNamed: #creator put: aRG2Behavior.
 	classStub propertyNamed: #role put: #class.
 		
 	metaclassStub := aRG2Behavior isMeta
-		ifFalse: [ RG2Metaclass unresolvedWithParent: self environment ]
+		ifFalse: [ RG2MetaclassOld unresolvedWithParent: self environment ]
 		ifTrue: [ aRG2Behavior ].
 	metaclassStub propertyNamed: #creator put: aRG2Behavior.
 	metaclassStub propertyNamed: #role put: #metaclass.
 
-	superclassStub := RG2Class unresolvedWithParent: self environment.
+	superclassStub := RG2ClassOld unresolvedWithParent: self environment.
 	superclassStub propertyNamed: #creator put: aRG2Behavior.
 	superclassStub propertyNamed: #role put: #superclass.
 
-	superclassMetaclassStub := RG2Metaclass unresolvedWithParent: self environment.
+	superclassMetaclassStub := RG2MetaclassOld unresolvedWithParent: self environment.
 	superclassMetaclassStub propertyNamed: #creator put: aRG2Behavior.
 	superclassMetaclassStub propertyNamed: #role put: #superclassMetaclass.
 	

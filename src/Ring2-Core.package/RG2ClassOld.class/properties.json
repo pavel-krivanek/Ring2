@@ -1,0 +1,1 @@
+{	"commentStamp" : "PavelKrivanek 3/16/2018 16:09",	"super" : "RG2ClassDescription",	"category" : "Ring2-Core-Kernel",	"classinstvars" : [ ],	"pools" : [ ],	"classvars" : [ ],	"instvars" : [		"comment",		"classVariables",		"package",		"sharedPools"	],	"name" : "RG2ClassOld",	"type" : "normal"}

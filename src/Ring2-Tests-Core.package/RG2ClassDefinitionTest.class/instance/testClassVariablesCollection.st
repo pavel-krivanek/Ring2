@@ -3,7 +3,7 @@ testClassVariablesCollection
 	
 	| class env classVariable1 classVariable2 classVariable3 |
 
-	class := RG2Class unnamed.
+	class := RG2ClassOld unnamed.
 	env := class environment.
 
 	self assert: class classVariables isEmpty.

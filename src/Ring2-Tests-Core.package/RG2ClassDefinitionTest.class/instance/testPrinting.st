@@ -2,7 +2,7 @@ tests
 testPrinting
 	| aClass |
 	
-	aClass := RG2Class named: 'Object'.
+	aClass := RG2ClassOld named: 'Object'.
 	
 	self assert: aClass printString equals: #Object.
 	

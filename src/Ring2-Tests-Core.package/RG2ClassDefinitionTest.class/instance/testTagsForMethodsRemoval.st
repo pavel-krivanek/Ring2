@@ -3,7 +3,7 @@ testTagsForMethodsRemoval
 	
 	| class method1 method2 |
 
-	class := RG2Class unnamed.
+	class := RG2ClassOld unnamed.
 	
 	self assert: class tagsForMethods isEmpty.
 	self assert: (class hasUnresolved: #tagsForMethods).
