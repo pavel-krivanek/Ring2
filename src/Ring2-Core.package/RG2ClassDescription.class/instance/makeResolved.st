@@ -1,4 +1,4 @@
-resolving
+done
 makeResolved
 
 	super makeResolved.

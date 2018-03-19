@@ -1,4 +1,4 @@
-default model values
+done
 defaultMetaClass
 
 	^ self environment backend createNewUnresolvedMetaclassFor: self

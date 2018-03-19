@@ -1,4 +1,4 @@
-done
+private - backend interface
 pvtResolvableProperties
 
 	^ super pvtResolvableProperties, { 
