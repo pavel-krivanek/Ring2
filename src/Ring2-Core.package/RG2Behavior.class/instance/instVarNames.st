@@ -1,4 +1,3 @@
-queries - other
+as yet unclassified
 instVarNames
-
-	^ Array new
+	^ self behaviorStrategy instVarNames
