@@ -1,4 +1,4 @@
 tests
 behaviorClass
 
-	^ RG2ClassOld
+	^ RG2Class

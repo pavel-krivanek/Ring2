@@ -16,13 +16,13 @@ createUnresolvedTraitGroupFor: aRG2Behavior
 	classTraitStub propertyNamed: #role put: #classTrait.
 
 	"Trait"
-	traitMetaclassStub := RG2ClassOld unresolvedWithParent: self environment.
+	traitMetaclassStub := RG2Class unresolvedWithParent: self environment.
 	self createUnresolvedClassGroupFor: traitMetaclassStub.
 	traitMetaclassStub propertyNamed: #creator put: aRG2Behavior.
 	traitMetaclassStub propertyNamed: #role put: #traitMetaclass.
 	
 	"ClassTrait"
-	classTraitMetaclassStub := RG2ClassOld unresolvedWithParent: self environment.
+	classTraitMetaclassStub := RG2Class unresolvedWithParent: self environment.
 	self createUnresolvedClassGroupFor: classTraitMetaclassStub.
 	classTraitMetaclassStub propertyNamed: #creator put: aRG2Behavior.
 	classTraitMetaclassStub propertyNamed: #role put: #classTraitMetaclass.

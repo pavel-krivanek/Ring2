@@ -1,4 +1,6 @@
 instance creation
 unresolved
 
-	self shouldBeImplemented 
+	^ (RG2Behavior unresolved)
+		behaviorStrategy: self newStrategy;
+		yourself
