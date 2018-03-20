@@ -1,6 +1,4 @@
 instance creation
 unnamed
 
-	^ (RG2Behavior unnamed)
-		behaviorStrategy: self newStrategy;
-		yourself
+	^ RG2Behavior unnamedWithBehaviorStrategy: self newStrategy

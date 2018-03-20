@@ -2,8 +2,4 @@ initialization
 initializeUnresolved
 
 	super initializeUnresolved. 
-	layout := self unresolvedValue: self defaultLayout. 
-
-
-"	metaClass := self defaultMetaClass.
-"
+	layout := self unresolvedValue: self defaultLayout.

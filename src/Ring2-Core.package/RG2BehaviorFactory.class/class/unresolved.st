@@ -1,6 +1,4 @@
 instance creation
 unresolved
 
-	^ (RG2Behavior unresolved)
-		behaviorStrategy: self newStrategy;
-		yourself
+	^ RG2Behavior unresolvedWithBehaviorStrategy: self newStrategy
