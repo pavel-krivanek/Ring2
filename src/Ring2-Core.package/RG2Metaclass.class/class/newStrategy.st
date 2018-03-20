@@ -1,4 +1,4 @@
 instance creation
 newStrategy
 
-	^ RG2MetaclassStrategy new
+	^ RG2MetaclassStrategy basicNew

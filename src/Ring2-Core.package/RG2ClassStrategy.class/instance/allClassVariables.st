@@ -4,4 +4,4 @@ allClassVariables
 
 	^ ((self owner superclass == nil) or: [ self owner superclass == self owner]) 
 		ifTrue: [ self classVariables ]
-		ifFalse: [ self superclass allClassVariables, classVariables ]
+		ifFalse: [ self owner superclass allClassVariables, classVariables ]

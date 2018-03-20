@@ -1,4 +1,4 @@
 instance creation
 newStrategy
 
-	^ RG2MetaclassTraitStrategy new
+	^ RG2MetaclassTraitStrategy basicNew
