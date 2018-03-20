@@ -7,7 +7,7 @@ testJoinEnvironmentsWithOverlappedHierarchy
 	superclass1 := class1 environment ensureClassNamed: #Object.
 	class1 superclass: superclass1.
 	
-	class2 := RG2MetaclassOld named: #Object.
+	class2 := RG2Metaclass named: #Object.
 
 	joinEnv := self joinedEnvironmentFor: class1 environment and: class2 environment.
 

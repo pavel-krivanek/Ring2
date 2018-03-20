@@ -5,12 +5,12 @@ createUnresolvedTraitGroupFor: aRG2Behavior
 
 	traitStub := aRG2Behavior isMeta
 		ifFalse: [ aRG2Behavior ]
-		ifTrue: [ RG2TraitOld unresolvedWithParent: self environment ].
+		ifTrue: [ RG2Trait unresolvedWithParent: self environment ].
 	traitStub propertyNamed: #creator put: aRG2Behavior.
 	traitStub propertyNamed: #role put: #trait.
 		
 	classTraitStub := aRG2Behavior isMeta
-		ifFalse: [ RG2MetaclassTraitOld unresolvedWithParent: self environment ]
+		ifFalse: [ RG2MetaclassTrait unresolvedWithParent: self environment ]
 		ifTrue: [ aRG2Behavior ].
 	classTraitStub propertyNamed: #creator put: aRG2Behavior.
 	classTraitStub propertyNamed: #role put: #classTrait.

@@ -7,7 +7,7 @@ pvtAsTrait
 		ifTrue: [self error: 'This class cannot be converted to trait'].
 		
 	"TODO: check empty layout"
-	newTrait := RG2TraitOld unresolvedWithParent: self parent.
+	newTrait := RG2Trait unresolvedWithParent: self parent.
 	newTrait copyPropertiesFrom: self.
 	newTrait pvtName: name.
 	newTrait pvtLocalMethods: localMethods.

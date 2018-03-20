@@ -1,0 +1,4 @@
+accessing
+traitTransformationString
+
+	^ self name

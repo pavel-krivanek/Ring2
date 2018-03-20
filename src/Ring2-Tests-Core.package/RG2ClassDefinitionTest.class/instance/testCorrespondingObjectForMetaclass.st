@@ -3,9 +3,9 @@ testCorrespondingObjectForMetaclass
 
 	| def1 def2 def3 |
 	
-	def1 := RG2MetaclassOld named: 'SomeClass class'.
-	def2 := RG2MetaclassOld named: 'SomeClass class'.
-	def3 := RG2MetaclassOld named: 'SomeClass1 class'.
+	def1 := RG2Metaclass named: 'SomeClass class'.
+	def2 := RG2Metaclass named: 'SomeClass class'.
+	def3 := RG2Metaclass named: 'SomeClass1 class'.
 	
 	self assert: (def1 correspondingObjectIn: def2 environment) equals: def2.
 	self assert: (def1 correspondingObjectIn: def3 environment) equals: nil.

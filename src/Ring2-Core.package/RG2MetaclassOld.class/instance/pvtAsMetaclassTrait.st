@@ -7,7 +7,7 @@ pvtAsMetaclassTrait
 		ifTrue: [self error: 'This class cannot be converted to trait'].
 		
 	"TODO: check empty layout"
-	newMetaclassTrait := RG2MetaclassTraitOld unresolvedWithParent: self parent.
+	newMetaclassTrait := RG2MetaclassTrait unresolvedWithParent: self parent.
 	newMetaclassTrait copyPropertiesFrom: self.
 
 	(self hasResolved: #name)

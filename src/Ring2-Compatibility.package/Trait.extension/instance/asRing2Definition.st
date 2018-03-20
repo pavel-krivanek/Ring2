@@ -3,7 +3,7 @@ asRing2Definition
 
 	| model env |
 	
-	model := (RG2TraitOld named: self name).
+	model := (RG2Trait named: self name).
 	env := model environment.
 	model 	superclass: (env ensureClassNamed: #Trait).
 		

@@ -3,7 +3,7 @@ createNewUnresolvedMetaclassFor: aRG2Behavior
 
 	| metaclassStub superclassMetaclass |
 	
-	metaclassStub := RG2MetaclassOld unresolvedWithParent: self environment.
+	metaclassStub := RG2Metaclass unresolvedWithParent: self environment.
 
 	superclassMetaclass := aRG2Behavior pvtSuperclass pvtMetaclass.
 	superclassMetaclass 

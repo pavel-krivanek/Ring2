@@ -3,9 +3,9 @@ testCorrespondingObjectForMetaclassTrait
 
 	| def1 def2 def3 |
 	
-	def1 := RG2MetaclassTraitOld named: 'SomeTrait classTrait'.
-	def2 := RG2MetaclassTraitOld named: 'SomeTrait classTrait'.
-	def3 := RG2MetaclassTraitOld named: 'SomeTrait1 classTrait'.
+	def1 := RG2MetaclassTrait named: 'SomeTrait classTrait'.
+	def2 := RG2MetaclassTrait named: 'SomeTrait classTrait'.
+	def3 := RG2MetaclassTrait named: 'SomeTrait1 classTrait'.
 	
 	self assert: (def1 correspondingObjectIn: def2 environment) equals: def2.
 	self assert: (def1 correspondingObjectIn: def3 environment) equals: nil.
