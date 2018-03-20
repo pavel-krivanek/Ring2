@@ -1,0 +1,4 @@
+strategy
+removeClassVariable: aRG2InstanceVariableDefinition
+
+	^ self behaviorStrategy removeClassVariable: aRG2InstanceVariableDefinition

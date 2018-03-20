@@ -1,4 +1,4 @@
 class
 cleanSharedPoolsFor: aRG2Behavior
 
-	^ aRG2Behavior pvtCleanSharedPools
+	^ aRG2Behavior behaviorStrategy behaviorStrategy pvtCleanSharedPools

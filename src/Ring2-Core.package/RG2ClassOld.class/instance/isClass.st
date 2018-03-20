@@ -1,4 +1,4 @@
-testing types
+DONE
 isClass
 	
 	^ true

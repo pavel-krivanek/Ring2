@@ -1,4 +1,4 @@
-private - backend access
+DONE
 pvtResolvableProperties
 
 	^ super pvtResolvableProperties, { 

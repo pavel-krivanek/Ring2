@@ -1,4 +1,4 @@
-accessing - backend
+DONE
 addSharedPool: aRG2PoolVariable
 
 	self announceDefinitionChangeDuring: [ 

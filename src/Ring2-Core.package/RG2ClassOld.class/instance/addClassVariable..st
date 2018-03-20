@@ -1,4 +1,4 @@
-accessing - backend
+DONE
 addClassVariable: aRG2InstanceVariableDefinition 
 
 	self announceDefinitionChangeDuring: [ 

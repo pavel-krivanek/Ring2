@@ -1,4 +1,4 @@
-queries - shared pools
+DONE
 sharedPools
 
 	| allSharedPools |

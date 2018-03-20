@@ -1,4 +1,4 @@
 class
 cleanClassVariablesFor: aRG2Behavior
 
-	^ aRG2Behavior pvtCleanClassVariables
+	^ aRG2Behavior behaviorStrategy pvtCleanClassVariables

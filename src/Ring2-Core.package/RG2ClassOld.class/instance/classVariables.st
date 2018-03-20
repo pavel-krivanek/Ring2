@@ -1,4 +1,4 @@
-queries - variables
+DONE
 classVariables
 
 	| allClassVariables |

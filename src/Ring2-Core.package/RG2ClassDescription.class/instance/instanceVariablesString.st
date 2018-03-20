@@ -1,4 +1,4 @@
-printing
+done
 instanceVariablesString
 	"Answer a string of my instance variable names separated by spaces."
 

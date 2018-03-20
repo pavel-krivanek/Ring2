@@ -1,4 +1,4 @@
-accessing - backend
+DONE
 removeSharedPool: aRG2PoolVariable
 
 	self announceDefinitionChangeDuring: [ 

@@ -1,4 +1,4 @@
-copying
+DONE
 copyForBehaviorDefinitionPostCopy
 
 	| newVariables newSharedPools |

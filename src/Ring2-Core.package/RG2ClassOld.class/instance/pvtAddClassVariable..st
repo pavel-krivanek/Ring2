@@ -1,4 +1,4 @@
-private - backend access
+DONE
 pvtAddClassVariable: aRG2InstanceVariableDefinition
 
 	self environment verifyOwnership: aRG2InstanceVariableDefinition.

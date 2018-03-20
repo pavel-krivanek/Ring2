@@ -1,0 +1,23 @@
+strategy
+pvtAsTrait
+
+	| newTrait |
+	
+	"TODO: swap strategies"
+	
+	(self resolvedProperties includesAnyOf: #(superclass traitComposition classVariables sharedPools))
+		ifTrue: [self error: 'This class cannot be converted to trait'].
+		
+	"TODO: check empty layout"
+	newTrait := RG2TraitOld unresolvedWithParent: self parent.
+	newTrait copyPropertiesFrom: self.
+	newTrait pvtName: name.
+	newTrait pvtLocalMethods: localMethods.
+	newTrait pvtTags: tags.
+
+	newTrait pvtComment: self behaviorStrategy comment.
+	newTrait pvtPackage: self behaviorStrategy package.
+	
+	^ newTrait
+	
+	

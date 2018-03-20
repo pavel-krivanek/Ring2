@@ -1,4 +1,4 @@
-accessing - backend
+DONE
 removeClassVariable: aRG2InstanceVariableDefinition
 
 	self announceDefinitionChangeDuring: [ 

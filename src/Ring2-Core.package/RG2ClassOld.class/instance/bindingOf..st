@@ -1,4 +1,4 @@
-binding
+DONE
 bindingOf: varName
 
 	| aSymbol | 

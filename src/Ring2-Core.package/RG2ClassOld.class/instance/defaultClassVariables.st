@@ -1,4 +1,4 @@
-default model values
+DONE
 defaultClassVariables
 
 	^ OrderedCollection new

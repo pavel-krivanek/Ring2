@@ -1,4 +1,4 @@
-default model values
+DONE
 defaultComment
 
 	^ self defaultCommentStubIn: self

@@ -1,4 +1,4 @@
-private
+DONE
 pvtAsTrait
 
 	| newTrait |

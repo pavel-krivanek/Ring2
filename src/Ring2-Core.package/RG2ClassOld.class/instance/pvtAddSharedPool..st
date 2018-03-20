@@ -1,4 +1,4 @@
-private - backend access
+DONE
 pvtAddSharedPool: aRG2PoolVariable
 
 	self environment verifyOwnership: aRG2PoolVariable.

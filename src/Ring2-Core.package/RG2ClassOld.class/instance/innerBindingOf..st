@@ -1,4 +1,4 @@
-compiling
+DONE
 innerBindingOf: aSymbol
 
 	self classVariables detect: [ :each | each name = aSymbol  ] ifFound: [ :found | ^ found ].

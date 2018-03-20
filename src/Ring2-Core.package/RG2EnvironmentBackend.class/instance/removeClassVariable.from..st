@@ -1,4 +1,4 @@
 class
 removeClassVariable: aRG2InstanceVariableDefinition from: aRG2Behavior
 
-	^ aRG2Behavior pvtRemoveClassVariable: aRG2InstanceVariableDefinition
+	^ aRG2Behavior behaviorStrategy pvtRemoveClassVariable: aRG2InstanceVariableDefinition

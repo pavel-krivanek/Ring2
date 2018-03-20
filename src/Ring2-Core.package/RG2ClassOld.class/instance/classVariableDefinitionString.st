@@ -1,4 +1,4 @@
-class variables
+DONE
 classVariableDefinitionString
 	"Answer a string that evaluates to the definition of the class Variables"
 	
