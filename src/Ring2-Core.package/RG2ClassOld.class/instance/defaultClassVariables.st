@@ -1,6 +1,0 @@
-DONE
-defaultClassVariables
-
-	^ OrderedCollection new
-
-	

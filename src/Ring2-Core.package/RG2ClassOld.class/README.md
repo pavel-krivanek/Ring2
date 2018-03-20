@@ -1,1 +1,0 @@
-RG2Class is the concrete representation of a class (no trait)

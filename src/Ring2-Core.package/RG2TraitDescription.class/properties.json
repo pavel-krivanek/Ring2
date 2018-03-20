@@ -1,1 +1,0 @@
-{	"commentStamp" : "PavelKrivanek 3/16/2018 16:05",	"super" : "RG2Behavior",	"category" : "Ring2-Core-Kernel",	"classinstvars" : [ ],	"pools" : [ ],	"classvars" : [ ],	"instvars" : [ ],	"name" : "RG2TraitDescription",	"type" : "normal"}

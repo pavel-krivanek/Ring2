@@ -1,4 +1,0 @@
-accessing
-baseTrait
-
-	^ self

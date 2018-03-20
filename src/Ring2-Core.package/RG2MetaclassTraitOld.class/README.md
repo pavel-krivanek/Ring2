@@ -1,1 +1,0 @@
-RG2MetatraitDefinition is a concrete representation of metaclasses of traits
