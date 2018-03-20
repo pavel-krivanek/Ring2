@@ -8,4 +8,4 @@ copyForBehaviorDefinitionPostCopy
 	tagsForMethods := self tagsForMethods copy asSet.
 	tags := self tags copy asSet.
 	
-	behaviorStrategy := self behaviorStrategy copyForBehaviorDefinition.
+	behaviorStrategy := behaviorStrategy copyForBehaviorDefinition.

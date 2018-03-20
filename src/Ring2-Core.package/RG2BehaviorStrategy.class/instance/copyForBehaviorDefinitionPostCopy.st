@@ -1,2 +1,4 @@
 copying
 copyForBehaviorDefinitionPostCopy
+
+	super postCopy.
