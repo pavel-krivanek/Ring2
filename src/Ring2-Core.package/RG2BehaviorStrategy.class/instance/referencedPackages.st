@@ -1,4 +1,4 @@
 private - backend access
 referencedPackages
 
-	self incompatibleBehaviorType
+	^ Array new
