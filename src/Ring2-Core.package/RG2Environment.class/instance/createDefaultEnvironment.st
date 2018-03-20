@@ -3,18 +3,18 @@ createDefaultEnvironment
 
 	| protoobject protoobjectClass object objectClass class classClass classDescription classDescriptionClass behavior behaviorClass metaclass metaclassClass kernelPackage |
 	
-	protoobject := RG2ClassOld unresolvedNamed: #'ProtoObject' withParent: self.
+	protoobject := RG2Class unresolvedNamed: #'ProtoObject' withParent: self.
 	protoobjectClass := RG2MetaclassOld unresolvedNamed: #'ProtoObject class' withParent: self.
-	object := RG2ClassOld unresolvedNamed: #'Object' withParent: self.
+	object := RG2Class unresolvedNamed: #'Object' withParent: self.
 	objectClass := RG2MetaclassOld unresolvedNamed: #'Object class' withParent: self.
-	class := RG2ClassOld unresolvedNamed: #'Class' withParent: self.
+	class := RG2Class unresolvedNamed: #'Class' withParent: self.
 	classClass := RG2MetaclassOld unresolvedNamed: #'Class class' withParent: self.
-	classDescription := RG2ClassOld unresolvedNamed: #'ClassDescription' withParent: self.
+	classDescription := RG2Class unresolvedNamed: #'ClassDescription' withParent: self.
 	classDescriptionClass := RG2MetaclassOld unresolvedNamed: #'ClassDescription class' withParent: self.
-	behavior := RG2ClassOld unresolvedNamed: #'Behavior' withParent: self.
-	behaviorClass := RG2MetaclassOld unresolvedNamed: #'Behavior class' withParent: self.
-	metaclass := RG2ClassOld unresolvedNamed: #'Metaclass' withParent: self.
-	metaclassClass := RG2MetaclassOld unresolvedNamed: #'Metaclass class' withParent: self.
+	behavior := RG2Class unresolvedNamed: #'Behavior' withParent: self.
+	behaviorClass := RG2Metaclass unresolvedNamed: #'Behavior class' withParent: self.
+	metaclass := RG2Class unresolvedNamed: #'Metaclass' withParent: self.
+	metaclassClass := RG2Metaclass unresolvedNamed: #'Metaclass class' withParent: self.
 	kernelPackage := RG2Package unresolvedNamed: #'Kernel' withParent: self.
 	
 	{ protoobject. protoobjectClass. object. objectClass. class. classClass. classDescription. classDescriptionClass. behavior. behaviorClass. metaclass. metaclassClass } do: [ :each |

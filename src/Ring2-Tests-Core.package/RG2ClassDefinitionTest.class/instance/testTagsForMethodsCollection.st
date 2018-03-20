@@ -3,7 +3,7 @@ testTagsForMethodsCollection
 	
 	| class env tag1 tag2 tag3 |
 
-	class := RG2ClassOld unnamed.
+	class := RG2Class unnamed.
 	env := class environment.
 
 	self assert: class tagsForMethods isEmpty.

@@ -10,7 +10,7 @@ testPackages
 	self assert: method environment ask packages size equals: 2.
 	
 	" adding to existing class definition "
-	class := RG2ClassOld unnamed.
+	class := RG2Class unnamed.
 	method := RG2Method parent: class.
 	class addLocalMethod: method.
 	
@@ -18,7 +18,7 @@ testPackages
 	self assert: method environment ask packages size equals: 2.
 
 	" adding to existing class definition with package "
-	class := RG2ClassOld unnamed.
+	class := RG2Class unnamed.
 	method := RG2Method parent: class.
 	class addLocalMethod: method.
 	method package: (RG2Package named: 'SomePackage' parent: method environment).

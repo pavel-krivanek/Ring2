@@ -6,7 +6,7 @@ testJoinWithImageEnvironment
 	env := RG2Environment new.
 	env backend: (RG2ReadOnlyImageBackend for: env).
 	
-	class1 := RG2ClassOld named: #SomeClass.
+	class1 := RG2Class named: #SomeClass.
 	superclass1 := class1 environment ensureClassNamed: #Object.
 	class1 superclass: superclass1.
 	class1 environment clean.

@@ -1,4 +1,4 @@
 behavior
 layoutFor: aRG2Behavior
 
-	^  aRG2Behavior pvtLayout
+	^  aRG2Behavior behaviorStrategy pvtLayout

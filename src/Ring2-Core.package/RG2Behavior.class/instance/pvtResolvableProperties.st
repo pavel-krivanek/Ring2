@@ -9,6 +9,6 @@ pvtResolvableProperties
 		#metaclass -> metaclass.  
 		#tagsForMethods -> tagsForMethods. 
  		#tags -> tags. 
-    	}
+    	}, self behaviorStrategy pvtResolvableProperties
 	
 	

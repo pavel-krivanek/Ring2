@@ -1,4 +1,6 @@
 instance creation
 named: aString parent: aRG2Definition
 
-	self shouldBeImplemented 
+	^ (RG2Behavior named: aString parent: aRG2Definition)
+		behaviorStrategy: self newStrategy;
+		yourself

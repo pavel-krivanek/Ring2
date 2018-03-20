@@ -2,7 +2,7 @@ tests
 testSiblings
 	| newBehavior |
 	
-	newBehavior := RG2ClassOld named: #SomeBehaivor.
+	newBehavior := RG2Class named: #SomeBehaivor.
 	self assert: newBehavior sibling equals: newBehavior metaclass.
 	self assert: newBehavior baseBehavior equals: newBehavior.
 	self assert: newBehavior instanceSide equals: newBehavior.

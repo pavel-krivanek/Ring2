@@ -1,4 +1,6 @@
 instance creation
 unnamed
 
-	self shouldBeImplemented 
+	^ (RG2Behavior unnamed)
+		behaviorStrategy: self newStrategy;
+		yourself
