@@ -10,7 +10,7 @@ copyForBehaviorDefinitionPostCopy
 	self pvtCleanClassVariables.
 	self pvtCleanSharedPools.
 	
-	newVariables do: [ :each | self addClassVariable: each ].
-	newSharedPools do: [ :each | self addSharedPool: each ].
+	newVariables do: [ :each | self privAddClassVariable: each ].
+	newSharedPools do: [ :each | self privAddSharedPool: each ].
 
 
