@@ -1,4 +1,6 @@
 private - backend access
 bindingOf: varName
 
-	self incompatibleBehaviorType
+	^ self owner isRootInEnvironment
+		ifFalse: [self owner superclass bindingOf: varName]
+		ifTrue: [ nil ]

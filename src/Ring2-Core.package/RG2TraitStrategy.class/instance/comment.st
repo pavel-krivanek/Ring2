@@ -1,4 +1,4 @@
 testing
 comment
 
-	^ self backend forBehavior traitCommentFor: self
+	^ self backend forBehavior traitCommentFor: self owner

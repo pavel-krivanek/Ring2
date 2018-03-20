@@ -1,4 +1,4 @@
 accessing
 package
 
-	^ self backend forBehavior traitPackageFor: self
+	^ self backend forBehavior traitPackageFor: self owner

@@ -1,4 +1,4 @@
 accessing
 traitTransformationString
 
-	^ self name
+	^ self owner name

@@ -5,7 +5,7 @@ definition
 	^ String streamContents: 
 		[:strm |
 		strm print: self.
-		self hasTraitComposition ifTrue: [
+		self owner hasTraitComposition ifTrue: [
 			strm
 				crtab;
 				nextPutAll: 'uses: ';

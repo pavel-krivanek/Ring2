@@ -3,5 +3,5 @@ initialize
 
 	super initialize.
 	
-	self environment backend createUnresolvedTraitGroupFor: self owner.
+	self owner environment backend createUnresolvedTraitGroupFor: self owner.
 	

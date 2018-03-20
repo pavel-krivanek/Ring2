@@ -1,6 +1,4 @@
 instance creation
 newMetaclass
 
-	^ self new 
-		behaviorStrategy: (RG2MetaclassStrategy new);
-		yourself
+	^ self unnamedWithBehaviorStrategy: RG2MetaclassStrategy basicNew

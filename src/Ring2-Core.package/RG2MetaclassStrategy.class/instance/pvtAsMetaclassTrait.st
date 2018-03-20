@@ -3,7 +3,7 @@ pvtAsMetaclassTrait
 
 	| newMetaclassTrait |
 	
-	(self resolvedProperties includesAnyOf: #(superclass traitComposition))
+	(self owner resolvedProperties includesAnyOf: #(superclass traitComposition))
 		ifTrue: [self error: 'This class cannot be converted to trait'].
 		
 	"TODO: check empty layout"
