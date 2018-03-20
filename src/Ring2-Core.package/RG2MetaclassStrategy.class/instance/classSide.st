@@ -1,6 +1,4 @@
 private - backend access
 classSide
 
-	"temporary"
-	
-	^ self
+	^ self owner
