@@ -1,4 +1,4 @@
 as yet unclassified
 named: aString
 
-	^ super named: aString asSymbol
+	^ self badInstantiationError
