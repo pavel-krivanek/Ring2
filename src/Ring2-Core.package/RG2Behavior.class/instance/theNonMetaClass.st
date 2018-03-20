@@ -1,3 +1,4 @@
 as yet unclassified
 theNonMetaClass
-	^self
+	
+	^ self behaviorStrategy theNonMetaClass

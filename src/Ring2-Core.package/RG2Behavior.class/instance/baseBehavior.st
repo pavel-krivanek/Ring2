@@ -1,4 +1,4 @@
 queries - other
 baseBehavior
 
-	^ self 
+	^ self behaviorStrategy baseBehavior

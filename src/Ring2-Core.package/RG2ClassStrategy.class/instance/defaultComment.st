@@ -1,4 +1,4 @@
 default model values
 defaultComment
 
-	^ self owner defaultCommentStubIn: self
+	^ self owner defaultCommentStubIn: self owner

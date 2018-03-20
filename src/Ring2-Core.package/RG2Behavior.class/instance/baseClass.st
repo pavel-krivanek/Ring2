@@ -1,4 +1,4 @@
 as yet unclassified
 baseClass
 
-	^ self
+	^ self behaviorStrategy baseClass

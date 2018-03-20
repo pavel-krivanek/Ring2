@@ -1,4 +1,4 @@
 variables
 trait
 
-	^ self
+	^ self owner

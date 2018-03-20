@@ -1,4 +1,4 @@
 testing
 defaultComment
 
-	^ self owner defaultCommentStubIn: self
+	^ self owner defaultCommentStubIn: self owner

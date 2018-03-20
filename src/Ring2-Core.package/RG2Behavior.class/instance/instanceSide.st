@@ -1,3 +1,4 @@
 as yet unclassified
 instanceSide
-	^ self 
+
+	^ self behaviorStrategy instanceSide
