@@ -1,4 +1,4 @@
-as yet unclassified
+strategy
 referencedPackages
 
-	^ Array new
+	^ self behaviorStrategy referencedPackages

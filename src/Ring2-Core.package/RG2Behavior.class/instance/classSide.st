@@ -1,4 +1,4 @@
-as yet unclassified
+strategy
 classSide
 
-	^ self
+	^ self behaviorStrategy classSide

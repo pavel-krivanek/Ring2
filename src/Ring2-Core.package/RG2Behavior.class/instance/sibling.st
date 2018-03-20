@@ -1,4 +1,4 @@
-as yet unclassified
+strategy
 sibling
 
-	^ self subclassResponsibility.
+	^ self behaviorStrategy sibling
