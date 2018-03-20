@@ -1,4 +1,4 @@
 as yet unclassified
 instSize
 
-	^ 0
+	^ self behaviorStrategy instSize

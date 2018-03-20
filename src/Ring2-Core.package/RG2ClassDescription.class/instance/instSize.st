@@ -1,4 +1,4 @@
-as yet unclassified
+done
 instSize
 
 	^ self allInstVarNames size

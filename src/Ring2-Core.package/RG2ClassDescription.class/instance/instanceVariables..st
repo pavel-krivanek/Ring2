@@ -1,4 +1,4 @@
-as yet unclassified
+done
 instanceVariables: aCollectionOfSymbols
 
 	"specify instance variable names"

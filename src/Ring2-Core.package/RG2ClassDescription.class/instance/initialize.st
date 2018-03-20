@@ -1,4 +1,4 @@
-initialization
+done
 initialize
 
 	super initialize.
