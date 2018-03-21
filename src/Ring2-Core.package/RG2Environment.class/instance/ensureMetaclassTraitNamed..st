@@ -27,7 +27,7 @@ ensureMetaclassTraitNamed: aSymbol
 						ifFalse: [ 
 							newTrait := sibling pvtAsTrait.
 							originalMetaclass := sibling metaclass.
-							newMetaclassTrait := originalMetaclass pvtAsMetaclassTrait.
+							newMetaclassTrait := originalMetaclass behaviorStrategy pvtAsMetaclassTrait.
 							self ask replaceName: originalMetaclass name with: newMetaclassTrait name.
 							sibling metaclass becomeForward: newMetaclassTrait.
 							originalMetaclass becomeForward: newMetaclassTrait.
@@ -46,7 +46,7 @@ ensureMetaclassTraitNamed: aSymbol
 							"environment already contains metaclass of the similar name. It was probably 
 							created because correct type was not known. Convert it to classTrait"
 							| similarClass |
-							newMetaclassTrait := similarMetaclass pvtAsMetaclassTrait.
+							newMetaclassTrait := similarMetaclass behaviorStrategy pvtAsMetaclassTrait.
 							similarClass := similarMetaclass baseClass.
 							newTrait := similarClass pvtAsTrait.
 							self ask replaceName: similarMetaclass name with: newMetaclassTrait name.

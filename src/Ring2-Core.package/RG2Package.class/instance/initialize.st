@@ -3,6 +3,6 @@ initialize
 
 	super initialize.
 
-	extensionMethods := self unresolvedValue: self defaultDefinedBehaviors.
-	definedBehaviors := self unresolvedValue: self defaultExtensionMethods.
+	extensionMethods := self unresolvedValue: self defaultExtensionMethods.
+	definedBehaviors := self unresolvedValue: self defaultDefinedBehaviors.
 	tagsForClasses := self unresolvedValue: self defaultTagsForClasses.

@@ -7,7 +7,8 @@ package: aRG2Package
 	self owner announceDefinitionChangeDuring: [ 
 		self owner backend forBehavior setPackageFor: self owner to: aRG2Package.
 		self owner environment addPackage: aRG2Package.
-		oldPackage removeDefinedBehavior: self owner.
+		(oldPackage hasResolved: #definedBehaviors)
+			ifTrue: [ oldPackage removeDefinedBehavior: self owner ].
 		aRG2Package addDefinedBehavior: self owner. ].
 	
 	self owner announce: (ClassRepackaged 
