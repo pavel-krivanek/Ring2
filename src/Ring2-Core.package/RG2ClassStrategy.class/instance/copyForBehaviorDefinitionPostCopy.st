@@ -2,6 +2,9 @@ private - backend access
 copyForBehaviorDefinitionPostCopy
 
 	| newVariables newSharedPools |
+	
+	self owner behaviorStrategy: self.
+	
 	super copyForBehaviorDefinitionPostCopy.
 	
 	newVariables := self classVariables collect: [ :each | each copyWithParent: self owner].

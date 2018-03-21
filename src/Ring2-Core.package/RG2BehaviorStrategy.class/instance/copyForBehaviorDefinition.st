@@ -1,4 +1,0 @@
-copying
-copyForBehaviorDefinition
-
-	^ self shallowCopy copyForBehaviorDefinitionPostCopy

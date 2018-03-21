@@ -4,7 +4,7 @@ makeResolved
 	
 	"try to set the correct name before resolving of it"
 	((self owner hasUnresolved: #name) and: [ self owner metaclass isRing2Resolved and: [ self metaclass hasResolved: #name ] ]) ifTrue: [ 
-		self owner pvtName: (self metaclass name withoutSuffix: ' class') asSymbol.
+		self owner pvtName: (self owner metaclass name withoutSuffix: ' class') asSymbol.
 		 ].
 	
 	super makeResolved.
