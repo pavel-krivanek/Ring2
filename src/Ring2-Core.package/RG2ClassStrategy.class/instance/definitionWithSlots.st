@@ -8,7 +8,7 @@ definitionWithSlots
 	aStream := (String new: 800) writeStream.
 	self owner superclass 
 		ifNil: [aStream nextPutAll: 'ProtoObject']
-		ifNotNil: [aStream nextPutAll: self superclass owner name].
+		ifNotNil: [aStream nextPutAll: self owner superclass name].
 	aStream nextPutAll: ' subclass: ';
 			store: self owner name.
 	(self owner hasTraitComposition) ifTrue: [

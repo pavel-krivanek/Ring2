@@ -4,7 +4,7 @@ definition
 	| aStream poolString |
 	
 	self owner usesSpecialSlot 
-		ifTrue: [ ^ self owner definitionWithSlots ].
+		ifTrue: [ ^ self definitionWithSlots ].
 		
 	poolString := self owner sharedPoolsString.
 	aStream := (String new: 800) writeStream.
