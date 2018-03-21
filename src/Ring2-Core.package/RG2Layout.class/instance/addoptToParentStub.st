@@ -3,4 +3,4 @@ addoptToParentStub
 
 	super addoptToParentStub.
 	self environment backend createUnresolvedClassGroupFor: self parent.
-	self parent pvtLayout: self.
+	self parent behaviorStrategy pvtLayout: self.

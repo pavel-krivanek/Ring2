@@ -24,42 +24,42 @@ createDefaultEnvironment
 	
 	protoobject pvtSuperclass: protoobject.
 	protoobject pvtMetaclass: protoobjectClass.
-	protoobject pvtPackage: kernelPackage.
+	protoobject behaviorStrategy pvtPackage: kernelPackage.
 
 	protoobjectClass pvtSuperclass: class.
 	protoobjectClass pvtMetaclass: metaclass.
 
 	object pvtSuperclass: protoobject.
 	object pvtMetaclass: objectClass.
-	object pvtPackage: kernelPackage.
+	object behaviorStrategy pvtPackage: kernelPackage.
 
 	objectClass pvtSuperclass: protoobjectClass.
 	objectClass pvtMetaclass: metaclass.
 
 	class pvtSuperclass: classDescription.
 	class pvtMetaclass: classClass.
-	class pvtPackage: kernelPackage.
+	class behaviorStrategy pvtPackage: kernelPackage.
 
 	classClass pvtSuperclass: classDescriptionClass.
 	classClass pvtMetaclass: metaclass.
 
 	classDescription pvtSuperclass: behavior.
 	classDescription pvtMetaclass: classDescriptionClass.
-	classDescription pvtPackage: kernelPackage.
+	classDescription behaviorStrategy pvtPackage: kernelPackage.
 
 	classDescriptionClass pvtSuperclass: behaviorClass.
 	classDescriptionClass pvtMetaclass: metaclass.
 
 	behavior pvtSuperclass: object.
 	behavior pvtMetaclass: behaviorClass.
-	behavior pvtPackage: kernelPackage.
+	behavior behaviorStrategy pvtPackage: kernelPackage.
 
 	behaviorClass pvtSuperclass: objectClass.
 	behaviorClass pvtMetaclass: metaclass.
 
 	metaclass pvtSuperclass: classDescription.
 	metaclass pvtMetaclass: metaclassClass.
-	metaclass pvtPackage: kernelPackage.
+	metaclass behaviorStrategy pvtPackage: kernelPackage.
 
 	metaclassClass pvtSuperclass: classDescriptionClass.
 	metaclassClass pvtMetaclass: metaclass.

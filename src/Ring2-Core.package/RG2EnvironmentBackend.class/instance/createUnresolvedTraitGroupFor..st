@@ -31,15 +31,15 @@ createUnresolvedTraitGroupFor: aRG2Behavior
 	packageStub1 propertyNamed: #creator put: aRG2Behavior.
 	packageStub1 propertyNamed: #role put: #traitMetaclassPackage.
 
-	traitStub pvtPackage: packageStub1.
+	traitStub behaviorStrategy pvtPackage: packageStub1.
 	packageStub1 pvtAddDefinedBehavior: traitStub.
 	traitStub pvtSuperclass: traitStub.
 	traitStub pvtMetaclass: traitMetaclassStub.
-	traitStub pvtClassTrait: classTraitStub.
+	traitStub behaviorStrategy pvtClassTrait: classTraitStub.
 
 	classTraitStub pvtSuperclass: classTraitStub.
 	classTraitStub pvtMetaclass: classTraitMetaclassStub.
-	classTraitStub pvtBaseTrait: traitStub.
+	classTraitStub behaviorStrategy pvtBaseTrait: traitStub.
 	
 	self environment pvtAddBehavior: traitStub.		
 	self environment pvtAddBehavior: classTraitStub.	

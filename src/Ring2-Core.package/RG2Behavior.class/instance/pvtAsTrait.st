@@ -15,8 +15,8 @@ pvtAsTrait
 	newTrait pvtLocalMethods: localMethods.
 	newTrait pvtTags: tags.
 
-	newTrait pvtComment: self behaviorStrategy comment.
-	newTrait pvtPackage: self behaviorStrategy package.
+	newTrait behaviorStrategy pvtComment: self behaviorStrategy comment.
+	newTrait behaviorStrategy pvtPackage: self behaviorStrategy package.
 	
 	^ newTrait
 	

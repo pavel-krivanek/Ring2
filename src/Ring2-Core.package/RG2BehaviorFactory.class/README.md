@@ -1,0 +1,3 @@
+My subclasses are very simple factories that serve as entry point to create different kind of behaviors. There should be no instances of me.
+
+The behaviors are composition of a RG2Behavior instances and a strategy that describes a kind of the behavior. The behavior factory only create sach pairs so for example my subclass RG2Class creates a composition of RG2Behavior instance with a RG2ClassStrategy. 
