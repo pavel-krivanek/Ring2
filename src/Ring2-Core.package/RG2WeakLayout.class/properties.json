@@ -1,1 +1,11 @@
-{	"commentStamp" : "",	"super" : "RG2PointerLayout",	"category" : "Ring2-Core-Kernel",	"classinstvars" : [ ],	"pools" : [ ],	"classvars" : [ ],	"instvars" : [ ],	"name" : "RG2WeakLayout",	"type" : "normal"}
+{
+	"commentStamp" : "",
+	"super" : "RG2PointerLayout",
+	"category" : "Ring2-Core-Kernel",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RG2WeakLayout",
+	"type" : "normal"
+}

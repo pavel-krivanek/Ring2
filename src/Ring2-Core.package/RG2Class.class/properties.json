@@ -1,1 +1,11 @@
-{	"commentStamp" : "PavelKrivanek 3/21/2018 13:45",	"super" : "RG2BehaviorFactory",	"category" : "Ring2-Core-Kernel",	"classinstvars" : [ ],	"pools" : [ ],	"classvars" : [ ],	"instvars" : [ ],	"name" : "RG2Class",	"type" : "normal"}
+{
+	"commentStamp" : "PavelKrivanek 3/21/2018 13:45",
+	"super" : "RG2BehaviorFactory",
+	"category" : "Ring2-Core-Kernel",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RG2Class",
+	"type" : "normal"
+}
