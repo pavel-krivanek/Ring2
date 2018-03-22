@@ -2,5 +2,5 @@ properties
 propertyNames
 	
 	self hasProperties
-		ifFalse:[ ^ OrderedCollection new ].
+		ifFalse: [ ^ OrderedCollection new ].
 	^ properties keys

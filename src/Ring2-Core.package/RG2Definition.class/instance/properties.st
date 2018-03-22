@@ -1,4 +1,4 @@
 properties
 properties
 
-	^ properties ifNil:[ properties := IdentityDictionary new ]
+	^ properties ifNil: [ properties := IdentityDictionary new ]

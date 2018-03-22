@@ -1,6 +1,6 @@
 properties
 propertyNamed: annotationName ifAbsentPut: blockValue 
 
-	^ self properties
+	^self properties
 		at: annotationName
 		ifAbsentPut: blockValue
