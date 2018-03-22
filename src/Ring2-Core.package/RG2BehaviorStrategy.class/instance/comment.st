@@ -1,4 +1,4 @@
 private - backend access
 comment
 
-	self incompatibleBehaviorType
+	self subclassResponsibility
