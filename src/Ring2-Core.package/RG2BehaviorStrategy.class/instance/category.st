@@ -1,4 +1,4 @@
 private - backend access
 category
 
-	self shouldBeImplemented 
+	self subclassResponsibility 

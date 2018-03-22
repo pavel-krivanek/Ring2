@@ -1,4 +1,4 @@
 utilities
 sibling
 
-	^ self shouldBeImplemented 
+	^ self subclassResponsibility 
