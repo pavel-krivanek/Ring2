@@ -1,4 +1,4 @@
 default model values
 defaultMetaClass
 
-	^ self behaviorStrategy defaultMetaClass
+	^ self incompatibleBehaviorType
