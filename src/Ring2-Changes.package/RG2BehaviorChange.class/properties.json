@@ -1,13 +1,14 @@
 {
 	"commentStamp" : "",
-	"super" : "Object",
+	"super" : "RG2Change",
 	"category" : "Ring2-Changes",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"environment"
+		"behavior",
+		"behaviorName"
 	],
-	"name" : "RG2Change",
+	"name" : "RG2BehaviorChange",
 	"type" : "normal"
 }
