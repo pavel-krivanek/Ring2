@@ -1,4 +1,4 @@
 private - backend access
 instanceVariablesString
 
-	self incompatibleBehaviorType
+	^ String new

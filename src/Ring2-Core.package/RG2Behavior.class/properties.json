@@ -1,19 +1,1 @@
-{
-	"commentStamp" : "PavelKrivanek 3/16/2018 16:18",
-	"super" : "RG2AbstractBehavior",
-	"category" : "Ring2-Core-Kernel",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [
-		"superclass",
-		"localMethods",
-		"protocols",
-		"traitComposition",
-		"metaclass",
-		"tagsForMethods",
-		"tags"
-	],
-	"name" : "RG2Behavior",
-	"type" : "normal"
-}
+{	"commentStamp" : "PavelKrivanek 3/16/2018 16:18",	"super" : "RG2AbstractBehavior",	"category" : "Ring2-Core-Kernel",	"classinstvars" : [ ],	"pools" : [ ],	"classvars" : [ ],	"instvars" : [		"superclass",		"localMethods",		"protocols",		"traitComposition",		"metaclass",		"tagsForMethods",		"tags"	],	"name" : "RG2Behavior",	"type" : "normal"}

@@ -1,11 +1,1 @@
-{
-	"commentStamp" : "PavelKrivanek 3/16/2018 17:14",
-	"super" : "RG2Definition",
-	"category" : "Ring2-Core-Kernel",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
-	"name" : "RG2Element",
-	"type" : "normal"
-}
+{	"commentStamp" : "PavelKrivanek 3/16/2018 17:14",	"super" : "RG2Definition",	"category" : "Ring2-Core-Kernel",	"classinstvars" : [ ],	"pools" : [ ],	"classvars" : [ ],	"instvars" : [ ],	"name" : "RG2Element",	"type" : "normal"}

@@ -1,11 +1,1 @@
-{
-	"commentStamp" : "",
-	"super" : "RG2Layout",
-	"category" : "Ring2-Core-Kernel",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
-	"name" : "RG2ObjectLayout",
-	"type" : "normal"
-}
+{	"commentStamp" : "",	"super" : "RG2Layout",	"category" : "Ring2-Core-Kernel",	"classinstvars" : [ ],	"pools" : [ ],	"classvars" : [ ],	"instvars" : [ ],	"name" : "RG2ObjectLayout",	"type" : "normal"}

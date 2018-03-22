@@ -1,4 +1,4 @@
 private - backend access
 sharedPools
 
-	self incompatibleBehaviorType
+	^ OrderedCollection new
