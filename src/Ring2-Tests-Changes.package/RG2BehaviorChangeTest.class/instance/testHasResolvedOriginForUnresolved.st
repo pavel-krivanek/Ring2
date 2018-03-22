@@ -1,5 +1,5 @@
 tests
-testHasResolvedOriginFOrUnresolved
+testHasResolvedOriginForUnresolved
 
 	| class change |
 	

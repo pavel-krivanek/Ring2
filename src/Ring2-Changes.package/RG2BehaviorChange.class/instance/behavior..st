@@ -8,5 +8,5 @@ behavior: aRG2Behavior
 			behavior := nil.
 			behaviorName := aRG2Behavior name. ]
 		ifFalse: [ 
-			behavior := aRG2Behavior name.
+			behavior := aRG2Behavior.
 			behaviorName := nil ].
