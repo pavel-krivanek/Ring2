@@ -1,4 +1,4 @@
 instance creation
 newStrategy
 
-	self shouldBeImplemented 
+	self subclassResponsibility 
