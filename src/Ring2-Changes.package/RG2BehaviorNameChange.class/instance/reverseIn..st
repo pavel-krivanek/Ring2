@@ -8,5 +8,7 @@ reverseIn: aRG2Environment
 		ifFalse: [ aRG2Environment ask behaviorNamed: newName ifAbsent: [ RG2NotFoundError signal ] ].
 		
 	aRG2Behavior name: oldName.
-		
 	
+	^ aRG2Behavior
+		
+	 

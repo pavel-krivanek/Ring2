@@ -8,7 +8,7 @@ applyIn: aRG2Environment
 		ifFalse: [
 			behaviorName
 				ifNil: [ RG2NotFoundError signal ]
-				ifNotNil: [ 	aRG2Environment ask behaviorNamed: behaviorName ] ].
+				ifNotNil: [ 	aRG2Environment ask behaviorNamed: behaviorName ifAbsent: [ RG2NotFoundError signal ] ] ].
 		
 	aRG2Behavior name: newName.
 		

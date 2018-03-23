@@ -1,9 +1,8 @@
 tests
-testReverseInWithResolving
+testReverseInWithResolvingChanges2to3
 
 	| aClass |
 	
-	list add: change1.
 	list add: change2.
 	list add: change3.
 	
@@ -11,4 +10,4 @@ testReverseInWithResolving
 	list resolveOrigins.
 	list reverseIn: aClass environment.
 
-	self assert: (list environment ask behaviorNamed: #NewName) isNil
+	self assert: (aClass environment ask behaviorNamed: #NewName) isNil.
