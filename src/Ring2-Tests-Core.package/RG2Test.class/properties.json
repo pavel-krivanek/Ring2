@@ -1,11 +1,1 @@
-{
-	"commentStamp" : "",
-	"super" : "TestCase",
-	"category" : "Ring2-Tests-Core",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
-	"name" : "RG2Test",
-	"type" : "normal"
-}
+{	"commentStamp" : "",	"super" : "TestCase",	"category" : "Ring2-Tests-Core",	"classinstvars" : [ ],	"pools" : [ ],	"classvars" : [ ],	"instvars" : [ ],	"name" : "RG2Test",	"type" : "normal"}

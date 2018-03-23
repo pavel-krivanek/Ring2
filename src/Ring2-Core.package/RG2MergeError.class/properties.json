@@ -1,15 +1,1 @@
-{
-	"commentStamp" : "",
-	"super" : "Error",
-	"category" : "Ring2-Core-Kernel",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [
-		"property",
-		"target",
-		"source"
-	],
-	"name" : "RG2MergeError",
-	"type" : "normal"
-}
+{	"commentStamp" : "",	"super" : "Error",	"category" : "Ring2-Core-Kernel",	"classinstvars" : [ ],	"pools" : [ ],	"classvars" : [ ],	"instvars" : [		"property",		"target",		"source"	],	"name" : "RG2MergeError",	"type" : "normal"}

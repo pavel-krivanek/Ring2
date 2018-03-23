@@ -1,11 +1,1 @@
-{
-	"commentStamp" : "",
-	"super" : "Error",
-	"category" : "Ring2-Core-Kernel",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
-	"name" : "RG2IncompatibleBehaviorTypeError",
-	"type" : "normal"
-}
+{	"commentStamp" : "",	"super" : "Error",	"category" : "Ring2-Core-Kernel",	"classinstvars" : [ ],	"pools" : [ ],	"classvars" : [ ],	"instvars" : [ ],	"name" : "RG2IncompatibleBehaviorTypeError",	"type" : "normal"}

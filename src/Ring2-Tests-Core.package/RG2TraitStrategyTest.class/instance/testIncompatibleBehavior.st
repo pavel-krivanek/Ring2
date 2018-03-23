@@ -15,4 +15,7 @@ testIncompatibleBehavior
 		aRG2Behavior removeSharedPool: (aRG2Behavior environment ensureClassNamed: #SomeClass)].
 	self checkIncompatible: [ 
 		aRG2Behavior sharedPoolsDo: [ :sharedPool | ] ].
-
+	self checkIncompatible: [ 
+		aRG2Behavior defaultMetaClass ].
+	self checkIncompatible: [ 
+		aRG2Behavior innerBindingOf: #someSymbol ].
