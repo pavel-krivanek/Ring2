@@ -3,6 +3,6 @@ nameOrNil
 
 	"...if name is unresolved"
 		
-	(self hasResolved: #name) ifFalse: [ ^ nil ].
+	(self hasResolvedName) ifFalse: [ ^ nil ].
 
 	^ self name

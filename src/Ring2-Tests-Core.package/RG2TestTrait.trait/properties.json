@@ -1,1 +1,5 @@
-{	"name" : "RG2TestTrait",	"commentStamp" : "",	"category" : "Ring2-Tests-Core"}
+{
+	"name" : "RG2TestTrait",
+	"commentStamp" : "",
+	"category" : "Ring2-Tests-Core"
+}

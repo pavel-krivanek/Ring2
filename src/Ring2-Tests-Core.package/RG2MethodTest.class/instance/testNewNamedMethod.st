@@ -7,7 +7,7 @@ testNewNamedMethod
 	
 	self assert: (method isRing2Resolved).
 	
-	self assert: (method hasResolved: #name).
+	self assert: (method hasResolvedName).
 	self assert: (method hasUnresolved: #sourceCode).
 
 	self assert: method selector equals: 'someMessage'.

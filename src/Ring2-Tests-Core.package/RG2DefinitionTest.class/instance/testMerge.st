@@ -7,13 +7,13 @@ testMerge
 	def1 := RG2Class named: #SomeDefinition.
 	def2 := RG2Class unnamed.
 	def1 merge: def2.
-	self assert: (def1 hasResolved: #name).
+	self assert: (def1 hasResolvedName).
 	self assert: def1 name equals: #SomeDefinition.
 	
 	def1 := RG2Class unnamed.
 	def2 := RG2Class named: #SomeDefinition.
 	def1 merge: def2.
-	self assert: (def1 hasResolved: #name).
+	self assert: (def1 hasResolvedName).
 	self assert: def1 name equals: #SomeDefinition.
 	
 	def1 := RG2Class unnamed.
@@ -24,7 +24,7 @@ testMerge
 	def1 := RG2Class named: #SomeDefinition.
 	def2 := RG2Class named: #SomeDefinition.
 	def1 merge: def2.
-	self assert: (def1 hasResolved: #name).
+	self assert: (def1 hasResolvedName).
 	self assert: def1 name equals: #SomeDefinition.
 
 	def1 := RG2Class named: #SomeDefinition1.

@@ -10,7 +10,7 @@ pvtAsMetaclassTrait
 	newMetaclassTrait := RG2MetaclassTrait unresolvedWithParent: self owner parent.
 	newMetaclassTrait copyPropertiesFrom: self owner.
 
-	(self owner hasResolved: #name)
+	(self owner hasResolvedName)
 		ifTrue: [ newMetaclassTrait pvtName: ((self owner name withoutSuffix: ' class'), ' classTrait') asSymbol ].
 	newMetaclassTrait pvtLocalMethods: self owner localMethods.
 	

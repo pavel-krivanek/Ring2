@@ -1,1 +1,5 @@
-{	"name" : "TRG2BehaviorTest",	"commentStamp" : "",	"category" : "Ring2-Tests-Core"}
+{
+	"name" : "TRG2BehaviorTest",
+	"commentStamp" : "",
+	"category" : "Ring2-Tests-Core"
+}

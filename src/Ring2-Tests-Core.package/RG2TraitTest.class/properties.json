@@ -1,1 +1,13 @@
-{	"classtraitcomposition" : "TRG2BehaviorTest classTrait",	"classvars" : [ ],	"instvars" : [ ],	"name" : "RG2TraitTest",	"commentStamp" : "",	"super" : "RG2Test",	"traitcomposition" : "TRG2BehaviorTest",	"type" : "normal",	"classinstvars" : [ ],	"pools" : [ ],	"category" : "Ring2-Tests-Core"}
+{
+	"classtraitcomposition" : "TRG2BehaviorTest classTrait",
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RG2TraitTest",
+	"commentStamp" : "",
+	"super" : "RG2Test",
+	"traitcomposition" : "TRG2BehaviorTest",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "Ring2-Tests-Core"
+}

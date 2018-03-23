@@ -9,7 +9,7 @@ testNewBehavior
 		ifFalse: [ self assert: (newBehavior hasUnresolved: #superclass) ].
 	newBehavior name: #SomeClass.
 	self assert: newBehavior name equals: #SomeClass.
-	self assert: (newBehavior hasResolved: #name).
+	self assert: (newBehavior hasResolvedName).
 	self deny: (newBehavior hasUnresolved: #name).
 	newBehavior isTrait
 		ifFalse: [ self assert: newBehavior superclass isRing2Resolved not ].

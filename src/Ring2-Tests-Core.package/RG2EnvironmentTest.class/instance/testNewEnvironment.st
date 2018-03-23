@@ -9,7 +9,7 @@ testNewEnvironment
 	self assert: (newEnvironment isEnvironment).
 	self assert: (newEnvironment name = 'Testing environment').
 	self assert: (newEnvironment ask behaviors isEmpty).
-	self assert: (newEnvironment hasResolved: #name).
+	self assert: (newEnvironment hasResolvedName).
 	self assert: (newEnvironment hasUnresolved: #behaviors).
 	self assert: (newEnvironment hasUnresolved: #globalVariables).
 	

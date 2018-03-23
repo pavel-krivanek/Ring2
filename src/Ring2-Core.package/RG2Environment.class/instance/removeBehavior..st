@@ -13,5 +13,5 @@ removeBehavior: aRG2Behavior
 	
 	self announcer behaviorRemoved: aRG2Behavior.
 	
-	(aRG2Behavior hasResolved: #name) ifTrue: [ 
+	(aRG2Behavior hasResolvedName) ifTrue: [ 
 		self queryInterface behaviorsDictionary removeKey: aRG2Behavior name ifAbsent: []].

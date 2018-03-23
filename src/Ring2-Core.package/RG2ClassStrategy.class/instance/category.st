@@ -4,7 +4,7 @@ category
 	^ self owner tags 
 		ifEmpty: [ self owner package categoryName ]
 		ifNotEmpty: [ 
-			(self owner package hasResolved: #name) 
+			(self owner package hasResolvedName) 
 				ifTrue: [ self owner package categoryName, '-', self owner tags first  ]
 				ifFalse: [ self owner tags first  ]	] 
 	

@@ -13,6 +13,6 @@ addBehavior: aRG2Behavior
 					addGlobalVariable: (RG2GlobalVariable named: aRG2Behavior name parent: self)
 					to: self" ].
 
-	(aRG2Behavior hasResolved: #name)
+	(aRG2Behavior hasResolvedName)
 		ifTrue: [ self queryInterface behaviorsDictionary at: aRG2Behavior name asSymbol put: aRG2Behavior ].
 				

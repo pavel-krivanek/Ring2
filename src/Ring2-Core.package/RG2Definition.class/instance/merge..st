@@ -3,9 +3,9 @@ merge: aRG2Definition
 
 	| sourceHasResolvedName |
 	
-	sourceHasResolvedName := aRG2Definition hasResolved: #name.
+	sourceHasResolvedName := aRG2Definition hasResolvedName.
 	
-	((self hasResolved: #name) 
+	((self hasResolvedName) 
 		and: ( sourceHasResolvedName 
 		and: [ self name ~~ aRG2Definition name]))
 			ifTrue: [ RG2MergeError property: #name target: self source: aRG2Definition ].
