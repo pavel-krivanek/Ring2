@@ -19,4 +19,4 @@ testEnvironmentWithNamespace
 	self assert: (newPackage isRing2FullyResolved).
 	self deny: (newPackage isRing2FullyUnresolved).
 	
-	self should: [newEnvironment addPackage: newPackage] raise: AssertionFailure.
+	self should: [newEnvironment addPackage: newPackage] raise: RG2WrongEnvironment.
