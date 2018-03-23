@@ -1,9 +1,9 @@
 testing
-testApplyOnClassInEmptyEnvironment
+testApplyOnMetaclassInEmptyEnvironment
 
 	| class emptyEnvironment change newClass |
 	
-	class := RG2Class named: #SomeClass.
+	class := RG2Metaclass named: #SomeClass.
 	emptyEnvironment := RG2Environment new.
 
 	change := RG2BehaviorAddition for: class.
@@ -12,4 +12,4 @@ testApplyOnClassInEmptyEnvironment
 	self assert: emptyEnvironment ask behaviors size equals: 4.
 	newClass := emptyEnvironment ask classNamed: #SomeClass.
 	self assert: newClass notNil.
-	self assert: newClass isClass.
+	self assert: newClass isMetaclass.
