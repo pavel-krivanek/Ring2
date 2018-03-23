@@ -6,7 +6,7 @@ testNameChangeAfter
 	class := RG2Class named: #OldName.
 	class := class name: #RG2Class.
 	
-	change := RG2BehaviorNameChange for: class from: #OldName to: #NewName.
+	change := RG2BehaviorNameChange for: class oldName: #OldName newName: #NewName.
 	
 	self assert: change behavior equals: class.
 	self assert: change oldName equals: #OldName.

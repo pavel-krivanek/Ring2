@@ -11,3 +11,5 @@ testUnresolveSuperclass
 	self assert: class2 hasResolvedSuperclass. 
 	class2 unresolveSuperclass.
 	self deny: class2 hasResolvedSuperclass. 
+	
+	self assert: class1 subclasses isEmpty.

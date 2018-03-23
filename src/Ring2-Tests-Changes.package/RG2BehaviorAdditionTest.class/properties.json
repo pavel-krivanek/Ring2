@@ -1,11 +1,11 @@
 {
 	"commentStamp" : "",
-	"super" : "RG2ChangeTest",
+	"super" : "RG2BehaviorChangeTest",
 	"category" : "Ring2-Tests-Changes",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "RG2BehaviorChangeTest",
+	"name" : "RG2BehaviorAdditionTest",
 	"type" : "normal"
 }

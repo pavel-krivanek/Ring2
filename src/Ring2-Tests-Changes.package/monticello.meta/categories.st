@@ -1,1 +1,1 @@
-SystemOrganization addCategory: #'Ring2-Tests-Changes'!
+SystemOrganization addCategory: #'Ring2-Tests-Changes'!

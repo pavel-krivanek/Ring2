@@ -4,7 +4,7 @@ testReverseOnClassInTheSameEnvironment
 	| class change |
 	
 	class := RG2Class named: #NewName.
-	change := RG2BehaviorNameChange for: class from: #OldName to: #NewName.
+	change := RG2BehaviorNameChange for: class oldName: #OldName newName: #NewName.
 	
 	change reverseIn: class environment.
 		
