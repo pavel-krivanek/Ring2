@@ -1,1 +1,13 @@
-{	"commentStamp" : "",	"super" : "Object",	"category" : "Ring2-Core-Kernel",	"classinstvars" : [ ],	"pools" : [ ],	"classvars" : [ ],	"instvars" : [		"owner"	],	"name" : "RG2BehaviorStrategy",	"type" : "normal"}
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Ring2-Core-Kernel",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"owner"
+	],
+	"name" : "RG2BehaviorStrategy",
+	"type" : "normal"
+}

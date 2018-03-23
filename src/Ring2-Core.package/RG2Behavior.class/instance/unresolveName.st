@@ -1,5 +1,5 @@
 accessing - backend
-name: aString
+unresolveName
 
 	| oldName subclassesWithOldDefinitions |
 	
@@ -9,7 +9,7 @@ name: aString
 		each -> each copyForBehaviorDefinition ].
 	
 	self announceDefinitionChangeDuring: [ 
-		super name: aString ].
+		super unresolveName ].
 	
 	self announcer behaviorRenamed: self from: oldName.
 
