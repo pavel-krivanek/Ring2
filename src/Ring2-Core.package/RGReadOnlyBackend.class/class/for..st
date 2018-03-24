@@ -1,6 +1,6 @@
 as yet unclassified
-for: aRGEnvironment
+for: anRGEnvironment
 
 	^ self new 
-		environment: aRGEnvironment;
+		environment: anRGEnvironment;
 		yourself.

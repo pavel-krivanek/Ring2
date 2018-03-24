@@ -1,10 +1,10 @@
 tests
 testCreationByNamedParent
 
-	| aRGBehavior parent |
+	| anRGBehavior parent |
 	
 	parent := RGEnvironment	new.
-	aRGBehavior := RGClass named: #SomeClass parent: parent.
-	self checkBasicPropertiesOf: aRGBehavior.
-	self assert: aRGBehavior name equals: #SomeClass.
-	self assert: aRGBehavior parent equals: parent.
+	anRGBehavior := RGClass named: #SomeClass parent: parent.
+	self checkBasicPropertiesOf: anRGBehavior.
+	self assert: anRGBehavior name equals: #SomeClass.
+	self assert: anRGBehavior parent equals: parent.

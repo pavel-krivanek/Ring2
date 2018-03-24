@@ -1,4 +1,4 @@
 class
-cleanClassTagsFor: aRGBehavior
+cleanClassTagsFor: anRGBehavior
 
-	aRGBehavior pvtCleanTags.
+	anRGBehavior pvtCleanTags.

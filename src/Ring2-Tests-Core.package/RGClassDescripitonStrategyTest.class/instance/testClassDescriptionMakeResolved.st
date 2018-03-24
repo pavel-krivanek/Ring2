@@ -1,12 +1,12 @@
 tests
 testClassDescriptionMakeResolved
 
-	| aRGBehavior |
+	| anRGBehavior |
 	
-	aRGBehavior := RGBehavior newClass.
+	anRGBehavior := RGBehavior newClass.
 	
-	self deny: (aRGBehavior hasResolved: #layout).
-	aRGBehavior makeResolved.
-	self assert: (aRGBehavior hasResolved: #layout).
+	self deny: (anRGBehavior hasResolved: #layout).
+	anRGBehavior makeResolved.
+	self assert: (anRGBehavior hasResolved: #layout).
 	
 	

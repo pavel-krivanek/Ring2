@@ -1,5 +1,5 @@
 environment
-removeBehavior: aRGBehavior from: aRGEnvironment
+removeBehavior: anRGBehavior from: anRGEnvironment
 
-	aRGEnvironment pvtRemoveBehavior: aRGBehavior.
+	anRGEnvironment pvtRemoveBehavior: anRGBehavior.
 	

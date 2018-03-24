@@ -1,4 +1,4 @@
 class
-cleanClassVariablesFor: aRGBehavior
+cleanClassVariablesFor: anRGBehavior
 
-	^ aRGBehavior behaviorStrategy pvtCleanClassVariables
+	^ anRGBehavior behaviorStrategy pvtCleanClassVariables

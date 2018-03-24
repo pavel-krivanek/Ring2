@@ -1,6 +1,6 @@
 unresolved objects
-createUnresolvedClassGroupFor: aRGBehavior 
+createUnresolvedClassGroupFor: anRGBehavior 
 
-	^ 	aRGBehavior isMeta
-		ifFalse: [ aRGBehavior ]
-		ifTrue: [ aRGBehavior metaclass].
+	^ 	anRGBehavior isMeta
+		ifFalse: [ anRGBehavior ]
+		ifTrue: [ anRGBehavior metaclass].

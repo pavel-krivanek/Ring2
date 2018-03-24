@@ -1,12 +1,12 @@
 as yet unclassified
-named: aName behaviorStrategy: aRGBehaviorStrategy
+named: aName behaviorStrategy: anRGBehaviorStrategy
 
 	| aBehavior |
 	
 	aBehavior := self basicNew
-		behaviorStrategy: aRGBehaviorStrategy;
+		behaviorStrategy: anRGBehaviorStrategy;
 		initialize.
-	aRGBehaviorStrategy initialize.
+	anRGBehaviorStrategy initialize.
 	^ aBehavior
 		pvtName: aName asSymbol;
 		yourself		

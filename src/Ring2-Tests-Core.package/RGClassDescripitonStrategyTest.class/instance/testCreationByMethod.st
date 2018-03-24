@@ -1,7 +1,7 @@
 tests
 testCreationByMethod
 
-	| aRGBehavior |
+	| anRGBehavior |
 	
-	aRGBehavior := RGBehavior newClass.
-	self checkBasicPropertiesOf: aRGBehavior
+	anRGBehavior := RGBehavior newClass.
+	self checkBasicPropertiesOf: anRGBehavior

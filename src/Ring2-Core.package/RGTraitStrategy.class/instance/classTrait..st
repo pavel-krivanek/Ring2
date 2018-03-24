@@ -1,4 +1,4 @@
 private - backend access
-classTrait: aRGMetatraitDefinition
+classTrait: anRGMetatraitDefinition
 
-	self backend forBehavior setClassTraitFor: self owner to: aRGMetatraitDefinition
+	self backend forBehavior setClassTraitFor: self owner to: anRGMetatraitDefinition

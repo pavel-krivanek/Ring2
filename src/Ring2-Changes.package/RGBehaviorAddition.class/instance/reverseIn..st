@@ -1,15 +1,15 @@
 actions
-reverseIn: aRGEnvironment
+reverseIn: anRGEnvironment
 
-	| aRGBehavior |
+	| anRGBehavior |
 
-	aRGBehavior  := (self environment == aRGEnvironment)
+	anRGBehavior  := (self environment == anRGEnvironment)
 		ifTrue: [ behavior ]
 		ifFalse: [ 
-			behaviorName ifNotNil: [ aRGEnvironment ask behaviorNamed: behaviorName ] ].
+			behaviorName ifNotNil: [ anRGEnvironment ask behaviorNamed: behaviorName ] ].
 		
-	aRGBehavior ifNil: [ RGNotFoundError signal ].
+	anRGBehavior ifNil: [ RGNotFoundError signal ].
 	
-	aRGEnvironment removeBehavior: aRGBehavior.
+	anRGEnvironment removeBehavior: anRGBehavior.
 	
-	^ aRGBehavior
+	^ anRGBehavior

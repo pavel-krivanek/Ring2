@@ -1,4 +1,4 @@
 method
-methodPackageFor: aRGMethod
+methodPackageFor: anRGMethod
 
-	^  aRGMethod pvtPackage
+	^  anRGMethod pvtPackage

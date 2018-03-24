@@ -1,4 +1,4 @@
 accessing
-environment: aRGEnvironment
+environment: anRGEnvironment
 
-	environment := aRGEnvironment
+	environment := anRGEnvironment

@@ -1,4 +1,4 @@
 method
-timeFor: aRGMethod
+timeFor: anRGMethod
 
-	^ aRGMethod timeForStamp: (self realMethodFor: aRGMethod) stamp
+	^ anRGMethod timeForStamp: (self realMethodFor: anRGMethod) stamp

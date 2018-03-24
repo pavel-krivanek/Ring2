@@ -1,4 +1,4 @@
 actions
-applyIn: aRGEnvironment
+applyIn: anRGEnvironment
 
 	self subclassResponsibility

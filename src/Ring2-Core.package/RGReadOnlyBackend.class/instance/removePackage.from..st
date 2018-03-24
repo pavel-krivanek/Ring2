@@ -1,4 +1,4 @@
 environment
-removePackage: anRGPackageDefinition from: aRGEnvironment
+removePackage: anRGPackageDefinition from: anRGEnvironment
 
 	self readOnlyError.

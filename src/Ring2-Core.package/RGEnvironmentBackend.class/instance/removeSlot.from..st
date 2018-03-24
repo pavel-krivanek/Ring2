@@ -1,4 +1,4 @@
 pointer layout
-removeSlot: aRGSlot from: aRGLayout
+removeSlot: anRGSlot from: anRGLayout
 
-	^ aRGLayout pvtRemoveSlot: aRGSlot
+	^ anRGLayout pvtRemoveSlot: anRGSlot

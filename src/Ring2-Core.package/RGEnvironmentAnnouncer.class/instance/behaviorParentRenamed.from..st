@@ -1,7 +1,7 @@
 triggering
-behaviorParentRenamed: aRGBehavior from: oldName
+behaviorParentRenamed: anRGBehavior from: oldName
 
 	self announce: (ClassParentRenamed 
-		classParentOf: aRGBehavior
+		classParentOf: anRGBehavior
 		renamedFrom: oldName
-		to: aRGBehavior name)
+		to: anRGBehavior name)

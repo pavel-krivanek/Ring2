@@ -1,4 +1,4 @@
 class description
-setMetaClassFor: aRGBehavior to: aRGMetaclass
+setMetaClassFor: anRGBehavior to: anRGMetaclass
 
 	self readOnlyError.

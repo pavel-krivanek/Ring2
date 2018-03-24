@@ -1,4 +1,4 @@
 class comment
-classCommentContentFor: aRGComment
+classCommentContentFor: anRGComment
 
-	^ (self realBehaviorFor: aRGComment parent) organization classComment.
+	^ (self realBehaviorFor: anRGComment parent) organization classComment.

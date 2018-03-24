@@ -1,9 +1,9 @@
 tests
 testCreationByUnresolved
 
-	| aRGBehavior |
+	| anRGBehavior |
 	
-	aRGBehavior := RGClass unresolved.
-	self checkBasicPropertiesOf: aRGBehavior.
-	self assert: (aRGBehavior hasResolvedName) not.
-	self assert: aRGBehavior isRing2Resolved not.
+	anRGBehavior := RGClass unresolved.
+	self checkBasicPropertiesOf: anRGBehavior.
+	self assert: (anRGBehavior hasResolvedName) not.
+	self assert: anRGBehavior isRing2Resolved not.

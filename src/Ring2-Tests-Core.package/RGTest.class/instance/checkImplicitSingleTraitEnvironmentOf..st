@@ -1,14 +1,14 @@
 utilities
-checkImplicitSingleTraitEnvironmentOf: aRGTrait
+checkImplicitSingleTraitEnvironmentOf: anRGTrait
 	
-	self assert: aRGTrait environment ask behaviors size equals: 10.
-	self assert: aRGTrait environment ask packages size equals: 5.
+	self assert: anRGTrait environment ask behaviors size equals: 10.
+	self assert: anRGTrait environment ask packages size equals: 5.
 
-	self checkHierarchyConsistencyOf: aRGTrait metaclass.
+	self checkHierarchyConsistencyOf: anRGTrait metaclass.
 	
-	self assert: (aRGTrait ~~ aRGTrait classTrait).
-	self assert: (aRGTrait superclass == aRGTrait superclass).
-	self assert: (aRGTrait classTrait superclass == aRGTrait classTrait superclass).
+	self assert: (anRGTrait ~~ anRGTrait classTrait).
+	self assert: (anRGTrait superclass == anRGTrait superclass).
+	self assert: (anRGTrait classTrait superclass == anRGTrait classTrait superclass).
 	
 	
 	

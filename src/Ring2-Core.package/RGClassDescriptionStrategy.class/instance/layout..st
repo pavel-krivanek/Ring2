@@ -1,5 +1,5 @@
 accessing - backend
-layout: aRGLayout
+layout: anRGLayout
 
 	self owner announceDefinitionChangeDuring: [ 
-		self backend forBehavior setLayoutFor: self owner to: aRGLayout ].
+		self backend forBehavior setLayoutFor: self owner to: anRGLayout ].

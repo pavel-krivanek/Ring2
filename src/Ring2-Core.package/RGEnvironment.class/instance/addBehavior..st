@@ -1,18 +1,18 @@
 accessing - backend
-addBehavior: aRGBehavior
+addBehavior: anRGBehavior
 
 	self backend forEnvironment
-		addBehavior: aRGBehavior
+		addBehavior: anRGBehavior
 		to: self.
-	aRGBehavior isMeta ifFalse: [
-		aRGBehavior package
+	anRGBehavior isMeta ifFalse: [
+		anRGBehavior package
 			ifNotNil: [ :package | 
-				self backend forEnvironment addPackage: aRGBehavior package	to: self.
-				package addDefinedBehavior: aRGBehavior. ].
+				self backend forEnvironment addPackage: anRGBehavior package	to: self.
+				package addDefinedBehavior: anRGBehavior. ].
 		"self backend forEnvironment
-					addGlobalVariable: (RGGlobalVariable named: aRGBehavior name parent: self)
+					addGlobalVariable: (RGGlobalVariable named: anRGBehavior name parent: self)
 					to: self" ].
 
-	(aRGBehavior hasResolvedName)
-		ifTrue: [ self queryInterface behaviorsDictionary at: aRGBehavior name asSymbol put: aRGBehavior ].
+	(anRGBehavior hasResolvedName)
+		ifTrue: [ self queryInterface behaviorsDictionary at: anRGBehavior name asSymbol put: anRGBehavior ].
 				

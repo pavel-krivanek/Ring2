@@ -1,4 +1,4 @@
 trait transormation
-subjectFor: aRGTraitTransformation
+subjectFor: anRGTraitTransformation
 
-	^ (aRGTraitTransformation propertyNamed: #realObject ifAbsent: [ self error: 'You can use only trait transformations generated directly by this backend' ]) subject asRing2MinimalDefinitionIn: aRGTraitTransformation environment
+	^ (anRGTraitTransformation propertyNamed: #realObject ifAbsent: [ self error: 'You can use only trait transformations generated directly by this backend' ]) subject asRing2MinimalDefinitionIn: anRGTraitTransformation environment

@@ -1,5 +1,5 @@
 private - backend access
-addSharedPool: aRGPoolVariable
+addSharedPool: anRGPoolVariable
 
 	self owner announceDefinitionChangeDuring: [ 
-		self privAddSharedPool: aRGPoolVariable ].
+		self privAddSharedPool: anRGPoolVariable ].

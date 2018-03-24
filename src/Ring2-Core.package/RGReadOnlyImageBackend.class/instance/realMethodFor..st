@@ -1,6 +1,6 @@
 as yet unclassified
-realMethodFor: aRGMethod
+realMethodFor: anRGMethod
 
 	"TODO: should we cache the definition?"
-	^ ((self realBehaviorFor: aRGMethod parent) >> aRGMethod selector)
+	^ ((self realBehaviorFor: anRGMethod parent) >> anRGMethod selector)
 	

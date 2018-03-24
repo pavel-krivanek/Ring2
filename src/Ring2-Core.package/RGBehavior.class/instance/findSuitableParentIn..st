@@ -1,5 +1,5 @@
 as yet unclassified
-findSuitableParentIn: aRGEnvironment
+findSuitableParentIn: anRGEnvironment
 
-	^ aRGEnvironment packages detect: [:package |
+	^ anRGEnvironment packages detect: [:package |
 		package name = self package name ] 

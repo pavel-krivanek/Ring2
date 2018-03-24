@@ -1,4 +1,4 @@
 as yet unclassified
-correspondingObjectIn: aRGEnvironment		
+correspondingObjectIn: anRGEnvironment		
 		
-	^ aRGEnvironment ask packageNamed: self name.  
+	^ anRGEnvironment ask packageNamed: self name.  

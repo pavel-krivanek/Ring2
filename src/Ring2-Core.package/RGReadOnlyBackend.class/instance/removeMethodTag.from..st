@@ -1,4 +1,4 @@
 class
-removeMethodTag: aSymbol from: aRGBehavior
+removeMethodTag: aSymbol from: anRGBehavior
 
 	self readOnlyError.

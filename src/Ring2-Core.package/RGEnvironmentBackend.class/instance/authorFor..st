@@ -1,4 +1,4 @@
 method
-authorFor: aRGMethod
+authorFor: anRGMethod
 
-	^  aRGMethod pvtAuthor
+	^  anRGMethod pvtAuthor

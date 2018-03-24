@@ -1,4 +1,4 @@
 private - backend access
-baseClass: aRGClass
+baseClass: anRGClass
 
-	self backend forBehavior setBaseClassFor: self owner to: aRGClass
+	self backend forBehavior setBaseClassFor: self owner to: anRGClass

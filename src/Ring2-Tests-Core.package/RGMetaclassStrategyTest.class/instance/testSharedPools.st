@@ -1,7 +1,7 @@
 tests
 testSharedPools
 
-	| aRGBehavior |
+	| anRGBehavior |
 	
-	aRGBehavior := RGBehavior newMetaclass.
-	self assert: (aRGBehavior sharedPools) isEmpty.
+	anRGBehavior := RGBehavior newMetaclass.
+	self assert: (anRGBehavior sharedPools) isEmpty.

@@ -1,4 +1,4 @@
 strategy
-removeClassVariable: aRGInstanceVariableDefinition
+removeClassVariable: anRGInstanceVariableDefinition
 
-	^ self behaviorStrategy removeClassVariable: aRGInstanceVariableDefinition
+	^ self behaviorStrategy removeClassVariable: anRGInstanceVariableDefinition

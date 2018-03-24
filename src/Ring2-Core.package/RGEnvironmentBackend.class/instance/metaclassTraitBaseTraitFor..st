@@ -1,4 +1,4 @@
 metaclass trait
-metaclassTraitBaseTraitFor: aRGMetaclassTrait
+metaclassTraitBaseTraitFor: anRGMetaclassTrait
 
-	^  aRGMetaclassTrait behaviorStrategy pvtBaseTrait
+	^  anRGMetaclassTrait behaviorStrategy pvtBaseTrait

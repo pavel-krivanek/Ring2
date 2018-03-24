@@ -1,5 +1,5 @@
 accessing - backend
-traitComposition: aRGTraitComposition
+traitComposition: anRGTraitComposition
 
 	self announceDefinitionChangeDuring: [ 
-		self backend forBehavior setTraitCompositionFor: self to: aRGTraitComposition.].
+		self backend forBehavior setTraitCompositionFor: self to: anRGTraitComposition.].

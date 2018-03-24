@@ -1,10 +1,10 @@
 *Ring2-Core
-ensureRing2DefinitionIn: aRGEnvironment
+ensureRing2DefinitionIn: anRGEnvironment
 
-	^ aRGEnvironment ask behaviors 
+	^ anRGEnvironment ask behaviors 
 		detect: [:each | each name = self name] 
 		ifNone: [ 
 			| behaviorModel |
-			behaviorModel := self asRing2MinimalDefinitionIn: aRGEnvironment.
-			aRGEnvironment addBehavior: behaviorModel.
+			behaviorModel := self asRing2MinimalDefinitionIn: anRGEnvironment.
+			anRGEnvironment addBehavior: behaviorModel.
 			behaviorModel]

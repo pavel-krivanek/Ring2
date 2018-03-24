@@ -1,4 +1,4 @@
 class
-tagMethod: aRGMethod with: aSymbol
+tagMethod: anRGMethod with: aSymbol
 
 	self readOnlyError.

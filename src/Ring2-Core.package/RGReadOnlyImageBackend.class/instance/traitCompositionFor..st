@@ -1,10 +1,10 @@
 behavior
-traitCompositionFor: aRGBehavior
+traitCompositionFor: anRGBehavior
 
 	| realClass realTraitComposition def |
 	
-	realClass := self realBehaviorFor: aRGBehavior.
+	realClass := self realBehaviorFor: anRGBehavior.
 	realTraitComposition := realClass traitComposition.
 	def := self 	definitionFor: realTraitComposition ifAbsentRegister: [ 
-			realTraitComposition asRing2MinimalDefinitionIn: aRGBehavior environment ].
+			realTraitComposition asRing2MinimalDefinitionIn: anRGBehavior environment ].
 	^ def

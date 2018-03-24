@@ -1,4 +1,4 @@
 environment
-addBehavior: aRGBehavior to: aRGEnvironment
+addBehavior: anRGBehavior to: anRGEnvironment
 
 	self readOnlyError.

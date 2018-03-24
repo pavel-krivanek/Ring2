@@ -1,5 +1,5 @@
 as yet unclassified
-behaviorsFor: aRGEnvironment do: aBlock
+behaviorsFor: anRGEnvironment do: aBlock
 
 	| enumerated  |
 	

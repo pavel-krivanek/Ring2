@@ -1,8 +1,8 @@
 actions
-behavior: aRGBehavior
+behavior: anRGBehavior
 
-	super behavior: aRGBehavior.
+	super behavior: anRGBehavior.
 	
-	self behaviorStrategyClassName: aRGBehavior behaviorStrategy class name.
+	self behaviorStrategyClassName: anRGBehavior behaviorStrategy class name.
 	
 	

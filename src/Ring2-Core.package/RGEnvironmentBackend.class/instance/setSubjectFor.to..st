@@ -1,4 +1,4 @@
 trait transormation
-setSubjectFor: aRGTraitComposition to: aRGTrait
+setSubjectFor: anRGTraitComposition to: anRGTrait
 
-	^  aRGTraitComposition pvtSubject: aRGTrait
+	^  anRGTraitComposition pvtSubject: anRGTrait

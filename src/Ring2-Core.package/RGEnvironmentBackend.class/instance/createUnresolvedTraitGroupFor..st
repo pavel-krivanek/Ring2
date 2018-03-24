@@ -1,34 +1,34 @@
 unresolved objects
-createUnresolvedTraitGroupFor: aRGBehavior 
+createUnresolvedTraitGroupFor: anRGBehavior 
 
 	| traitStub classTraitStub traitMetaclassStub classTraitMetaclassStub packageStub1  |
 
-	traitStub := aRGBehavior isMeta
-		ifFalse: [ aRGBehavior ]
+	traitStub := anRGBehavior isMeta
+		ifFalse: [ anRGBehavior ]
 		ifTrue: [ RGTrait unresolvedWithParent: self environment ].
-	traitStub propertyNamed: #creator put: aRGBehavior.
+	traitStub propertyNamed: #creator put: anRGBehavior.
 	traitStub propertyNamed: #role put: #trait.
 		
-	classTraitStub := aRGBehavior isMeta
+	classTraitStub := anRGBehavior isMeta
 		ifFalse: [ RGMetaclassTrait unresolvedWithParent: self environment ]
-		ifTrue: [ aRGBehavior ].
-	classTraitStub propertyNamed: #creator put: aRGBehavior.
+		ifTrue: [ anRGBehavior ].
+	classTraitStub propertyNamed: #creator put: anRGBehavior.
 	classTraitStub propertyNamed: #role put: #classTrait.
 
 	"Trait"
 	traitMetaclassStub := RGClass unresolvedWithParent: self environment.
 	self createUnresolvedClassGroupFor: traitMetaclassStub.
-	traitMetaclassStub propertyNamed: #creator put: aRGBehavior.
+	traitMetaclassStub propertyNamed: #creator put: anRGBehavior.
 	traitMetaclassStub propertyNamed: #role put: #traitMetaclass.
 	
 	"ClassTrait"
 	classTraitMetaclassStub := RGClass unresolvedWithParent: self environment.
 	self createUnresolvedClassGroupFor: classTraitMetaclassStub.
-	classTraitMetaclassStub propertyNamed: #creator put: aRGBehavior.
+	classTraitMetaclassStub propertyNamed: #creator put: anRGBehavior.
 	classTraitMetaclassStub propertyNamed: #role put: #classTraitMetaclass.
 
 	packageStub1 := RGPackageDefinition unresolvedWithParent: self environment.
-	packageStub1 propertyNamed: #creator put: aRGBehavior.
+	packageStub1 propertyNamed: #creator put: anRGBehavior.
 	packageStub1 propertyNamed: #role put: #traitMetaclassPackage.
 
 	traitStub behaviorStrategy pvtPackage: packageStub1.
@@ -47,6 +47,6 @@ createUnresolvedTraitGroupFor: aRGBehavior
 	self environment pvtAddBehavior: classTraitMetaclassStub.
 	self environment pvtAddPackage: packageStub1.
 
-	^ 	aRGBehavior isMeta
+	^ 	anRGBehavior isMeta
 		ifFalse: [ traitStub ]
 		ifTrue: [ classTraitStub ].

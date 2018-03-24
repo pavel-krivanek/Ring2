@@ -1,4 +1,4 @@
 method
-authorFor: aRGMethod
+authorFor: anRGMethod
 
-	^ aRGMethod authorForStamp: (self realMethodFor: aRGMethod) stamp
+	^ anRGMethod authorForStamp: (self realMethodFor: anRGMethod) stamp

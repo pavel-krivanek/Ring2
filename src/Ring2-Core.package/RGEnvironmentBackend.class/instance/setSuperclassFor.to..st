@@ -1,4 +1,4 @@
 behavior
-setSuperclassFor: aRGBehavior to: anObject
+setSuperclassFor: anRGBehavior to: anObject
 
-	^  aRGBehavior pvtSuperclass: anObject
+	^  anRGBehavior pvtSuperclass: anObject

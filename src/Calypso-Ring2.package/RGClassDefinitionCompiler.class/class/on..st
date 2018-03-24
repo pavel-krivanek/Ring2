@@ -1,4 +1,4 @@
 instance creation
-on: aRGEnvironment 
+on: anRGEnvironment 
 	^self new 
-		environment: aRGEnvironment 
+		environment: anRGEnvironment 

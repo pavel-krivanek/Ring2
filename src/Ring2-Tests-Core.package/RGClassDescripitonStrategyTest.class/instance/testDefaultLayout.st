@@ -1,7 +1,7 @@
 tests
 testDefaultLayout
 
-	| aRGBehavior |
+	| anRGBehavior |
 	
-	aRGBehavior := RGBehavior newClass.
-	self assert: aRGBehavior defaultLayout isPointerLayout 
+	anRGBehavior := RGBehavior newClass.
+	self assert: anRGBehavior defaultLayout isPointerLayout 

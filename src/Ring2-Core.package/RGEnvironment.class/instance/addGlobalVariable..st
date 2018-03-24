@@ -1,4 +1,4 @@
 accessing - backend
-addGlobalVariable: aRGGlobalVariable 
+addGlobalVariable: anRGGlobalVariable 
 
-	self backend forBehavior addGlobalVariable: aRGGlobalVariable to: self.
+	self backend forBehavior addGlobalVariable: anRGGlobalVariable to: self.

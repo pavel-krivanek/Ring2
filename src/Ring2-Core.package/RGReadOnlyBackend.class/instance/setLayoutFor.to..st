@@ -1,4 +1,4 @@
 behavior
-setLayoutFor: aRGBehavior to: aRGLayout
+setLayoutFor: anRGBehavior to: anRGLayout
 
 	self readOnlyError.

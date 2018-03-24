@@ -1,6 +1,6 @@
 instance creation
-for: aRGBehavior
+for: anRGBehavior
 
 	^ self new
-		behavior: aRGBehavior;
+		behavior: anRGBehavior;
 		yourself

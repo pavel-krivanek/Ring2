@@ -1,4 +1,4 @@
 trait
-setTraitPackageFor: aRGBehavior to: anRGPackageDefinition
+setTraitPackageFor: anRGBehavior to: anRGPackageDefinition
 
 	self readOnlyError 

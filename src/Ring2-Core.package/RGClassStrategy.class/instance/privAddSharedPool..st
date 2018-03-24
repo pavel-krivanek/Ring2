@@ -1,4 +1,4 @@
 private - backend access
-privAddSharedPool: aRGPoolVariable
+privAddSharedPool: anRGPoolVariable
 	
-	self backend forBehavior addSharedPool: aRGPoolVariable to: self owner
+	self backend forBehavior addSharedPool: anRGPoolVariable to: self owner

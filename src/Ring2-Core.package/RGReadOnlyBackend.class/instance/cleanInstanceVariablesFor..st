@@ -1,4 +1,4 @@
 class description
-cleanInstanceVariablesFor: aRGBehavior
+cleanInstanceVariablesFor: anRGBehavior
 
 	self readOnlyError.

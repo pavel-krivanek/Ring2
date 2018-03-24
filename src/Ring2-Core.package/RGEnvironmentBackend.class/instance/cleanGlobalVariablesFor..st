@@ -1,4 +1,4 @@
 environment
-cleanGlobalVariablesFor: aRGEnvironment
+cleanGlobalVariablesFor: anRGEnvironment
 
-	^ aRGEnvironment pvtCleanGlobalVariables
+	^ anRGEnvironment pvtCleanGlobalVariables

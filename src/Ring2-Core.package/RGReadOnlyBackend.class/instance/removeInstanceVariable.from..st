@@ -1,4 +1,4 @@
 class description
-removeInstanceVariable: aRGInstanceVariableDefinition from: aRGBehavior
+removeInstanceVariable: anRGInstanceVariableDefinition from: anRGBehavior
 
 	self readOnlyError.

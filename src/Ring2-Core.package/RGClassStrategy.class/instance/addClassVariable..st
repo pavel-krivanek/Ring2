@@ -1,7 +1,7 @@
 private - backend access
-addClassVariable: aRGInstanceVariableDefinition 
+addClassVariable: anRGInstanceVariableDefinition 
 
 	self owner announceDefinitionChangeDuring: [ 
-		self privAddClassVariable: aRGInstanceVariableDefinition ]
+		self privAddClassVariable: anRGInstanceVariableDefinition ]
 	
 	

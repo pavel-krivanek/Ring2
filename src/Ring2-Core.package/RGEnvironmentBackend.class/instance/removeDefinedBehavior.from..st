@@ -1,4 +1,4 @@
 package
-removeDefinedBehavior: aRGBehavior from: anRGPackageDefinition
+removeDefinedBehavior: anRGBehavior from: anRGPackageDefinition
 
-	^ anRGPackageDefinition pvtRemoveDefinedBehavior: aRGBehavior
+	^ anRGPackageDefinition pvtRemoveDefinedBehavior: anRGBehavior

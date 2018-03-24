@@ -1,4 +1,4 @@
 class
-sharedPoolsFor: aRGBehavior do: aBlock
+sharedPoolsFor: anRGBehavior do: aBlock
 
-	^ aRGBehavior behaviorStrategy pvtSharedPoolsDo: aBlock
+	^ anRGBehavior behaviorStrategy pvtSharedPoolsDo: aBlock

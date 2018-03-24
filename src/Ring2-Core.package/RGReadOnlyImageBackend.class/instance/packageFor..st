@@ -1,4 +1,4 @@
 class
-packageFor: aRGBehavior
+packageFor: anRGBehavior
 
-	^ (self realBehaviorFor: aRGBehavior) package asRing2MinimalDefinitionIn: aRGBehavior environment.
+	^ (self realBehaviorFor: anRGBehavior) package asRing2MinimalDefinitionIn: anRGBehavior environment.

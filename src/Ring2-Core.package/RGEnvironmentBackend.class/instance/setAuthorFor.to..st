@@ -1,4 +1,4 @@
 method
-setAuthorFor: aRGMethod to: aDateAndTime
+setAuthorFor: anRGMethod to: aDateAndTime
 
-	^  aRGMethod pvtAuthor: aDateAndTime
+	^  anRGMethod pvtAuthor: aDateAndTime

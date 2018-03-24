@@ -1,4 +1,4 @@
 accessing
-baseClass: aRGClass
+baseClass: anRGClass
 
-	^ self behaviorStrategy baseClass: aRGClass
+	^ self behaviorStrategy baseClass: anRGClass

@@ -1,7 +1,7 @@
 tests
 testTheMetaclass
 
-	| aRGBehavior |
+	| anRGBehavior |
 	
-	aRGBehavior := RGBehavior newMetaclass.
-	self assert: (aRGBehavior theMetaClass) equals: aRGBehavior.
+	anRGBehavior := RGBehavior newMetaclass.
+	self assert: (anRGBehavior theMetaClass) equals: anRGBehavior.

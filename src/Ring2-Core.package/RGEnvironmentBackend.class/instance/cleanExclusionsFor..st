@@ -1,4 +1,4 @@
 trait exclusion
-cleanExclusionsFor: aRGTraitExclusion
+cleanExclusionsFor: anRGTraitExclusion
 
-	^ aRGTraitExclusion pvtCleanExclusions
+	^ anRGTraitExclusion pvtCleanExclusions

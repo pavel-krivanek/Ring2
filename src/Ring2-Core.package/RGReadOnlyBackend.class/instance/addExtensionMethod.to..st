@@ -1,4 +1,4 @@
 package
-addExtensionMethod: aRGMethod to: anRGPackageDefinition
+addExtensionMethod: anRGMethod to: anRGPackageDefinition
 
 	self readOnlyError.

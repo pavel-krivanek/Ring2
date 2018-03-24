@@ -1,5 +1,5 @@
 as yet unclassified
-correspondingObjectIn: aRGEnvironment
+correspondingObjectIn: anRGEnvironment
 
 	(self isRing2Resolved not and: ((self hasPropertyNamed: #creator) and: [ self hasPropertyNamed: #role])) ifTrue: [ 
 		| creator role base correspondingBase correspondingCreator |
@@ -10,7 +10,7 @@ correspondingObjectIn: aRGEnvironment
 				ifFalse: [ creator isClass ifTrue: [ creator ] ifFalse: [ creator baseClass ]]
 				ifTrue: [ creator isMetaclassTrait ifFalse: [ creator ]	ifTrue: [ creator baseTrait ]].
 			base == self ifFalse: [ 
-				correspondingBase := base correspondingObjectIn: aRGEnvironment.
+				correspondingBase := base correspondingObjectIn: anRGEnvironment.
 				correspondingBase ifNil: [ ^ nil ].
 				(role = #class) ifTrue: [ ^ correspondingBase ].
 				(role = #metaclass) ifTrue: [ ^ correspondingBase metaclass ].
@@ -23,7 +23,7 @@ correspondingObjectIn: aRGEnvironment
 				(role = #classTraitMetaclass) ifTrue: [ ^ correspondingBase classTrait metaclass ]].
 			
 			"cannot found corresponding base, try corresponding creator"
-			correspondingCreator := creator correspondingObjectIn: aRGEnvironment.
+			correspondingCreator := creator correspondingObjectIn: anRGEnvironment.
 			correspondingCreator ifNotNil: [
 				self == creator ifTrue: [ ^ correspondingCreator ].
 				self metaclass = creator ifTrue: [ ^ correspondingCreator baseClass ].
@@ -33,4 +33,4 @@ correspondingObjectIn: aRGEnvironment
 		]]].
 		
 
-	^ aRGEnvironment ask behaviorNamed: self name.  
+	^ anRGEnvironment ask behaviorNamed: self name.  

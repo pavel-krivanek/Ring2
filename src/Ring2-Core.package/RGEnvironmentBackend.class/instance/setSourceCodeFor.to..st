@@ -1,4 +1,4 @@
 method
-setSourceCodeFor: aRGMethod to: anObject
+setSourceCodeFor: anRGMethod to: anObject
 
-	aRGMethod pvtSourceCode: anObject
+	anRGMethod pvtSourceCode: anObject

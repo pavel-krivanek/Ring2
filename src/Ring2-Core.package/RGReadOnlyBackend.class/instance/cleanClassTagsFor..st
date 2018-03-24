@@ -1,4 +1,4 @@
 class
-cleanClassTagsFor: aRGBehavior
+cleanClassTagsFor: anRGBehavior
 
 	self readOnlyError.

@@ -1,9 +1,9 @@
 class
-classVariablesFor: aRGBehavior do: aBlock
+classVariablesFor: anRGBehavior do: aBlock
 
 	| realClass |
-	realClass := self realBehaviorFor: aRGBehavior.
+	realClass := self realBehaviorFor: anRGBehavior.
 	realClass classVariables do: [ :classVariable | 
 		| def |
-		def := RGClassVariable named: classVariable key parent: aRGBehavior.
+		def := RGClassVariable named: classVariable key parent: anRGBehavior.
 		aBlock value: def. ]

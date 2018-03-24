@@ -1,4 +1,4 @@
 strategy
-classTrait: aRGMetaclassTrait
+classTrait: anRGMetaclassTrait
 
-	^ self behaviorStrategy classTrait: aRGMetaclassTrait
+	^ self behaviorStrategy classTrait: anRGMetaclassTrait

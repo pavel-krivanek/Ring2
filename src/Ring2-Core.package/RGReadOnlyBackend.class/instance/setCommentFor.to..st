@@ -1,4 +1,4 @@
 class
-setCommentFor: aRGBehavior to: aRGComment
+setCommentFor: anRGBehavior to: anRGComment
 
 	self readOnlyError.

@@ -1,4 +1,4 @@
 pointer layout
-cleanSlotsFor: aRGLayout
+cleanSlotsFor: anRGLayout
 
-	^ aRGLayout pvtCleanSlots
+	^ anRGLayout pvtCleanSlots

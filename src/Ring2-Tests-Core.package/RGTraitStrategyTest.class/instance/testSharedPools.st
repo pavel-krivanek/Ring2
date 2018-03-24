@@ -1,7 +1,7 @@
 tests
 testSharedPools
 
-	| aRGBehavior |
+	| anRGBehavior |
 	
-	aRGBehavior := RGBehavior newTrait.
-	self assert: (aRGBehavior sharedPools isEmpty).
+	anRGBehavior := RGBehavior newTrait.
+	self assert: (anRGBehavior sharedPools isEmpty).

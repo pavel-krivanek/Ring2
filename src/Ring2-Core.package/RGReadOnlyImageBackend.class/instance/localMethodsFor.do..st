@@ -1,8 +1,8 @@
 behavior
-localMethodsFor: aRGBehavior do: aBlock
+localMethodsFor: anRGBehavior do: aBlock
 
-	(self realBehaviorFor: aRGBehavior) localMethods do: [:method |
+	(self realBehaviorFor: anRGBehavior) localMethods do: [:method |
 		| def |
 		def := self definitionFor: method ifAbsentRegister: [
-			method asRing2MinimalDefinitionIn: aRGBehavior environment].
+			method asRing2MinimalDefinitionIn: anRGBehavior environment].
 		aBlock value: def]

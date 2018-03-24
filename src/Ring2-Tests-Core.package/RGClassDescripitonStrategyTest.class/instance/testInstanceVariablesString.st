@@ -1,10 +1,10 @@
 tests
 testInstanceVariablesString
 
-	| aRGBehavior |
+	| anRGBehavior |
 	
-	aRGBehavior := RGBehavior newClass.
+	anRGBehavior := RGBehavior newClass.
 	
-	aRGBehavior instanceVariables: #(a b c).
+	anRGBehavior instanceVariables: #(a b c).
 	
-	self assert: aRGBehavior instanceVariablesString equals: 'a b c'.
+	self assert: anRGBehavior instanceVariablesString equals: 'a b c'.

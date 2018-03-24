@@ -1,6 +1,6 @@
 as yet unclassified
-for: aRGBehavior newName: newName
+for: anRGBehavior newName: newName
 
-	^ (self for: aRGBehavior)
+	^ (self for: anRGBehavior)
 		newName: newName;
 		yourself.

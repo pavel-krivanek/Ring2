@@ -1,4 +1,4 @@
 trait exclusion
-removeExclusion: aSymbol from: aRGTraitExclusion
+removeExclusion: aSymbol from: anRGTraitExclusion
 
 	self readOnlyError 

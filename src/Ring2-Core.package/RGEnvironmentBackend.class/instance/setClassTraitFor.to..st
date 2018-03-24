@@ -1,4 +1,4 @@
 trait
-setClassTraitFor: aRGTrait to: aRGMetatraitDefinition
+setClassTraitFor: anRGTrait to: anRGMetatraitDefinition
 
-	^  aRGTrait behaviorStrategy pvtClassTrait: aRGMetatraitDefinition
+	^  anRGTrait behaviorStrategy pvtClassTrait: anRGMetatraitDefinition

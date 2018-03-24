@@ -1,5 +1,5 @@
 as yet unclassified
-realBehaviorFor: aRGBehavior
+realBehaviorFor: anRGBehavior
 
 	"TODO: should we cache the definition?"
-	^ Smalltalk classOrTraitNamed: aRGBehavior name asSymbol
+	^ Smalltalk classOrTraitNamed: anRGBehavior name asSymbol

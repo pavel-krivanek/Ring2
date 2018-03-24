@@ -1,4 +1,4 @@
 method
-astFor: aRGMethod
+astFor: anRGMethod
 
-	^  aRGMethod astFromSource
+	^  anRGMethod astFromSource

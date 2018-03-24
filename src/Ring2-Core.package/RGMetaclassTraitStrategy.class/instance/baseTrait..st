@@ -1,4 +1,4 @@
 private - backend access
-baseTrait: aRGClass
+baseTrait: anRGClass
 
-	self backend forBehavior setMetaclassTraitBaseTraitFor: self to: aRGClass
+	self backend forBehavior setMetaclassTraitBaseTraitFor: self to: anRGClass

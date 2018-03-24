@@ -1,6 +1,6 @@
 private - backend access
-pvtRemoveSharedPool: aRGPoolVariableDefinition
+pvtRemoveSharedPool: anRGPoolVariableDefinition
 
-	self environment verifyOwnership: aRGPoolVariableDefinition.
+	self environment verifyOwnership: anRGPoolVariableDefinition.
 	
-	sharedPools remove: aRGPoolVariableDefinition.
+	sharedPools remove: anRGPoolVariableDefinition.

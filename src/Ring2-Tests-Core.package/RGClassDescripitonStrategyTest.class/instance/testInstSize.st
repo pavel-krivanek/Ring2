@@ -1,10 +1,10 @@
 tests
 testInstSize
 
-	| aRGBehavior |
+	| anRGBehavior |
 	
-	aRGBehavior := RGBehavior newClass.
+	anRGBehavior := RGBehavior newClass.
 	
-	aRGBehavior instanceVariables: #(a b c).
+	anRGBehavior instanceVariables: #(a b c).
 	
-	self assert: aRGBehavior instSize equals: 3.
+	self assert: anRGBehavior instSize equals: 3.

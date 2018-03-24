@@ -1,8 +1,8 @@
 triggering
-behaviorRenamed: aRGBehavior from: oldName
+behaviorRenamed: anRGBehavior from: oldName
 
 	self announce: (ClassRenamed 
-		class: aRGBehavior 
-		category: aRGBehavior category 
+		class: anRGBehavior 
+		category: anRGBehavior category 
 		oldName: oldName 
-		newName: aRGBehavior name)
+		newName: anRGBehavior name)

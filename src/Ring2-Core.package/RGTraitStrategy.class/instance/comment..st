@@ -1,6 +1,6 @@
 testing
-comment: aRGComment
+comment: anRGComment
 
-	self backend forBehavior setTraitCommentFor: self owner to: aRGComment.
+	self backend forBehavior setTraitCommentFor: self owner to: anRGComment.
 	
 	self owner announcer behaviorCommentModified: self owner.

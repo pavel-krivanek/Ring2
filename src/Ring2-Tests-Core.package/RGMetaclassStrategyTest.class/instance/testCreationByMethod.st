@@ -1,8 +1,8 @@
 tests
 testCreationByMethod
 
-	| aRGBehavior |
+	| anRGBehavior |
 	
-	aRGBehavior := RGBehavior newMetaclass.
-	self assert: (aRGBehavior isBehavior).	
-	self assert: (aRGBehavior behaviorStrategy isMetaclassStrategy).
+	anRGBehavior := RGBehavior newMetaclass.
+	self assert: (anRGBehavior isBehavior).	
+	self assert: (anRGBehavior behaviorStrategy isMetaclassStrategy).

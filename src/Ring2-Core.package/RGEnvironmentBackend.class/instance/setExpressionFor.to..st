@@ -1,4 +1,4 @@
 slot
-setExpressionFor: aRGUnknownSlot to: aString
+setExpressionFor: anRGUnknownSlot to: aString
 
-	^  aRGUnknownSlot pvtExpression: aString
+	^  anRGUnknownSlot pvtExpression: aString

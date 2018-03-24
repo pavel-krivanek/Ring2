@@ -1,9 +1,9 @@
 tests
 testUnresolvedClassGroupRoleProperties
 
-	| aRGBehavior |
+	| anRGBehavior |
 	
-	aRGBehavior := RGBehavior newClass.
-	self assert: (aRGBehavior superclass propertyNamed: #role) equals: #superclass.
-	self assert: (aRGBehavior metaclass propertyNamed: #role) equals: #metaclass.
-	self assert: (aRGBehavior metaclass superclass propertyNamed: #role) equals: #superclassMetaclass.
+	anRGBehavior := RGBehavior newClass.
+	self assert: (anRGBehavior superclass propertyNamed: #role) equals: #superclass.
+	self assert: (anRGBehavior metaclass propertyNamed: #role) equals: #metaclass.
+	self assert: (anRGBehavior metaclass superclass propertyNamed: #role) equals: #superclassMetaclass.

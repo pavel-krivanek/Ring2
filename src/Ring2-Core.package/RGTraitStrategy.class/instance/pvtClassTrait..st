@@ -1,6 +1,6 @@
 accessing
-pvtClassTrait: aRGMetatraitDefinition
+pvtClassTrait: anRGMetatraitDefinition
 
-	self environment verifyOwnership: aRGMetatraitDefinition.
+	self environment verifyOwnership: anRGMetatraitDefinition.
 
-	^ classTrait := aRGMetatraitDefinition
+	^ classTrait := anRGMetatraitDefinition

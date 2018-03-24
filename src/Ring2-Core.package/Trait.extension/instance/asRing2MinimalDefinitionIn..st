@@ -1,5 +1,5 @@
 *Ring2-Core
-asRing2MinimalDefinitionIn: aRGEnvironment
+asRing2MinimalDefinitionIn: anRGEnvironment
 
-	^ aRGEnvironment backend definitionFor: self ifAbsentRegister: [
-		RGTrait named: self name parent: aRGEnvironment]
+	^ anRGEnvironment backend definitionFor: self ifAbsentRegister: [
+		RGTrait named: self name parent: anRGEnvironment]

@@ -1,12 +1,12 @@
 initialization
-add: aRGChange
+add: anRGChange
 
 	environment 
-		ifNil: [ self environment: aRGChange environment ]
+		ifNil: [ self environment: anRGChange environment ]
 		ifNotNil: [ 
-			self environment = aRGChange environment 
+			self environment = anRGChange environment 
 				ifFalse: [ RGWrongEnvironment signal ] ].
 	
-	self changes add: aRGChange.
+	self changes add: anRGChange.
 	
 	

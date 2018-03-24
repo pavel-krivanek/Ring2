@@ -1,4 +1,4 @@
 as yet unclassified
-isReferencedIn: aRGMethod 
+isReferencedIn: anRGMethod 
 
-	^ (aRGMethod ast variableNodes select: #isGlobal) anySatisfy: [ :each | each name = self name ] 
+	^ (anRGMethod ast variableNodes select: #isGlobal) anySatisfy: [ :each | each name = self name ] 

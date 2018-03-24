@@ -1,4 +1,4 @@
 package
-removeExtensionMethod: aRGMethod from: anRGPackageDefinition
+removeExtensionMethod: anRGMethod from: anRGPackageDefinition
 
 	self readOnlyError.

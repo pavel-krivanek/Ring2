@@ -1,9 +1,9 @@
 private - backend access
-pvtAddSharedPool: aRGPoolVariable
+pvtAddSharedPool: anRGPoolVariable
 
-	self environment verifyOwnership: aRGPoolVariable.
+	self environment verifyOwnership: anRGPoolVariable.
 	
 	sharedPools isRing2Resolved ifFalse: [ 
 		self pvtCleanSharedPools  ].
 	
-	sharedPools add: aRGPoolVariable.	
+	sharedPools add: anRGPoolVariable.	

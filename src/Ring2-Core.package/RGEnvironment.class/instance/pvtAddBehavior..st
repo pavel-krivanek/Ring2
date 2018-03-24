@@ -1,15 +1,15 @@
 private - backend interface
-pvtAddBehavior: aRGBehavior
+pvtAddBehavior: anRGBehavior
 
-	self environment verifyOwnership: aRGBehavior.
+	self environment verifyOwnership: anRGBehavior.
 	
 	behaviors isRing2Resolved ifFalse: [ 
 		self pvtCleanBehaviors ].
 	
-	(behaviors includes: aRGBehavior)
+	(behaviors includes: anRGBehavior)
 		ifFalse: [ 
-			behaviors add: aRGBehavior.
-			self announcer behaviorAdded: aRGBehavior].
+			behaviors add: anRGBehavior.
+			self announcer behaviorAdded: anRGBehavior].
 		
 	
 		

@@ -1,4 +1,4 @@
 trait
-traitPackageFor: aRGBehavior
+traitPackageFor: anRGBehavior
 
-	^  aRGBehavior behaviorStrategy pvtPackage
+	^  anRGBehavior behaviorStrategy pvtPackage

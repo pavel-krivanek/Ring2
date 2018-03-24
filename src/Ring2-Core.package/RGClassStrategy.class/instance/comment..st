@@ -1,6 +1,6 @@
 private - backend access
-comment: aRGComment
+comment: anRGComment
 
-	self backend forBehavior setCommentFor: self owner to: aRGComment.
+	self backend forBehavior setCommentFor: self owner to: anRGComment.
 	
 	self owner announcer behaviorCommentModified: self.

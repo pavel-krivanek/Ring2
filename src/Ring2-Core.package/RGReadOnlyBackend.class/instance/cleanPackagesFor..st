@@ -1,4 +1,4 @@
 environment
-cleanPackagesFor: aRGEnvironment
+cleanPackagesFor: anRGEnvironment
 
 	self readOnlyError.

@@ -1,4 +1,4 @@
 trait
-setTraitCommentFor: aRGBehavior to: aRGComment
+setTraitCommentFor: anRGBehavior to: anRGComment
 
-	^  aRGBehavior behaviorStrategy pvtComment: aRGComment
+	^  anRGBehavior behaviorStrategy pvtComment: anRGComment

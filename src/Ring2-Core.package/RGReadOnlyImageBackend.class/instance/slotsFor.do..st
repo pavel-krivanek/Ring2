@@ -1,11 +1,11 @@
 pointer layout
-slotsFor: aRGLayout do: aBlock
+slotsFor: anRGLayout do: aBlock
 	| realClass |
-	realClass := self realBehaviorFor: aRGLayout parent.
+	realClass := self realBehaviorFor: anRGLayout parent.
 	realClass classLayout slots
 		do: [ :each | 
 			| def |
 			def := self
 				definitionFor: each
-				ifAbsentRegister: [ each asRing2MinimalDefinitionIn: aRGLayout environment ].
+				ifAbsentRegister: [ each asRing2MinimalDefinitionIn: anRGLayout environment ].
 			aBlock value: def ]

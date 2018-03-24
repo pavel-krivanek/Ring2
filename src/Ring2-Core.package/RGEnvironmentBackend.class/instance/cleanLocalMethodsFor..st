@@ -1,4 +1,4 @@
 behavior
-cleanLocalMethodsFor: aRGBehavior
+cleanLocalMethodsFor: anRGBehavior
 
-	^ aRGBehavior pvtCleanLocalMethods
+	^ anRGBehavior pvtCleanLocalMethods

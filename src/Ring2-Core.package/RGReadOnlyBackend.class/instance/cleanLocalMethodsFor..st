@@ -1,4 +1,4 @@
 behavior
-cleanLocalMethodsFor: aRGBehavior
+cleanLocalMethodsFor: anRGBehavior
 
 	self readOnlyError.

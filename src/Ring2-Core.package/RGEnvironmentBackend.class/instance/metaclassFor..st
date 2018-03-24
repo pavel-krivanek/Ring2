@@ -1,4 +1,4 @@
 as yet unclassified
-metaclassFor: aRGBehavior
+metaclassFor: anRGBehavior
 
-	^  aRGBehavior pvtMetaclass
+	^  anRGBehavior pvtMetaclass

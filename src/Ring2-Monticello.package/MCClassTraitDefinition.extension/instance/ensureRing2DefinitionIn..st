@@ -1,10 +1,10 @@
 *Ring2-Monticello
-ensureRing2DefinitionIn: aRGEnvironment
+ensureRing2DefinitionIn: anRGEnvironment
 
-	^ aRGEnvironment backend definitionFor: self ifAbsentRegister: [
+	^ anRGEnvironment backend definitionFor: self ifAbsentRegister: [
 		| def traitDef |
-		def := aRGEnvironment ensureMetaclassTraitNamed: (self baseTrait, ' classTrait') asSymbol.
-		traitDef := aRGEnvironment ensureTraitNamed: (self baseTrait) asSymbol.
+		def := anRGEnvironment ensureMetaclassTraitNamed: (self baseTrait, ' classTrait') asSymbol.
+		traitDef := anRGEnvironment ensureTraitNamed: (self baseTrait) asSymbol.
 		def baseTrait: traitDef.
 		traitDef classTrait: def.
 		def traitComposition: (self traitCompositionFrom: self classTraitComposition parent: def).

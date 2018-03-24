@@ -1,4 +1,4 @@
 actions
-reverseIn: aRGEnvironment
+reverseIn: anRGEnvironment
 
 	self subclassResponsibility

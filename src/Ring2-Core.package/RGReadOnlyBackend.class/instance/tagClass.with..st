@@ -1,4 +1,4 @@
 class
-tagClass: aRGBehavior with: aSymbol
+tagClass: anRGBehavior with: aSymbol
 
 	self readOnlyError.

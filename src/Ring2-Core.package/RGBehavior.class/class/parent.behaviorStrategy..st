@@ -1,11 +1,11 @@
 as yet unclassified
-parent: anRGObject behaviorStrategy: aRGBehaviorStrategy
+parent: anRGObject behaviorStrategy: anRGBehaviorStrategy
 	
 	| aBehavior |
 
 	aBehavior := self basicNew
-		behaviorStrategy: aRGBehaviorStrategy;
+		behaviorStrategy: anRGBehaviorStrategy;
 		parent: anRGObject;
 		initialize.
-	aRGBehaviorStrategy initialize.
+	anRGBehaviorStrategy initialize.
 	^ aBehavior

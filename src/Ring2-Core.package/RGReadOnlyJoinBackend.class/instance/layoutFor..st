@@ -1,7 +1,7 @@
 behavior
-layoutFor: aRGBehavior
+layoutFor: anRGBehavior
 
 	^ self operation: [ :backend :definition |
 			backend layoutFor: definition ]
-		on: aRGBehavior
+		on: anRGBehavior
 	

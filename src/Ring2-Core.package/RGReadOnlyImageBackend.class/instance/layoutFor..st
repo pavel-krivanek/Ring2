@@ -1,10 +1,10 @@
 behavior
-layoutFor: aRGBehavior
+layoutFor: anRGBehavior
 
 	| realClass realLayout def |
 	
-	realClass := self realBehaviorFor: aRGBehavior.
+	realClass := self realBehaviorFor: anRGBehavior.
 	realLayout := realClass classLayout.
 	def := self 	definitionFor: realLayout ifAbsentRegister: [ 
-			realLayout asRing2MinimalDefinitionIn: aRGBehavior environment ].
+			realLayout asRing2MinimalDefinitionIn: anRGBehavior environment ].
 	^ def

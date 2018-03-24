@@ -1,4 +1,4 @@
 as yet unclassified
-setMetaclassFor: aRGBehavior to: aRGMetaclass
+setMetaclassFor: anRGBehavior to: anRGMetaclass
 
-	^  aRGBehavior pvtMetaclass: aRGMetaclass
+	^  anRGBehavior pvtMetaclass: anRGMetaclass

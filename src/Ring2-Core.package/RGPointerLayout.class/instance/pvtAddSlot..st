@@ -1,9 +1,9 @@
 private - backend access
-pvtAddSlot: aRGSlot
+pvtAddSlot: anRGSlot
 
-	self environment verifyOwnership: aRGSlot.
+	self environment verifyOwnership: anRGSlot.
 	
 	slots isRing2Resolved ifFalse: [ 
 		self pvtCleanSlots  ].
 	
-	slots add: aRGSlot.	
+	slots add: anRGSlot.	

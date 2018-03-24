@@ -1,4 +1,4 @@
 class
-addSharedPool: aRGPoolVariable to: aRGBehavior
+addSharedPool: anRGPoolVariable to: anRGBehavior
 
 	self readOnlyError.

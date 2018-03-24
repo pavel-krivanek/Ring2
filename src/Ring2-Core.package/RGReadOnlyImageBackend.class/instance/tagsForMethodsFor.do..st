@@ -1,4 +1,4 @@
 method
-tagsForMethodsFor: aRGBehavior do: aBlock
+tagsForMethodsFor: anRGBehavior do: aBlock
 
-	(self realBehaviorFor: aRGBehavior) protocols do: aBlock
+	(self realBehaviorFor: anRGBehavior) protocols do: aBlock

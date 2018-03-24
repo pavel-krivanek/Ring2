@@ -1,4 +1,4 @@
 class comment
-classCommentContentFor: aRGComment
+classCommentContentFor: anRGComment
 
-	^ aRGComment pvtContent
+	^ anRGComment pvtContent

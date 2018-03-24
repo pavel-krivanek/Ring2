@@ -1,4 +1,4 @@
 environment
-packagesFor: aRGEnvironment do: aBlock
+packagesFor: anRGEnvironment do: aBlock
 
-	^  aRGEnvironment pvtPackagesDo: aBlock
+	^  anRGEnvironment pvtPackagesDo: aBlock

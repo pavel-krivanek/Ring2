@@ -1,4 +1,4 @@
 method
-cleanTagsForMethodsFor: aRGBehavior
+cleanTagsForMethodsFor: anRGBehavior
 
 	self readOnlyError.

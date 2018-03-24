@@ -1,8 +1,8 @@
 instance creation
-unresolvedNamed: aString withParent: aRGDefintion
+unresolvedNamed: aString withParent: anRGDefintion
 
 	^self basicNew
 		initializeUnresolved; 
 		pvtName: aString asSymbol;
-		parent: aRGDefintion;
+		parent: anRGDefintion;
 		yourself

@@ -1,4 +1,4 @@
 class
-removeSharedPool: aRGPoolVariable from: aRGBehavior
+removeSharedPool: anRGPoolVariable from: anRGBehavior
 
 	self readOnlyError.

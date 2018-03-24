@@ -1,16 +1,16 @@
 *Ring2-Monticello
-ensureRing2DefinitionIn: aRGEnvironment
+ensureRing2DefinitionIn: anRGEnvironment
 
-	^ aRGEnvironment backend definitionFor: self ifAbsentRegister: [
+	^ anRGEnvironment backend definitionFor: self ifAbsentRegister: [
 		| def metaclassDef |
-		def := aRGEnvironment ensureClassNamed: self className asSymbol.
-		metaclassDef := aRGEnvironment ensureClassNamed: (self className, ' class') asSymbol.
+		def := anRGEnvironment ensureClassNamed: self className asSymbol.
+		metaclassDef := anRGEnvironment ensureClassNamed: (self className, ' class') asSymbol.
 		def metaclass: metaclassDef.
 		def traitComposition: (self traitCompositionFrom: self traitComposition parent: def).			
 		metaclassDef traitComposition: (self traitCompositionFrom: self classTraitComposition parent: metaclassDef).			
 		(self superclassName = #nil)
 			ifTrue: [ def superclass: def ]
-			ifFalse: [ def superclass: (aRGEnvironment ensureClassNamed: superclassName ) ].
+			ifFalse: [ def superclass: (anRGEnvironment ensureClassNamed: superclassName ) ].
 		def category: self category.
 		def layout: (self ring2LayoutType parent: def).
 		metaclassDef layout: (RGFixedLayout parent: metaclassDef). 

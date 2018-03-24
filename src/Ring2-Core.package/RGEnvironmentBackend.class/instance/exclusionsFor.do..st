@@ -1,4 +1,4 @@
 trait exclusion
-exclusionsFor: aRGTraitExclusion do: aBlock
+exclusionsFor: anRGTraitExclusion do: aBlock
 
-	^ aRGTraitExclusion pvtExclusionsDo: aBlock
+	^ anRGTraitExclusion pvtExclusionsDo: aBlock

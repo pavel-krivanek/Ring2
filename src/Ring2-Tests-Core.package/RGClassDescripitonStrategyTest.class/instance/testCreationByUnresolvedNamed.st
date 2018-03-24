@@ -1,12 +1,12 @@
 tests
 testCreationByUnresolvedNamed
 
-	| aRGBehavior parent |
+	| anRGBehavior parent |
 	
 	parent := RGEnvironment	new.
-	aRGBehavior := RGClass unresolvedNamed: #SomeClass withParent: parent.
-	self checkBasicPropertiesOf: aRGBehavior.
-	self assert: aRGBehavior name equals: #SomeClass.
-	self assert: aRGBehavior parent equals: parent.
-	self assert: aRGBehavior isRing2Resolved not.
+	anRGBehavior := RGClass unresolvedNamed: #SomeClass withParent: parent.
+	self checkBasicPropertiesOf: anRGBehavior.
+	self assert: anRGBehavior name equals: #SomeClass.
+	self assert: anRGBehavior parent equals: parent.
+	self assert: anRGBehavior isRing2Resolved not.
 	

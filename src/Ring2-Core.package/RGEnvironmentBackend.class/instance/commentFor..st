@@ -1,4 +1,4 @@
 class
-commentFor: aRGBehavior
+commentFor: anRGBehavior
 
-	^  aRGBehavior behaviorStrategy pvtComment
+	^  anRGBehavior behaviorStrategy pvtComment

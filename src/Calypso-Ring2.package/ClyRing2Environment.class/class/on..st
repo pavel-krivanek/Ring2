@@ -1,6 +1,6 @@
 instance creation
-on: aRGEvironment
+on: anRGEvironment
 
 	^ self new 
-		environment: aRGEvironment;
+		environment: anRGEvironment;
 		yourself.

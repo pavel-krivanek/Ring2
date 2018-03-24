@@ -1,7 +1,7 @@
 behavior
-tagsForClass: aRGBehavior do: aBlock
+tagsForClass: anRGBehavior do: aBlock
 
 	| realClass |
 	
-	realClass := self realBehaviorFor: aRGBehavior.
+	realClass := self realBehaviorFor: anRGBehavior.
 	realClass tags do: [:tag | aBlock value: tag ]

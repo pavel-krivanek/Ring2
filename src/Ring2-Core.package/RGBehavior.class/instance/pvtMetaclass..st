@@ -1,6 +1,6 @@
 private - backend access
-pvtMetaclass: aRGMetaclass
+pvtMetaclass: anRGMetaclass
 
-	self environment verifyOwnership: aRGMetaclass.
+	self environment verifyOwnership: anRGMetaclass.
 
-	^ metaclass := aRGMetaclass
+	^ metaclass := anRGMetaclass

@@ -1,4 +1,4 @@
 class
-addSharedPool: aRGPoolVariable to: aRGBehavior
+addSharedPool: anRGPoolVariable to: anRGBehavior
 
-	^ aRGBehavior behaviorStrategy pvtAddSharedPool: aRGPoolVariable
+	^ anRGBehavior behaviorStrategy pvtAddSharedPool: anRGPoolVariable

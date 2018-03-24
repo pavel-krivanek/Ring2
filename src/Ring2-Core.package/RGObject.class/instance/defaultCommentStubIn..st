@@ -1,6 +1,6 @@
 hierarchy-defaults
-defaultCommentStubIn: aRGBehavior
+defaultCommentStubIn: anRGBehavior
 
 	^ RGComment unresolved
-		parent: aRGBehavior;
+		parent: anRGBehavior;
 		yourself.

@@ -1,4 +1,4 @@
 pointer layout
-addSlot: aRGSlot to: aRGLayout
+addSlot: anRGSlot to: anRGLayout
 
-	^ aRGLayout pvtAddSlot: aRGSlot
+	^ anRGLayout pvtAddSlot: anRGSlot

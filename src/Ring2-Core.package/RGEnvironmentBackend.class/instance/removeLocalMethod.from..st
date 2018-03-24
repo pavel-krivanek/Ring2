@@ -1,4 +1,4 @@
 behavior
-removeLocalMethod: aRGMethod from: aRGBehavior
+removeLocalMethod: anRGMethod from: anRGBehavior
 
-	^ aRGBehavior pvtRemoveLocalMethod: aRGMethod
+	^ anRGBehavior pvtRemoveLocalMethod: anRGMethod

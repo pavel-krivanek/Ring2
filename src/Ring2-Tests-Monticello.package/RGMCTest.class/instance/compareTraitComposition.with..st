@@ -1,9 +1,9 @@
 tests
-compareTraitComposition: aTraitComposition with: aRGTraitComposition
+compareTraitComposition: aTraitComposition with: anRGTraitComposition
 	
-	self assert: aTraitComposition transformations size equals: aRGTraitComposition transformations size.
+	self assert: aTraitComposition transformations size equals: anRGTraitComposition transformations size.
 	
-	aTraitComposition transformations with: aRGTraitComposition transformations do: [ :real :model |
+	aTraitComposition transformations with: anRGTraitComposition transformations do: [ :real :model |
 		self assert: real isTrait equals: model isTrait.
 		self assert: real isTraitAlias equals: model isTraitAlias.
 		self assert: real isTraitExclusion equals: model isTraitExclusion.

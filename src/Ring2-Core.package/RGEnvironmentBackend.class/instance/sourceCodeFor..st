@@ -1,4 +1,4 @@
 method
-sourceCodeFor: aRGMethod 
+sourceCodeFor: anRGMethod 
 
-	^ aRGMethod pvtSafeSourceCode
+	^ anRGMethod pvtSafeSourceCode

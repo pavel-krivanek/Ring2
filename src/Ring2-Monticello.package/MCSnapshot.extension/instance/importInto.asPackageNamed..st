@@ -1,9 +1,9 @@
 *Ring2-Monticello
-importInto: aRGEnvironment asPackageNamed: aPackageName
+importInto: anRGEnvironment asPackageNamed: aPackageName
 
-	| aRGPacakgeDefinition |
-	aRGPacakgeDefinition := aRGEnvironment ensurePackageNamed: aPackageName.
+	| anRGPacakgeDefinition |
+	anRGPacakgeDefinition := anRGEnvironment ensurePackageNamed: aPackageName.
 	self definitions do: [ :each |
-		each ensureRing2DefinitionIn: aRGEnvironment package: aRGPacakgeDefinition ].
+		each ensureRing2DefinitionIn: anRGEnvironment package: anRGPacakgeDefinition ].
 
-	^ aRGPacakgeDefinition
+	^ anRGPacakgeDefinition

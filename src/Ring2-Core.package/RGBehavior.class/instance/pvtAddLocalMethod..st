@@ -1,7 +1,7 @@
 private - backend interface
-pvtAddLocalMethod: aRGMethod
+pvtAddLocalMethod: anRGMethod
 
-	self environment verifyOwnership: aRGMethod.
+	self environment verifyOwnership: anRGMethod.
 	
 	localMethods isRing2Resolved ifFalse: [ 
 		self pvtCleanLocalMethods ].
@@ -9,8 +9,8 @@ pvtAddLocalMethod: aRGMethod
 	(self hasResolved: #tagsForMethods) 
 		ifFalse: [ self pvtCleanTagsForMethods ].
 
-	aRGMethod tags do: [ :aTag |
+	anRGMethod tags do: [ :aTag |
 		self pvtAddMethodTag: aTag ].
 
-	localMethods add: aRGMethod.	
+	localMethods add: anRGMethod.	
 	

@@ -1,4 +1,4 @@
 class
-cleanSharedPoolsFor: aRGBehavior
+cleanSharedPoolsFor: anRGBehavior
 
 	self readOnlyError.

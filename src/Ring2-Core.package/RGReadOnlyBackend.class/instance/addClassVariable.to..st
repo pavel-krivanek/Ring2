@@ -1,4 +1,4 @@
 class
-addClassVariable: aRGInstanceVariableDefinition to: aRGBehavior
+addClassVariable: anRGInstanceVariableDefinition to: anRGBehavior
 
 	self readOnlyError.

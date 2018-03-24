@@ -1,4 +1,4 @@
 strategy
-removeSharedPool: aRGPoolVariable
+removeSharedPool: anRGPoolVariable
 
-	^ self behaviorStrategy removeSharedPool: aRGPoolVariable
+	^ self behaviorStrategy removeSharedPool: anRGPoolVariable

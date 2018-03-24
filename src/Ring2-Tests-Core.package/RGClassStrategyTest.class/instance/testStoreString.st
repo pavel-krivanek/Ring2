@@ -1,10 +1,10 @@
 tests
 testStoreString
 
-	| aRGBehavior |
+	| anRGBehavior |
 	
-	aRGBehavior := RGBehavior newClass.
-	self assert: aRGBehavior storeString equals: '(RGClass named: #unresolved)'.
+	anRGBehavior := RGBehavior newClass.
+	self assert: anRGBehavior storeString equals: '(RGClass named: #unresolved)'.
 
-	aRGBehavior := RGClass named: #SomeClass.
-	self assert: aRGBehavior storeString equals: '(RGClass named: #SomeClass)'.	
+	anRGBehavior := RGClass named: #SomeClass.
+	self assert: anRGBehavior storeString equals: '(RGClass named: #SomeClass)'.	

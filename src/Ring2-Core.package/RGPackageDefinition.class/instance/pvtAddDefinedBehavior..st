@@ -1,10 +1,10 @@
 private - backend interface
-pvtAddDefinedBehavior: aRGBehavior
+pvtAddDefinedBehavior: anRGBehavior
 
-	self environment verifyOwnership: aRGBehavior.
+	self environment verifyOwnership: anRGBehavior.
 	
 	definedBehaviors isRing2Resolved ifFalse: [ 
 		self pvtCleanDefinedBehaviors  ].
 	
-	definedBehaviors add: aRGBehavior.	
+	definedBehaviors add: anRGBehavior.	
 	

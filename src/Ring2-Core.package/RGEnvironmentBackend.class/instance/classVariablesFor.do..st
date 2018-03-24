@@ -1,4 +1,4 @@
 class
-classVariablesFor: aRGBehavior do: aBlock
+classVariablesFor: anRGBehavior do: aBlock
 
-	^ aRGBehavior behaviorStrategy pvtClassVariablesDo: aBlock
+	^ anRGBehavior behaviorStrategy pvtClassVariablesDo: aBlock

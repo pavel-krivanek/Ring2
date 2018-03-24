@@ -1,4 +1,4 @@
 method
-setTimeFor: aRGMethod to: aDateAndTime
+setTimeFor: anRGMethod to: aDateAndTime
 
-	^  aRGMethod pvtTime: aDateAndTime
+	^  anRGMethod pvtTime: aDateAndTime

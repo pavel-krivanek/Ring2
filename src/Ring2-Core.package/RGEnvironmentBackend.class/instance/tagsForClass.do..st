@@ -1,4 +1,4 @@
 class
-tagsForClass: aRGBehavior do: aBlock
+tagsForClass: anRGBehavior do: aBlock
 
-	^  aRGBehavior pvtTagsDo: aBlock
+	^  anRGBehavior pvtTagsDo: aBlock

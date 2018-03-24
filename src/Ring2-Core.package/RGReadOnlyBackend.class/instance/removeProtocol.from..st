@@ -1,4 +1,4 @@
 behavior
-removeProtocol: aRGProtocolDefinition from: aRGBehavior
+removeProtocol: anRGProtocolDefinition from: anRGBehavior
 
 	self readOnlyError.

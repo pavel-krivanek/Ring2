@@ -1,13 +1,13 @@
 tests
 testIncompatibleBehavior
 
-	| aRGBehavior |
+	| anRGBehavior |
 	
-	aRGBehavior := RGBehavior newClass.
+	anRGBehavior := RGBehavior newClass.
 	
 	self checkIncompatible: [ 
-		aRGBehavior baseClass: (aRGBehavior environment ensureClassNamed: #SomeOtherClass) ].
+		anRGBehavior baseClass: (anRGBehavior environment ensureClassNamed: #SomeOtherClass) ].
 	self checkIncompatible: [ 
-		aRGBehavior baseTrait ].
+		anRGBehavior baseTrait ].
 	self checkIncompatible: [ 
-		aRGBehavior baseTrait: (aRGBehavior environment ensureTraitNamed: #SomeTrait) ].
+		anRGBehavior baseTrait: (anRGBehavior environment ensureTraitNamed: #SomeTrait) ].

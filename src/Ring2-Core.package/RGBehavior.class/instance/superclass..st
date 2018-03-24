@@ -1,5 +1,5 @@
 accessing - backend
-superclass: aRGBehavior
+superclass: anRGBehavior
 
 	self announceDefinitionChangeDuring: [ 
-		self backend forBehavior setSuperclassFor: self to: aRGBehavior ].
+		self backend forBehavior setSuperclassFor: self to: anRGBehavior ].

@@ -1,13 +1,13 @@
 as yet unclassified
-named: aName parent: anRGObject behaviorStrategy: aRGBehaviorStrategy
+named: aName parent: anRGObject behaviorStrategy: anRGBehaviorStrategy
 	
 	| aBehavior |
 
 	aBehavior := self basicNew
-		behaviorStrategy: aRGBehaviorStrategy;
+		behaviorStrategy: anRGBehaviorStrategy;
 		parent: anRGObject;
 		initialize.
-	aRGBehaviorStrategy initialize.
+	anRGBehaviorStrategy initialize.
 	^ aBehavior
 		pvtName: aName asSymbol;
 		yourself		

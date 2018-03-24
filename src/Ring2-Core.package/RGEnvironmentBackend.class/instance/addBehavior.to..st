@@ -1,4 +1,4 @@
 environment
-addBehavior: aRGBehavior to: aRGEnvironment
+addBehavior: anRGBehavior to: anRGEnvironment
 
-	^ aRGEnvironment pvtAddBehavior: aRGBehavior
+	^ anRGEnvironment pvtAddBehavior: anRGBehavior

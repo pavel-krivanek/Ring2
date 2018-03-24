@@ -1,4 +1,4 @@
 accessing - backend
-addDefinedBehavior: aRGBehavior
+addDefinedBehavior: anRGBehavior
 
-	self backend forPackage addDefinedBehavior: aRGBehavior to: self
+	self backend forPackage addDefinedBehavior: anRGBehavior to: self

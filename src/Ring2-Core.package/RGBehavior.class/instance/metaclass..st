@@ -1,5 +1,5 @@
 accessing - backend
-metaclass: aRGMetaclass
+metaclass: anRGMetaclass
 
-	self backend forBehavior setMetaclassFor: self to: aRGMetaclass.
+	self backend forBehavior setMetaclassFor: self to: anRGMetaclass.
 	

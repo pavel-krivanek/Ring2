@@ -1,4 +1,4 @@
 strategy
-layout: aRGLayout
+layout: anRGLayout
 
-	^ self behaviorStrategy layout: aRGLayout
+	^ self behaviorStrategy layout: anRGLayout

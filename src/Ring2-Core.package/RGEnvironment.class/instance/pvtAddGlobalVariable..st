@@ -1,9 +1,9 @@
 private - backend access
-pvtAddGlobalVariable: aRGGlobalVariable
+pvtAddGlobalVariable: anRGGlobalVariable
 
-	self environment verifyOwnership: aRGGlobalVariable.
+	self environment verifyOwnership: anRGGlobalVariable.
 	
 	globalVariables isRing2Resolved ifFalse: [ 
 		self pvtCleanGlobalVariables  ].
 	
-	globalVariables add: aRGGlobalVariable.	
+	globalVariables add: anRGGlobalVariable.	

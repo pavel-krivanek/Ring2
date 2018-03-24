@@ -1,4 +1,4 @@
 behavior
-removeLocalMethod: aRGMethod from: aRGBehavior
+removeLocalMethod: anRGMethod from: anRGBehavior
 
 	self readOnlyError.

@@ -1,4 +1,4 @@
 trait
-classTraitFor: aRGTrait
+classTraitFor: anRGTrait
 
-	^  aRGTrait behaviorStrategy pvtClassTrait
+	^  anRGTrait behaviorStrategy pvtClassTrait

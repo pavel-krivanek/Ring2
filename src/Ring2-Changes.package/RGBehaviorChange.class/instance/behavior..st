@@ -1,10 +1,10 @@
 accessing
-behavior: aRGBehavior
+behavior: anRGBehavior
 
-	self environment: aRGBehavior environment.
+	self environment: anRGBehavior environment.
 	
-	behavior := aRGBehavior.
+	behavior := anRGBehavior.
 	
-	behaviorName := aRGBehavior hasResolvedName
-		ifTrue: [ aRGBehavior name. ]
+	behaviorName := anRGBehavior hasResolvedName
+		ifTrue: [ anRGBehavior name. ]
 		ifFalse: [ nil ].

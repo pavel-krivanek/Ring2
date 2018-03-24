@@ -1,5 +1,5 @@
 accessing - backend
-removeTransformation: aRGTraitTransformation
+removeTransformation: anRGTraitTransformation
 
 	self parent announceDefinitionChangeDuring: [ 
-		self backend forBehavior removeTransformation: aRGTraitTransformation from: self ].
+		self backend forBehavior removeTransformation: anRGTraitTransformation from: self ].

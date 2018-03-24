@@ -1,6 +1,6 @@
 private - backend access
-pvtComment: aRGComment
+pvtComment: anRGComment
 
-	self environment verifyOwnership: aRGComment.
+	self environment verifyOwnership: anRGComment.
 
-	^ comment := aRGComment
+	^ comment := anRGComment

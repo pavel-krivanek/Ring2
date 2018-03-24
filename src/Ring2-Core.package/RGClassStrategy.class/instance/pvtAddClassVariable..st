@@ -1,9 +1,9 @@
 private - backend access
-pvtAddClassVariable: aRGInstanceVariableDefinition
+pvtAddClassVariable: anRGInstanceVariableDefinition
 
-	self owner environment verifyOwnership: aRGInstanceVariableDefinition.
+	self owner environment verifyOwnership: anRGInstanceVariableDefinition.
 	
 	classVariables isRing2Resolved ifFalse: [ 
 		self pvtCleanClassVariables  ].
 	
-	classVariables add: aRGInstanceVariableDefinition.	
+	classVariables add: anRGInstanceVariableDefinition.	

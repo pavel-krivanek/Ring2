@@ -1,4 +1,4 @@
 trait exclusion
-addExclusion: aSymbol to: aRGTraitExclusion
+addExclusion: aSymbol to: anRGTraitExclusion
 
-	^ aRGTraitExclusion pvtAddExclusion: aSymbol
+	^ anRGTraitExclusion pvtAddExclusion: aSymbol

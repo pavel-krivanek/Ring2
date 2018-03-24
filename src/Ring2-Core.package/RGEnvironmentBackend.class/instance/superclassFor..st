@@ -1,4 +1,4 @@
 behavior
-superclassFor: aRGBehavior
+superclassFor: anRGBehavior
 
-	^  aRGBehavior pvtSuperclass
+	^  anRGBehavior pvtSuperclass

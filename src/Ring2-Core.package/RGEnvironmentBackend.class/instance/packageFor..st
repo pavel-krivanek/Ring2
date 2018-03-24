@@ -1,4 +1,4 @@
 class
-packageFor: aRGBehavior
+packageFor: anRGBehavior
 
-	^  aRGBehavior behaviorStrategy pvtPackage
+	^  anRGBehavior behaviorStrategy pvtPackage

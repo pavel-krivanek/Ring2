@@ -1,9 +1,9 @@
 accessing - backend
-removeLocalMethod: aRGMethod 
+removeLocalMethod: anRGMethod 
 
-	(aRGMethod package = self package)
-		ifFalse: [ aRGMethod package removeExtensionMethod:  aRGMethod ].
+	(anRGMethod package = self package)
+		ifFalse: [ anRGMethod package removeExtensionMethod:  anRGMethod ].
 		
-	self backend forBehavior removeLocalMethod: aRGMethod from: self.
+	self backend forBehavior removeLocalMethod: anRGMethod from: self.
 	
-	self announcer methodRemoved: aRGMethod.
+	self announcer methodRemoved: anRGMethod.

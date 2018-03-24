@@ -1,4 +1,4 @@
 private - backend access
-removeClassVariable: aRGInstanceVariableDefinition
+removeClassVariable: anRGInstanceVariableDefinition
 
 	self incompatibleBehaviorType

@@ -1,4 +1,4 @@
 environment
-removePackage: anRGPackageDefinition from: aRGEnvironment
+removePackage: anRGPackageDefinition from: anRGEnvironment
 
-	^ aRGEnvironment pvtRemovePackage: anRGPackageDefinition
+	^ anRGEnvironment pvtRemovePackage: anRGPackageDefinition

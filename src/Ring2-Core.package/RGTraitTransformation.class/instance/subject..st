@@ -1,5 +1,5 @@
 accessing - backend
-subject: aRGTrait
+subject: anRGTrait
 
 	self parent parent announceDefinitionChangeDuring: [ 
-		self backend forBehavior setSubjectFor: self to: aRGTrait. ].
+		self backend forBehavior setSubjectFor: self to: anRGTrait. ].

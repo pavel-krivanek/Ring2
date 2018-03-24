@@ -1,9 +1,9 @@
 tests
 testClassVariablesString
 
-	| aRGBehavior |
+	| anRGBehavior |
 	
-	aRGBehavior := RGBehavior newTrait.
+	anRGBehavior := RGBehavior newTrait.
 
-	self assert: aRGBehavior classVariablesString equals: ''
+	self assert: anRGBehavior classVariablesString equals: ''
 

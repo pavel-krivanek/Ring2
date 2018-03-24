@@ -1,15 +1,15 @@
 actions
-applyIn: aRGEnvironment
+applyIn: anRGEnvironment
 
-	| aRGBehavior |
+	| anRGBehavior |
 	
-	aRGBehavior := (self environment == aRGEnvironment)
+	anRGBehavior := (self environment == anRGEnvironment)
 		ifTrue: [ behavior ]
 		ifFalse: [
 			behaviorName
 				ifNil: [ RGNotFoundError signal ]
-				ifNotNil: [ 	aRGEnvironment ask behaviorNamed: behaviorName ifAbsent: [ RGNotFoundError signal ] ] ].
+				ifNotNil: [ 	anRGEnvironment ask behaviorNamed: behaviorName ifAbsent: [ RGNotFoundError signal ] ] ].
 		
-	aRGBehavior name: newName.
+	anRGBehavior name: newName.
 		
 	

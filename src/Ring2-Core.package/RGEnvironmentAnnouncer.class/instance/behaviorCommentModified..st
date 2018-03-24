@@ -1,4 +1,4 @@
 triggering
-behaviorCommentModified: aRGBehavior
+behaviorCommentModified: anRGBehavior
 
-	self announce: (ClassCommented classCommented: aRGBehavior)
+	self announce: (ClassCommented classCommented: anRGBehavior)

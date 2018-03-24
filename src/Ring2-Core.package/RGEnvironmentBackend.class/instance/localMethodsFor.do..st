@@ -1,4 +1,4 @@
 behavior
-localMethodsFor: aRGBehavior do: aBlock
+localMethodsFor: anRGBehavior do: aBlock
 
-	^ aRGBehavior pvtLocalMethodsDo: aBlock
+	^ anRGBehavior pvtLocalMethodsDo: aBlock

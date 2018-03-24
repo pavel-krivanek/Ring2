@@ -1,6 +1,6 @@
 private - backend interface
-pvtTraitComposition: aRGTraitComposition
+pvtTraitComposition: anRGTraitComposition
 
-	self environment verifyOwnership: aRGTraitComposition.
+	self environment verifyOwnership: anRGTraitComposition.
 
-	^ traitComposition := aRGTraitComposition
+	^ traitComposition := anRGTraitComposition

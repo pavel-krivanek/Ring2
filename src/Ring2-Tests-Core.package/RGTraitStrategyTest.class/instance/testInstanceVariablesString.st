@@ -1,7 +1,7 @@
 tests
 testInstanceVariablesString
 
-	| aRGBehavior |
+	| anRGBehavior |
 	
-	aRGBehavior := RGBehavior newTrait.
-	self assert: aRGBehavior instanceVariablesString equals: ''
+	anRGBehavior := RGBehavior newTrait.
+	self assert: anRGBehavior instanceVariablesString equals: ''

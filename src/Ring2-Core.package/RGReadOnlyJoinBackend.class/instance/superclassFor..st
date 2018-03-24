@@ -1,9 +1,9 @@
 behavior
-superclassFor: aRGBehavior
+superclassFor: anRGBehavior
 
 	^ self operation: [ :backend :definition |
 			backend superclassFor: definition ]
-		on: aRGBehavior	
+		on: anRGBehavior	
 
 	
 	

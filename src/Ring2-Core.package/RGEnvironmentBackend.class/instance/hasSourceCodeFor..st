@@ -1,4 +1,4 @@
 method
-hasSourceCodeFor: aRGMethod 
+hasSourceCodeFor: anRGMethod 
 
-	^ aRGMethod pvtSourceCode notNil
+	^ anRGMethod pvtSourceCode notNil

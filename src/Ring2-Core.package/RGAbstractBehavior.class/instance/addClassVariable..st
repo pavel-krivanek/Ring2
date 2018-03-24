@@ -1,4 +1,4 @@
 strategy
-addClassVariable: aRGInstanceVariableDefinition 
+addClassVariable: anRGInstanceVariableDefinition 
 
-	^ self behaviorStrategy addClassVariable: aRGInstanceVariableDefinition 
+	^ self behaviorStrategy addClassVariable: anRGInstanceVariableDefinition 

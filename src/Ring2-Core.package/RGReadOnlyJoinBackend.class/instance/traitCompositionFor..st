@@ -1,7 +1,7 @@
 behavior
-traitCompositionFor: aRGBehavior
+traitCompositionFor: anRGBehavior
 
 	^ self operation: [ :backend :definition |
 			backend traitCompositionFor: definition ]
-		on: aRGBehavior
+		on: anRGBehavior
 	

@@ -1,6 +1,6 @@
 private - backend interface
-pvtLayout: aRGLayout
+pvtLayout: anRGLayout
 
-	self environment verifyOwnership: aRGLayout.
+	self environment verifyOwnership: anRGLayout.
 
-	^ layout := aRGLayout
+	^ layout := anRGLayout

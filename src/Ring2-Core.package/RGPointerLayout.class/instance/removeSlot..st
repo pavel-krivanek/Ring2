@@ -1,5 +1,5 @@
 accessing - backend
-removeSlot: aRGSlot
+removeSlot: anRGSlot
 
 	self parent announceDefinitionChangeDuring: [ 
-		self backend forBehavior removeSlot: aRGSlot from: self ].
+		self backend forBehavior removeSlot: anRGSlot from: self ].

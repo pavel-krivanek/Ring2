@@ -1,4 +1,4 @@
 environment
-behaviorsFor: aRGEnvironment do: aBlock
+behaviorsFor: anRGEnvironment do: aBlock
 
-	^  aRGEnvironment pvtBehaviorsDo: aBlock
+	^  anRGEnvironment pvtBehaviorsDo: aBlock

@@ -1,4 +1,4 @@
 accessing - backend
-removeExtensionMethod: aRGMethod 
+removeExtensionMethod: anRGMethod 
 
-	self backend forPackage removeExtensionMethod: aRGMethod from: self
+	self backend forPackage removeExtensionMethod: anRGMethod from: self

@@ -1,7 +1,7 @@
 private - backend interface
-pvtRemoveLocalMethod: aRGMethod
+pvtRemoveLocalMethod: anRGMethod
 
-	self environment verifyOwnership: aRGMethod.
+	self environment verifyOwnership: anRGMethod.
 	
-	localMethods remove: aRGMethod.
+	localMethods remove: anRGMethod.
 	

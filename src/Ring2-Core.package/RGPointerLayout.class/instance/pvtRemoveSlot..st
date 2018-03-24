@@ -1,7 +1,7 @@
 private - backend access
-pvtRemoveSlot: aRGSlot
+pvtRemoveSlot: anRGSlot
 
-	self environment verifyOwnership: aRGSlot.
+	self environment verifyOwnership: anRGSlot.
 	
-	slots remove: aRGSlot.
+	slots remove: anRGSlot.
 	

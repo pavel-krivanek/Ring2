@@ -1,10 +1,10 @@
 as yet unclassified
-unnamedWithBehaviorStrategy: aRGBehaviorStrategy
+unnamedWithBehaviorStrategy: anRGBehaviorStrategy
 
 	| aBehavior |
 	
 	aBehavior := self basicNew
-		behaviorStrategy: aRGBehaviorStrategy;
+		behaviorStrategy: anRGBehaviorStrategy;
 		initialize.
-	aRGBehaviorStrategy initialize.
+	anRGBehaviorStrategy initialize.
 	^ aBehavior

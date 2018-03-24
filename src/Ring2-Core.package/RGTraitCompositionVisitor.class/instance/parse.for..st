@@ -1,9 +1,9 @@
 parsing
-parse: anExpressionString for: aRGTraitCompositionDefinition
+parse: anExpressionString for: anRGTraitCompositionDefinition
 
 	| ast result |
 	ast := (RBParser parseExpression: anExpressionString).
-	self traitComposition: aRGTraitCompositionDefinition.
+	self traitComposition: anRGTraitCompositionDefinition.
 	result := ast acceptVisitor: self.
 	
 	result isCollection 

@@ -1,4 +1,4 @@
 class comment
-classCommentTimeFor: aRGComment
+classCommentTimeFor: anRGComment
 
-	^ aRGComment timeForStamp: (self realBehaviorFor: aRGComment parent) organization commentStamp.
+	^ anRGComment timeForStamp: (self realBehaviorFor: anRGComment parent) organization commentStamp.

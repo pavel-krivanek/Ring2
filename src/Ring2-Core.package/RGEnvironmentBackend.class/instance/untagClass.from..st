@@ -1,4 +1,4 @@
 class
-untagClass: aRGBehavior from: aSymbol
+untagClass: anRGBehavior from: aSymbol
 
-	^ aRGBehavior pvtUntagFrom: aSymbol
+	^ anRGBehavior pvtUntagFrom: aSymbol

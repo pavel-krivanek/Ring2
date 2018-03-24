@@ -1,4 +1,4 @@
 environment
-globalVariablesFor: aRGEnvironment do: aBlock
+globalVariablesFor: anRGEnvironment do: aBlock
 
-	^ aRGEnvironment pvtGlobalVariablesDo: aBlock
+	^ anRGEnvironment pvtGlobalVariablesDo: aBlock

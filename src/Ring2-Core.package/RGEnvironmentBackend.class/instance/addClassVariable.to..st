@@ -1,4 +1,4 @@
 class
-addClassVariable: aRGInstanceVariableDefinition to: aRGBehavior
+addClassVariable: anRGInstanceVariableDefinition to: anRGBehavior
 
-	^ aRGBehavior behaviorStrategy pvtAddClassVariable: aRGInstanceVariableDefinition
+	^ anRGBehavior behaviorStrategy pvtAddClassVariable: anRGInstanceVariableDefinition

@@ -1,4 +1,4 @@
 private - backend access
-addSharedPool: aRGPoolVariable
+addSharedPool: anRGPoolVariable
 
 	self incompatibleBehaviorType

@@ -1,4 +1,4 @@
 behavior
-addLocalMethod: aRGMethod to: aRGBehavior
+addLocalMethod: anRGMethod to: anRGBehavior
 
-	^ aRGBehavior pvtAddLocalMethod: aRGMethod
+	^ anRGBehavior pvtAddLocalMethod: anRGMethod

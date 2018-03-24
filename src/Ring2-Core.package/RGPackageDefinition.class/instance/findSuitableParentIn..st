@@ -1,4 +1,4 @@
 accessing
-findSuitableParentIn: aRGEnvironment
+findSuitableParentIn: anRGEnvironment
 
-	^ aRGEnvironment 
+	^ anRGEnvironment 

@@ -1,4 +1,4 @@
 class comment
-classCommentAuthorFor: aRGComment
+classCommentAuthorFor: anRGComment
 
-	^  aRGComment pvtAuthor
+	^  anRGComment pvtAuthor

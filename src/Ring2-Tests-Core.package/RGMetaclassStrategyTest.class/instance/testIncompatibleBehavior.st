@@ -1,46 +1,46 @@
 tests
 testIncompatibleBehavior
 
-	| aRGBehavior aTrait |
+	| anRGBehavior aTrait |
 	
-	aRGBehavior := RGBehavior newMetaclass.
-	aTrait := aRGBehavior environment ensureTraitNamed: 'SomeTrait'.
-	
-	self checkIncompatible: [ 
-		aRGBehavior addClassVariable: (RGClassVariable named: #classVar parent: aRGBehavior) ].
-	self checkIncompatible: [ 
-		aRGBehavior allClassVariables ].
-	self checkIncompatible: [ 
-		aRGBehavior classVariableDefinitionString ].
-	self checkIncompatible: [ 
-		aRGBehavior classVariables ].
-	self checkIncompatible: [ 
-		aRGBehavior classVariables: Array new ].
-	self checkIncompatible: [ 
-		aRGBehavior classVariablesDo: [:classVar | ] ].
-	self checkIncompatible: [ 
-		aRGBehavior cleanClassVariables ].
+	anRGBehavior := RGBehavior newMetaclass.
+	aTrait := anRGBehavior environment ensureTraitNamed: 'SomeTrait'.
 	
 	self checkIncompatible: [ 
-		aRGBehavior addSharedPool: (aRGBehavior environment ensureClassNamed: #SomePool) ].
+		anRGBehavior addClassVariable: (RGClassVariable named: #classVar parent: anRGBehavior) ].
 	self checkIncompatible: [ 
-		aRGBehavior cleanSharedPools ].
+		anRGBehavior allClassVariables ].
+	self checkIncompatible: [ 
+		anRGBehavior classVariableDefinitionString ].
+	self checkIncompatible: [ 
+		anRGBehavior classVariables ].
+	self checkIncompatible: [ 
+		anRGBehavior classVariables: Array new ].
+	self checkIncompatible: [ 
+		anRGBehavior classVariablesDo: [:classVar | ] ].
+	self checkIncompatible: [ 
+		anRGBehavior cleanClassVariables ].
+	
+	self checkIncompatible: [ 
+		anRGBehavior addSharedPool: (anRGBehavior environment ensureClassNamed: #SomePool) ].
+	self checkIncompatible: [ 
+		anRGBehavior cleanSharedPools ].
 
 	self checkIncompatible: [ 
-		aRGBehavior category: #someCategory ].
+		anRGBehavior category: #someCategory ].
 
 	self checkIncompatible: [ 
-		aRGBehavior classTrait ].
+		anRGBehavior classTrait ].
 
 	self checkIncompatible: [ 
-		aRGBehavior classTrait: aTrait classTrait ].
+		anRGBehavior classTrait: aTrait classTrait ].
 
 	self checkIncompatible: [ 
-		aRGBehavior comment: (RGComment parent: aRGBehavior) ].
+		anRGBehavior comment: (RGComment parent: anRGBehavior) ].
 
 	self checkIncompatible: [ 
-		aRGBehavior sharedPools: Array new ].
+		anRGBehavior sharedPools: Array new ].
 
 	self checkIncompatible: [ 
-		aRGBehavior trait ].
+		anRGBehavior trait ].
 

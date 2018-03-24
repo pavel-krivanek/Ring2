@@ -1,17 +1,17 @@
 accessing - backend
-removeBehavior: aRGBehavior
+removeBehavior: anRGBehavior
 
-	self backend forEnvironment removeBehavior: aRGBehavior from: self.
+	self backend forEnvironment removeBehavior: anRGBehavior from: self.
 	
 	"remove extensions methods deleted with the behavior from owning packages"
-	aRGBehavior extensions do: [ :each |
+	anRGBehavior extensions do: [ :each |
 		each package removeExtensionMethod: each ].
 	
-	(aRGBehavior package notNil and: [aRGBehavior package  definedBehaviors includes: aRGBehavior]) ifTrue: [ 
-	aRGBehavior package removeDefinedBehavior: aRGBehavior.
+	(anRGBehavior package notNil and: [anRGBehavior package  definedBehaviors includes: anRGBehavior]) ifTrue: [ 
+	anRGBehavior package removeDefinedBehavior: anRGBehavior.
 	].
 	
-	self announcer behaviorRemoved: aRGBehavior.
+	self announcer behaviorRemoved: anRGBehavior.
 	
-	(aRGBehavior hasResolvedName) ifTrue: [ 
-		self queryInterface behaviorsDictionary removeKey: aRGBehavior name ifAbsent: []].
+	(anRGBehavior hasResolvedName) ifTrue: [ 
+		self queryInterface behaviorsDictionary removeKey: anRGBehavior name ifAbsent: []].

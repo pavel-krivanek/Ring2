@@ -1,4 +1,4 @@
 class
-addMethodTag: aSymbol to: aRGBehavior
+addMethodTag: aSymbol to: anRGBehavior
 
-	^ aRGBehavior pvtAddMethodTag: aSymbol
+	^ anRGBehavior pvtAddMethodTag: aSymbol

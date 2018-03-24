@@ -1,4 +1,4 @@
 trait composition
-addTransformation: aRGTraitTransformation to: aRGTraitComposition
+addTransformation: anRGTraitTransformation to: anRGTraitComposition
 
 	self readOnlyError 

@@ -1,5 +1,5 @@
 private - backend access
-removeClassVariable: aRGInstanceVariableDefinition
+removeClassVariable: anRGInstanceVariableDefinition
 
 	self owner announceDefinitionChangeDuring: [ 
-		self backend forBehavior removeClassVariable: aRGInstanceVariableDefinition from: self owner ].
+		self backend forBehavior removeClassVariable: anRGInstanceVariableDefinition from: self owner ].

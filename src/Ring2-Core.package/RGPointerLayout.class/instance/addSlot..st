@@ -1,5 +1,5 @@
 accessing - backend
-addSlot: aRGSlot 
+addSlot: anRGSlot 
 
 	self parent announceDefinitionChangeDuring: [ 
-		self backend forBehavior addSlot: aRGSlot to: self ].
+		self backend forBehavior addSlot: anRGSlot to: self ].

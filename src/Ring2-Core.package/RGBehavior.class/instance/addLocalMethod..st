@@ -1,6 +1,6 @@
 accessing - backend
-addLocalMethod: aRGMethod
+addLocalMethod: anRGMethod
 
-	self backend forBehavior addLocalMethod: aRGMethod to: self.
+	self backend forBehavior addLocalMethod: anRGMethod to: self.
 	
-	self announcer methodAdded: aRGMethod.
+	self announcer methodAdded: anRGMethod.

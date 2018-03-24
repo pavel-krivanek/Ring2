@@ -1,4 +1,4 @@
 class comment
-classCommentTimeFor: aRGComment
+classCommentTimeFor: anRGComment
 
-	^  aRGComment pvtTime
+	^  anRGComment pvtTime

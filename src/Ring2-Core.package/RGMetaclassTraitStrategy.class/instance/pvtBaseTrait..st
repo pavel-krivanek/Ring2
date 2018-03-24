@@ -1,6 +1,6 @@
 private - backend access
-pvtBaseTrait: aRGTrait
+pvtBaseTrait: anRGTrait
 
-	self environment verifyOwnership: aRGTrait.
+	self environment verifyOwnership: anRGTrait.
 
-	^ baseTrait := aRGTrait
+	^ baseTrait := anRGTrait

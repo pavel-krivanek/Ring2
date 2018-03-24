@@ -1,7 +1,7 @@
 tests
 testEmtpyClassVariableString
 
-	| aRGBehavior |
+	| anRGBehavior |
 	
-	aRGBehavior := RGBehavior newClass.
-	self assert: aRGBehavior classVariablesString equals: ''.
+	anRGBehavior := RGBehavior newClass.
+	self assert: anRGBehavior classVariablesString equals: ''.

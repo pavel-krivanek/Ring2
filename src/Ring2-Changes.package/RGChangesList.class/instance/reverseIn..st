@@ -1,9 +1,9 @@
 actions
-reverseIn: aRGEnvironment
+reverseIn: anRGEnvironment
 
 	| originBindings |
 	
 	originBindings := Dictionary new.
 
 	self changes reverseDo: [ :each | 
-		each reverseIn: aRGEnvironment withBindings: originBindings ]
+		each reverseIn: anRGEnvironment withBindings: originBindings ]

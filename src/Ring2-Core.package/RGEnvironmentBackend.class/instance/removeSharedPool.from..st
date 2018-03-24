@@ -1,4 +1,4 @@
 class
-removeSharedPool: aRGPoolVariable from: aRGBehavior
+removeSharedPool: anRGPoolVariable from: anRGBehavior
 
-	^ aRGBehavior behaviorStrategy pvtRemoveSharedPool: aRGPoolVariable
+	^ anRGBehavior behaviorStrategy pvtRemoveSharedPool: anRGPoolVariable

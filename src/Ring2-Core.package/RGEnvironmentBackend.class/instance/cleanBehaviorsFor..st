@@ -1,4 +1,4 @@
 environment
-cleanBehaviorsFor: aRGEnvironment
+cleanBehaviorsFor: anRGEnvironment
 
-	aRGEnvironment pvtCleanBehaviors.
+	anRGEnvironment pvtCleanBehaviors.

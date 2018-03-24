@@ -1,7 +1,7 @@
 method
-tagsForMethod: aRGMethod do: aBlock
+tagsForMethod: anRGMethod do: aBlock
 
 	| realMethod |
 	
-	realMethod := self realMethodFor: aRGMethod.
+	realMethod := self realMethodFor: anRGMethod.
 	{ realMethod protocol } do: aBlock.

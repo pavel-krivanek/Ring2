@@ -1,4 +1,4 @@
 metaclass
-baseClassFor: aRGBehavior
+baseClassFor: anRGBehavior
 
-	^  aRGBehavior behaviorStrategy pvtBaseClass
+	^  anRGBehavior behaviorStrategy pvtBaseClass

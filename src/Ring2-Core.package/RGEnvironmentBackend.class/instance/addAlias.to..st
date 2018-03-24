@@ -1,4 +1,4 @@
 trait alias
-addAlias: aSymbol to: aRGTraitAlias
+addAlias: aSymbol to: anRGTraitAlias
 
-	^ aRGTraitAlias pvtAddAlias: aSymbol
+	^ anRGTraitAlias pvtAddAlias: aSymbol

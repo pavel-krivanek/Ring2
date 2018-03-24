@@ -1,4 +1,4 @@
 environment
-addPackage: anRGPackageDefinition to: aRGEnvironment
+addPackage: anRGPackageDefinition to: anRGEnvironment
 
-	^ aRGEnvironment pvtAddPackage: anRGPackageDefinition
+	^ anRGEnvironment pvtAddPackage: anRGPackageDefinition

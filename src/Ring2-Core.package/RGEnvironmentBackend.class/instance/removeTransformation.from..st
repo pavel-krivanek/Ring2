@@ -1,4 +1,4 @@
 trait composition
-removeTransformation: aRGTraitTransformation from: aRGTraitComposition
+removeTransformation: anRGTraitTransformation from: anRGTraitComposition
 
-	^ aRGTraitComposition pvtRemoveTransformation: aRGTraitTransformation
+	^ anRGTraitComposition pvtRemoveTransformation: anRGTraitTransformation

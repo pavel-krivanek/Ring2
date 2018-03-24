@@ -1,8 +1,8 @@
 tests
 testCreationByMethod
 
-	| aRGBehavior |
+	| anRGBehavior |
 	
-	aRGBehavior := RGBehavior newTrait.
-	self assert: (aRGBehavior isBehavior).	
-	self assert: (aRGBehavior behaviorStrategy isTraitStrategy).
+	anRGBehavior := RGBehavior newTrait.
+	self assert: (anRGBehavior isBehavior).	
+	self assert: (anRGBehavior behaviorStrategy isTraitStrategy).

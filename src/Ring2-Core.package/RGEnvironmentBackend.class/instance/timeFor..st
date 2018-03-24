@@ -1,4 +1,4 @@
 method
-timeFor: aRGMethod
+timeFor: anRGMethod
 
-	^  aRGMethod pvtTime
+	^  anRGMethod pvtTime

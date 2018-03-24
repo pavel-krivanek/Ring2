@@ -1,4 +1,4 @@
 class description
-addInstanceVariable: aRGInstanceVariableDefinition to: aRGBehavior
+addInstanceVariable: anRGInstanceVariableDefinition to: anRGBehavior
 
 	self readOnlyError.

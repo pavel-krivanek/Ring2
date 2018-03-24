@@ -1,4 +1,4 @@
 private - backend access
-classTrait: aRGMetaclassTrait
+classTrait: anRGMetaclassTrait
 
 	self incompatibleBehaviorType

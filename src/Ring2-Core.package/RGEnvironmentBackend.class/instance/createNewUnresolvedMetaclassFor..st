@@ -1,11 +1,11 @@
 unresolved objects
-createNewUnresolvedMetaclassFor: aRGBehavior
+createNewUnresolvedMetaclassFor: anRGBehavior
 
 	| metaclassStub superclassMetaclass |
 	
 	metaclassStub := RGMetaclass unresolvedWithParent: self environment.
 
-	superclassMetaclass := aRGBehavior pvtSuperclass pvtMetaclass.
+	superclassMetaclass := anRGBehavior pvtSuperclass pvtMetaclass.
 	superclassMetaclass 
 		ifNotNil: [ 
 			metaclassStub pvtSuperclass: superclassMetaclass.

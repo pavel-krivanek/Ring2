@@ -1,8 +1,8 @@
 tests
 testCreationByUnnamed
 
-	| aRGBehavior parent |
+	| anRGBehavior parent |
 	
-	aRGBehavior := RGClass parent: parent.
-	self checkBasicPropertiesOf: aRGBehavior.
-	self assert: (aRGBehavior hasResolvedName) not.
+	anRGBehavior := RGClass parent: parent.
+	self checkBasicPropertiesOf: anRGBehavior.
+	self assert: (anRGBehavior hasResolvedName) not.

@@ -1,4 +1,4 @@
 package
-addDefinedBehavior: aRGBehavior to: anRGPackageDefinition
+addDefinedBehavior: anRGBehavior to: anRGPackageDefinition
 
-	^ anRGPackageDefinition pvtAddDefinedBehavior: aRGBehavior
+	^ anRGPackageDefinition pvtAddDefinedBehavior: anRGBehavior

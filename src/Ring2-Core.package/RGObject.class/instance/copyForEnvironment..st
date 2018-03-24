@@ -1,9 +1,9 @@
 as yet unclassified
-copyForEnvironment: aRGEnvironment
+copyForEnvironment: anRGEnvironment
 
 	| newDefinition |
 	
 	newDefinition := self copy.
-	newDefinition propertyNamed: #environment put: aRGEnvironment.
+	newDefinition propertyNamed: #environment put: anRGEnvironment.
 	newDefinition propertyNamed: #originalDefinition put: self.
 	^ newDefinition

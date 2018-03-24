@@ -1,9 +1,9 @@
 tests
 testUnresolvedClassGroupCreatorProperties
 
-	| aRGBehavior |
+	| anRGBehavior |
 	
-	aRGBehavior := RGBehavior newClass.
-	self assert: (aRGBehavior superclass propertyNamed: #creator) equals: aRGBehavior.
-	self assert: (aRGBehavior metaclass propertyNamed: #creator) equals: aRGBehavior.
-	self assert: (aRGBehavior metaclass superclass propertyNamed: #creator) equals: aRGBehavior.
+	anRGBehavior := RGBehavior newClass.
+	self assert: (anRGBehavior superclass propertyNamed: #creator) equals: anRGBehavior.
+	self assert: (anRGBehavior metaclass propertyNamed: #creator) equals: anRGBehavior.
+	self assert: (anRGBehavior metaclass superclass propertyNamed: #creator) equals: anRGBehavior.

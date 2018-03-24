@@ -1,5 +1,5 @@
 unresolved objects
-createNewUnresolvedMetaclassFor: aRGBehavior
+createNewUnresolvedMetaclassFor: anRGBehavior
 
 	self readOnlyError 
 	"^ RGUnresolvedValue recursive"

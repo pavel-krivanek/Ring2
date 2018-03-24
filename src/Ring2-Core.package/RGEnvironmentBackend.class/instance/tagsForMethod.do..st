@@ -1,4 +1,4 @@
 method
-tagsForMethod: aRGMethod do: aBlock
+tagsForMethod: anRGMethod do: aBlock
 
-	^  aRGMethod pvtTagsDo: aBlock
+	^  anRGMethod pvtTagsDo: aBlock

@@ -1,4 +1,4 @@
 method
-setMethodPackageFor: aRGMethod to: anRGPackageDefinition
+setMethodPackageFor: anRGMethod to: anRGPackageDefinition
 
-	^  aRGMethod pvtPackage: anRGPackageDefinition
+	^  anRGMethod pvtPackage: anRGPackageDefinition

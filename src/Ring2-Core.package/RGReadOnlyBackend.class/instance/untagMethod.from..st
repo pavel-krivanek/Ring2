@@ -1,4 +1,4 @@
 method
-untagMethod: aRGMethod from: aSymbol
+untagMethod: anRGMethod from: aSymbol
 
 	self readOnlyError.

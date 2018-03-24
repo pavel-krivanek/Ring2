@@ -1,4 +1,4 @@
 trait composition
-cleanTransformationsFor: aRGTraitComposition
+cleanTransformationsFor: anRGTraitComposition
 
-	^ aRGTraitComposition pvtCleanTransformations
+	^ anRGTraitComposition pvtCleanTransformations

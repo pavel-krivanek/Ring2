@@ -1,6 +1,6 @@
 *Ring2-Compatibility
-asRing2DefinitionIn: aRGEnvironment
+asRing2DefinitionIn: anRGEnvironment
 
-	^ (self methodClass asRing2DefinitionIn: aRGEnvironment) methods detect: [:each | 
+	^ (self methodClass asRing2DefinitionIn: anRGEnvironment) methods detect: [:each | 
 			each selector = self selector] ifNone: [ RGNotFoundError signal ]
 	

@@ -1,4 +1,4 @@
 instance creation
-unresolvedNamed: aString withParent: aRGDefintion
+unresolvedNamed: aString withParent: anRGDefintion
 
-	^ RGBehavior unresolvedNamed: aString withParent: aRGDefintion behaviorStrategy: self newStrategy
+	^ RGBehavior unresolvedNamed: aString withParent: anRGDefintion behaviorStrategy: self newStrategy

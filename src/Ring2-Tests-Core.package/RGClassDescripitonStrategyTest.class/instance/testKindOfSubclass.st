@@ -1,8 +1,8 @@
 tests
 testKindOfSubclass
 
-	| aRGBehavior |
+	| anRGBehavior |
 	
-	aRGBehavior := RGBehavior newClass.
+	anRGBehavior := RGBehavior newClass.
 	
-	self assert: aRGBehavior kindOfSubclass equals: ' subclass: '.
+	self assert: anRGBehavior kindOfSubclass equals: ' subclass: '.

@@ -1,21 +1,21 @@
 tests
 testIncompatibleBehavior
 
-	| aRGBehavior |
+	| anRGBehavior |
 	
-	aRGBehavior := RGBehavior newTrait.
+	anRGBehavior := RGBehavior newTrait.
 	
 	self checkIncompatible: [ 
-		aRGBehavior instanceVariables: Array new ].
+		anRGBehavior instanceVariables: Array new ].
 	self checkIncompatible: [ 
-		aRGBehavior kindOfSubclass].
+		anRGBehavior kindOfSubclass].
 	self checkIncompatible: [ 
-		aRGBehavior removeClassVariable: (RGClassVariable named: #ClassVar parent: aRGBehavior)].
+		anRGBehavior removeClassVariable: (RGClassVariable named: #ClassVar parent: anRGBehavior)].
 	self checkIncompatible: [ 
-		aRGBehavior removeSharedPool: (aRGBehavior environment ensureClassNamed: #SomeClass)].
+		anRGBehavior removeSharedPool: (anRGBehavior environment ensureClassNamed: #SomeClass)].
 	self checkIncompatible: [ 
-		aRGBehavior sharedPoolsDo: [ :sharedPool | ] ].
+		anRGBehavior sharedPoolsDo: [ :sharedPool | ] ].
 	self checkIncompatible: [ 
-		aRGBehavior defaultMetaClass ].
+		anRGBehavior defaultMetaClass ].
 	self checkIncompatible: [ 
-		aRGBehavior innerBindingOf: #someSymbol ].
+		anRGBehavior innerBindingOf: #someSymbol ].

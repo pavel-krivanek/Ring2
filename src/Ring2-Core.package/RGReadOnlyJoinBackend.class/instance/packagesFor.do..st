@@ -1,5 +1,5 @@
 environment
-packagesFor: aRGEnvironment do: aBlock
+packagesFor: anRGEnvironment do: aBlock
 
 	| enumerated |
 	

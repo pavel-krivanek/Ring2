@@ -1,4 +1,4 @@
 trait composition
-cleanTransformationsFor: aRGTraitComposition
+cleanTransformationsFor: anRGTraitComposition
 
 	self readOnlyError 

@@ -1,10 +1,10 @@
 caching
 replaceName: aSymbol with: aNewSymbol
 
-	| aRGBehavior |
-	aRGBehavior := behaviorsDictionary at: aSymbol ifAbsent: [ nil ].
-	aRGBehavior ifNotNil: [ 
+	| anRGBehavior |
+	anRGBehavior := behaviorsDictionary at: aSymbol ifAbsent: [ nil ].
+	anRGBehavior ifNotNil: [ 
 		behaviorsDictionary removeKey: aSymbol.
-		behaviorsDictionary at: aNewSymbol put: aRGBehavior.
+		behaviorsDictionary at: aNewSymbol put: anRGBehavior.
 		 ]
 	

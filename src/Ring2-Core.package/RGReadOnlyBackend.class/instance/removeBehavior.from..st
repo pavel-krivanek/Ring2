@@ -1,4 +1,4 @@
 environment
-removeBehavior: aRGBehavior from: aRGEnvironment
+removeBehavior: anRGBehavior from: anRGEnvironment
 
 	self readOnlyError.

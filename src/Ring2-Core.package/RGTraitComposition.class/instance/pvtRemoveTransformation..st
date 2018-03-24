@@ -1,6 +1,6 @@
 private - backend access
-pvtRemoveTransformation: aRGTraitTransformation
+pvtRemoveTransformation: anRGTraitTransformation
 
-	self environment verifyOwnership: aRGTraitTransformation.
+	self environment verifyOwnership: anRGTraitTransformation.
 	
-	transformations remove: aRGTraitTransformation.
+	transformations remove: anRGTraitTransformation.

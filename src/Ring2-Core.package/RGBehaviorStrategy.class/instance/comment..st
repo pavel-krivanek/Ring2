@@ -1,4 +1,4 @@
 private - backend access
-comment: aRGComment
+comment: anRGComment
 
 	self incompatibleBehaviorType

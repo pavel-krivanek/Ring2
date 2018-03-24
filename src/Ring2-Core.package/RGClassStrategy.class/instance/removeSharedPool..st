@@ -1,5 +1,5 @@
 private - backend access
-removeSharedPool: aRGPoolVariable
+removeSharedPool: anRGPoolVariable
 
 	self owner announceDefinitionChangeDuring: [ 
-		self backend forBehavior removeSharedPool: aRGPoolVariable from: self owner].
+		self backend forBehavior removeSharedPool: anRGPoolVariable from: self owner].

@@ -1,4 +1,4 @@
 private - backend access
-baseTrait: aRGClass
+baseTrait: anRGClass
 
 	self incompatibleBehaviorType

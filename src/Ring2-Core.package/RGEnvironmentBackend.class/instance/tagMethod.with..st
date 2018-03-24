@@ -1,4 +1,4 @@
 method
-tagMethod: aRGMethod with: aSymbol
+tagMethod: anRGMethod with: aSymbol
 
-	^ aRGMethod pvtTagWith: aSymbol
+	^ anRGMethod pvtTagWith: aSymbol

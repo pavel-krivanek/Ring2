@@ -1,4 +1,4 @@
 class comment
-setClassCommentAuthorFor: aRGComment to: aString
+setClassCommentAuthorFor: anRGComment to: aString
 
 	self readOnlyError.

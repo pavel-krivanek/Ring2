@@ -1,4 +1,4 @@
 behavior
-addLocalMethod: aRGMethod to: aRGBehavior
+addLocalMethod: anRGMethod to: anRGBehavior
 
 	self readOnlyError.

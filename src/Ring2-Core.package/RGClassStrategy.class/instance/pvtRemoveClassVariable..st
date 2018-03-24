@@ -1,6 +1,6 @@
 private - backend access
-pvtRemoveClassVariable: aRGInstanceVariableDefinition
+pvtRemoveClassVariable: anRGInstanceVariableDefinition
 
-	self environment verifyOwnership: aRGInstanceVariableDefinition.
+	self environment verifyOwnership: anRGInstanceVariableDefinition.
 	
-	classVariables remove: aRGInstanceVariableDefinition.
+	classVariables remove: anRGInstanceVariableDefinition.

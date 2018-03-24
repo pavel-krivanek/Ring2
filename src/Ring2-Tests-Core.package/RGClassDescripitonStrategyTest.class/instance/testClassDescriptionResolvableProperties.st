@@ -1,8 +1,8 @@
 tests
 testClassDescriptionResolvableProperties
 
-	| aRGBehavior |
+	| anRGBehavior |
 	
-	aRGBehavior := RGBehavior newClass.
+	anRGBehavior := RGBehavior newClass.
 	
-	self assert: (aRGBehavior pvtResolvableProperties asDictionary includesKey: #layout)
+	self assert: (anRGBehavior pvtResolvableProperties asDictionary includesKey: #layout)

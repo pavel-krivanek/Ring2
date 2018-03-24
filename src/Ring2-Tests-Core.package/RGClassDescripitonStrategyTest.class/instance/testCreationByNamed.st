@@ -1,8 +1,8 @@
 tests
 testCreationByNamed
 
-	| aRGBehavior |
+	| anRGBehavior |
 	
-	aRGBehavior := RGClass named: #SomeClass.
-	self checkBasicPropertiesOf: aRGBehavior.
-	self assert: aRGBehavior name equals: #SomeClass.
+	anRGBehavior := RGClass named: #SomeClass.
+	self checkBasicPropertiesOf: anRGBehavior.
+	self assert: anRGBehavior name equals: #SomeClass.

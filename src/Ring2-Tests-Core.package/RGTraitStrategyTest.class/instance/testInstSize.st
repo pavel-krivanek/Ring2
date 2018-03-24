@@ -1,7 +1,7 @@
 tests
 testInstSize
 
-	| aRGBehavior |
+	| anRGBehavior |
 	
-	aRGBehavior := RGBehavior newTrait.
-	self assert: aRGBehavior instSize equals: 0
+	anRGBehavior := RGBehavior newTrait.
+	self assert: anRGBehavior instSize equals: 0

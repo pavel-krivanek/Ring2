@@ -1,4 +1,4 @@
 trait alias
-aliasesFor: aRGTraitAlias do: aBlock
+aliasesFor: anRGTraitAlias do: aBlock
 
-	^ aRGTraitAlias pvtAliasesDo: aBlock
+	^ anRGTraitAlias pvtAliasesDo: aBlock

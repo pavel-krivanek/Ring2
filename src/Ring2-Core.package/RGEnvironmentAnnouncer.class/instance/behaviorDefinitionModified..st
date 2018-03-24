@@ -1,4 +1,4 @@
 triggering
-behaviorDefinitionModified: aRGBehavior
+behaviorDefinitionModified: anRGBehavior
 
-	self announce: (ClassModificationApplied toClass: aRGBehavior)
+	self announce: (ClassModificationApplied toClass: anRGBehavior)

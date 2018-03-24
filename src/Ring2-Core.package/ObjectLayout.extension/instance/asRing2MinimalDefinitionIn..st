@@ -1,4 +1,4 @@
 *Ring2-Core
-asRing2MinimalDefinitionIn: aRGEnvironment
+asRing2MinimalDefinitionIn: anRGEnvironment
 
 	self subclassResponsibility 

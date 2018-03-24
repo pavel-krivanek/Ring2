@@ -1,4 +1,4 @@
 class comment
-setClassCommentTimeFor: aRGComment to: aDateAndTime
+setClassCommentTimeFor: anRGComment to: aDateAndTime
 
-	^  aRGComment pvtTime: aDateAndTime
+	^  anRGComment pvtTime: aDateAndTime

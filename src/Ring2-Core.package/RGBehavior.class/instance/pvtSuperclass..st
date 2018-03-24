@@ -1,8 +1,8 @@
 private - backend interface
-pvtSuperclass: aRGBehavior
+pvtSuperclass: anRGBehavior
 
-	aRGBehavior ifNotNil: [ 
-		self environment verifyOwnership: aRGBehavior.].
+	anRGBehavior ifNotNil: [ 
+		self environment verifyOwnership: anRGBehavior.].
 
-	^ superclass := aRGBehavior
+	^ superclass := anRGBehavior
 	

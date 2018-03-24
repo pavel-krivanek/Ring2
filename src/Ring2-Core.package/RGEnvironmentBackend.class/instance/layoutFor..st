@@ -1,4 +1,4 @@
 behavior
-layoutFor: aRGBehavior
+layoutFor: anRGBehavior
 
-	^  aRGBehavior behaviorStrategy pvtLayout
+	^  anRGBehavior behaviorStrategy pvtLayout

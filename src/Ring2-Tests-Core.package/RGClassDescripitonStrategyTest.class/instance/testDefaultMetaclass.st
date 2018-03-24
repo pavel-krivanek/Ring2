@@ -1,7 +1,7 @@
 tests
 testDefaultMetaclass
 
-	| aRGBehavior |
+	| anRGBehavior |
 	
-	aRGBehavior := RGBehavior newClass.
-	self assert: aRGBehavior defaultMetaClass isMeta 
+	anRGBehavior := RGBehavior newClass.
+	self assert: anRGBehavior defaultMetaClass isMeta 

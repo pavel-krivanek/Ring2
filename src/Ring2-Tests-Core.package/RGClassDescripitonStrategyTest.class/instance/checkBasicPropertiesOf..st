@@ -1,10 +1,10 @@
 tests
-checkBasicPropertiesOf: aRGBehavior
+checkBasicPropertiesOf: anRGBehavior
 
-	self assert: aRGBehavior isBehavior.	
-	self assert: aRGBehavior behaviorStrategy isClassStrategy.
-	self assert: aRGBehavior behaviorStrategy owner equals: aRGBehavior.
-	self assert: aRGBehavior layout isRing2Resolved not.
-	self assert: aRGBehavior layout isFixedLayout.
+	self assert: anRGBehavior isBehavior.	
+	self assert: anRGBehavior behaviorStrategy isClassStrategy.
+	self assert: anRGBehavior behaviorStrategy owner equals: anRGBehavior.
+	self assert: anRGBehavior layout isRing2Resolved not.
+	self assert: anRGBehavior layout isFixedLayout.
 
 	

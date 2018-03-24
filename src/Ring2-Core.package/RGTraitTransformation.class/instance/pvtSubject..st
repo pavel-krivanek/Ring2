@@ -1,6 +1,6 @@
 private - backend interface
-pvtSubject: aRGTrait
+pvtSubject: anRGTrait
 
-	self environment verifyOwnership: aRGTrait.
+	self environment verifyOwnership: anRGTrait.
 
-	^ subject := aRGTrait
+	^ subject := anRGTrait

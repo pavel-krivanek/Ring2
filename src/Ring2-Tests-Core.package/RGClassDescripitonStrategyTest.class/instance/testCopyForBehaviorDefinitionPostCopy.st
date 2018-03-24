@@ -1,11 +1,11 @@
 tests
 testCopyForBehaviorDefinitionPostCopy
 
-	| aRGBehavior copy |
+	| anRGBehavior copy |
 	
-	aRGBehavior := RGBehavior newClass.
-	copy := aRGBehavior copyForBehaviorDefinition.
-	self deny: aRGBehavior behaviorStrategy == copy behaviorStrategy.	
-	self deny: (aRGBehavior behaviorStrategy instVarNamed: #layout) == (copy behaviorStrategy instVarNamed: #layout).
+	anRGBehavior := RGBehavior newClass.
+	copy := anRGBehavior copyForBehaviorDefinition.
+	self deny: anRGBehavior behaviorStrategy == copy behaviorStrategy.	
+	self deny: (anRGBehavior behaviorStrategy instVarNamed: #layout) == (copy behaviorStrategy instVarNamed: #layout).
 "TODO: check this failing case:"
-"	self deny: aRGBehavior behaviorStrategy layout == copy behaviorStrategy layout."
+"	self deny: anRGBehavior behaviorStrategy layout == copy behaviorStrategy layout."

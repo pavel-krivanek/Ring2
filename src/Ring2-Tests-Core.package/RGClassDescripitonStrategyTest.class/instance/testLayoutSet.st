@@ -1,9 +1,9 @@
 tests
 testLayoutSet
 
-	| aRGBehavior layout |
+	| anRGBehavior layout |
 	
-	aRGBehavior := RGBehavior newClass.
-	layout := RGCompiledMethodLayout parent: aRGBehavior.
-	aRGBehavior layout: layout.
-	self assert: aRGBehavior layout equals: layout.
+	anRGBehavior := RGBehavior newClass.
+	layout := RGCompiledMethodLayout parent: anRGBehavior.
+	anRGBehavior layout: layout.
+	self assert: anRGBehavior layout equals: layout.

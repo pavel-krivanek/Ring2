@@ -1,9 +1,9 @@
 private - backend access
-pvtAddTransformation: aRGTraitTransformation
+pvtAddTransformation: anRGTraitTransformation
 
-	self environment verifyOwnership: aRGTraitTransformation.
+	self environment verifyOwnership: anRGTraitTransformation.
 	
 	transformations isRing2Resolved ifFalse: [ 
 		self pvtCleanTransformations  ].
 	
-	transformations add: aRGTraitTransformation.	
+	transformations add: anRGTraitTransformation.	

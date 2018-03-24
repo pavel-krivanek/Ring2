@@ -1,4 +1,4 @@
 strategy
-comment: aRGComment
+comment: anRGComment
 
-	^ self behaviorStrategy comment: aRGComment
+	^ self behaviorStrategy comment: anRGComment

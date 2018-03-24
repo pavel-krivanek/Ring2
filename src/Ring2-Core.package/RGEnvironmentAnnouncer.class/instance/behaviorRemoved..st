@@ -1,5 +1,5 @@
 triggering
-behaviorRemoved: aRGBehavior
+behaviorRemoved: anRGBehavior
 
 	self announce: (ClassRemoved 
-		class: aRGBehavior category: aRGBehavior category)
+		class: anRGBehavior category: anRGBehavior category)

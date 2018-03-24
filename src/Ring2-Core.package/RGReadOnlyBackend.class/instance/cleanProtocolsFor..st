@@ -1,4 +1,4 @@
 behavior
-cleanProtocolsFor: aRGBehavior
+cleanProtocolsFor: anRGBehavior
 
 	self readOnlyError.

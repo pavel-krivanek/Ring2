@@ -1,4 +1,4 @@
 behavior
-setTraitCompositionFor: aRGBehavior to: aRGTraitComposition
+setTraitCompositionFor: anRGBehavior to: anRGTraitComposition
 
-	^  aRGBehavior pvtTraitComposition: aRGTraitComposition
+	^  anRGBehavior pvtTraitComposition: anRGTraitComposition

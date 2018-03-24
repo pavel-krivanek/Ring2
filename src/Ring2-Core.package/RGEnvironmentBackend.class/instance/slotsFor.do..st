@@ -1,4 +1,4 @@
 pointer layout
-slotsFor: aRGLayout do: aBlock
+slotsFor: anRGLayout do: aBlock
 
-	^ aRGLayout pvtSlotsDo: aBlock
+	^ anRGLayout pvtSlotsDo: aBlock

@@ -1,5 +1,5 @@
 private - backend access
-privAddClassVariable: aRGInstanceVariableDefinition 
+privAddClassVariable: anRGInstanceVariableDefinition 
 
-	self backend forBehavior addClassVariable: aRGInstanceVariableDefinition to: self owner	
+	self backend forBehavior addClassVariable: anRGInstanceVariableDefinition to: self owner	
 	
