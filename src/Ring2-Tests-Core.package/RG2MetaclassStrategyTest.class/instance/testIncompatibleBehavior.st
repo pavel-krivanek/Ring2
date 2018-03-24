@@ -38,3 +38,9 @@ testIncompatibleBehavior
 	self checkIncompatible: [ 
 		aRG2Behavior comment: (RG2Comment parent: aRG2Behavior) ].
 
+	self checkIncompatible: [ 
+		aRG2Behavior sharedPools: Array new ].
+
+	self checkIncompatible: [ 
+		aRG2Behavior trait ].
+
