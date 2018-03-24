@@ -1,4 +1,0 @@
-private - backend access
-incompatibleBehaviorType
-
-	RG2IncompatibleBehaviorTypeError signal

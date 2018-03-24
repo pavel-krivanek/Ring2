@@ -1,7 +1,7 @@
 instance creation
-unresolvedWithParent: aRG2Defintion
+unresolvedWithParent: aRGDefintion
 
 	^self basicNew
 		initializeUnresolved; 
-		parent: aRG2Defintion;
+		parent: aRGDefintion;
 		yourself

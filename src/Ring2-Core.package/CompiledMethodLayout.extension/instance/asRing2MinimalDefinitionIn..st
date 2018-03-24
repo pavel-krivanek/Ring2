@@ -1,5 +1,5 @@
 *Ring2-Core
-asRing2MinimalDefinitionIn: aRG2Environment
+asRing2MinimalDefinitionIn: aRGEnvironment
 
-	^ aRG2Environment backend definitionFor: self ifAbsentRegister: [
-		RG2CompiledMethodLayout parent: (self host asRing2MinimalDefinitionIn: aRG2Environment)]
+	^ aRGEnvironment backend definitionFor: self ifAbsentRegister: [
+		RGCompiledMethodLayout parent: (self host asRing2MinimalDefinitionIn: aRGEnvironment)]

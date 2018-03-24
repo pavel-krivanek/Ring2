@@ -1,1 +1,0 @@
-{	"classtraitcomposition" : "TRG2ReadOnlyTest classTrait",	"classvars" : [ ],	"instvars" : [ ],	"name" : "RG2ReadOnlyBackendTest",	"commentStamp" : "",	"super" : "RG2BackendTest",	"traitcomposition" : "TRG2ReadOnlyTest",	"type" : "normal",	"classinstvars" : [ ],	"pools" : [ ],	"category" : "Ring2-Tests-Core"}

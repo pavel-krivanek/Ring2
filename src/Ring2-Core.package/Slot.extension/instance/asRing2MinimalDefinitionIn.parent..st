@@ -1,7 +1,7 @@
 *Ring2-Core
-asRing2MinimalDefinitionIn: aRG2Environment parent: aRG2Layout
+asRing2MinimalDefinitionIn: aRGEnvironment parent: aRGLayout
 
-	^ aRG2Environment backend definitionFor: self ifAbsentRegister: [
+	^ aRGEnvironment backend definitionFor: self ifAbsentRegister: [
 		| def |
-		def := RG2UnknownSlot named: self name asSymbol parent: aRG2Layout.
+		def := RGUnknownSlot named: self name asSymbol parent: aRGLayout.
 		def ].

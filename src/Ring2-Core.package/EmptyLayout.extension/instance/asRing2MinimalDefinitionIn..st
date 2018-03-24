@@ -1,11 +1,11 @@
 *Ring2-Core
-asRing2MinimalDefinitionIn: aRG2Environment
+asRing2MinimalDefinitionIn: aRGEnvironment
 
 	| aHost |
 	
 	aHost := self host 
-		ifNotNil: [ :foundHost | foundHost asRing2MinimalDefinitionIn: aRG2Environment ]
+		ifNotNil: [ :foundHost | foundHost asRing2MinimalDefinitionIn: aRGEnvironment ]
 		ifNil: [ self error: 'Cannot create model for an empty layout without a host'].
 
-	^ aRG2Environment backend definitionFor: self ifAbsentRegister: [
-		RG2EmptyLayout parent: aHost]
+	^ aRGEnvironment backend definitionFor: self ifAbsentRegister: [
+		RGEmptyLayout parent: aHost]

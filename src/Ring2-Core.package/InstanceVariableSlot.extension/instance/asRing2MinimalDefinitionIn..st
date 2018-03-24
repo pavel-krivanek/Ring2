@@ -1,12 +1,12 @@
 *Ring2-Core
-asRing2MinimalDefinitionIn: aRG2Environment
+asRing2MinimalDefinitionIn: aRGEnvironment
 	
 	^ self class == InstanceVariableSlot 
 		ifTrue: [
-			aRG2Environment backend definitionFor: self ifAbsentRegister: [
-				RG2InstanceVariableSlot
+			aRGEnvironment backend definitionFor: self ifAbsentRegister: [
+				RGInstanceVariableSlot
 					named: self name asSymbol
 					parent:
-						(self definingClass classLayout asRing2MinimalDefinitionIn: aRG2Environment)]]
-		ifFalse: [ super asRing2MinimalDefinitionIn: aRG2Environment ]
+						(self definingClass classLayout asRing2MinimalDefinitionIn: aRGEnvironment)]]
+		ifFalse: [ super asRing2MinimalDefinitionIn: aRGEnvironment ]
 

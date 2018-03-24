@@ -1,6 +1,6 @@
 hierarchy-defaults
-defaultTraitCompositionStubIn: aRG2Behavior
+defaultTraitCompositionStubIn: aRGBehavior
 
-	^ RG2TraitComposition unresolved
-		parent: aRG2Behavior;
+	^ RGTraitComposition unresolved
+		parent: aRGBehavior;
 		yourself.

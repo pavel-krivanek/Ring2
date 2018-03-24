@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "PavelKrivanek 3/22/2018 11:32",
+	"super" : "RGChange",
+	"category" : "Ring2-Changes",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"behavior",
+		"behaviorName"
+	],
+	"name" : "RGBehaviorChange",
+	"type" : "normal"
+}

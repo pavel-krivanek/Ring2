@@ -1,7 +1,7 @@
 *Ring2-Core
-asRing2MinimalCommentDefinitionIn: aRG2Environment
+asRing2MinimalCommentDefinitionIn: aRGEnvironment
 
-	^ aRG2Environment backend definitionFor: ('classComment:', self name) asSymbol ifAbsentRegister: [
-		RG2Comment parent: (self asRing2MinimalDefinitionIn: aRG2Environment).
+	^ aRGEnvironment backend definitionFor: ('classComment:', self name) asSymbol ifAbsentRegister: [
+		RGComment parent: (self asRing2MinimalDefinitionIn: aRGEnvironment).
 	]. 
 	

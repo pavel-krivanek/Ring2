@@ -1,6 +1,6 @@
 initialize
 initialize
 	super initialize.
-	environment := RG2Environment new.
+	environment := RGEnvironment new.
 	package := RGPackage named: 'ChangeSet'.
 	doIts := Set new.

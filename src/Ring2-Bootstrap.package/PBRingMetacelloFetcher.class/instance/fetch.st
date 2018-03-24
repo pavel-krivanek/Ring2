@@ -43,7 +43,7 @@ pom := environment ask classNamed: #'ProtoObject class'.
 pom superclass: cl.
 
 #(#Smalltalk #SourceFiles #Transcript #Undeclared #Display #TextConstants  #Sensor #Processor #SystemOrganization) do: [ :each |
-environment addGlobalVariable: (RG2GlobalVariable named: each parent: environment)].
+environment addGlobalVariable: (RGGlobalVariable named: each parent: environment)].
 
 
 environment clean.

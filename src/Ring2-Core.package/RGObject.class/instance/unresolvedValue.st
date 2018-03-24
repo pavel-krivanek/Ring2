@@ -1,4 +1,4 @@
 converting
 unresolvedValue
 
-	^ RG2UnresolvedValue new.
+	^ RGUnresolvedValue new.

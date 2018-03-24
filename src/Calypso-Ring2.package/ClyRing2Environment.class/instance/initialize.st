@@ -3,4 +3,4 @@ initialize
 
 	super initialize.
 	
-	environment := RG2Environment new.
+	environment := RGEnvironment new.

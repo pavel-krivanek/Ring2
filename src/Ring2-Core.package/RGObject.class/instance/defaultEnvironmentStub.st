@@ -1,4 +1,4 @@
 hierarchy-defaults
 defaultEnvironmentStub
 
-	^ RG2Environment unresolved
+	^ RGEnvironment unresolved

@@ -1,0 +1,1 @@
+{	"commentStamp" : "TorstenBergmann 2/12/2014 23:08",	"super" : "RGTest",	"category" : "Ring2-Tests-Core",	"classinstvars" : [ ],	"pools" : [ ],	"classvars" : [ ],	"instvars" : [ ],	"name" : "RGPackageTest",	"type" : "normal"}

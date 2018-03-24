@@ -1,6 +1,6 @@
 converting
 unresolvedValue: aDefaultValue
 
-	^ RG2UnresolvedValue new
+	^ RGUnresolvedValue new
 		default: aDefaultValue;
 		yourself

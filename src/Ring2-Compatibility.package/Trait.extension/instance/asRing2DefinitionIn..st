@@ -1,4 +1,4 @@
 *Ring2-Compatibility
-asRing2DefinitionIn: aRG2Environment
+asRing2DefinitionIn: aRGEnvironment
 
-	^ RG2Trait named: self name parent: aRG2Environment.
+	^ RGTrait named: self name parent: aRGEnvironment.

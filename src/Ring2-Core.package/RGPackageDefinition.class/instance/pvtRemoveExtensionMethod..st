@@ -1,9 +1,9 @@
 private - backend interface
-pvtRemoveExtensionMethod: aRG2Method
+pvtRemoveExtensionMethod: aRGMethod
 
-	self environment verifyOwnership: aRG2Method.
+	self environment verifyOwnership: aRGMethod.
 	
-	extensionMethods remove: aRG2Method.
+	extensionMethods remove: aRGMethod.
 	
 	"TODO:Announce"
 	

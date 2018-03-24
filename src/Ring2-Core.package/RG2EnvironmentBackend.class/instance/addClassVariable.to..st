@@ -1,4 +1,0 @@
-class
-addClassVariable: aRG2InstanceVariableDefinition to: aRG2Behavior
-
-	^ aRG2Behavior behaviorStrategy pvtAddClassVariable: aRG2InstanceVariableDefinition

@@ -1,5 +1,5 @@
 *Ring2-Core
-asRing2MinimalDefinitionIn: aRG2Environment
+asRing2MinimalDefinitionIn: aRGEnvironment
 
-	^ aRG2Environment backend definitionFor: self ifAbsentRegister: [
-		RG2Method named: self selector asSymbol parent: (self methodClass asRing2MinimalDefinitionIn: aRG2Environment)]
+	^ aRGEnvironment backend definitionFor: self ifAbsentRegister: [
+		RGMethod named: self selector asSymbol parent: (self methodClass asRing2MinimalDefinitionIn: aRGEnvironment)]

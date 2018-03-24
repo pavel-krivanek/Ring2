@@ -1,12 +1,12 @@
 *Ring2-Core
-asRing2MinimalDefinitionIn: aRG2Environment
+asRing2MinimalDefinitionIn: aRGEnvironment
 	| def |
-	^ aRG2Environment backend
+	^ aRGEnvironment backend
 		definitionFor: self
 		ifAbsentRegister: [ | definingClass |
 			definingClass := Smalltalk environment allBehaviors detect: [ :b | b traitComposition == self or: [b traitComposition includesElement: self]].
 
-			def := RG2TraitComposition named: self name parent: (definingClass asRing2MinimalDefinitionIn: aRG2Environment).
+			def := RGTraitComposition named: self name parent: (definingClass asRing2MinimalDefinitionIn: aRGEnvironment).
 
 			def propertyNamed: #realObject put: self.
 

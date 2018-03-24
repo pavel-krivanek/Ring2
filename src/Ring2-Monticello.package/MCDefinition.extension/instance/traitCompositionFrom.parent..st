@@ -3,11 +3,11 @@ traitCompositionFrom: aStringOrNil parent: aBehavior
 	
 	| composition transformations |
 	
-	composition := RG2TraitComposition parent: aBehavior.
+	composition := RGTraitComposition parent: aBehavior.
 
 	aStringOrNil ifNil: [ ^ composition ].
 
-	transformations := RG2TraitCompositionVisitor new parse: aStringOrNil for: composition.
+	transformations := RGTraitCompositionVisitor new parse: aStringOrNil for: composition.
 	transformations do: [ :each |
 		composition addTransformation: each ].
 	^ composition

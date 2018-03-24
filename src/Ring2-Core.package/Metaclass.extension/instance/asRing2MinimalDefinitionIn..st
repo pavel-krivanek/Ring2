@@ -1,4 +1,4 @@
 *Ring2-Core
-asRing2MinimalDefinitionIn: aRG2Environment
+asRing2MinimalDefinitionIn: aRGEnvironment
 
-	^ RG2Metaclass named: self name parent: aRG2Environment.
+	^ RGMetaclass named: self name parent: aRGEnvironment.

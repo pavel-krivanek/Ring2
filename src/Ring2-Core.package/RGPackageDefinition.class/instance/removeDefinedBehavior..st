@@ -1,4 +1,4 @@
 accessing - backend
-removeDefinedBehavior: aRG2Behavior
+removeDefinedBehavior: aRGBehavior
 
-	self backend forPackage removeDefinedBehavior: aRG2Behavior from: self
+	self backend forPackage removeDefinedBehavior: aRGBehavior from: self

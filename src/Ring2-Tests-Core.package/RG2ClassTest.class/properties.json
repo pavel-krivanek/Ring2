@@ -1,1 +1,0 @@
-{	"classtraitcomposition" : "TRG2BehaviorTest classTrait + TRG2ClassDescriptionTest classTrait",	"classvars" : [ ],	"instvars" : [ ],	"name" : "RG2ClassTest",	"commentStamp" : "",	"super" : "RG2Test",	"traitcomposition" : "TRG2BehaviorTest + TRG2ClassDescriptionTest",	"type" : "normal",	"classinstvars" : [ ],	"pools" : [ ],	"category" : "Ring2-Tests-Core"}

@@ -1,9 +1,9 @@
 accessing
-parent: aRG2Behavior
+parent: aRGBehavior
 
 	"If possible, do not use this method directly."
 
-	parent := aRG2Behavior.
+	parent := aRGBehavior.
 	"self addoptToParentStub."
 
 	

@@ -1,4 +1,0 @@
-environment
-cleanGlobalVariablesFor: aRG2Environment
-
-	^ aRG2Environment pvtCleanGlobalVariables

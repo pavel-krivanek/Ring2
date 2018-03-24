@@ -1,4 +1,4 @@
 accessing - backend
-addExtensionMethod: aRG2Method 
+addExtensionMethod: aRGMethod 
 
-	self backend forPackage addExtensionMethod: aRG2Method to: self
+	self backend forPackage addExtensionMethod: aRGMethod to: self

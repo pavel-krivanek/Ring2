@@ -1,5 +1,5 @@
 managing container
 defaultParentStub
 
-	^ RG2Environment new
+	^ RGEnvironment new
 		yourself.

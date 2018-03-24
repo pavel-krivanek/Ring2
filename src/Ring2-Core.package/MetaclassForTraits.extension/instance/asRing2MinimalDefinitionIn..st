@@ -1,5 +1,5 @@
 *Ring2-Core
-asRing2MinimalDefinitionIn: aRG2Environment
+asRing2MinimalDefinitionIn: aRGEnvironment
 
-	^ aRG2Environment backend definitionFor: self ifAbsentRegister: [
-		RG2MetaclassTrait named: self name parent: aRG2Environment]
+	^ aRGEnvironment backend definitionFor: self ifAbsentRegister: [
+		RGMetaclassTrait named: self name parent: aRGEnvironment]

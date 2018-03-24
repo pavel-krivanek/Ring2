@@ -26,7 +26,7 @@ classDefinition: aString with: chgRec
 	
 	tokens size = 13
 	ifTrue:[
-		RG2TraitCompositionVisitor new parse: (tokens fifth) for: theClass traitComposition.
+		RGTraitCompositionVisitor new parse: (tokens fifth) for: theClass traitComposition.
 		theClass 
 			instanceVariables: (tokens seventh findTokens: ' ');
 			classVariables: (tokens ninth findTokens: ' ');

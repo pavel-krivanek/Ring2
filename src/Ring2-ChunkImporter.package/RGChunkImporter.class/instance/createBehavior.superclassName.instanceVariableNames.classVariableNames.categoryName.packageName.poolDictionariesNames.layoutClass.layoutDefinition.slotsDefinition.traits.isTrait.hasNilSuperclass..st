@@ -34,11 +34,11 @@ createBehavior: subclassName superclassName: superclassName instanceVariableName
 		slotsDefinition children do: [:child |
 			| newSlot | 
 			newSlot := (child isLiteralNode and: [ child value isSymbol ])
-				ifTrue: [ RG2InstanceVariableSlot named: child value parent: behavior layout ]
+				ifTrue: [ RGInstanceVariableSlot named: child value parent: behavior layout ]
 				ifFalse: [
 					"TODO: probably needs more robust analysis"
 					self assert: child isMessage.
-					(RG2UnknownSlot named: (self slotNameFor: child) parent: behavior layout)
+					(RGUnknownSlot named: (self slotNameFor: child) parent: behavior layout)
 						expression: child formattedCode;
 						yourself].
 			behavior layout addSlot: newSlot] .].
@@ -63,8 +63,8 @@ createBehavior: subclassName superclassName: superclassName instanceVariableName
 
 	traitsDefinition ifNotNil: [ 
 		| composition transformations |
-		composition := RG2TraitComposition parent: behavior.
-		transformations := RG2TraitCompositionVisitor new parse: traitsDefinition for: composition.
+		composition := RGTraitComposition parent: behavior.
+		transformations := RGTraitCompositionVisitor new parse: traitsDefinition for: composition.
 		behavior traitComposition: composition.
 		transformations do: [ :each |
 			composition addTransformation: each ].

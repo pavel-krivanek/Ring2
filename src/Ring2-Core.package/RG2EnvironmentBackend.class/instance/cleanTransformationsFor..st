@@ -1,4 +1,0 @@
-trait composition
-cleanTransformationsFor: aRG2TraitComposition
-
-	^ aRG2TraitComposition pvtCleanTransformations

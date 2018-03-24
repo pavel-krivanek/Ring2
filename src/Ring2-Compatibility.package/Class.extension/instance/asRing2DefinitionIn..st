@@ -1,5 +1,5 @@
 *Ring2-Compatibility
-asRing2DefinitionIn: aRG2Environment
+asRing2DefinitionIn: aRGEnvironment
 
-	^ aRG2Environment ask behaviors detect: [:each | 
-			each name = self name]  ifNone: [ RG2NotFoundError signal ]
+	^ aRGEnvironment ask behaviors detect: [:each | 
+			each name = self name]  ifNone: [ RGNotFoundError signal ]

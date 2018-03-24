@@ -1,4 +1,4 @@
 hierarchy-defaults
 defaultTraitCompositionStub
 
-	^ RG2TraitComposition unresolved
+	^ RGTraitComposition unresolved

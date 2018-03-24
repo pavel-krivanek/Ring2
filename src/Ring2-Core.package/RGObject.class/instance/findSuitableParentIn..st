@@ -1,4 +1,4 @@
 as yet unclassified
-findSuitableParentIn: aRG2Environment
+findSuitableParentIn: aRGEnvironment
 
 	^ self subclassResponsibility 

@@ -32,36 +32,36 @@ visitDoItChunk: aChunk
 
 		self if: selectorParts in: ast includes: #subclass do: [:argument |
 			subclassName := argument value. 
-			layoutClass := RG2FixedLayout. ].
+			layoutClass := RGFixedLayout. ].
 
 		self if: selectorParts in: ast includes: #named do: [:argument |
 			subclassName := argument value. 
 			isTrait := true.
-			layoutClass := RG2FixedLayout. ].
+			layoutClass := RGFixedLayout. ].
 
 		self if: selectorParts in: ast includes: #immediateSubclass do: [:argument |
 			subclassName := argument value. 
-			layoutClass := RG2ImmediateLayout ].
+			layoutClass := RGImmediateLayout ].
 
 		self if: selectorParts in: ast includes: #variableSubclass do: [:argument |
 			subclassName := argument value. 
-			layoutClass := RG2VariableLayout ].
+			layoutClass := RGVariableLayout ].
 
 		self if: selectorParts in: ast includes: #variableByteSubclass do: [:argument |
 			subclassName := argument value. 
-			layoutClass := RG2ByteLayout ].
+			layoutClass := RGByteLayout ].
 		
 		self if: selectorParts in: ast includes: #variableWordSubclass do: [:argument |
 			subclassName := argument value. 
-			layoutClass := RG2WordLayout ].
+			layoutClass := RGWordLayout ].
 
 		self if: selectorParts in: ast includes: #weakSubclass do: [:argument |
 			subclassName := argument value. 
-			layoutClass := RG2WeakLayout ].
+			layoutClass := RGWeakLayout ].
 		
 		self if: selectorParts in: ast includes: #ephemeronSubclass do: [:argument |
 			subclassName := argument value. 
-			layoutClass := RG2EphemeronLayout ].
+			layoutClass := RGEphemeronLayout ].
 		
 		self if: selectorParts in: ast includes: #instanceVariableNames do: [:argument |
 			instanceVariableNames := argument value. ].
@@ -93,7 +93,7 @@ visitDoItChunk: aChunk
 			superclassName := nil ].
 		
 		(#(CompiledBlock CompiledCode CompiledMethod) includes: subclassName) ifTrue: [ 
-			layoutClass := RG2CompiledMethodLayout ].
+			layoutClass := RGCompiledMethodLayout ].
 		
 		^ self createBehavior: subclassName
 			superclassName: superclassName 

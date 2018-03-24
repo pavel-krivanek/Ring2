@@ -16,4 +16,4 @@ testClassWithUnknownSlotsWithMessages
 	self assert: class instVarNames asArray equals: #(#name #year #director #actors).
 	self assert: class classVarNames isEmpty.
 	self assert: class category equals: 'Slot-Tests-Associations'.
-	self assert: ((class slots last: 2) allSatisfy: [ :each | each isKindOf: RG2UnknownSlot  ])
+	self assert: ((class slots last: 2) allSatisfy: [ :each | each isKindOf: RGUnknownSlot  ])

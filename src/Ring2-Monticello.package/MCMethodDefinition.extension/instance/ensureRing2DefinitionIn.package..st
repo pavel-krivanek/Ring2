@@ -1,9 +1,9 @@
 *Ring2-Monticello
-ensureRing2DefinitionIn: aRG2Environment package: anRGPackageDefinition
+ensureRing2DefinitionIn: aRGEnvironment package: anRGPackageDefinition
 	
 	| def  |
 	
-	def := self ensureRing2DefinitionIn: aRG2Environment.
+	def := self ensureRing2DefinitionIn: aRGEnvironment.
 	def package: anRGPackageDefinition.
 
 	^ def
