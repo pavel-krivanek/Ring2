@@ -3,7 +3,7 @@ testProperties
 
 	| def | 
 	
-	def := RG2Definition new.
+	def := RGObject new.
 	
 	self assert: def hasProperties not.
 	self assert: (def hasPropertyNamed: #note) not.

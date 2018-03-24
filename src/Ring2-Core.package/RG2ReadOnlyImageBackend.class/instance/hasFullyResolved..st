@@ -1,4 +1,4 @@
 resolving
-hasFullyResolved: aRG2Definition
+hasFullyResolved: anRGObject
 
 	^ true

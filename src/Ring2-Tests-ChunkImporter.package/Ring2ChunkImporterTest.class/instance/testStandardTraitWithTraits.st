@@ -3,7 +3,7 @@ testStandardTraitWithTraits
 
 	| importer trait | 
 	
-	importer := Ring2ChunkImporter new.
+	importer := RGChunkImporter new.
 	
 	importer fileInFrom: 'Trait named: #TBehavior
 	uses: {}

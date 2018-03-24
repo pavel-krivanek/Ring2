@@ -1,4 +1,4 @@
 as yet unclassified
-named: aString parent: aRG2Definition
+named: aString parent: anRGObject
 
 	^ self badInstantiationError

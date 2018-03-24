@@ -1,0 +1,1 @@
+{	"commentStamp" : "",	"super" : "Object",	"category" : "Ring2-ChunkImporter",	"classinstvars" : [ ],	"pools" : [ ],	"classvars" : [ ],	"instvars" : [		"environment",		"package",		"doIts"	],	"name" : "RGChunkImporter",	"type" : "normal"}

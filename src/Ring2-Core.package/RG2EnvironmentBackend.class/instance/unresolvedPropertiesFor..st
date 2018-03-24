@@ -1,4 +1,4 @@
 resolving
-unresolvedPropertiesFor: aRG2Definition
+unresolvedPropertiesFor: anRGObject
 
-	^ aRG2Definition pvtUnresolvedProperties
+	^ anRGObject pvtUnresolvedProperties

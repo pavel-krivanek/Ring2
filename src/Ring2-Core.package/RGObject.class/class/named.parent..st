@@ -1,8 +1,8 @@
 instance creation
-named: aName parent: aRG2Definition
+named: aName parent: anRGObject
 
 	^self basicNew
-		parent: aRG2Definition;
+		parent: anRGObject;
 		initialize;
 		pvtName: aName asSymbol;
 		yourself

@@ -1,4 +1,4 @@
 general
-setNameFor: aRG2Definition to: aString
+setNameFor: anRGObject to: aString
 
 	self readOnlyError.

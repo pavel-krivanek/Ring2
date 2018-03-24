@@ -3,7 +3,7 @@ testStandardMethodInExistingMetaclassTrait
 
 	| importer trait method code | 
 	
-	importer := Ring2ChunkImporter new.
+	importer := RGChunkImporter new.
 
 	trait := importer environment ensureMetaclassTraitNamed: #'SomeTrait classTrait'.
 

@@ -3,7 +3,7 @@ testMiscellaneous
 
 	| def fullCopy| 
 	
-	"we cannot test RG2Definition directly here"
+	"we cannot test RGObject directly here"
 	def := RG2Class named: #SomeDefinition.
 	self assert: (def asRGDefinition == def).
 	self assert: def fullName equals: #SomeDefinition.

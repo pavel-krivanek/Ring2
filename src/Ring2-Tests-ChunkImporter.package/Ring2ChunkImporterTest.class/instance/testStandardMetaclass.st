@@ -3,7 +3,7 @@ testStandardMetaclass
 
 	| importer class | 
 	
-	importer := Ring2ChunkImporter new.
+	importer := RGChunkImporter new.
 	importer fileInFrom: 'SomeClass class
 	instanceVariableNames: ''''' readStream.
 	class := importer environment ask behaviorNamed: 'SomeClass class'.
@@ -12,7 +12,7 @@ testStandardMetaclass
 	self assert: class instVarNames isEmpty.
 	self assert: (importer environment ask behaviorNamed: 'SomeClass') notNil.
 
-	importer := Ring2ChunkImporter new.
+	importer := RGChunkImporter new.
 	importer fileInFrom: 'SomeClass class
 	instanceVariableNames: ''var1 var2 var3''' readStream.
 	class := importer environment ask behaviorNamed: 'SomeClass class'.

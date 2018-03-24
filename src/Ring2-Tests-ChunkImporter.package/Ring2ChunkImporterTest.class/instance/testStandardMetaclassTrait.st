@@ -3,7 +3,7 @@ testStandardMetaclassTrait
 
 	| importer trait | 
 	
-	importer := Ring2ChunkImporter new.
+	importer := RGChunkImporter new.
 	
 	importer fileInFrom: 'TBehavior classTrait
 	uses: {}' readStream.

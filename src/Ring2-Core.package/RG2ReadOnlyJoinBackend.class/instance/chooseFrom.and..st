@@ -1,19 +1,19 @@
 as yet unclassified
-chooseFrom: aRG2Definition1 and: aRG2Definition2
+chooseFrom: anRGObject1 and: anRGObject2
 
 	| firstResolved |
 	
-	"(aRG2Definition1 canMergeSimplyWithoutName: aRG2Definition2)
+	"(anRGObject1 canMergeSimplyWithoutName: anRGObject2)
 		ifFalse: [ RG2JoiningError signal]."
 
-	(aRG2Definition1 canMergeWith:	aRG2Definition2 visited: IdentitySet new)	
+	(anRGObject1 canMergeWith:	anRGObject2 visited: IdentitySet new)	
 		ifFalse: [ RG2JoiningError signal].
 	"
-	(aRG2Definition1 canBeJoined not and: [ aRG2Definition2 canBeJoined not ])
+	(anRGObject1 canBeJoined not and: [ anRGObject2 canBeJoined not ])
 		ifTrue: [ RG2JoiningError signal ].
 	"
-	firstResolved := aRG2Definition1 isRing2Resolved.
+	firstResolved := anRGObject1 isRing2Resolved.
 		
 	^ firstResolved 
-		ifTrue: [ aRG2Definition1 ]
-		ifFalse: [ aRG2Definition2 ].
+		ifTrue: [ anRGObject1 ]
+		ifFalse: [ anRGObject2 ].

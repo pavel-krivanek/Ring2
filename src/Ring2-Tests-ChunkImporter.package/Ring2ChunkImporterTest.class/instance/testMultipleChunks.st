@@ -3,7 +3,7 @@ testMultipleChunks
 
 	| importer class | 
 	
-	importer := Ring2ChunkImporter new.
+	importer := RGChunkImporter new.
 	
 	importer fileInFrom: 'Object subclass: #SomeClass!
 Object subclass: #SomeClass2!' readStream.

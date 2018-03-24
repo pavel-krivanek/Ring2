@@ -3,7 +3,7 @@ testStandardMetaclassMethod
 
 	| importer class method code | 
 	
-	importer := Ring2ChunkImporter new.
+	importer := RGChunkImporter new.
 	
 	code := '!SomeClass class methodsFor: ''some protocol'' stamp: ''GuillermoPolito 5/2/2012 13:35''!someMethod
 	^true'.

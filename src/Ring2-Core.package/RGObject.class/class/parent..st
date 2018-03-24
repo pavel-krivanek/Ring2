@@ -1,7 +1,7 @@
 instance creation
-parent: aRG2Definition
+parent: anRGObject
 
 	^self basicNew
-		parent: aRG2Definition;
+		parent: anRGObject;
 		initialize;
 		yourself

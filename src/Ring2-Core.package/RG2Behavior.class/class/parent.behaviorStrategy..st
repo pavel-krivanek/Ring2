@@ -1,11 +1,11 @@
 as yet unclassified
-parent: aRG2Definition behaviorStrategy: aRG2BehaviorStrategy
+parent: anRGObject behaviorStrategy: aRG2BehaviorStrategy
 	
 	| aBehavior |
 
 	aBehavior := self basicNew
 		behaviorStrategy: aRG2BehaviorStrategy;
-		parent: aRG2Definition;
+		parent: anRGObject;
 		initialize.
 	aRG2BehaviorStrategy initialize.
 	^ aBehavior

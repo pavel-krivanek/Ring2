@@ -1,4 +1,4 @@
 general
-nameFor: aRG2Definition
+nameFor: anRGObject
 
-	^ aRG2Definition pvtName
+	^ anRGObject pvtName

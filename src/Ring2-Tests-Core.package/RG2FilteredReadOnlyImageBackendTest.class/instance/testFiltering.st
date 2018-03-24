@@ -7,6 +7,6 @@ testFiltering
 	env backend: (RG2FilteredReadOnlyImageBackend for: env).
 	
 	self assert: (env ask classNamed: #Object) notNil.
-	self assert: (env ask classNamed: #RG2Definition) isNil.
+	self assert: (env ask classNamed: #RGObject) isNil.
 	
 	

@@ -3,7 +3,7 @@ testMetaclassWithTrait
 
 	| importer class | 
 	
-	importer := Ring2ChunkImporter new.
+	importer := RGChunkImporter new.
 	importer fileInFrom: 'SomeClass class
 	uses: SomeTrait classTrait
 	instanceVariableNames: ''''' readStream.

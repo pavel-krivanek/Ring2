@@ -3,7 +3,7 @@ testMultipleMixedChunksInStrangeOrder
 
 	| importer class method | 
 	
-	importer := Ring2ChunkImporter new.
+	importer := RGChunkImporter new.
 	
 	importer fileInFrom: '!SomeClass methodsFor: ''some protocol'' stamp: ''GuillermoPolito 5/2/2012 13:35''!
 someMethod

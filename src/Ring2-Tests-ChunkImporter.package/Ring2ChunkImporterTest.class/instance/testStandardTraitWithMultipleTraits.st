@@ -3,7 +3,7 @@ testStandardTraitWithMultipleTraits
 
 	| importer trait usedTraits | 
 	
-	importer := Ring2ChunkImporter new.
+	importer := RGChunkImporter new.
 	
 	importer fileInFrom: 'Trait named: #TClass
 	uses: TClassDescription + TComposingDescription + TTransformationCompatibility

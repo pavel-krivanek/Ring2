@@ -1,8 +1,8 @@
 utility
-verifyOwnership: aRG2Definition
+verifyOwnership: anRGObject
 
 	"ignore unresolved values. TODO: check default values ownership?"
-	aRG2Definition isRing2Resolved ifFalse: [ ^ self.].
+	anRGObject isRing2Resolved ifFalse: [ ^ self.].
 
-	(aRG2Definition environment = self)
+	(anRGObject environment = self)
 		ifFalse: [ RG2WrongEnvironment signal ].

@@ -4,7 +4,7 @@ testStandardClassWithVariables
 	
 	| importer class | 
 	
-	importer := Ring2ChunkImporter new.
+	importer := RGChunkImporter new.
 	
 	importer fileInFrom: 'Object subclass: #SomeClass
 			instanceVariableNames: ''var1 var2 var3''

@@ -1,11 +1,11 @@
 as yet unclassified
-unresolvedWithParent: aRG2Definition behaviorStrategy: aRG2BehaviorStrategy
+unresolvedWithParent: anRGObject behaviorStrategy: aRG2BehaviorStrategy
 	
 	| aBehavior |
 
 	aBehavior := self basicNew
 		behaviorStrategy: aRG2BehaviorStrategy;
-		parent: aRG2Definition;
+		parent: anRGObject;
 		initializeUnresolved.
 	aRG2BehaviorStrategy initializeUnresolved.
 	^ aBehavior

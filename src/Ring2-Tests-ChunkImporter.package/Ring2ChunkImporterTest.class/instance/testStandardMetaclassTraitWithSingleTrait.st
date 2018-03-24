@@ -3,7 +3,7 @@ testStandardMetaclassTraitWithSingleTrait
 
 	| importer trait usedTrait | 
 	
-	importer := Ring2ChunkImporter new.
+	importer := RGChunkImporter new.
 	
 	importer fileInFrom: 'TClass classTrait
 	uses: TBehaviorCategorization classTrait' readStream.

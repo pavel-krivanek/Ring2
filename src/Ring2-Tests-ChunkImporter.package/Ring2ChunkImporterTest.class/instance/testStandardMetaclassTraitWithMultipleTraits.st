@@ -3,7 +3,7 @@ testStandardMetaclassTraitWithMultipleTraits
 
 	| importer trait usedTraits | 
 	
-	importer := Ring2ChunkImporter new.
+	importer := RGChunkImporter new.
 	
 	importer fileInFrom: 'TClass classTrait
 	uses: TClassDescription classTrait + TComposingDescription classTrait + TTransformationCompatibility classTrait' readStream.

@@ -1,4 +1,4 @@
 resolving
-hasFullyUnresolved: aRG2Definition		
+hasFullyUnresolved: anRGObject		
 		
 	^ false

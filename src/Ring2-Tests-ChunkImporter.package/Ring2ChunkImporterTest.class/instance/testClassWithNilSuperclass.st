@@ -3,7 +3,7 @@ testClassWithNilSuperclass
 
 	| importer class | 
 	
-	importer := Ring2ChunkImporter new.
+	importer := RGChunkImporter new.
 	
 	importer fileInFrom: 'SomeClass subclass: #SomeClass
 	instanceVariableNames: ''''

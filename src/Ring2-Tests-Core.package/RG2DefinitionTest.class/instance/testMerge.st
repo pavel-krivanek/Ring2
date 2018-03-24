@@ -3,7 +3,7 @@ testMerge
 
 	| def1 def2 | 
 	
-	"we cannot test RG2Definition directly here"
+	"we cannot test RGObject directly here"
 	def1 := RG2Class named: #SomeDefinition.
 	def2 := RG2Class unnamed.
 	def1 merge: def2.

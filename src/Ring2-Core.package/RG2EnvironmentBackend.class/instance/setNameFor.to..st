@@ -1,4 +1,4 @@
 general
-setNameFor: aRG2Definition to: aString
+setNameFor: anRGObject to: aString
 
-	^ aRG2Definition pvtName: aString
+	^ anRGObject pvtName: aString

@@ -3,7 +3,7 @@ compileANewClassFrom: aString notifying: aController startingFrom: aClass
 	
 	| importer |
 	
-	importer := Ring2ChunkImporter new.
+	importer := RGChunkImporter new.
 	importer environment: self environment.
 	importer fileInFrom: (aString, '!') readStream.
 	

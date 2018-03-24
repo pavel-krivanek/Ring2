@@ -1,4 +1,4 @@
 resolving
-resolvedPropertiesFor: aRG2Definition
+resolvedPropertiesFor: anRGObject
 
-	^ aRG2Definition pvtResolvableProperties collect: #key
+	^ anRGObject pvtResolvableProperties collect: #key

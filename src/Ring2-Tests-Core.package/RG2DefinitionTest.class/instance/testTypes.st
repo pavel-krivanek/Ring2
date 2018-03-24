@@ -3,7 +3,7 @@ testTypes
 
 	| def | 
 	
-	def := RG2Definition new.
+	def := RGObject new.
 	
 	self deny: def isComment.
 	self deny: def isEnvironment.

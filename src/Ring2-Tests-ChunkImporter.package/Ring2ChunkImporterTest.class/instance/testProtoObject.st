@@ -3,7 +3,7 @@ testProtoObject
 
 	| importer class | 
 	
-	importer := Ring2ChunkImporter new.
+	importer := RGChunkImporter new.
 	
 	importer fileInFrom: 'ProtoObject subclass: #ProtoObject
 	instanceVariableNames: ''''

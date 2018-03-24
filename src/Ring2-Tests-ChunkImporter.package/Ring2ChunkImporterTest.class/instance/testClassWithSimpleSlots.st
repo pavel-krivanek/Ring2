@@ -3,7 +3,7 @@ testClassWithSimpleSlots
 
 	| importer class | 
 	
-	importer := Ring2ChunkImporter new.
+	importer := RGChunkImporter new.
 	
 	importer fileInFrom: 'Object subclass: #SlotExampleMovie
 	slots: { #name. #year. #director. #actors }

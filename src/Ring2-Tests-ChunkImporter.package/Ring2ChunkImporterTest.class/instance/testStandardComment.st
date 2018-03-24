@@ -3,7 +3,7 @@ testStandardComment
 
 	| importer class comment code | 
 	
-	importer := Ring2ChunkImporter new.
+	importer := RGChunkImporter new.
 	
 	code := self testingCommentFor: #SomeClass.
 	

@@ -1,5 +1,5 @@
 as yet unclassified
-copyFor: aRG2Definition
+copyFor: anRGObject
 
-	^ self definitionFor: aRG2Definition ifAbsentRegister: [
-		aRG2Definition copyForEnvironment: self environment].
+	^ self definitionFor: anRGObject ifAbsentRegister: [
+		anRGObject copyForEnvironment: self environment].

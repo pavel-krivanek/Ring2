@@ -7,7 +7,7 @@ testMultipleMixedChunksInStrangeOrderWithMetaclassTrait
 	"This test currently needs to fail because the CodeImporter gives only original behavior name and #isMata. 
 	We do not know that the behavior was supposed to be classTrait."	
 	
-	importer := Ring2ChunkImporter new.
+	importer := RGChunkImporter new.
 	
 	importer fileInFrom: '!TBehavior classTrait methodsFor: ''some protocol'' stamp: ''GuillermoPolito 5/2/2012 13:35''!
 someMethod

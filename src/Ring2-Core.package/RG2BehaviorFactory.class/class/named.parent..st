@@ -1,5 +1,5 @@
 instance creation
-named: aString parent: aRG2Definition
+named: aString parent: anRGObject
 
-	^ (RG2Behavior named: aString parent: aRG2Definition  behaviorStrategy: self newStrategy)
+	^ (RG2Behavior named: aString parent: anRGObject  behaviorStrategy: self newStrategy)
 		yourself
