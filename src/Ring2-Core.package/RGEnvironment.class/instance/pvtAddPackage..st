@@ -3,7 +3,7 @@ pvtAddPackage: anRGPackageDefinition
 
 	self environment verifyOwnership: anRGPackageDefinition.
 	
-	packages isRing2Resolved ifFalse: [ 
+	packages isRingResolved ifFalse: [ 
 		self pvtCleanPackages ].
 	
 	packages add: anRGPackageDefinition.	

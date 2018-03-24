@@ -14,7 +14,7 @@ testImplicitEnvironment
 	self assert: def parent protocols size equals: 1.
 	self assert: def parent protocols anyOne equals: 'as yet unclassified'.
 
-	self assert: (def isRing2Resolved).
+	self assert: (def isRingResolved).
 	
 	def2 := RGMethod named: #someMethod parent: def parent.
 	def2 parent addLocalMethod: def2.

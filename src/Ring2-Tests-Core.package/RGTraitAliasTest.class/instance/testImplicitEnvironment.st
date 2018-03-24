@@ -6,13 +6,13 @@ testImplicitEnvironment
 	def := RGTraitAlias unnamed.
 	env := def environment.
 
-	self assert: (def isRing2Resolved).
+	self assert: (def isRingResolved).
 		
 	self assert: def parent isTraitComposition.
-	self assert: def parent isRing2Resolved not.
+	self assert: def parent isRingResolved not.
 
 	self assert: def parent parent isClass.
-	self assert: def parent parent isRing2Resolved not.
+	self assert: def parent parent isRingResolved not.
 	
 	self assert: def parent transformations size equals: 1.
 

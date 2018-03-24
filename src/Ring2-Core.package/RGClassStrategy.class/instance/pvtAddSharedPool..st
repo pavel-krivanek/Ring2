@@ -3,7 +3,7 @@ pvtAddSharedPool: anRGPoolVariable
 
 	self environment verifyOwnership: anRGPoolVariable.
 	
-	sharedPools isRing2Resolved ifFalse: [ 
+	sharedPools isRingResolved ifFalse: [ 
 		self pvtCleanSharedPools  ].
 	
 	sharedPools add: anRGPoolVariable.	

@@ -16,8 +16,8 @@ testImplicitEnvironmentContentForMethodDefinition
 
 	self checkHierarchyConsistencyOf: def parent.
 	
-	self deny: (def parent isRing2Resolved).
-	self deny: (def parent superclass isRing2Resolved).
-	self deny: (def parent metaclass isRing2Resolved).
-	self deny: (def parent superclass metaclass isRing2Resolved).
+	self deny: (def parent isRingResolved).
+	self deny: (def parent superclass isRingResolved).
+	self deny: (def parent metaclass isRingResolved).
+	self deny: (def parent superclass metaclass isRingResolved).
 	

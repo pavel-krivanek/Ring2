@@ -1,7 +1,7 @@
 as yet unclassified
 correspondingObjectIn: anRGEnvironment
 
-	(self isRing2Resolved not and: ((self hasPropertyNamed: #creator) and: [ self hasPropertyNamed: #role])) ifTrue: [ 
+	(self isRingResolved not and: ((self hasPropertyNamed: #creator) and: [ self hasPropertyNamed: #role])) ifTrue: [ 
 		| creator role base correspondingBase correspondingCreator |
 		creator := self propertyNamed: #creator.
 		creator == self ifFalse: [  

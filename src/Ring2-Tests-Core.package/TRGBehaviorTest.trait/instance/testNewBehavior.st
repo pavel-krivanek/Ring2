@@ -2,7 +2,7 @@ tests
 testNewBehavior
 	| newBehavior newSuperclass |
 	newBehavior := self behaviorClass unnamed.
-	self assert: newBehavior isRing2Resolved.
+	self assert: newBehavior isRingResolved.
 	self
 		assert: (newBehavior hasUnresolvedAll: #(localMethods protocols)).
 	newBehavior isTrait
@@ -12,7 +12,7 @@ testNewBehavior
 	self assert: (newBehavior hasResolvedName).
 	self deny: (newBehavior hasUnresolved: #name).
 	newBehavior isTrait
-		ifFalse: [ self assert: newBehavior superclass isRing2Resolved not ].
+		ifFalse: [ self assert: newBehavior superclass isRingResolved not ].
 	"	self assert: (newBehavior superclass environment == newBehavior environment).
 "
 	newSuperclass := RGBehavior

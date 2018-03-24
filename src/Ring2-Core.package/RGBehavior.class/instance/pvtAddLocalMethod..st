@@ -3,7 +3,7 @@ pvtAddLocalMethod: anRGMethod
 
 	self environment verifyOwnership: anRGMethod.
 	
-	localMethods isRing2Resolved ifFalse: [ 
+	localMethods isRingResolved ifFalse: [ 
 		self pvtCleanLocalMethods ].
 
 	(self hasResolved: #tagsForMethods) 

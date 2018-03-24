@@ -17,8 +17,8 @@ testImplicitEnvironmentContentForMetaclassDefinition
 	baseClass := def baseClass.
 	self checkHierarchyConsistencyOf: baseClass.
 	
-	self deny: (baseClass isRing2Resolved).
-	self deny: (baseClass superclass isRing2Resolved).
-	self assert: (baseClass metaclass isRing2Resolved).
-	self deny: (baseClass superclass metaclass isRing2Resolved).
+	self deny: (baseClass isRingResolved).
+	self deny: (baseClass superclass isRingResolved).
+	self assert: (baseClass metaclass isRingResolved).
+	self deny: (baseClass superclass metaclass isRingResolved).
 	

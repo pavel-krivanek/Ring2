@@ -8,7 +8,7 @@ evaluate
 	importer fileInFrom: (definitionString, '!') readStream.
 	
 	class := importer environment ask behaviors detect: [:each | 
-		each isRing2Resolved and: [each superclass isRing2Resolved ]].
+		each isRingResolved and: [each superclass isRingResolved ]].
 
 	importer := RGChunkImporter new.
 	importer environment: environment.
@@ -16,7 +16,7 @@ evaluate
 	
 	createdClass := environment ask behaviorNamed: class name.
 
-	createdClass superclass metaclass metaclass isRing2Resolved ifTrue: [ 
+	createdClass superclass metaclass metaclass isRingResolved ifTrue: [ 
 		environment cleanWithMetaclassNamed: createdClass superclass metaclass metaclass name
 		].
 	^createdClass

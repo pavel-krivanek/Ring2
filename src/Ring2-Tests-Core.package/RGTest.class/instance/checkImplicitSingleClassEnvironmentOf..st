@@ -1,7 +1,7 @@
 utilities
 checkImplicitSingleClassEnvironmentOf: anRGClass
 	
-	self deny: (anRGClass isRing2Resolved).
+	self deny: (anRGClass isRingResolved).
 
 	"we have SomeClass, SomeClass class, SomeClass superclass, SomeClass superclass class"
 	self assert: anRGClass environment ask behaviors size equals: 4.

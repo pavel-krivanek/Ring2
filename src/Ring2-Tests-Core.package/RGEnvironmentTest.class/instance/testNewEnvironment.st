@@ -4,7 +4,7 @@ testNewEnvironment
 	
 	newEnvironment := RGEnvironment named: 'Testing environment'.
 	
-	self assert: (newEnvironment isRing2Resolved).
+	self assert: (newEnvironment isRingResolved).
 	
 	self assert: (newEnvironment isEnvironment).
 	self assert: (newEnvironment name = 'Testing environment').

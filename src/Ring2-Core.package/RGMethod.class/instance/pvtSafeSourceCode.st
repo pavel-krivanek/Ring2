@@ -3,9 +3,9 @@ pvtSafeSourceCode
 
 	| aStringOrUnresolved |
 	aStringOrUnresolved := self pvtSourceCode. 
-	^ aStringOrUnresolved isRing2Resolved
+	^ aStringOrUnresolved isRingResolved
 		ifFalse: [ 
-			self pvtName isRing2Resolved 
+			self pvtName isRingResolved 
 				ifTrue: [ self sourceCodeForNoSource ]
 				ifFalse: [ self sourceCodeForNoSelector ] ]
 		ifTrue: [ aStringOrUnresolved value ]

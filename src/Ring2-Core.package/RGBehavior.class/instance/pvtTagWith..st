@@ -1,7 +1,7 @@
 private - backend access
 pvtTagWith: aSymbol
 	
-	tags isRing2Resolved ifFalse: [ 
+	tags isRingResolved ifFalse: [ 
 		self pvtCleanTags  ].
 	
 	tags add: aSymbol.	

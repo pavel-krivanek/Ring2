@@ -12,7 +12,7 @@ testBehavior
 	self assert: (newBehavior bindingOf: #someVariable) isNil.
 	self assert: (newBehavior classVariablesBindings isEmpty).
 	
-	self deny: (newBehavior isRing2FullyUnresolved).
+	self deny: (newBehavior isRingFullyUnresolved).
 
 	self deny: newBehavior hasTraitComposition.	
 	

@@ -20,7 +20,7 @@ testStandardMethodInNewMetaclassTrait
 	self assert: trait isTrait.
 	self assert: trait classTrait isMetaclassTrait.
 	self assert: method notNil.
-	self assert: method isRing2Resolved.
+	self assert: method isRingResolved.
 	self assert: (method hasResolvedAll: #(name protocol sourceCode author time)).
 	
 	self assert: method name equals: #someMethod.

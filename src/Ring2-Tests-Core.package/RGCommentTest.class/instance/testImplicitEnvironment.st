@@ -8,7 +8,7 @@ testImplicitEnvironment
 
 	self checkImplicitSingleClassEnvironmentOf: def parent.	
 
-	self assert: (def isRing2Resolved).
+	self assert: (def isRingResolved).
 	
 	def2 := RGComment parent: def parent .
 	self checkImplicitSingleClassEnvironmentOf: def parent.	

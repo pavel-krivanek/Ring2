@@ -1,7 +1,7 @@
 private - backend access
 pvtAddMethodTag: aSymbol
 	
-	tagsForMethods isRing2Resolved ifFalse: [ 
+	tagsForMethods isRingResolved ifFalse: [ 
 		self pvtCleanTagsForMethods  ].
 	
 	tagsForMethods add: aSymbol.	

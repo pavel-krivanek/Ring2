@@ -4,7 +4,7 @@ testNewComment
 	
 	comment := RGComment unnamed.
 	
-	self assert: (comment isRing2Resolved).
+	self assert: (comment isRingResolved).
 	self assert: (comment isComment).
 	
 	self assert: (comment hasUnresolvedAll: #(content author time name)).

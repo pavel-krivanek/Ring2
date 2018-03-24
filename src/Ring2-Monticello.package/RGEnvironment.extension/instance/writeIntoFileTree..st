@@ -1,7 +1,7 @@
 *Ring2-Monticello
 writeIntoFileTree: aMCFileTreeRepository
 
-	(self ask packages select: #isRing2Resolved) do: [ :aPackage |
+	(self ask packages select: #isRingResolved) do: [ :aPackage |
 		| aSnapshot info version |
 		aSnapshot := aPackage asMCSnapshot.
 

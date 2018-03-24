@@ -5,18 +5,18 @@ testEnvironmentWithNamespace
 	
 	newEnvironment := RGEnvironment named: 'Testing environment'.
 	
-	self assert: (newEnvironment isRing2Resolved).
+	self assert: (newEnvironment isRingResolved).
 	
 	newPackage := RGPackageDefinition named: 'Collections-Sequenceable'.
 	
-	self assert: (newPackage isRing2Resolved).
-	self deny: (newPackage isRing2FullyResolved).
-	self deny: (newPackage isRing2FullyUnresolved).
+	self assert: (newPackage isRingResolved).
+	self deny: (newPackage isRingFullyResolved).
+	self deny: (newPackage isRingFullyUnresolved).
 	newPackage cleanDefinedBehaviors.
 	newPackage cleanExtensionMethods.
 	newPackage cleanTagsForClasses.
-	self assert: (newPackage isRing2Resolved).
-	self assert: (newPackage isRing2FullyResolved).
-	self deny: (newPackage isRing2FullyUnresolved).
+	self assert: (newPackage isRingResolved).
+	self assert: (newPackage isRingFullyResolved).
+	self deny: (newPackage isRingFullyUnresolved).
 	
 	self should: [newEnvironment addPackage: newPackage] raise: RGWrongEnvironment.

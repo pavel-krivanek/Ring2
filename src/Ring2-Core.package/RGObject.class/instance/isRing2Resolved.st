@@ -1,4 +1,4 @@
 testing
-isRing2Resolved
+isRingResolved
 
 	^ self propertyNamed: #resolved ifAbsent: [ true ]

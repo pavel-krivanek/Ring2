@@ -1,4 +1,4 @@
 resolving
-isRing2FullyResolved
+isRingFullyResolved
 
 	^ self backend hasFullyResolved: self

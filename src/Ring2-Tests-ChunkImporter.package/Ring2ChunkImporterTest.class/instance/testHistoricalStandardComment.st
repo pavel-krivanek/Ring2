@@ -14,7 +14,7 @@ testHistoricalStandardComment
 	
 	self assert: comment notNil.
 	self assert: comment isComment.
-	self assert: comment isRing2Resolved.
+	self assert: comment isRingResolved.
 	self assert: (comment hasResolvedAll: #(content author time)).
 	
 	self assert: comment content equals: 'I''m a nice comment!, treat me well :).'.

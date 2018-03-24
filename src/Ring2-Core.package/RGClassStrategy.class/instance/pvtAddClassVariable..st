@@ -3,7 +3,7 @@ pvtAddClassVariable: anRGInstanceVariableDefinition
 
 	self owner environment verifyOwnership: anRGInstanceVariableDefinition.
 	
-	classVariables isRing2Resolved ifFalse: [ 
+	classVariables isRingResolved ifFalse: [ 
 		self pvtCleanClassVariables  ].
 	
 	classVariables add: anRGInstanceVariableDefinition.	

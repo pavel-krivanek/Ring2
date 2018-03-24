@@ -3,7 +3,7 @@ pvtAddTransformation: anRGTraitTransformation
 
 	self environment verifyOwnership: anRGTraitTransformation.
 	
-	transformations isRing2Resolved ifFalse: [ 
+	transformations isRingResolved ifFalse: [ 
 		self pvtCleanTransformations  ].
 	
 	transformations add: anRGTraitTransformation.	

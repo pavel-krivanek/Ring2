@@ -1,4 +1,4 @@
 private - backend interface
 pvtFullyResolved
 
-	^ (self pvtResolvableProperties collect: #value) allSatisfy: #isRing2FullyResolved
+	^ (self pvtResolvableProperties collect: #value) allSatisfy: #isRingFullyResolved

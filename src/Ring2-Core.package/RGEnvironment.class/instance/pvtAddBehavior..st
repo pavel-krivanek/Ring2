@@ -3,7 +3,7 @@ pvtAddBehavior: anRGBehavior
 
 	self environment verifyOwnership: anRGBehavior.
 	
-	behaviors isRing2Resolved ifFalse: [ 
+	behaviors isRingResolved ifFalse: [ 
 		self pvtCleanBehaviors ].
 	
 	(behaviors includes: anRGBehavior)

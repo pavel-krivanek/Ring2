@@ -1,7 +1,7 @@
 private - backend interface
 pvtAddClassTag: aSymbol
 	
-	tagsForClasses isRing2Resolved ifFalse: [ 
+	tagsForClasses isRingResolved ifFalse: [ 
 		self pvtCleanTagsForClasses  ].
 	
 	tagsForClasses add: aSymbol.	

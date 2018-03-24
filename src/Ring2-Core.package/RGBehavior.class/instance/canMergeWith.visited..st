@@ -5,7 +5,7 @@ canMergeWith: anRGObject visited: visitedDefinitions
 
 	(visitedDefinitions includes: self) ifTrue: [ ^ true ].
 	
-	(self isRing2FullyResolved or: [ anRGObject isRing2FullyResolved]) ifTrue: [^ true].
+	(self isRingFullyResolved or: [ anRGObject isRingFullyResolved]) ifTrue: [^ true].
 
 	(super canMergeWith: anRGObject visited: visitedDefinitions) ifFalse: [ ^ false ].
 

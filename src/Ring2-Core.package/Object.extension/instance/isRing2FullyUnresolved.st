@@ -1,4 +1,4 @@
 *Ring2-Core
-isRing2FullyUnresolved
+isRingFullyUnresolved
 
 	^ false

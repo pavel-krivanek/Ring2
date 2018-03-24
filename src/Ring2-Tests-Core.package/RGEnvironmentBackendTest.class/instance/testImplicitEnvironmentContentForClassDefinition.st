@@ -16,10 +16,10 @@ testImplicitEnvironmentContentForClassDefinition
 
 	self checkHierarchyConsistencyOf: def.
 	
-	self assert: (def isRing2Resolved).
-	self deny: (def superclass isRing2Resolved).
-	self deny: (def metaclass isRing2Resolved).
-	self deny: (def superclass metaclass isRing2Resolved).
+	self assert: (def isRingResolved).
+	self deny: (def superclass isRingResolved).
+	self deny: (def metaclass isRingResolved).
+	self deny: (def superclass metaclass isRingResolved).
 	
 	def2 := RGClass named: #SomeOtherClass parent: env.
 	self assert: env ask behaviors size equals: 8. 
@@ -27,8 +27,8 @@ testImplicitEnvironmentContentForClassDefinition
 	
 	self checkHierarchyConsistencyOf: def2.
 
-	self assert: (def2 isRing2Resolved).
-	self deny: (def2 superclass isRing2Resolved).
-	self deny: (def2 metaclass isRing2Resolved).
-	self deny: (def2 superclass metaclass isRing2Resolved).
+	self assert: (def2 isRingResolved).
+	self deny: (def2 superclass isRingResolved).
+	self deny: (def2 metaclass isRingResolved).
+	self deny: (def2 superclass metaclass isRingResolved).
 	

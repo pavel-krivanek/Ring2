@@ -1,7 +1,7 @@
 private - backend access
 pvtAddAlias: aSymbol
 
-	aliases isRing2Resolved ifFalse: [ 
+	aliases isRingResolved ifFalse: [ 
 		self pvtCleanAliases  ].
 	
 	aliases add: aSymbol.	

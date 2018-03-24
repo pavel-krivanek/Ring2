@@ -11,5 +11,5 @@ unifyTrait
 		(each isTrait)
 			ifTrue: [ each metaclass: aTrait]].
 		
-	(self ask behaviors select: [ :each | each isRing2Resolved not and: [(each propertyNamed: #role) = #trait] ]) do: [:each | self removeBehavior: each  ].
+	(self ask behaviors select: [ :each | each isRingResolved not and: [(each propertyNamed: #role) = #trait] ]) do: [:each | self removeBehavior: each  ].
 			

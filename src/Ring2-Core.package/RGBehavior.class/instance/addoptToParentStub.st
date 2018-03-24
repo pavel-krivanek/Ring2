@@ -3,7 +3,7 @@ addoptToParentStub
 
 	| aPackage |
 	
-	self isRing2Resolved ifFalse: [ ^ self ].
+	self isRingResolved ifFalse: [ ^ self ].
 
 	super addoptToParentStub.
 

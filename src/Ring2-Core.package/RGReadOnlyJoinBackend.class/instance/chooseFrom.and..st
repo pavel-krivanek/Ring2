@@ -12,7 +12,7 @@ chooseFrom: anRGObject1 and: anRGObject2
 	(anRGObject1 canBeJoined not and: [ anRGObject2 canBeJoined not ])
 		ifTrue: [ RGJoiningError signal ].
 	"
-	firstResolved := anRGObject1 isRing2Resolved.
+	firstResolved := anRGObject1 isRingResolved.
 		
 	^ firstResolved 
 		ifTrue: [ anRGObject1 ]

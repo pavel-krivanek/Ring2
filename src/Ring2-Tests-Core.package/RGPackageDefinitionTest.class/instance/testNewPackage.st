@@ -4,7 +4,7 @@ testNewPackage
 	
 	newPackage := RGPackageDefinition named: 'Collections-Sequenceable'.
 	
-	self assert: (newPackage isRing2Resolved).
+	self assert: (newPackage isRingResolved).
 	
 	self assert: (newPackage isPackage).
 	self assert: (newPackage name = 'Collections-Sequenceable').
@@ -29,9 +29,9 @@ testNewPackage
 	self assert: (newPackage definedBehaviors isEmpty).
 	self assert: (newPackage extensionMethods isEmpty).
 	
-	self assert: (newPackage isRing2Resolved).
-	self assert: (newPackage isRing2FullyResolved).
-	self deny: (newPackage isRing2FullyUnresolved).
+	self assert: (newPackage isRingResolved).
+	self assert: (newPackage isRingFullyResolved).
+	self deny: (newPackage isRingFullyUnresolved).
 
 	self assert: (newPackage package = newPackage).
 	

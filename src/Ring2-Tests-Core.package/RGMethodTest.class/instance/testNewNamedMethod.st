@@ -5,7 +5,7 @@ testNewNamedMethod
 	
 	method := RGMethod named: #someMessage.
 	
-	self assert: (method isRing2Resolved).
+	self assert: (method isRingResolved).
 	
 	self assert: (method hasResolvedName).
 	self assert: (method hasUnresolved: #sourceCode).

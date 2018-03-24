@@ -11,6 +11,6 @@ testBehaviorAdded
 	self assert: announcements size equals: 4.
 	self assert: announcements first classAffected == behavior.
 	
-	self assert: (announcements select: [:each | each classAffected isRing2Resolved]) size equals: 1.
+	self assert: (announcements select: [:each | each classAffected isRingResolved]) size equals: 1.
 	
 	

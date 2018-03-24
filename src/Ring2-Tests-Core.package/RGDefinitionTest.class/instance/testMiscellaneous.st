@@ -12,7 +12,7 @@ testMiscellaneous
 	self assert: (fullCopy ~~ def).
 	self assert: fullCopy name equals: def name.
 	
-	self deny: (def unresolvedValue isRing2Resolved).
+	self deny: (def unresolvedValue isRingResolved).
 	
 	
 	

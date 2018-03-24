@@ -3,7 +3,7 @@ testNewMetaclassTrait
 
 	| trait baseTrait | 
 	trait  := RGMetaclassTrait unnamed.
-	self assert: (trait isRing2Resolved).
+	self assert: (trait isRingResolved).
 	self assert: (trait hasUnresolved: #baseTrait).
 	self assert: (trait isTrait).
 	

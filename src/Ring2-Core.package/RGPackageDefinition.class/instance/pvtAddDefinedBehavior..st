@@ -3,7 +3,7 @@ pvtAddDefinedBehavior: anRGBehavior
 
 	self environment verifyOwnership: anRGBehavior.
 	
-	definedBehaviors isRing2Resolved ifFalse: [ 
+	definedBehaviors isRingResolved ifFalse: [ 
 		self pvtCleanDefinedBehaviors  ].
 	
 	definedBehaviors add: anRGBehavior.	

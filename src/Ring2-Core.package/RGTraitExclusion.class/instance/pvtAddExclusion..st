@@ -2,7 +2,7 @@ private - backend access
 pvtAddExclusion: aSymbol
 
 
-	exclusions isRing2Resolved ifFalse: [ 
+	exclusions isRingResolved ifFalse: [ 
 		self pvtCleanExclusions  ].
 	
 	exclusions add: aSymbol.	

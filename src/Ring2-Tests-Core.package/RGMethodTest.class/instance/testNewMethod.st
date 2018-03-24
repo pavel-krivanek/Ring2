@@ -5,7 +5,7 @@ testNewMethod
 	method := RGMethod unnamed.
 	self assert: method isMethod. 
 	
-	self assert: (method isRing2Resolved).
+	self assert: (method isRingResolved).
 	
 	self assert: (method hasUnresolvedAll: #(name protocol sourceCode package author time)).
 

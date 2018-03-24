@@ -3,7 +3,7 @@ pvtAddGlobalVariable: anRGGlobalVariable
 
 	self environment verifyOwnership: anRGGlobalVariable.
 	
-	globalVariables isRing2Resolved ifFalse: [ 
+	globalVariables isRingResolved ifFalse: [ 
 		self pvtCleanGlobalVariables  ].
 	
 	globalVariables add: anRGGlobalVariable.	

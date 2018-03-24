@@ -4,22 +4,22 @@ testDefaultValue
 	| unresolved | 
 	
 	unresolved := RGUnresolvedValue new.
-	self deny: unresolved isRing2Resolved.
-	self deny: unresolved isRing2FullyResolved.
-	self assert: unresolved isRing2FullyUnresolved.
+	self deny: unresolved isRingResolved.
+	self deny: unresolved isRingFullyResolved.
+	self assert: unresolved isRingFullyUnresolved.
 	self assert: unresolved value isNil.
-	self assert: unresolved value isRing2Resolved.
+	self assert: unresolved value isRingResolved.
 	
 	unresolved := RGUnresolvedValue new default: #someObject.
-	self deny: unresolved isRing2Resolved.
+	self deny: unresolved isRingResolved.
 	self assert: unresolved value equals: #someObject.
-	self assert: unresolved value isRing2Resolved.
+	self assert: unresolved value isRingResolved.
 	
 	unresolved := RGUnresolvedValue new default: #someObject.
-	self deny: unresolved isRing2Resolved.
+	self deny: unresolved isRingResolved.
 	self assert: unresolved value equals: #someObject.
-	self assert: unresolved value isRing2Resolved.
+	self assert: unresolved value isRingResolved.
 
 	unresolved := RGUnresolvedValue recursive.
-	self deny: unresolved isRing2Resolved.
-	self deny: unresolved value isRing2Resolved.
+	self deny: unresolved isRingResolved.
+	self deny: unresolved value isRingResolved.

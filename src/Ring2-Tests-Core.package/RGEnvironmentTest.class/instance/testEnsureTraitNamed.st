@@ -20,7 +20,7 @@ testEnsureTraitNamed
 	env := RGEnvironment new.
 	existing := (env ensureTraitNamed: 'SomeTrait classTrait') baseTrait.
 	self assert: (existing isTrait).
-	self assert: (existing isRing2Resolved not).
+	self assert: (existing isRingResolved not).
 	definition := env ensureTraitNamed: 'SomeTrait'.
 	self assert: (definition == existing).
 	self assert: definition isClass not. 
@@ -31,7 +31,7 @@ testEnsureTraitNamed
 	env := RGEnvironment new.
 	existing := (env ensureClassNamed: 'SomeTrait').
 	self assert: (existing isClass).
-	self assert: (existing isRing2Resolved).
+	self assert: (existing isRingResolved).
 	definition := env ensureTraitNamed: 'SomeTrait'.
 	self assert: (definition == existing).
 	self assert: definition isClass not. 
@@ -42,7 +42,7 @@ testEnsureTraitNamed
 	env := RGEnvironment new.
 	existing := (env ensureTraitNamed: 'SomeTrait') classTrait.
 	self assert: (existing isMetaclassTrait).
-	self assert: (existing isRing2Resolved not).
+	self assert: (existing isRingResolved not).
 	definition := env ensureTraitNamed: 'SomeTrait classTrait'.
 	self assert: (definition == existing).
 	self assert: definition isClass not. 
@@ -54,7 +54,7 @@ testEnsureTraitNamed
 	env := RGEnvironment new.
 	existing := (env ensureClassNamed: 'SomeTrait') metaclass.
 	self assert: (existing isMetaclass).
-	self assert: (existing isRing2Resolved not).
+	self assert: (existing isRingResolved not).
 	definition := env ensureTraitNamed: 'SomeTrait classTrait'.
 	self assert: (definition == existing).
 	self assert: definition isClass not. 
@@ -66,7 +66,7 @@ testEnsureTraitNamed
 	env := RGEnvironment new.
 	existing := (env ensureClassNamed: 'SomeTrait class') baseClass .
 	self assert: (existing isClass).
-	self assert: (existing isRing2Resolved not).
+	self assert: (existing isRingResolved not).
 	definition := env ensureTraitNamed: 'SomeTrait classTrait'.
 	self assert: (definition baseTrait == existing).
 	self assert: definition baseTrait isClass not. 

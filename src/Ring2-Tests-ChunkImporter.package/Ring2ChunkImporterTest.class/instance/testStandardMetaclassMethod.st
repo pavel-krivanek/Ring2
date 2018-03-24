@@ -14,7 +14,7 @@ testStandardMetaclassMethod
 	method := class methodNamed: #someMethod.
 	
 	self assert: class isMetaclass.
-	self assert: method isRing2Resolved.
+	self assert: method isRingResolved.
 	self assert: (method hasResolvedAll: #(name tags sourceCode author time)).
 	
 	self assert: method name equals: #someMethod.

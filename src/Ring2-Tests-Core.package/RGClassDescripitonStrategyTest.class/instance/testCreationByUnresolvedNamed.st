@@ -8,5 +8,5 @@ testCreationByUnresolvedNamed
 	self checkBasicPropertiesOf: anRGBehavior.
 	self assert: anRGBehavior name equals: #SomeClass.
 	self assert: anRGBehavior parent equals: parent.
-	self assert: anRGBehavior isRing2Resolved not.
+	self assert: anRGBehavior isRingResolved not.
 	
