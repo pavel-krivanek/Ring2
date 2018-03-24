@@ -1,4 +1,4 @@
 converting
-asRing2Definition
+asRGDefinition
 
 	^ self

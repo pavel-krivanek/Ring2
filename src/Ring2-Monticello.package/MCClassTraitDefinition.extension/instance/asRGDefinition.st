@@ -1,4 +1,4 @@
 *Ring2-Monticello
-asRing2Definition
+asRGDefinition
 
 	^ self ensureRing2DefinitionIn: RG2Environment new

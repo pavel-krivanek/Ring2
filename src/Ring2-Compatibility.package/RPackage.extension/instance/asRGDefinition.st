@@ -1,3 +1,3 @@
 *Ring2-Compatibility
-asRing2Definition
+asRGDefinition
 	^RG2Package named: self name asSymbol

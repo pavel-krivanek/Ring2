@@ -1,5 +1,5 @@
 *Ring2-Compatibility
-asRing2Definition
+asRGDefinition
 	"Retrieves an active RG2Method object based on the receiver.
 	Note that its class is not converted."
 	

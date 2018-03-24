@@ -5,7 +5,7 @@ testMiscellaneous
 	
 	"we cannot test RG2Definition directly here"
 	def := RG2Class named: #SomeDefinition.
-	self assert: (def asRing2Definition == def).
+	self assert: (def asRGDefinition == def).
 	self assert: def fullName equals: #SomeDefinition.
 	
 	fullCopy := def fullCopy.

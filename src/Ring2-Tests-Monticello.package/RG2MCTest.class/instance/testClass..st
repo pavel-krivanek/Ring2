@@ -5,7 +5,7 @@ testClass: aClass
 	
 	mcDef := 	aClass asClassDefinition.
 		
-	def := mcDef asRing2Definition.
+	def := mcDef asRGDefinition.
 	env := def environment.
 	
 	self assert: def name equals: aClass name.

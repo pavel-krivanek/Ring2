@@ -1,5 +1,5 @@
 *Ring2-Monticello
-asRing2Definition
+asRGDefinition
 
 "	method2 := (Object>>#isRing2Object) asRing2Definition.
 	self assert: method2 class equals: RG2Method.	
