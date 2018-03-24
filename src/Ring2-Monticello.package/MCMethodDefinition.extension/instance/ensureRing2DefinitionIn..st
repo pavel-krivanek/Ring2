@@ -1,5 +1,5 @@
 *Ring2-Monticello
-ensureRing2DefinitionIn: anRGEnvironment
+ensureRingDefinitionIn: anRGEnvironment
 
 	^ anRGEnvironment backend definitionFor: self ifAbsentRegister: [
 		| def classDef metaclassDef parent protocol |

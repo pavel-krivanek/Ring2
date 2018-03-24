@@ -1,4 +1,4 @@
 *Ring2-Monticello
-ensureRing2DefinitionIn: anRGEnvironment
+ensureRingDefinitionIn: anRGEnvironment
 
 	"do nothing by default"

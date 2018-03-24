@@ -12,7 +12,7 @@ asRingEnvironment
 
 			defs := snap definitions.
 			defs do: [ :each |			
-				each ensureRing2DefinitionIn: anRGEnvironment package: package ]
+				each ensureRingDefinitionIn: anRGEnvironment package: package ]
 			displayingProgress: 'snapshot'.] 
 		 displayingProgress: 'versions'.
 		].		

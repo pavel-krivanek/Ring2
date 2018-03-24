@@ -8,5 +8,5 @@ asRGDefinition
 
 	self deny: (method2 environment == env1)."
 
-	^ self ensureRing2DefinitionIn: RGEnvironment new
+	^ self ensureRingDefinitionIn: RGEnvironment new
 	

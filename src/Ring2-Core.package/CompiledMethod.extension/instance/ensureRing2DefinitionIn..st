@@ -1,9 +1,9 @@
 *Ring2-Core
-ensureRing2DefinitionIn: anRGEnvironment
+ensureRingDefinitionIn: anRGEnvironment
 
 	| parentModel |
 	
-	parentModel := (self methodClass ensureRing2DefinitionIn: anRGEnvironment).
+	parentModel := (self methodClass ensureRingDefinitionIn: anRGEnvironment).
 	
 	^ parentModel methods 
 		detect: [:each | each selector = self selector]

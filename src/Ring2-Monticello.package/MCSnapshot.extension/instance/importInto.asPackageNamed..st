@@ -4,6 +4,6 @@ importInto: anRGEnvironment asPackageNamed: aPackageName
 	| anRGPacakgeDefinition |
 	anRGPacakgeDefinition := anRGEnvironment ensurePackageNamed: aPackageName.
 	self definitions do: [ :each |
-		each ensureRing2DefinitionIn: anRGEnvironment package: anRGPacakgeDefinition ].
+		each ensureRingDefinitionIn: anRGEnvironment package: anRGPacakgeDefinition ].
 
 	^ anRGPacakgeDefinition

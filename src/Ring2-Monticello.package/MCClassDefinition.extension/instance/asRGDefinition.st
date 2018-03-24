@@ -1,4 +1,4 @@
 *Ring2-Monticello
 asRGDefinition
 
-	^ self ensureRing2DefinitionIn: RGEnvironment new
+	^ self ensureRingDefinitionIn: RGEnvironment new

@@ -12,7 +12,7 @@ exportAllMczTo: aDirectory
 		snap := packageName asPackage mcWorkingCopy snapshot.
 		defs := snap definitions.
 		defs do: [ :each |
-			each ensureRing2DefinitionIn: environment package: package ].
+			each ensureRingDefinitionIn: environment package: package ].
 		
 		"repository basicStoreVersion: mcz "] 
 	]

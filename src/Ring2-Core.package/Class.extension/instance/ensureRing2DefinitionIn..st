@@ -1,5 +1,5 @@
 *Ring2-Core
-ensureRing2DefinitionIn: anRGEnvironment
+ensureRingDefinitionIn: anRGEnvironment
 
 	^ anRGEnvironment ask behaviors 
 		detect: [:each | each name = self name] 

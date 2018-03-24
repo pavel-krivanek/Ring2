@@ -5,7 +5,7 @@ testDefinitionsIdentity
 	
 	env1 := RGEnvironment new.
 	
-	self assert: (((Object>>#isRGObject) ensureRing2DefinitionIn: env1) == ((Object>>#isRGObject) ensureRing2DefinitionIn: env1)).
+	self assert: (((Object>>#isRGObject) ensureRingDefinitionIn: env1) == ((Object>>#isRGObject) ensureRingDefinitionIn: env1)).
 	
-	self assert: (((Object>>#isRGObject) ensureRing2DefinitionIn: env1) parent
-== ((Object>>#isRGObject) ensureRing2DefinitionIn: env1) parent).
+	self assert: (((Object>>#isRGObject) ensureRingDefinitionIn: env1) parent
+== ((Object>>#isRGObject) ensureRingDefinitionIn: env1) parent).
