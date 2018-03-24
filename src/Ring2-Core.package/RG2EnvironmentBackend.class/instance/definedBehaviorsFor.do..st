@@ -1,4 +1,4 @@
 package
-definedBehaviorsFor: aRG2Package do: aBlock
+definedBehaviorsFor: anRGPackageDefinition do: aBlock
 
-	^  aRG2Package pvtDefinedBehaviorsDo: aBlock
+	^  anRGPackageDefinition pvtDefinedBehaviorsDo: aBlock

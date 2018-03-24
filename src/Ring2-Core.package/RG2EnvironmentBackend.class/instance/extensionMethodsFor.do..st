@@ -1,4 +1,4 @@
 package
-extensionMethodsFor: aRG2Package do: aBlock
+extensionMethodsFor: anRGPackageDefinition do: aBlock
 
-	^ aRG2Package pvtExtensionMethodsDo: aBlock
+	^ anRGPackageDefinition pvtExtensionMethodsDo: aBlock

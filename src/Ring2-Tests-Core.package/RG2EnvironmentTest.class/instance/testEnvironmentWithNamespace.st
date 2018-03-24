@@ -7,7 +7,7 @@ testEnvironmentWithNamespace
 	
 	self assert: (newEnvironment isRing2Resolved).
 	
-	newPackage := RG2Package named: 'Collections-Sequenceable'.
+	newPackage := RGPackageDefinition named: 'Collections-Sequenceable'.
 	
 	self assert: (newPackage isRing2Resolved).
 	self deny: (newPackage isRing2FullyResolved).

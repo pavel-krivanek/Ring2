@@ -1,13 +1,13 @@
 merging
-merge: aRG2Package
+merge: anRGPackageDefinition
 
-	super merge: aRG2Package.
+	super merge: anRGPackageDefinition.
 	
-	((self hasUnresolved: #definedBehaviors) and: [ (aRG2Package hasUnresolved: #definedBehaviors) ])
+	((self hasUnresolved: #definedBehaviors) and: [ (anRGPackageDefinition hasUnresolved: #definedBehaviors) ])
 		ifFalse: [ 
 			(self hasResolved: #definedBehaviors) ifFalse: [ 
 				self cleanDefinedBehaviors ].
-			aRG2Package definedBehaviorsDo: [ :behavior |
+			anRGPackageDefinition definedBehaviorsDo: [ :behavior |
 				| newDefinition |
 				 "create empty unresolved definition of the same kind in the same environment"
 				newDefinition := behavior class unresolvedWithParent: self.

@@ -6,7 +6,7 @@ testRemovePackage
 	method := RG2Method unnamed.
 	class := method parent.
 	
-	method package: (RG2Package named: 'SomePackage' parent: method environment).
+	method package: (RGPackageDefinition named: 'SomePackage' parent: method environment).
 	
 	self assert: (method parent package ~~ method package).
 	self assert: method environment ask packages size equals: 3.

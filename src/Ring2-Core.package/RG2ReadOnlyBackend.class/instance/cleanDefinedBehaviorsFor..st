@@ -1,4 +1,4 @@
 package
-cleanDefinedBehaviorsFor: aRG2Package
+cleanDefinedBehaviorsFor: anRGPackageDefinition
 
 	self readOnlyError.

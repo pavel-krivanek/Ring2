@@ -1,4 +1,4 @@
 strategy
-package: aRG2Package
+package: anRGPackageDefinition
 
-	^ self behaviorStrategy package: aRG2Package
+	^ self behaviorStrategy package: anRGPackageDefinition

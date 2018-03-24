@@ -1,11 +1,11 @@
 package
-extensionMethodsFor: aRG2Package do: aBlock
+extensionMethodsFor: anRGPackageDefinition do: aBlock
 
 	| realPackage |
 	
-	realPackage := self realPackageFor: aRG2Package.
+	realPackage := self realPackageFor: anRGPackageDefinition.
 	realPackage ifNotNil: [ 
 		realPackage extensionMethods do: [:aCompiledMethod |
 			| def | 
-			def := self definitionFor: aCompiledMethod ifAbsentRegister: [aCompiledMethod asRing2MinimalDefinitionIn: aRG2Package environment].
+			def := self definitionFor: aCompiledMethod ifAbsentRegister: [aCompiledMethod asRing2MinimalDefinitionIn: anRGPackageDefinition environment].
 			aBlock value: def.]]

@@ -27,7 +27,7 @@ createUnresolvedTraitGroupFor: aRG2Behavior
 	classTraitMetaclassStub propertyNamed: #creator put: aRG2Behavior.
 	classTraitMetaclassStub propertyNamed: #role put: #classTraitMetaclass.
 
-	packageStub1 := RG2Package unresolvedWithParent: self environment.
+	packageStub1 := RGPackageDefinition unresolvedWithParent: self environment.
 	packageStub1 propertyNamed: #creator put: aRG2Behavior.
 	packageStub1 propertyNamed: #role put: #traitMetaclassPackage.
 

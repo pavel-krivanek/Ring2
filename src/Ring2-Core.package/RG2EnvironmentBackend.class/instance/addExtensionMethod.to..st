@@ -1,4 +1,4 @@
 package
-addExtensionMethod: aRG2Method to: aRG2Package
+addExtensionMethod: aRG2Method to: anRGPackageDefinition
 
-	^ aRG2Package pvtAddExtensionMethod: aRG2Method
+	^ anRGPackageDefinition pvtAddExtensionMethod: aRG2Method

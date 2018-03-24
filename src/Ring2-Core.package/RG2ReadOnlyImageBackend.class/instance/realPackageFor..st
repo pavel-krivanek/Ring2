@@ -1,4 +1,4 @@
 as yet unclassified
-realPackageFor: aRG2Package
+realPackageFor: anRGPackageDefinition
 
-	^ RPackageOrganizer default packageNamed: aRG2Package name ifAbsent: [nil].
+	^ RPackageOrganizer default packageNamed: anRGPackageDefinition name ifAbsent: [nil].

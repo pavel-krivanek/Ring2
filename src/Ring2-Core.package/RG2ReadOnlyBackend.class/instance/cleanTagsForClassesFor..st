@@ -1,4 +1,4 @@
 package
-cleanTagsForClassesFor: aRG2Package
+cleanTagsForClassesFor: anRGPackageDefinition
 
 	self readOnlyError.

@@ -1,6 +1,6 @@
 testing
-pvtPackage: aRG2Package
+pvtPackage: anRGPackageDefinition
 
-	self owner environment verifyOwnership: aRG2Package.
+	self owner environment verifyOwnership: anRGPackageDefinition.
 
-	^ package := aRG2Package
+	^ package := anRGPackageDefinition

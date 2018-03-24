@@ -23,14 +23,14 @@ createUnresolvedClassGroupFor: aRG2Behavior
 	superclassMetaclassStub propertyNamed: #creator put: aRG2Behavior.
 	superclassMetaclassStub propertyNamed: #role put: #superclassMetaclass.
 	
-	packageStub1 := RG2Package unresolvedWithParent: self environment.
+	packageStub1 := RGPackageDefinition unresolvedWithParent: self environment.
 	classStub behaviorStrategy pvtPackage: packageStub1.
 	self environment pvtAddPackage: packageStub1.
 	packageStub1 pvtAddDefinedBehavior: classStub.
 	packageStub1 propertyNamed: #creator put: aRG2Behavior.
 	packageStub1 propertyNamed: #role put: #package.
 	
-	packageStub2 := RG2Package unresolvedWithParent: self environment.
+	packageStub2 := RGPackageDefinition unresolvedWithParent: self environment.
 	superclassStub behaviorStrategy pvtPackage: packageStub2.
 	self environment pvtAddPackage: packageStub2.
 	packageStub2 pvtAddDefinedBehavior: superclassStub.

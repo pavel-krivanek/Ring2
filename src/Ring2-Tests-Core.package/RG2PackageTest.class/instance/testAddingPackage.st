@@ -2,7 +2,7 @@ testing
 testAddingPackage
 "	| newPackage childPackage |
 	
-	newPackage:= RG2Package named: #'Collections'.
+	newPackage:= RGPackageDefinition named: #'Collections'.
 	newPackage addPackageNamed: #'Collections-Sequenceable'.
 		
 	self assert: (newPackage includesPackageNamed: #'Collections-Sequenceable').

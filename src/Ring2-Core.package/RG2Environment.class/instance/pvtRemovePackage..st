@@ -1,9 +1,9 @@
 private - backend interface
-pvtRemovePackage: aRG2Package
+pvtRemovePackage: anRGPackageDefinition
 
-	self verifyOwnership: aRG2Package.
+	self verifyOwnership: anRGPackageDefinition.
 	
-	packages remove: aRG2Package.
+	packages remove: anRGPackageDefinition.
 	
 	"TODO:Announce"
 	

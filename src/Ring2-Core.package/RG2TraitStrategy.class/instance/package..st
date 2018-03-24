@@ -1,7 +1,7 @@
 accessing
-package: aRG2Package
+package: anRGPackageDefinition
 
 	self announceDefinitionChangeDuring: [ 
-		self backend forBehavior setTraitPackageFor: self to: aRG2Package.
-		self environment addPackage: aRG2Package.
-		aRG2Package addDefinedBehavior: self owner. ].
+		self backend forBehavior setTraitPackageFor: self to: anRGPackageDefinition.
+		self environment addPackage: anRGPackageDefinition.
+		anRGPackageDefinition addDefinedBehavior: self owner. ].

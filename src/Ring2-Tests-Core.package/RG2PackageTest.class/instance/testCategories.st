@@ -3,7 +3,7 @@ testCategories
 	
 	| package env class1 class2 |
 
-	package := RG2Package named: 'SomePackage'.
+	package := RGPackageDefinition named: 'SomePackage'.
 	env := package environment.
 		
 	class1 := env ensureClassNamed: #Class1.

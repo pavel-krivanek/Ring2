@@ -1,4 +1,4 @@
 package
-removeExtensionMethod: aRG2Method from: aRG2Package
+removeExtensionMethod: aRG2Method from: anRGPackageDefinition
 
-	^ aRG2Package pvtRemoveExtensionMethod: aRG2Method
+	^ anRGPackageDefinition pvtRemoveExtensionMethod: aRG2Method

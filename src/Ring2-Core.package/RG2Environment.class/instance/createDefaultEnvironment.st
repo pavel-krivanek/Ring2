@@ -15,7 +15,7 @@ createDefaultEnvironment
 	behaviorClass := RG2Metaclass unresolvedNamed: #'Behavior class' withParent: self.
 	metaclass := RG2Class unresolvedNamed: #'Metaclass' withParent: self.
 	metaclassClass := RG2Metaclass unresolvedNamed: #'Metaclass class' withParent: self.
-	kernelPackage := RG2Package unresolvedNamed: #'Kernel' withParent: self.
+	kernelPackage := RGPackageDefinition unresolvedNamed: #'Kernel' withParent: self.
 	
 	{ protoobject. protoobjectClass. object. objectClass. class. classClass. classDescription. classDescriptionClass. behavior. behaviorClass. metaclass. metaclassClass } do: [ :each |
 		kernelPackage pvtAddDefinedBehavior: each.

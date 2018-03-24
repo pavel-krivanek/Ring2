@@ -1,4 +1,4 @@
 package
-cleanTagsForClassesFor: aRG2Package
+cleanTagsForClassesFor: anRGPackageDefinition
 
-	aRG2Package pvtCleanTagsForClasses.
+	anRGPackageDefinition pvtCleanTagsForClasses.

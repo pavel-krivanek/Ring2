@@ -1,4 +1,4 @@
 package
-removeClassTag: aSymbol from: aRG2Package
+removeClassTag: aSymbol from: anRGPackageDefinition
 
-	^ aRG2Package pvtRemoveClassTag: aSymbol
+	^ anRGPackageDefinition pvtRemoveClassTag: aSymbol

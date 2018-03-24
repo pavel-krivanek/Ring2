@@ -1,4 +1,4 @@
 package
-addClassTag: aSymbol to: aRG2Package
+addClassTag: aSymbol to: anRGPackageDefinition
 
-	^ aRG2Package pvtAddClassTag: aSymbol
+	^ anRGPackageDefinition pvtAddClassTag: aSymbol

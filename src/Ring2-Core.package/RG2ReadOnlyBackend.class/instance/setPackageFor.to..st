@@ -1,4 +1,4 @@
 class
-setPackageFor: aRG2Behavior to: aaRG2Package
+setPackageFor: aRG2Behavior to: anRGPackageDefinition
 
 	self readOnlyError.

@@ -1,10 +1,10 @@
 private - backend interface
-pvtAddPackage: aRG2Package
+pvtAddPackage: anRGPackageDefinition
 
-	self environment verifyOwnership: aRG2Package.
+	self environment verifyOwnership: anRGPackageDefinition.
 	
 	packages isRing2Resolved ifFalse: [ 
 		self pvtCleanPackages ].
 	
-	packages add: aRG2Package.	
+	packages add: anRGPackageDefinition.	
 		

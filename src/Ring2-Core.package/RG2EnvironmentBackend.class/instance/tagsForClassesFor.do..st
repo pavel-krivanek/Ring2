@@ -1,4 +1,4 @@
 package
-tagsForClassesFor: aRG2Package do: aBlock
+tagsForClassesFor: anRGPackageDefinition do: aBlock
 
-	^  aRG2Package pvtTagsForClassesDo: aBlock
+	^  anRGPackageDefinition pvtTagsForClassesDo: aBlock

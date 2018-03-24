@@ -2,7 +2,7 @@ tests - new
 testPrinting
 	| newPackage |
 	
-	newPackage := RG2Package named: 'Collections-Sequenceable'.
+	newPackage := RGPackageDefinition named: 'Collections-Sequenceable'.
 	
-	self assert: newPackage printString equals: ('RG2Package(Collections-Sequenceable)').
+	self assert: newPackage printString equals: ('RGPackageDefinition(Collections-Sequenceable)').
 	

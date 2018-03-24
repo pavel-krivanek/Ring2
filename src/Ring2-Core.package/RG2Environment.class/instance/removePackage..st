@@ -1,6 +1,6 @@
 accessing - backend
-removePackage: aRG2Package
+removePackage: anRGPackageDefinition
 
-	self backend forPackage removePackage: aRG2Package from: self.
+	self backend forPackage removePackage: anRGPackageDefinition from: self.
 	
-	self announce: (RPackageUnregistered to: aRG2Package).
+	self announce: (RPackageUnregistered to: anRGPackageDefinition).

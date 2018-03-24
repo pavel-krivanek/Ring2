@@ -1,4 +1,4 @@
 environment
-addPackage: aRG2Package to: aRG2Environment
+addPackage: anRGPackageDefinition to: aRG2Environment
 
 	self readOnlyError.

@@ -1,4 +1,4 @@
 package
-cleanExtensionMethodsFor: aRG2Package
+cleanExtensionMethodsFor: anRGPackageDefinition
 
 	self readOnlyError.

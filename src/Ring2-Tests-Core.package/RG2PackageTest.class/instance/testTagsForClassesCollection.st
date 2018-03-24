@@ -3,7 +3,7 @@ testTagsForClassesCollection
 	
 	| package env tag1 tag2 tag3 |
 
-	package := RG2Package unnamed.
+	package := RGPackageDefinition unnamed.
 	env := package environment.
 
 	self assert: package tagsForClasses isEmpty.

@@ -8,5 +8,5 @@ testClassTrait
 	
 	self assert: result isCollection.
 	self assert: (result allSatisfy: #isTrait).
-	self assert: (result allSatisfy: #isRing2Object).
+	self assert: (result allSatisfy: #isRGObject).
 	self assert: (result collect: #name) equals: #('Trait1 classTrait' 'Trait2 classTrait') asOrderedCollection.

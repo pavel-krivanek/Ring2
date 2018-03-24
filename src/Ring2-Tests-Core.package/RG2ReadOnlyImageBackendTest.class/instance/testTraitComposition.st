@@ -11,7 +11,7 @@ testTraitComposition
 	self assert: traitComposition transformations size equals: 1.
 	self assert: traitComposition transformations first name equals: #RG2TestTrait.
 	self assert: traitComposition transformations first isTrait.
-	self assert: traitComposition transformations first isRing2Object.
+	self assert: traitComposition transformations first isRGObject.
 	
 	self assert: traitComposition parent traitComposition equals: traitComposition.
 	

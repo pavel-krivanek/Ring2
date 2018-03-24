@@ -1,4 +1,4 @@
 trait
-setTraitPackageFor: aRG2Behavior to: aRG2Package
+setTraitPackageFor: aRG2Behavior to: anRGPackageDefinition
 
-	^  aRG2Behavior pvtPackage: aRG2Package
+	^  aRG2Behavior pvtPackage: anRGPackageDefinition

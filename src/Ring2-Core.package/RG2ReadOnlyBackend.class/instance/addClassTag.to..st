@@ -1,4 +1,4 @@
 package
-addClassTag: aSymbol to: aRG2Package
+addClassTag: aSymbol to: anRGPackageDefinition
 
 	self readOnlyError.

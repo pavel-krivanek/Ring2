@@ -1,7 +1,7 @@
 accessing - backend
-package: aRG2Package
+package: anRGPackageDefinition
 
-	self backend forMethod setMethodPackageFor: self to: aRG2Package.
-	self environment addPackage: aRG2Package.
-	(self parent package = aRG2Package)
+	self backend forMethod setMethodPackageFor: self to: anRGPackageDefinition.
+	self environment addPackage: anRGPackageDefinition.
+	(self parent package = anRGPackageDefinition)
 		ifFalse: [ self package addExtensionMethod: self ].

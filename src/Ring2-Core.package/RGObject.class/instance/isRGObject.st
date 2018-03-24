@@ -1,4 +1,4 @@
 testing
-isRing2Object
+isRGObject
 
 	^true

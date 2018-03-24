@@ -1,6 +1,6 @@
 accessing - backend
-addPackage: aRG2Package
+addPackage: anRGPackageDefinition
 
-	self backend forPackage addPackage: aRG2Package to: self.
+	self backend forPackage addPackage: anRGPackageDefinition to: self.
 	
-	self announce: (RPackageRegistered to: aRG2Package).
+	self announce: (RPackageRegistered to: anRGPackageDefinition).

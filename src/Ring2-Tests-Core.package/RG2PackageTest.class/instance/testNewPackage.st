@@ -2,7 +2,7 @@ tests - new
 testNewPackage
 	| newPackage |
 	
-	newPackage := RG2Package named: 'Collections-Sequenceable'.
+	newPackage := RGPackageDefinition named: 'Collections-Sequenceable'.
 	
 	self assert: (newPackage isRing2Resolved).
 	

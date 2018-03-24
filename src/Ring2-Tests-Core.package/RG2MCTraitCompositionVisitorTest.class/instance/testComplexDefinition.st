@@ -7,7 +7,7 @@ testComplexDefinition
 	result := RG2TraitCompositionVisitor new parse: 'Trait1 + (Trait2 @ {#a -> #b. #c: -> #d:}) + (Trait3 - {#e. #f:})' for: composition.
 	
 	self assert: result isCollection.
-	self assert: (result allSatisfy: #isRing2Object).
+	self assert: (result allSatisfy: #isRGObject).
 	self assert: result size equals: 3.
 
 	self assert: result first isTrait.	
@@ -22,7 +22,7 @@ testComplexDefinition
 	self assert: result second aliases second equals: (#c: -> #d:).
 	
 	self assert: result third isTraitExclusion.
-	self assert: result third isRing2Object.
+	self assert: result third isRGObject.
 	self assert: result third subject isTrait.	
 	self assert: result third subject name = #Trait3.
 	self assert: result third exclusions isCollection.

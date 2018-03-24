@@ -13,7 +13,7 @@ testMethod
 	method time <= DateAndTime now.
 	
 	self assert: method selector equals: #x.
-	self assert: (method package isRing2Object and: [method package isPackage]).
+	self assert: (method package isRGObject and: [method package isPackage]).
 	self assert: method package name equals: 'Kernel'.
 	self assert: (method package == method parent package).
 	self assert: method sourceCode equals: (Point>>#x) sourceCode.	

@@ -4,7 +4,7 @@ createNewUnresolvedClass
 	| classStub metaclassStub packageStub |
 	
 	classStub := RG2Class unresolvedWithParent: self environment.
-	packageStub := RG2Package unresolvedWithParent: self environment.
+	packageStub := RGPackageDefinition unresolvedWithParent: self environment.
 	classStub behaviorStrategy pvtPackage: packageStub.
 	packageStub pvtAddDefinedBehavior: classStub.
 	metaclassStub := self createNewUnresolvedMetaclassFor: classStub.

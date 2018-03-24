@@ -1,4 +1,4 @@
 method
-setMethodPackageFor: aRG2Method to: aRG2Package
+setMethodPackageFor: aRG2Method to: anRGPackageDefinition
 
 	self readOnlyError.

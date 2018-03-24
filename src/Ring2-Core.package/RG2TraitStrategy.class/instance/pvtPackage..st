@@ -1,6 +1,6 @@
 accessing
-pvtPackage: aRG2Package
+pvtPackage: anRGPackageDefinition
 
-	self environment verifyOwnership: aRG2Package.
+	self environment verifyOwnership: anRGPackageDefinition.
 
-	^ package := aRG2Package
+	^ package := anRGPackageDefinition
