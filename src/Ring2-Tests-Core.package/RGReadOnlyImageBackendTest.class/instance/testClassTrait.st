@@ -6,7 +6,7 @@ testClassTrait
 	env := RGEnvironment new.
 	env backend: (RGReadOnlyImageBackend for: env).
 	
-	classTrait := RGTestTrait classTrait asRing2MinimalDefinitionIn: env.
+	classTrait := RGTestTrait classTrait asRingMinimalDefinitionIn: env.
 	self assert: classTrait isTrait.
 	self assert: classTrait isMeta.
 	self assert: classTrait name equals: 'RGTestTrait classTrait'.

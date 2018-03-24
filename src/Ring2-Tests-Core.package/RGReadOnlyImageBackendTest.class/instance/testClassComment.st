@@ -6,7 +6,7 @@ testClassComment
 	env := RGEnvironment new.
 	env backend: (RGReadOnlyImageBackend for: env).
 	
-	comment := (Point asRing2MinimalDefinitionIn: env) comment.
+	comment := (Point asRingMinimalDefinitionIn: env) comment.
 	
 	comment content notEmpty.
 	comment author notEmpty.

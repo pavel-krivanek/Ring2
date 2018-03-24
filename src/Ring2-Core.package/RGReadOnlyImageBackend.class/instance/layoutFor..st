@@ -6,5 +6,5 @@ layoutFor: anRGBehavior
 	realClass := self realBehaviorFor: anRGBehavior.
 	realLayout := realClass classLayout.
 	def := self 	definitionFor: realLayout ifAbsentRegister: [ 
-			realLayout asRing2MinimalDefinitionIn: anRGBehavior environment ].
+			realLayout asRingMinimalDefinitionIn: anRGBehavior environment ].
 	^ def

@@ -7,6 +7,6 @@ testGlobalVariable
 	env backend: (RGReadOnlyImageBackend for: env).
 	
 	real := (Smalltalk globals associations detect: [ :each | each key = #Smalltalk ]).
-	globalVariable := real asRing2MinimalDefinitionIn: env.
+	globalVariable := real asRingMinimalDefinitionIn: env.
 	
 	self assert: (globalVariable name = #Smalltalk)

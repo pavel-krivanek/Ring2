@@ -6,7 +6,7 @@ testSlots
 	env := RGEnvironment new.
 	env backend: (RGReadOnlyImageBackend for: env).
 	
-	slot := (Point slotNamed: #x) asRing2MinimalDefinitionIn: env.
+	slot := (Point slotNamed: #x) asRingMinimalDefinitionIn: env.
 	self assert: slot isSlot.
 	self assert: slot name equals: #x.
 	self assert: slot parent isLayout.

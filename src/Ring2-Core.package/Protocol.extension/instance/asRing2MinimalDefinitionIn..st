@@ -1,6 +1,6 @@
 *Ring2-Core
-asRing2MinimalDefinitionIn: anRGEnvironment
+asRingMinimalDefinitionIn: anRGEnvironment
 
-	self error: 'For Protocol you need to use #asRing2MinimalDefinitionIn:parent: because parent class cannot be resolved automatically'
+	self error: 'For Protocol you need to use #asRingMinimalDefinitionIn:parent: because parent class cannot be resolved automatically'
 
 

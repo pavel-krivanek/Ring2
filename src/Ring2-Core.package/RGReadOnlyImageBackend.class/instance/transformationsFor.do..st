@@ -10,5 +10,5 @@ transformationsFor: anRGTraitComposition do: aBlock
 	realTraitComposition transformations do: [:transformation |
 		| def |
 		def := self definitionFor: transformation ifAbsentRegister: [
-			transformation asRing2MinimalDefinitionIn: anRGTraitComposition environment].
+			transformation asRingMinimalDefinitionIn: anRGTraitComposition environment].
 		aBlock value: def]

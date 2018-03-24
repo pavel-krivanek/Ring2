@@ -1,5 +1,5 @@
 *Ring2-Monticello
-asRing2EnvironmentWith: packageNames
+asRingEnvironmentWith: packageNames
 
 	| anRGEnvironment |
 	anRGEnvironment := RGEnvironment new.

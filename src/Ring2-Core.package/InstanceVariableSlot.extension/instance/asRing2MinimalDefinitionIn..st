@@ -1,5 +1,5 @@
 *Ring2-Core
-asRing2MinimalDefinitionIn: anRGEnvironment
+asRingMinimalDefinitionIn: anRGEnvironment
 	
 	^ self class == InstanceVariableSlot 
 		ifTrue: [
@@ -7,6 +7,6 @@ asRing2MinimalDefinitionIn: anRGEnvironment
 				RGInstanceVariableSlot
 					named: self name asSymbol
 					parent:
-						(self definingClass classLayout asRing2MinimalDefinitionIn: anRGEnvironment)]]
-		ifFalse: [ super asRing2MinimalDefinitionIn: anRGEnvironment ]
+						(self definingClass classLayout asRingMinimalDefinitionIn: anRGEnvironment)]]
+		ifFalse: [ super asRingMinimalDefinitionIn: anRGEnvironment ]
 

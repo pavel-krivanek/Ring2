@@ -1,5 +1,5 @@
 *Ring2-Core
-asRing2MinimalDefinitionIn: anRGEnvironment 
+asRingMinimalDefinitionIn: anRGEnvironment 
 
 	^ anRGEnvironment backend definitionFor: self ifAbsentRegister: [
 		RGGlobalVariable named: self key asSymbol parent: anRGEnvironment].

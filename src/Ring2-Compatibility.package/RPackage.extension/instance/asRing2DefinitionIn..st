@@ -1,9 +1,9 @@
 *Ring2-Compatibility
-asRing2DefinitionIn: anRGEnvironment
+asRingDefinitionIn: anRGEnvironment
 
 	| pkg parent|
 	
-	pkg := self asRing2MinimalDefinitionIn: anRGEnvironment.
+	pkg := self asRingMinimalDefinitionIn: anRGEnvironment.
 	
 	parent := pkg findSuitableParentIn: anRGEnvironment.
 	pkg parent: parent.

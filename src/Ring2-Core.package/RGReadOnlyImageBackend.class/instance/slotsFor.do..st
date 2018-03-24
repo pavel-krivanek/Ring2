@@ -7,5 +7,5 @@ slotsFor: anRGLayout do: aBlock
 			| def |
 			def := self
 				definitionFor: each
-				ifAbsentRegister: [ each asRing2MinimalDefinitionIn: anRGLayout environment ].
+				ifAbsentRegister: [ each asRingMinimalDefinitionIn: anRGLayout environment ].
 			aBlock value: def ]

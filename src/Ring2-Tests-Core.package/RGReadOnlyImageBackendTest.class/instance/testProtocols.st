@@ -6,18 +6,18 @@ testProtocols
 	env1 := RGEnvironment new.
 	env1 backend: (RGReadOnlyImageBackend for: env1).
 	
-	point := Point asRing2MinimalDefinitionIn: env1.
+	point := Point asRingMinimalDefinitionIn: env1.
 	self assert: (point protocols notEmpty).
 	protocol := point protocols detect: [ :each | each = 'accessing' ].
 	self assert: (protocol isSymbol).
 	
-	method := (Point>>#x) asRing2MinimalDefinitionIn: env1.
+	method := (Point>>#x) asRingMinimalDefinitionIn: env1.
 	protocol := method protocol.
-	method2 := (Point>>#y) asRing2MinimalDefinitionIn: env1.
+	method2 := (Point>>#y) asRingMinimalDefinitionIn: env1.
 	protocol2 := method2 protocol.
 	
 	self assert: (protocol == protocol2).
 	self assert: (protocol isSymbol).
 	self assert: protocol equals: 'accessing'.
 	
-	self should: [ (Protocol name: 'aProtocol') asRing2MinimalDefinitionIn: RGEnvironment new ] raise: Error.
+	self should: [ (Protocol name: 'aProtocol') asRingMinimalDefinitionIn: RGEnvironment new ] raise: Error.

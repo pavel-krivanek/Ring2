@@ -6,7 +6,7 @@ testUnknownSlots
 	env := RGEnvironment new.
 	env backend: (RGReadOnlyImageBackend for: env).
 	
-	slot := (SlotExamplePerson slotNamed: #directedMovies) asRing2MinimalDefinitionIn: env.
+	slot := (SlotExamplePerson slotNamed: #directedMovies) asRingMinimalDefinitionIn: env.
 	self assert: slot isSlot.
 	self assert: slot name equals: #directedMovies.
 	self assert: slot expression equals: 'ToManyRelationSlot inverse: #director inClass: #SlotExampleMovie'.

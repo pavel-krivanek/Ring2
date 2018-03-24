@@ -6,7 +6,7 @@ testBehaviorLocalMethods
 	env1 := RGEnvironment new.
 	env1 backend: (RGReadOnlyImageBackend for: env1).
 
-	point := Point asRing2MinimalDefinitionIn: env1.
+	point := Point asRingMinimalDefinitionIn: env1.
 	
 	self assert: point ask localMethods size equals: Point localMethods size.
 	self assert: (point ask localMethods 

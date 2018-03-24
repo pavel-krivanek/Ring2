@@ -1,5 +1,5 @@
 *Ring2-Core
-asRing2MinimalDefinitionIn: anRGEnvironment
+asRingMinimalDefinitionIn: anRGEnvironment
 
 	^ anRGEnvironment backend definitionFor: self ifAbsentRegister: [
-		RGVariableLayout parent: (self host asRing2MinimalDefinitionIn: anRGEnvironment)]
+		RGVariableLayout parent: (self host asRingMinimalDefinitionIn: anRGEnvironment)]

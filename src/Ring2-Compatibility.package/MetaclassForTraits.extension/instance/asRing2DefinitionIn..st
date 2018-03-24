@@ -1,4 +1,4 @@
 *Ring2-Compatibility
-asRing2DefinitionIn: anRGEnvironment
+asRingDefinitionIn: anRGEnvironment
 
 	^ RGMetaclassTrait named: self name parent: anRGEnvironment.

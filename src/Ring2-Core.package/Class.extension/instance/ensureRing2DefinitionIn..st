@@ -5,6 +5,6 @@ ensureRing2DefinitionIn: anRGEnvironment
 		detect: [:each | each name = self name] 
 		ifNone: [ 
 			| behaviorModel |
-			behaviorModel := self asRing2MinimalDefinitionIn: anRGEnvironment.
+			behaviorModel := self asRingMinimalDefinitionIn: anRGEnvironment.
 			anRGEnvironment addBehavior: behaviorModel.
 			behaviorModel]

@@ -1,4 +1,4 @@
 metaclass
 baseClassFor: anRGMetaclassTrait
 
-	^ (self realBehaviorFor: anRGMetaclassTrait) baseClass asRing2MinimalDefinitionIn: anRGMetaclassTrait environment.
+	^ (self realBehaviorFor: anRGMetaclassTrait) baseClass asRingMinimalDefinitionIn: anRGMetaclassTrait environment.

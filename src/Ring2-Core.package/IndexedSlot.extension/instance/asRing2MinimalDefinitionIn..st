@@ -1,7 +1,7 @@
 *Ring2-Core
-asRing2MinimalDefinitionIn: anRGEnvironment
+asRingMinimalDefinitionIn: anRGEnvironment
 
 	^ self class == IndexedSlot 
 		ifTrue: [ anRGEnvironment backend definitionFor: self ifAbsentRegister: [
-			RGIndexedSlot named: self name asSymbol parent: (self definingClass classLayout asRing2MinimalDefinitionIn: anRGEnvironment)]]
-		ifFalse: [ super asRing2MinimalDefinitionIn: anRGEnvironment ]
+			RGIndexedSlot named: self name asSymbol parent: (self definingClass classLayout asRingMinimalDefinitionIn: anRGEnvironment)]]
+		ifFalse: [ super asRingMinimalDefinitionIn: anRGEnvironment ]

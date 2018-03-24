@@ -1,5 +1,5 @@
 *Ring2-Core
-asRing2MinimalDefinitionIn: anRGEnvironment
+asRingMinimalDefinitionIn: anRGEnvironment
 
 	^ anRGEnvironment backend definitionFor: self ifAbsentRegister: [
-		RGByteLayout parent: (self host asRing2MinimalDefinitionIn: anRGEnvironment)]
+		RGByteLayout parent: (self host asRingMinimalDefinitionIn: anRGEnvironment)]

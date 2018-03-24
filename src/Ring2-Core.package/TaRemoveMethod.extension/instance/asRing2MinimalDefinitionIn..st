@@ -1,5 +1,5 @@
 *Ring2-Core
-asRing2MinimalDefinitionIn: anRGEnvironment
+asRingMinimalDefinitionIn: anRGEnvironment
 
 	^ anRGEnvironment backend definitionFor: self ifAbsentRegister: [
 		| definingClass def |
@@ -7,7 +7,7 @@ asRing2MinimalDefinitionIn: anRGEnvironment
 		definingClass := Smalltalk environment allBehaviors detect: [ :b | b traitComposition transformations includes: self ].
 
 		def := RGTraitExclusion
-			parent: (definingClass traitComposition asRing2MinimalDefinitionIn: anRGEnvironment).
+			parent: (definingClass traitComposition asRingMinimalDefinitionIn: anRGEnvironment).
 			
 		"we need to set real object because we cannot simply identify the real object from the model data"
 		def propertyNamed: #realObject put: self.

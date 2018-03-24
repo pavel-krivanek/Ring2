@@ -7,5 +7,5 @@ superclassFor: anRGBehavior
 	realSuperclass := realClass superclass.
 	realSuperclass ifNil: [ realSuperclass := realClass ].
 	def := self 	definitionFor: realSuperclass ifAbsentRegister: [ 
-			realSuperclass asRing2MinimalDefinitionIn: anRGBehavior environment ].
+			realSuperclass asRingMinimalDefinitionIn: anRGBehavior environment ].
 	^ def

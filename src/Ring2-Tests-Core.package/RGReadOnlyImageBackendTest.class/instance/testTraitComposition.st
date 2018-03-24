@@ -6,7 +6,7 @@ testTraitComposition
 	env := RGEnvironment new.
 	env backend: (RGReadOnlyImageBackend for: env).
 	
-	traitComposition := RGTestClass traitComposition asRing2MinimalDefinitionIn: env.
+	traitComposition := RGTestClass traitComposition asRingMinimalDefinitionIn: env.
 	self assert: traitComposition isTraitComposition.
 	self assert: traitComposition transformations size equals: 1.
 	self assert: traitComposition transformations first name equals: #RGTestTrait.

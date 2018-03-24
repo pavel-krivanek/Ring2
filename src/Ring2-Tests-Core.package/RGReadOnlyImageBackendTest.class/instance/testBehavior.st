@@ -6,11 +6,11 @@ testBehavior
 	env1 := RGEnvironment new.
 	env1 backend: (RGReadOnlyImageBackend for: env1).
 	
-	point := Point asRing2MinimalDefinitionIn: env1.
+	point := Point asRingMinimalDefinitionIn: env1.
 	"different access method"
 	point2 := env1 ask behaviors detect: [ :each | each name == #Point ].
-	object := Object asRing2MinimalDefinitionIn: env1.
-	method := (Point>>#x) asRing2MinimalDefinitionIn: env1.
+	object := Object asRingMinimalDefinitionIn: env1.
+	method := (Point>>#x) asRingMinimalDefinitionIn: env1.
 		
 	self assert: (point == point2).
 	self assert: (point superclass == object).

@@ -1,4 +1,4 @@
 *Ring2-Compatibility
-asRing2DefinitionIn: anRGEnvironment
+asRingDefinitionIn: anRGEnvironment
 
 	^ RGTrait named: self name parent: anRGEnvironment.

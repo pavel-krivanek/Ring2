@@ -7,5 +7,5 @@ extensionMethodsFor: anRGPackageDefinition do: aBlock
 	realPackage ifNotNil: [ 
 		realPackage extensionMethods do: [:aCompiledMethod |
 			| def | 
-			def := self definitionFor: aCompiledMethod ifAbsentRegister: [aCompiledMethod asRing2MinimalDefinitionIn: anRGPackageDefinition environment].
+			def := self definitionFor: aCompiledMethod ifAbsentRegister: [aCompiledMethod asRingMinimalDefinitionIn: anRGPackageDefinition environment].
 			aBlock value: def.]]

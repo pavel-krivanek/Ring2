@@ -1,4 +1,4 @@
 trait
 traitCommentFor: anRGBehavior
 
-	^  (self realBehaviorFor: anRGBehavior) asRing2MinimalCommentDefinitionIn: self environment
+	^  (self realBehaviorFor: anRGBehavior) asRingMinimalCommentDefinitionIn: self environment

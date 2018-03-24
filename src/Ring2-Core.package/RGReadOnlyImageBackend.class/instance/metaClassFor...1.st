@@ -6,5 +6,5 @@ metaClassFor: anRGBehavior
 	realClass := self realBehaviorFor: anRGBehavior.
 	realMetaclass := realClass class.
 	def := self 	definitionFor: realMetaclass ifAbsentRegister: [ 
-			realMetaclass asRing2MinimalDefinitionIn: anRGBehavior environment ].
+			realMetaclass asRingMinimalDefinitionIn: anRGBehavior environment ].
 	^ def

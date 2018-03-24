@@ -9,6 +9,6 @@ ensureRing2DefinitionIn: anRGEnvironment
 		detect: [:each | each selector = self selector]
 		ifNone: [ 
 			| methodModel |
-			methodModel := self asRing2MinimalDefinitionIn: anRGEnvironment.
+			methodModel := self asRingMinimalDefinitionIn: anRGEnvironment.
 			parentModel addLocalMethod: methodModel.
 			methodModel ]	

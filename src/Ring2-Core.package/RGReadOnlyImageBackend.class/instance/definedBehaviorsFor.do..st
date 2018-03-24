@@ -8,5 +8,5 @@ definedBehaviorsFor: anRGPackageDefinition do: aBlock
 		realPackage definedClassesDo: [:behaviorName |
 			| def cls | 
 			cls := Smalltalk classOrTraitNamed: behaviorName.
-			def := self definitionFor: cls ifAbsentRegister: [cls asRing2MinimalDefinitionIn: anRGPackageDefinition environment].
+			def := self definitionFor: cls ifAbsentRegister: [cls asRingMinimalDefinitionIn: anRGPackageDefinition environment].
 			aBlock value: def.]]

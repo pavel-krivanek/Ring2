@@ -1,5 +1,5 @@
 *Ring2-Monticello
-asRing2Environment
+asRingEnvironment
 
 	| anRGEnvironment |
 	anRGEnvironment := RGEnvironment new.
