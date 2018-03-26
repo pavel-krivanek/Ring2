@@ -1,6 +1,7 @@
 instance creation
 for: anRGBehavior
 
-	^ self new
-		behavior: anRGBehavior;
-		yourself
+	| newRecorder |
+	
+	newRecorder := RGChangeRecorder for: anRGBehavior environment.
+	^ self for: anRGBehavior in: newRecorder

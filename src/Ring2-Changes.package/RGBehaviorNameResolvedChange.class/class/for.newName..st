@@ -1,6 +1,4 @@
 as yet unclassified
-for: anRGBehavior newName: newName
+for: anRGBehavior newName: newName 
 
-	^ (self for: anRGBehavior)
-		newName: newName;
-		yourself.
+	^ self for: anRGBehavior newName: newName in: (RGChangeRecorder for: anRGBehavior environment)

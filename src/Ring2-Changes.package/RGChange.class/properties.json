@@ -6,8 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"environment",
-		"properties"
+		"properties",
+		"recorder"
 	],
 	"name" : "RGChange",
 	"type" : "normal"

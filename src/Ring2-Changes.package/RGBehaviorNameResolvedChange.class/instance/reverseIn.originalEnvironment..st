@@ -1,9 +1,9 @@
 actions
-reverseIn: anRGEnvironment
+reverseIn: anRGEnvironment originalEnvironment: originalEnvironment
 
 	| anRGBehavior |
 	
-	anRGBehavior  := (self environment == anRGEnvironment)
+	anRGBehavior  := (originalEnvironment == anRGEnvironment)
 		ifTrue: [ behavior ]
 		ifFalse: [ 
 			anRGEnvironment ask behaviorNamed: newName ifAbsent: [ RGNotFoundError signal ] ].

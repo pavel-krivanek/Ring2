@@ -1,4 +1,4 @@
 actions
 reverseIn: anRGEnvironment
 
-	self subclassResponsibility
+	^ self reverseIn: anRGEnvironment originalEnvironment: self environment

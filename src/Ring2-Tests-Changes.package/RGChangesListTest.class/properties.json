@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "RGChangeTest",
+	"category" : "Ring2-Tests-Changes",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"list",
+		"class",
+		"change1",
+		"change2",
+		"change3"
+	],
+	"name" : "RGChangesListTest",
+	"type" : "normal"
+}

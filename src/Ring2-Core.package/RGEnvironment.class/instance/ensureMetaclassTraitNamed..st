@@ -66,7 +66,7 @@ ensureMetaclassTraitNamed: aSymbol
 			"some non-trait behavior found. We created this trait before as a class because correct behavior type was not known."
 			newTrait := found pvtAsTrait.
 			originalMetaclass := found metaclass.
-			newMetaclassTrait := originalMetaclass pvtAsMetaclassTrait.
+			newMetaclassTrait := originalMetaclass owner pvtAsMetaclassTrait.
 			self ask replaceName: originalMetaclass name with: newMetaclassTrait name.
 			found becomeForward: newTrait.
 			found metaclass becomeForward: newMetaclassTrait.

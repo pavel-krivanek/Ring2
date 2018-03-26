@@ -1,12 +1,14 @@
 visiting
 reverseIn: anRGEnvironment withBindings: originBindings
 
-	| savedBehavior result |
+	| savedBehavior result originalEnvironment |
 
 	savedBehavior := behavior.
 
 	(behavior notNil and: [ anRGEnvironment ~= behavior environment ])
 		ifTrue: [ behavior := nil ].
+
+	originalEnvironment := self environment.
 
 	behaviorName 
 		ifNotNil: [ 
@@ -18,9 +20,9 @@ reverseIn: anRGEnvironment withBindings: originBindings
 					boundBehavior := (originBindings associations detect: [ :each | each value = behaviorName ] ifNone: [ nil -> nil ]) key.
 					boundBehavior ifNotNil: [ 
 						behavior := boundBehavior.
-						environment := anRGEnvironment "TODO: revert environment afterwards or refactor" ] ] ].
+						originalEnvironment := anRGEnvironment ] ] ].
 			
-	result := self reverseIn: anRGEnvironment.
+	result := self reverseIn: anRGEnvironment originalEnvironment: originalEnvironment.
 	
 	behaviorName ifNotNil: [
 		originBindings at: result put: behaviorName ].

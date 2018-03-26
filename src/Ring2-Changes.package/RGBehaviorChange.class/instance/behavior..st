@@ -1,8 +1,9 @@
 accessing
 behavior: anRGBehavior
 
-	self environment: anRGBehavior environment.
-	
+	(anRGBehavior environment = self recorder environment)
+		ifFalse: [ RGWrongEnvironment signal ].
+
 	behavior := anRGBehavior.
 	
 	behaviorName := anRGBehavior hasResolvedName

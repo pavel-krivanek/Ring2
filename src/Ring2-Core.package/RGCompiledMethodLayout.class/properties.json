@@ -1,1 +1,11 @@
-{	"commentStamp" : "",	"super" : "RGObjectLayout",	"category" : "Ring2-Core-Kernel",	"classinstvars" : [ ],	"pools" : [ ],	"classvars" : [ ],	"instvars" : [ ],	"name" : "RGCompiledMethodLayout",	"type" : "normal"}
+{
+	"commentStamp" : "",
+	"super" : "RGObjectLayout",
+	"category" : "Ring2-Core-Kernel",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RGCompiledMethodLayout",
+	"type" : "normal"
+}

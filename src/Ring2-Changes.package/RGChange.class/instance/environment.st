@@ -1,3 +1,3 @@
 accessing
 environment
-	^ environment
+	^ self recorder environment
