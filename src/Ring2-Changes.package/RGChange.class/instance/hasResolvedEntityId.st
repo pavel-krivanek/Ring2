@@ -1,0 +1,4 @@
+testing
+hasResolvedEntityId
+
+	^ entityId notNil

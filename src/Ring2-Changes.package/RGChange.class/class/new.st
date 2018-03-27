@@ -1,4 +1,4 @@
 evaluating
 new
 
-	^ self in: RGEnvironment new
+	^ self in: (RGChangeRecorder for: RGEnvironment new)

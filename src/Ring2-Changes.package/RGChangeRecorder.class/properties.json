@@ -6,7 +6,10 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"environment"
+		"environment",
+		"lastId",
+		"origins",
+		"idsDictionary"
 	],
 	"name" : "RGChangeRecorder",
 	"type" : "normal"

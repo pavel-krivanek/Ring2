@@ -1,9 +1,9 @@
 tests
-testHasResolvedOriginForResolved
+testOriginFromName
 
 	| class change |
 	
 	class := RGClass named: #SomeClass.
 	change := RGBehaviorChange for: class.
-	self assert: change hasResolvedOriginName 
 	
+	self assert: change originFromName equals: class.
