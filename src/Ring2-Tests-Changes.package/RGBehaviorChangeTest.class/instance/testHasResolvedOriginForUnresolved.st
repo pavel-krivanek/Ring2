@@ -5,5 +5,5 @@ testHasResolvedOriginForUnresolved
 	
 	class := RGBehavior newClass.
 	change := RGBehaviorChange for: class.
-	self deny: change hasResolvedOrigin 
+	self deny: change hasResolvedOriginName 
 	

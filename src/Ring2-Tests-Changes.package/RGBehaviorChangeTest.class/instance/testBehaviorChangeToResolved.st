@@ -8,5 +8,5 @@ testBehaviorChangeToResolved
 	change := RGBehaviorChange for: class.
 	change behavior: class2.
 	self assert: change behaviorName equals: #SomeClass.
-	self assert: change hasResolvedOrigin 
+	self assert: change hasResolvedOriginName 
 	

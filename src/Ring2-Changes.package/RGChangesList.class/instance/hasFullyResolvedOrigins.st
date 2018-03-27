@@ -1,6 +1,6 @@
 initialization
 hasFullyResolvedOrigins
 
-	^ self changes allSatisfy: [ :each | each hasResolvedOrigin ]	
+	^ self changes allSatisfy: [ :each | each hasResolvedOriginName ]	
 
 	

@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Ring2-Changes",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"environment",
+		"changesToIDs",
+		"idsToOrigins",
+		"originsToIDs"
+	],
+	"name" : "RGChangesResolver",
+	"type" : "normal"
+}

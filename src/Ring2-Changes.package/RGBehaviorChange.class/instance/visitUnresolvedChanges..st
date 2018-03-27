@@ -1,7 +1,7 @@
 visiting
 visitUnresolvedChanges: aDictionary
 
-	self hasResolvedOrigin 
+	self hasResolvedOriginName 
 		ifTrue: [ 
 			behavior ifNotNil: [ 
 				aDictionary at: behavior ifPresent: [ :unresolvedChanges |

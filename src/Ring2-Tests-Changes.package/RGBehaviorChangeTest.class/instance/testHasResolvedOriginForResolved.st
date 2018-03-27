@@ -5,5 +5,5 @@ testHasResolvedOriginForResolved
 	
 	class := RGClass named: #SomeClass.
 	change := RGBehaviorChange for: class.
-	self assert: change hasResolvedOrigin 
+	self assert: change hasResolvedOriginName 
 	
