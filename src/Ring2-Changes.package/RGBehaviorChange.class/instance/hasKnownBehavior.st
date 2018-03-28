@@ -1,0 +1,4 @@
+private
+hasKnownBehavior
+
+	^ behavior notNil

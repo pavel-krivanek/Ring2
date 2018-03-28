@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Ring2-Changes",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"idsDictionary",
+		"lastId"
+	],
+	"name" : "RGChangesResolvingContext",
+	"type" : "normal"
+}

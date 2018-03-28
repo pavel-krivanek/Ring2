@@ -1,0 +1,4 @@
+private
+hasOriginId
+
+	^ originId notNil

@@ -1,13 +1,22 @@
 actions
-applyIn: anRGEnvironment
+applyIn: anRGEnvironment inContext: resolvingContext
 
 	| anRGBehavior newBehavior |
-	
+
 	anRGBehavior := (self environment == anRGEnvironment)
-		ifTrue: [ behavior ]
-		ifFalse: [ behaviorName ifNotNil: [ anRGEnvironment ask behaviorNamed: behaviorName ] ].
+		ifTrue: [ 
+			self hasKnownBehavior 
+				ifTrue: [ behavior ]
+				ifFalse: [
+					 self originId 
+						ifNotNil: [ resolvingContext originFor: self originId ]
+						ifNil: [ RGResolvingError signal ] ] ]
+		ifFalse: [ 
+			self hasResolvedOriginName 
+				ifTrue: [ anRGEnvironment ask behaviorNamed: behaviorName ] ]. 
 	
 	anRGBehavior ifNotNil: [ 
+		resolvingContext ensureIdFor: anRGBehavior.
 		"the behavior already exists in the environment"
 		^ self ].
 	
@@ -16,6 +25,5 @@ applyIn: anRGEnvironment
 	
 	newBehavior := RGBehavior named: behaviorName parent: anRGEnvironment behaviorStrategy: self newStrategy.
 	anRGEnvironment addBehavior: newBehavior
-		
 		
 	

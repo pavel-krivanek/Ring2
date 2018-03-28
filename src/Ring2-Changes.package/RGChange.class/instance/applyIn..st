@@ -1,4 +1,4 @@
 actions
-applyIn: anRGEnvironment
+applyIn: anEnvironment
 
-	self subclassResponsibility
+	^ self applyIn: anEnvironment inContext: self newResolvingContext
