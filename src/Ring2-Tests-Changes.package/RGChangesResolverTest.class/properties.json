@@ -5,7 +5,10 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"resolver",
+		"env"
+	],
 	"name" : "RGChangesResolverTest",
 	"type" : "normal"
 }

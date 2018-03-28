@@ -1,2 +1,4 @@
 visiting
-visitBehaviorNameChange: anRGBehaviorAddition
+visitBehaviorNameChange: anRGBehaviorNameChange
+
+	^ self visitBehaviorChange: anRGBehaviorNameChange

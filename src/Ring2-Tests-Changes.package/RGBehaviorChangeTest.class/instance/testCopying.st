@@ -7,5 +7,4 @@ testCopying
 	copy := change copyForEnvironment: nil.
 	
 	self assert: copy behaviorName equals: #SomeClass.
-	self assert: copy pvtBehavior equals: nil.
 	
