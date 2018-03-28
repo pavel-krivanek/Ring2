@@ -9,4 +9,4 @@ testApplyRawIn
 	
 	env := RGEnvironment new.
 	self deny: list hasFullyResolvedOrigins.
-	self should: [ list applyIn: env ] raise: RGNotFoundError.
+	self should: [ list applyIn: env ] raise: RGResolvingError.

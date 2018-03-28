@@ -9,10 +9,10 @@ applyIn: anRGEnvironment inContext: resolvingContext
 		"the behavior already exists in the environment"
 		^ self ].
 	
-	behaviorName ifNil: [ 
-		RGNotFoundError signal: 'Unknonw name of the behavior that should be created' ].
+	newBehavior := RGBehavior parent: anRGEnvironment behaviorStrategy: self newStrategy.
+	anRGEnvironment addBehavior: newBehavior.
 	
-	newBehavior := RGBehavior named: behaviorName parent: anRGEnvironment behaviorStrategy: self newStrategy.
-	anRGEnvironment addBehavior: newBehavior
-		
+	"we need to register the new class to the resolving context to allow the next changes
+	related to this class to be performed"
+	resolvingContext ensureIdFor: newBehavior.
 	

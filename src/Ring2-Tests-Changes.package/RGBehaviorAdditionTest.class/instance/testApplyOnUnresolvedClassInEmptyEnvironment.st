@@ -7,4 +7,6 @@ testApplyOnUnresolvedClassInEmptyEnvironment
 	emptyEnvironment := RGEnvironment new.
 
 	change := RGBehaviorAddition for: class.
-	self should: [ change applyIn: emptyEnvironment ] raise: RGNotFoundError.
+	change applyIn: emptyEnvironment.
+	
+	self assert: emptyEnvironment ask behaviors size equals: 4.

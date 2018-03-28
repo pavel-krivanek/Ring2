@@ -1,15 +1,15 @@
 tests
 testApplyWithResolving
 
-	| env |
+	| env resolved |
 	
 	list add: change1.
 	list add: change2.
 	list add: change3.
 	
 	env := RGEnvironment new.
-	list resolveOrigins.
-	list applyIn: env.
+	resolved := list resolveOrigins.
+	list apply: resolved in: env.
 	
-	self assert: list hasFullyResolvedOrigins.
+	"self assert: list hasFullyResolvedOrigins."
 	self assert: (env ask behaviorNamed: #NewName) notNil.
