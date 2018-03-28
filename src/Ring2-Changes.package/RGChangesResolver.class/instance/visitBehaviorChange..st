@@ -6,7 +6,6 @@ visitBehaviorChange: anRGBehaviorChange
 	changeCopy := anRGBehaviorChange copyForEnvironment: environment.
 	behavior := changeCopy pvtBehavior.
 	changeCopy clean.
-	
 	id := nil.
 	
 	behavior 
@@ -22,6 +21,8 @@ visitBehaviorChange: anRGBehaviorChange
 				ifTrue: [ id := lastKnownNames keyAtValue: lastKnownNames ] ].
 			
 	changeCopy originId: id.	
+	
+	^ changeCopy.
 			
 		
 	

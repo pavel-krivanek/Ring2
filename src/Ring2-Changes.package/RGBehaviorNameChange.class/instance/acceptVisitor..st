@@ -1,4 +1,4 @@
 visiting
 acceptVisitor: aVisitor
 
-	aVisitor visitBehaviorNameChange: self
+	^ aVisitor visitBehaviorNameChange: self

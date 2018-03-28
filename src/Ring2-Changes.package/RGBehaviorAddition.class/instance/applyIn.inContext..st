@@ -3,7 +3,7 @@ applyIn: anRGEnvironment inContext: resolvingContext
 
 	| anRGBehavior newBehavior |
 
-	anRGBehavior := self resolvedBehaviorFrom: resolvingContext in: anRGEnvironment.
+	anRGBehavior := self resolvedBehaviorOrNilFrom: resolvingContext in: anRGEnvironment.
 	
 	anRGBehavior ifNotNil: [ 
 		"the behavior already exists in the environment"

@@ -1,9 +1,9 @@
 actions
-reverseIn: anRGEnvironment
+reverse: resolvedChanges in: anRGEnvironment
 
 	| resolvingContext |
 	
 	resolvingContext := RGChangesResolvingContext forChanges: self changes.
 
-	self changes reverseDo: [ :each | 
+	resolvedChanges reverseDo: [ :each | 
 		each reverseIn: anRGEnvironment inContext: resolvingContext ]

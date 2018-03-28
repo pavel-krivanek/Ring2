@@ -1,14 +1,14 @@
 tests
 testReverseInWithResolving
 
-	| aClass |
+	| aClass resolvedChanges |
 	
 	list add: change1.
 	list add: change2.
 	list add: change3.
 	
 	aClass := RGClass named: #NewName.
-	list resolveOrigins.
-	list reverseIn: aClass environment.
+	resolvedChanges := list resolveOrigins.
+	list reverse: resolvedChanges in: aClass environment.
 
 	self assert: (list environment ask behaviorNamed: #NewName) isNil

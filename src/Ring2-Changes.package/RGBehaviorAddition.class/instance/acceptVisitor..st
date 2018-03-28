@@ -1,4 +1,4 @@
 visiting
 acceptVisitor: aVisitor
 
-	aVisitor visitBehaviorAddition: self
+	^ aVisitor visitBehaviorAddition: self

@@ -9,4 +9,4 @@ testReverseIn
 	
 	aClass := RGClass named: #NewName.
 
-	self should: [ list reverseIn: aClass environment ] raise: RGNotFoundError.
+	self should: [ list reverseIn: aClass environment ] raise: RGResolvingError.
