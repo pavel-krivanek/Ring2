@@ -8,5 +8,5 @@ testApplyOnClassInEmptyEnvironment
 
 	change := RGBehaviorNameChange for: class oldName: #OldName newName: #NewName.
 	
-	self should: [ change applyIn: emptyEnvironment ] raise: RGNotFoundError.
+	self should: [ change applyIn: emptyEnvironment ] raise: RGResolvingError.
 		
