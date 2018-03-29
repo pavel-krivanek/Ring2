@@ -1,17 +1,16 @@
 actions
 reverseIn: anRGEnvironment
 
-	| resolver resolvedChanges resolvingContext |
+	| resolver resolvedChanges resolvingContext results |
 	
 	resolver := RGChangesResolver for: self environment.
 	resolvedChanges := resolver resolve: self changes.
+	
 	resolvingContext := RGChangesResolvingContext forChanges: resolvedChanges.
 
-	^ resolvedChanges first reverseIn: anRGEnvironment inContext: resolvingContext.
-	"reverseIn: anRGEnvironment
-
-	| resolvingContext |
+	results := resolvedChanges reversed collect: [ :each | 
+		each reverseIn: anRGEnvironment inContext: resolvingContext ].
 	
-	resolvingContext := RGChangesResolvingContext forChanges: { self }.
-
-	^ self reverseIn: anRGEnvironment inContext: resolvingContext."
+	^ results size = 1
+		ifTrue: [ results anyOne ]
+		ifFalse: [ results ]
