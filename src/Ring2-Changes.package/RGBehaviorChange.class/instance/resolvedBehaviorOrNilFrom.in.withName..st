@@ -3,28 +3,9 @@ resolvedBehaviorOrNilFrom: resolvingContext in: anRGEnvironment withName: aBehav
 
 	| anRGBehavior |
 
-	anRGBehavior := (self environment == anRGEnvironment)
-		ifTrue: [ 
-			self hasKnownBehavior 
-				ifTrue: [ behavior ]
-				ifFalse: [
-					 self hasOriginId 
-						ifTrue: [ (resolvingContext originFor: self originId ifAbsent: [ nil ])
-							ifNil: [ 
-								self hasResolvedOriginName 	
-									ifTrue: [ anRGEnvironment ask behaviorNamed: aBehaviorName ]
-									ifFalse: [ nil ]  ]  ] ] ]
-		ifFalse: [ 
-			self hasOriginId 
-				ifTrue: [ (resolvingContext originFor: self originId ifAbsent: [ nil ])
-					ifNil: [ 
-					self hasResolvedOriginName 	
-						ifTrue: [ anRGEnvironment ask behaviorNamed: aBehaviorName ]
-						ifFalse: [ nil ]  ]  ]
-				ifFalse: [ 
-					self hasResolvedOriginName 
-						ifTrue: [ anRGEnvironment ask behaviorNamed: aBehaviorName ]
-						ifFalse: [ nil ] ] ]. 
+	anRGBehavior := ((self environment == anRGEnvironment) and: [ self hasKnownBehavior ])
+		ifTrue: [ behavior ]
+		ifFalse: [ self correspondingBehaviorFrom: anRGEnvironment named: aBehaviorName using: resolvingContext  ].
 	
 	anRGBehavior ifNotNil: [ 
 		self originId: (resolvingContext ensureIdFor: anRGBehavior proposed: self originId).
