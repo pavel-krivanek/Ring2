@@ -14,7 +14,7 @@ applyIn: anRGEnvironment inContext: resolvingContext
 		
 	"we need to register the new class to the resolving context to allow the next changes
 	related to this class to be performed"
-	resolvingContext ensureIdFor: newBehavior.
+	resolvingContext ensureIdFor: newBehavior proposed: self originId.
 	
 	^ newBehavior
 

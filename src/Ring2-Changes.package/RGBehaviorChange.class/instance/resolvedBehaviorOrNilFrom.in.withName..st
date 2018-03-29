@@ -13,17 +13,18 @@ resolvedBehaviorOrNilFrom: resolvingContext in: anRGEnvironment withName: aBehav
 						ifFalse: [ nil ] ] ]
 		ifFalse: [ 
 			self hasOriginId 
-				ifTrue: [ resolvingContext originFor: self originId ifAbsent: [ 
+				ifTrue: [ (resolvingContext originFor: self originId ifAbsent: [ nil ])
+					ifNil: [ 
 					self hasResolvedOriginName 	
 						ifTrue: [ anRGEnvironment ask behaviorNamed: aBehaviorName ]
-						ifFalse: [ nil ] ] ]
+						ifFalse: [ nil ]  ]  ]
 				ifFalse: [ 
 					self hasResolvedOriginName 
 						ifTrue: [ anRGEnvironment ask behaviorNamed: aBehaviorName ]
 						ifFalse: [ nil ] ] ]. 
 	
 	anRGBehavior ifNotNil: [ 
-		resolvingContext ensureIdFor: anRGBehavior.
+		resolvingContext ensureIdFor: anRGBehavior proposed: self originId.
 		behavior := anRGBehavior. ].
 	
 	^ anRGBehavior
