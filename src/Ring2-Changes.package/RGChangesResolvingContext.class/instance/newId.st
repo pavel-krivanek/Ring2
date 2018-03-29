@@ -7,5 +7,7 @@ newId
 	
 	[ idsDictionary includesKey: anId ] whileTrue: [ anId := anId + 1 ].
 
+	lastId := anId.
+
 	^ anId
 	

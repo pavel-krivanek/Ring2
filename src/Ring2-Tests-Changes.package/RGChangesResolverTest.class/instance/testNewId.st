@@ -1,5 +1,5 @@
 tests
-testNextID
+testNewId
 
 	self assert: resolver newID equals: resolver lastID.
 	self deny: resolver lastID equals: resolver newID.
