@@ -6,7 +6,7 @@ testApplyOnTraitInEmptyEnvironment
 	class := RGTrait named: #SomeClass.
 	emptyEnvironment := RGEnvironment new.
 
-	change := RGBehaviorAddition for: class.
+	change := RGBehaviorAdditionWithName for: class.
 	change applyIn: emptyEnvironment.
 
 	newClass := emptyEnvironment ask classNamed: #SomeClass.

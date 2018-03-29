@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "RGBehaviorAddition",
+	"category" : "Ring2-Changes",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RGBehaviorAdditionWithName",
+	"type" : "normal"
+}

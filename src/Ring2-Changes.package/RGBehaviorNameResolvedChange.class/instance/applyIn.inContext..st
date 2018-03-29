@@ -6,3 +6,5 @@ applyIn: anRGEnvironment inContext: resolvingContext
 	anRGBehavior := self resolvedBehaviorFrom: resolvingContext in: anRGEnvironment.
 	
 	anRGBehavior name: newName.
+	
+	^ anRGBehavior

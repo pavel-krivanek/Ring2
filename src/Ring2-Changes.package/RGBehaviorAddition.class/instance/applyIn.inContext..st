@@ -11,8 +11,10 @@ applyIn: anRGEnvironment inContext: resolvingContext
 	
 	newBehavior := RGBehavior parent: anRGEnvironment behaviorStrategy: self newStrategy.
 	anRGEnvironment addBehavior: newBehavior.
-	
+		
 	"we need to register the new class to the resolving context to allow the next changes
 	related to this class to be performed"
 	resolvingContext ensureIdFor: newBehavior.
 	
+	^ newBehavior
+

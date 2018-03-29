@@ -6,7 +6,7 @@ testApplyOnMetaclassInEmptyEnvironment
 	class := RGMetaclass named: #SomeClass.
 	emptyEnvironment := RGEnvironment new.
 
-	change := RGBehaviorAddition for: class.
+	change := RGBehaviorAdditionWithName for: class.
 	change applyIn: emptyEnvironment.
 
 	self assert: emptyEnvironment ask behaviors size equals: 4.
