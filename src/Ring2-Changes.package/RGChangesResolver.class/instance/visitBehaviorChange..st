@@ -3,7 +3,7 @@ visitBehaviorChange: anRGBehaviorChange
 
 	| changeCopy behavior id | 
 	
-	changeCopy := anRGBehaviorChange copyForEnvironment: environment.
+	changeCopy := anRGBehaviorChange copyForEnvironment: self environment.
 	behavior := changeCopy pvtBehavior.
 	changeCopy clean.
 	id := nil.
