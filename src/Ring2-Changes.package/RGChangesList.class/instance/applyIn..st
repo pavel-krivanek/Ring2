@@ -1,4 +1,6 @@
 actions
 applyIn: anRGEnvironment
 
-	self changes do: [ :each | each applyIn: anRGEnvironment ]
+	| resolved |
+	resolved := self resolveOrigins.
+	self apply: resolved in: anRGEnvironment.
