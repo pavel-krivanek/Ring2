@@ -4,7 +4,7 @@ testReverseOnClassInTheSameEnvironment
 	| class change |
 	
 	class := RGClass named: #SomeClass.
-	change := RGBehaviorAddition for: class.
+	change := RGBehaviorAdditionWithName for: class.
 	
 	change reverseIn: class environment.
 		

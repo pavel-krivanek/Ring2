@@ -8,5 +8,5 @@ testReverseOnClassInEmptyEnvironment
 
 	change := RGBehaviorNameChange for: class oldName: #OldName newName: #NewName.
 	
-	self should: [ change reverseIn: emptyEnvironment ] raise: RGNotFoundError.
+	self should: [ change reverseIn: emptyEnvironment ] raise: RGResolvingError.
 		

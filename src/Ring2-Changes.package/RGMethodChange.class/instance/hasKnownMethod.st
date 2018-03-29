@@ -1,0 +1,4 @@
+accessing
+hasKnownMethod
+
+	^ method notNil

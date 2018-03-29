@@ -5,6 +5,4 @@ behavior: anRGBehavior
 	
 	behavior := anRGBehavior.
 	
-	behaviorName := anRGBehavior hasResolvedName
-		ifTrue: [ anRGBehavior name. ]
-		ifFalse: [ nil ].
+	behaviorName := anRGBehavior resolvedNameOrNil.

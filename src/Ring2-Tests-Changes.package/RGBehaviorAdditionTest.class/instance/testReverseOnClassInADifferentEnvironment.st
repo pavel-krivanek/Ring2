@@ -7,7 +7,7 @@ testReverseOnClassInADifferentEnvironment
 	class2 := RGClass named: #SomeClass.
 	env := class2 environment.
 
-	change := RGBehaviorAddition for: class.
+	change := RGBehaviorAdditionWithName for: class.
 	deletedBehavior := change reverseIn: env.
 	
 	self assert: deletedBehavior equals: class2.

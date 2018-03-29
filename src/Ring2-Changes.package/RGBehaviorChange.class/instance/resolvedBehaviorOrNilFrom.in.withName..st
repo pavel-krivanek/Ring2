@@ -9,8 +9,11 @@ resolvedBehaviorOrNilFrom: resolvingContext in: anRGEnvironment withName: aBehav
 				ifTrue: [ behavior ]
 				ifFalse: [
 					 self hasOriginId 
-						ifTrue: [ resolvingContext originFor: self originId ]
-						ifFalse: [ nil ] ] ]
+						ifTrue: [ (resolvingContext originFor: self originId ifAbsent: [ nil ])
+							ifNil: [ 
+								self hasResolvedOriginName 	
+									ifTrue: [ anRGEnvironment ask behaviorNamed: aBehaviorName ]
+									ifFalse: [ nil ]  ]  ] ] ]
 		ifFalse: [ 
 			self hasOriginId 
 				ifTrue: [ (resolvingContext originFor: self originId ifAbsent: [ nil ])

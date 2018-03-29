@@ -8,5 +8,5 @@ reverseIn: anRGEnvironment
 	
 	resolvingContext := RGChangesResolvingContext forChanges: resolvedChanges.
 
-	resolvedChanges reverseDo: [ :each | 
+	^ resolvedChanges reverseDo: [ :each | 
 		each reverseIn: anRGEnvironment inContext: resolvingContext ]
