@@ -6,7 +6,7 @@ testClean
 	class := RGClass named: #SomeClass.
 	change := RGBehaviorChange for: class.
 	
-	self assert: change pvtBehavior equals: class.
+	self assert: change behavior equals: class.
 	change clean.
-	self assert: change pvtBehavior equals: nil.
+	self assert: change behavior equals: nil.
 	

@@ -24,7 +24,7 @@ resolvedBehaviorOrNilFrom: resolvingContext in: anRGEnvironment withName: aBehav
 						ifFalse: [ nil ] ] ]. 
 	
 	anRGBehavior ifNotNil: [ 
-		resolvingContext ensureIdFor: anRGBehavior proposed: self originId.
+		self originId: (resolvingContext ensureIdFor: anRGBehavior proposed: self originId).
 		behavior := anRGBehavior. ].
 	
 	^ anRGBehavior

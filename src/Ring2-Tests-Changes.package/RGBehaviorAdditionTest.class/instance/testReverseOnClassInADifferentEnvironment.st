@@ -1,14 +1,17 @@
 testing
 testReverseOnClassInADifferentEnvironment
 
-	| class class2 change env |
+	| class class2 change env deletedBehavior |
 	
 	class := RGClass named: #SomeClass.
 	class2 := RGClass named: #SomeClass.
 	env := class2 environment.
 
 	change := RGBehaviorAddition for: class.
-	change reverseIn: env.
+	deletedBehavior := change reverseIn: env.
+	
+	self assert: deletedBehavior equals: class2.
 		
 	self assert: (env ask classNamed: #SomeClass) equals: nil.
 
+	self deny: (env ask behaviors includes: deletedBehavior).

@@ -12,6 +12,6 @@ testResolveSimpleBehaviorChange
 	id := resolver idFor: class.
 	self assert: (resolver originFor: id) equals: class.
 	
-	resolvedChanges allSatisfy: [ :each | each pvtBehavior isNil. ]
+	resolvedChanges allSatisfy: [ :each | each behavior isNil. ]
 	
 	
