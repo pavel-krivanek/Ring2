@@ -6,7 +6,7 @@ initialize
 	originsToIDs := IdentityDictionary new.
 	idsToOrigins := IdentityDictionary new.
 	changesToIDs := IdentityDictionary new.
-	lastKnownNames := IdentityDictionary new.
+	lastKnownPaths := IdentityDictionary new.
 	
 	lastID := 0.
 	

@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "RGMethodChange",
+	"category" : "Ring2-Changes",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"oldName",
+		"newName"
+	],
+	"name" : "RGMethodNameChange",
+	"type" : "normal"
+}

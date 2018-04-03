@@ -1,11 +1,11 @@
 private
 correspondingBehaviorFrom: anRGEnvironment named: aBehaviorName using: resolvingContext originId: anId
 
-	| behaviorKnowToContext |
+	| behaviorKnownToContext |
 
-	behaviorKnowToContext := anId 
+	behaviorKnownToContext := anId 
 		ifNotNil: [ resolvingContext originFor: anId ifAbsent: [ nil ] ].
 		
-	^ behaviorKnowToContext 		
-		ifNil: [  self correspondingBehaviorFrom: anRGEnvironment named: aBehaviorName   ]
+	^ behaviorKnownToContext 		
+		ifNil: [ self correspondingBehaviorFrom: anRGEnvironment named: aBehaviorName   ]
 

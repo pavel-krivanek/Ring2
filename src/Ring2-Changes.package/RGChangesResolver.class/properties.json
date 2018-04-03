@@ -11,7 +11,7 @@
 		"idsToOrigins",
 		"originsToIDs",
 		"lastID",
-		"lastKnownNames"
+		"lastKnownPaths"
 	],
 	"name" : "RGChangesResolver",
 	"type" : "normal"

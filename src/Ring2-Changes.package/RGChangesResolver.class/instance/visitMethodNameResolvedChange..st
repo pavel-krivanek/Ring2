@@ -1,0 +1,4 @@
+visiting
+visitMethodNameResolvedChange: anRGBehaviorNameResolvedChange
+
+	^ self visitMethodChange: anRGBehaviorNameResolvedChange
