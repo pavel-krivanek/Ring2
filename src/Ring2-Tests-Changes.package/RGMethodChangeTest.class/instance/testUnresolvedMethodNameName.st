@@ -1,0 +1,12 @@
+tests
+testUnresolvedMethodNameName
+
+	| class method change  |
+	
+	class := RGClass named: #SomeClass.
+	method := class ensureUnresolvedLocalMethod.
+	change := RGMethodChange for: method.
+	self assert: change behaviorName equals: #SomeClass.
+	self assert: change methodName isNil.
+	self deny: change hasResolvedOriginName 
+	

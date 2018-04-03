@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
 	"super" : "RGChange",
-	"category" : "Ring2-Core",
+	"category" : "Ring2-Changes",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
