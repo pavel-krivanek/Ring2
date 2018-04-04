@@ -5,12 +5,7 @@ oldName: anOldName newName: aNewName
 	
 	oldName := anOldName.
 	newName := aNewName.
-
-	behaviorName = anOldName 
-		ifFalse: [ 
-			"the change record was done after actual renaming"
-			behaviorName := anOldName ]
-	
+	behaviorName := anOldName 
 	
 	
 

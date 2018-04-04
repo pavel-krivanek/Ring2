@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
 	"super" : "RGChangeTest",
-	"category" : "Ring2-Tests-Changes",
+	"category" : "Ring2-Store",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

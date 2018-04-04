@@ -1,11 +1,12 @@
 tests
 testApplyOnClassInTheSameEnvironment
 
-	| class change |
+	| class change result |
 	
 	class := RGClass named: #OldName.
 	change := RGBehaviorNameChange for: class oldName: #OldName newName: #NewName.
 	
-	change applyIn: class environment.
+	result := change applyIn: class environment.
+	self assert: result equals: class.
 		
 	self assert: class name equals: #NewName.
