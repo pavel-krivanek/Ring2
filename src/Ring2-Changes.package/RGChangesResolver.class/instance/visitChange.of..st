@@ -5,9 +5,6 @@ visitChange: anRGChange of: anRGObject
 
 	changeCopy := anRGChange copyForEnvironment: self environment.
 
-	(anRGChange environment == anRGObject environment) ifFalse: [ 
-		changeCopy clean. ].
-	
 	id := nil.
 	
 	anRGObject 

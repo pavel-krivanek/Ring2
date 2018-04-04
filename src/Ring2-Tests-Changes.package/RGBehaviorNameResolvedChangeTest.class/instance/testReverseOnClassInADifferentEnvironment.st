@@ -1,7 +1,7 @@
 tests
 testReverseOnClassInADifferentEnvironment
 
-	| class class2 change |
+	| class class2 change result |
 	
 	class := RGClass unresolved.
 	class name: #NewName.
@@ -9,7 +9,9 @@ testReverseOnClassInADifferentEnvironment
 
 	change := RGBehaviorNameResolvedChange for: class newName: #NewName.
 	
-	change reverseIn: class2 environment.
+	result := change reverseIn: class2 environment.
+	
+	self assert: result equals: class2.
 		
 	self assert: class2 hasResolvedName not.
 	self assert: (class2 environment ask behaviorNamed: #NewName) equals: nil.

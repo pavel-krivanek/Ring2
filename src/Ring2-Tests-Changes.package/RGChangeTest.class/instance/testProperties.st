@@ -8,6 +8,7 @@ testProperties
 	self assert: change hasProperties not.
 	self assert: (change hasPropertyNamed: #note) not.
 	self assert: change propertyNames isEmpty.
+	self assert: (change removePropertyNamed: #notExisting) propertyNames isEmpty.
 	self assert: (change propertyNamed: #note ifAbsent: [#someNote]) equals: #someNote.
 	self assert: (change hasPropertyNamed: #note) not.
 	self assert: (change propertyNamed: #note ifAbsentPut: [#someNote]) equals: #someNote.
