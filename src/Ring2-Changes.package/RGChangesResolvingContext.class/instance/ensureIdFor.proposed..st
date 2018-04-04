@@ -1,14 +1,14 @@
 initialization
-ensureIdFor: aBehavior proposed: proposedId
+ensureIdFor: anRGObject proposed: proposedId
 
 	^ proposedId
 		ifNotNil: [ 
-			idsDictionary at: proposedId put: aBehavior.
+			idsDictionary at: proposedId put: anRGObject.
 			proposedId ]
 		ifNil: [ 
-			idsDictionary keyAtValue: aBehavior ifAbsent: [ 
+			idsDictionary keyAtValue: anRGObject ifAbsent: [ 
 				| newId |
 				newId := self newId.
-				idsDictionary at: newId put: aBehavior.
+				idsDictionary at: newId put: anRGObject.
 				newId ] ]
 

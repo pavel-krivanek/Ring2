@@ -1,7 +1,10 @@
 running
 testFindFirstNewId
 
-	resolvingContext ensureIdFor: #a proposed: 1.
+	| result |
+	
+	result := resolvingContext ensureIdFor: #a proposed: 1.
+	self assert: result equals: 1.
 	resolvingContext ensureIdFor: #a proposed: 2.
 	resolvingContext ensureIdFor: #a proposed: 3.
 	resolvingContext ensureIdFor: #a proposed: 5.
