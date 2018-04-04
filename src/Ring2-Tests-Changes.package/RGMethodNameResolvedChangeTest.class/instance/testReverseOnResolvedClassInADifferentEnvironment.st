@@ -7,9 +7,9 @@ testReverseOnResolvedClassInADifferentEnvironment
 	method := class ensureUnresolvedLocalMethod.
 	method name: #someName.
 	class2 := RGClass named: #SomeClass.
-	method2 := class ensureLocalMethodNamed: #newName.
+	method2 := class ensureLocalMethodNamed: #someName.
 
-	change := RGMethodNameResolvedChange for: method newName: #newName.
+	change := RGMethodNameResolvedChange for: method newName: #someName.
 	
 	change reverseIn: method2 environment.
 		
