@@ -3,7 +3,7 @@ resolvedBehaviorOrNilFrom: resolvingContext in: anRGEnvironment withName: aBehav
 
 	| anRGBehavior |
 
-	anRGBehavior := ((self environment == anRGEnvironment) = [ self hasKnownBehavior ] value)
+	anRGBehavior := ((self environment == anRGEnvironment) and: [ self hasKnownBehavior ])
 		ifTrue: [ behavior ]
 		ifFalse: [ self correspondingBehaviorFrom: anRGEnvironment named: aBehaviorName using: resolvingContext  ].
 	
