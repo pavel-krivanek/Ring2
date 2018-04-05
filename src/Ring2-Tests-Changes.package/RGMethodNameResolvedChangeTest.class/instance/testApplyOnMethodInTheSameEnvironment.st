@@ -1,11 +1,13 @@
 tests
 testApplyOnMethodInTheSameEnvironment
 
-	| method  change |
+	| method  change result |
 	
 	method := RGMethod unresolved.
 	change := RGMethodNameResolvedChange for: method newName: #someMethod.
 
-	change applyIn: method environment.
+	result := change applyIn: method environment.
+	
+	self assert: result equals: method.
 
 	self assert: method name equals: #someMethod.		
