@@ -1,6 +1,8 @@
 tests
 testSimpleNameChange
 
+	"check if the change has a correct internal state"
+
 	| class change |
 	
 	class := RGClass named: #OldName.

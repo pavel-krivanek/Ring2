@@ -1,5 +1,7 @@
-tests
+tests - apply
 testApplyOnClassInADifferentEnvironment
+
+	"test applying of class renaming on a different environment that already contains a class of the same name. It should rename it."
 
 	| class class2 change |
 	

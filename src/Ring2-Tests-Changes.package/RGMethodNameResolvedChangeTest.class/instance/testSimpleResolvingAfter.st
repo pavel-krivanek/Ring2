@@ -1,6 +1,8 @@
 tests
 testSimpleResolvingAfter
 
+	"test if we can create a change after the actual method name resolving"
+
 	| method change |
 	
 	method := RGMethod unresolved.

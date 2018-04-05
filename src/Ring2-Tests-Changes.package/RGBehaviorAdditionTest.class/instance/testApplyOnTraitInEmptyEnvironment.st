@@ -1,5 +1,7 @@
-testing
+tests - apply
 testApplyOnTraitInEmptyEnvironment
+
+	"Try to apply change on a trait. It proves that a behavior of the correct kind is created."
 
 	| class emptyEnvironment change newClass |
 	

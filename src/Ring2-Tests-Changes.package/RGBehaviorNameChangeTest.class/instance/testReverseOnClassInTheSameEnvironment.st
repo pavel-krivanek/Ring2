@@ -1,5 +1,7 @@
-tests
+tests - revert
 testReverseOnClassInTheSameEnvironment
+
+	"test reverting in a class in the same environment. It should rename the class back"
 
 	| class change |
 	

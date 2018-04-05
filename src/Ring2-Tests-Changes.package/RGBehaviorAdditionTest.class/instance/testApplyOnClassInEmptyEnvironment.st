@@ -1,5 +1,7 @@
-testing
+tests - apply
 testApplyOnClassInEmptyEnvironment
+
+	"try to apply a change in a different empty environment. It should create a new class"
 
 	| class emptyEnvironment change newClass result |
 	

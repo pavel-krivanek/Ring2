@@ -1,6 +1,8 @@
 tests
 testSimpleResolvingAfter
 
+	"test creation of the change after the resolving of the behavior name was done"
+
 	| class change |
 	
 	class := RGClass unresolved.

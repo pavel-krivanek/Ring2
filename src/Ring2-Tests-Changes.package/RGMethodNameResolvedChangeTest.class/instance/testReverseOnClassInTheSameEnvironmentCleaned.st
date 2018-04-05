@@ -1,5 +1,7 @@
-tests
+tests - revert
 testReverseOnClassInTheSameEnvironmentCleaned
+
+		"try to revert the cleaned method resolving change in the same environment. The method belongs to an unresolved class. It should raise a resolving error because we cannot assign the change to any existing method"
 
 	| method  change |
 	

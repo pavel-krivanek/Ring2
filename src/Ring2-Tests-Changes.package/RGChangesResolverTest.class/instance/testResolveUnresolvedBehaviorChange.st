@@ -1,6 +1,8 @@
 tests
 testResolveUnresolvedBehaviorChange
 
+	"try the case when we are resolving firstly the resolved behavior and after that a change with the unresolved behavior but the same method reference. It should assign the same origin id the both of the chagnes"
+
 	| class method change changeCopy resolvedChanges | 
 	
 	class := RGClass named: #SomeClass.

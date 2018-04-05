@@ -1,5 +1,7 @@
-tests
+tests - apply
 testApplyOnMethodInTheSameEnvironment
+
+	"test if we can apply a change in the same environment. It should resolve and set the correct method name."
 
 	| method  change result |
 	

@@ -1,5 +1,7 @@
-tests
+tests - apply
 testApplyOnClassInTheSameEnvironment
+
+	"try to apply change in the same environment. It should rename the original class"
 
 	| class change result |
 	

@@ -1,5 +1,7 @@
 tests
-testCopying
+testCopy
+
+	"test the change copying"
 
 	| change copy |
 	

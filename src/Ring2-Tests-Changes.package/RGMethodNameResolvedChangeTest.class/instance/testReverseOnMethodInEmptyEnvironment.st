@@ -1,5 +1,7 @@
-tests
+tests - revert
 testReverseOnMethodInEmptyEnvironment
+
+	"try to revert a method change in a empty environment. It should raise a resolving error."
 
 	| method emptyEnvironment change |
 	

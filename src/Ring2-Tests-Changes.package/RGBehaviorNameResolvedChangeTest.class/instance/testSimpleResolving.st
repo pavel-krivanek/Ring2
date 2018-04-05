@@ -1,6 +1,8 @@
 tests
 testSimpleResolving
 
+	"test resolving of the name on a class with an unresolved name"
+
 	| class change |
 	
 	class := RGClass unresolved.

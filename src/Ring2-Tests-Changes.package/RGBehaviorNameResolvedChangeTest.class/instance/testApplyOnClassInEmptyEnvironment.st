@@ -1,5 +1,7 @@
-tests
+tests - apply
 testApplyOnClassInEmptyEnvironment
+
+	"test applying on a different empty environment. It should raise a resolving error"
 
 	| class emptyEnvironment change |
 	

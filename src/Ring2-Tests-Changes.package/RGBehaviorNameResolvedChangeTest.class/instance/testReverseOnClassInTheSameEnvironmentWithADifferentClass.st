@@ -1,5 +1,7 @@
-tests
+tests - revert
 testReverseOnClassInTheSameEnvironmentWithADifferentClass
+
+	"try to revert in the same environment but on a different class of the same name. It should make its name unresolved"
 
 	| env class class2 change result |
 	

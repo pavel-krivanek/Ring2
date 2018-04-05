@@ -1,6 +1,8 @@
 tests
 testBehaviorChangeToUnresolved
 
+	"test if we can assign unresolved class to a change that originally used resolved class"
+
 	| class class2 change |
 	
 	class := RGClass named: #SomeClass.

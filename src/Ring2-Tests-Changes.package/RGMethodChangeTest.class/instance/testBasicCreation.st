@@ -1,6 +1,8 @@
 tests
 testBasicCreation
 
+	"test if the new change storest the correct state"
+
 	| class method change  |
 	
 	class := RGClass named: #SomeClass.

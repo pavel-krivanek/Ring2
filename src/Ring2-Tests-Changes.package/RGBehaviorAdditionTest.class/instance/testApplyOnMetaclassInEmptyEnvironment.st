@@ -1,5 +1,7 @@
-testing
+tests - apply
 testApplyOnMetaclassInEmptyEnvironment
+
+	"try to apply a change in a different empty environment but this time on a Metaclass. It should create a new metaclass. It proves that a behavior of the correct kind is created."
 
 	| class emptyEnvironment change newClass |
 	

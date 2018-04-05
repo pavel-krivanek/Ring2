@@ -1,6 +1,8 @@
 tests
 testCorrespondingMethodFromNames
 
+	"test if the method lookup in the environment works"
+
 	| class method change result |
 	
 	class := RGClass named: #SomeClass.

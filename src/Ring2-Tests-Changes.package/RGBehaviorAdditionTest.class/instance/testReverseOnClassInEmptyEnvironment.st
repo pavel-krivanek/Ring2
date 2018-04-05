@@ -1,4 +1,4 @@
-testing
+tests - revert
 testReverseOnClassInEmptyEnvironment
 
 	| class emptyEnvironment change  |

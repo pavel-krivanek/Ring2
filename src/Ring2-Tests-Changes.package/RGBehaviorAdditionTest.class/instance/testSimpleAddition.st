@@ -1,6 +1,8 @@
 testing
 testSimpleAddition
 
+	"test if we can create a change of a resolved class"
+
 	| env class change |
 	
 	env := RGEnvironment new.

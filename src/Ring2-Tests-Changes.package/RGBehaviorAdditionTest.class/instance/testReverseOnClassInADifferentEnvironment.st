@@ -1,4 +1,4 @@
-testing
+tests - revert
 testReverseOnClassInADifferentEnvironment
 
 	| class class2 change env deletedBehavior |

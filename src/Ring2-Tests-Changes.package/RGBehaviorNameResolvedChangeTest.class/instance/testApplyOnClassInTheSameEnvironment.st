@@ -1,5 +1,7 @@
-tests
+tests - apply
 testApplyOnClassInTheSameEnvironment
+
+	"test applying in the same environment. it should set the class of the name"
 
 	| class change result |
 	

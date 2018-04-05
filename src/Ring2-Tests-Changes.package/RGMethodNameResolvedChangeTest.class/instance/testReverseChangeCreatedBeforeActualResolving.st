@@ -1,5 +1,7 @@
-tests
+tests - revert
 testReverseChangeCreatedBeforeActualResolving
+
+	"test if we can revert a change created before the actual method name resolving. It should unresolve the method name"
 
 	| method change result |
 	

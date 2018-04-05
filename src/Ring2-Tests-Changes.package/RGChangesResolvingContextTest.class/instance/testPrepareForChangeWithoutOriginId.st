@@ -1,6 +1,8 @@
 running
 testPrepareForChangeWithoutOriginId
 
+	"when the change has no ID, the context should not register it"
+
 	| class change |
 
 	class := RGClass named: #OldName.

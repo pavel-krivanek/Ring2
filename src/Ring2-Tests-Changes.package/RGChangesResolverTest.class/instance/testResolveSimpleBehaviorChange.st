@@ -1,6 +1,8 @@
 tests
 testResolveSimpleBehaviorChange
 
+	"test the id assignment for a simple behavior change"
+
 	| class change id resolvedChanges | 
 	
 	class := env ensureClassNamed: #OldName.

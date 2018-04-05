@@ -1,6 +1,8 @@
 tests
 testSetPath
 
+	"test if changing of the path correctly changes the internal state (behaviorName)"
+	
 	| class change |
 	
 	class := RGClass named: #SomeClass.

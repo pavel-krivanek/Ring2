@@ -1,5 +1,7 @@
-testing
+tests - apply
 testApplyOnMetaclassTraitInEmptyEnvironment
+
+	"Try to apply change on a metaclass. It proves that a behavior of the correct kind is created."
 
 	| class emptyEnvironment change newClass |
 	

@@ -1,5 +1,7 @@
-tests
+utility
 checkResolvingReturnsNewObjectsFor: aChange
+
+	"utility method to check that the resolver provides a different object than the original change was"
 
 	| resolver resolvedChanges |
 	

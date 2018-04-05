@@ -1,6 +1,8 @@
 tests
 testResolveUnresolvedBehaviorChangeCleanedReversed
 
+	"try to resolve two mehtod changes where the second one looses the reference to the original method object. It should be correctly resolved from the name"
+
 	| class method change changeCopy resolvedChanges | 
 	
 	class := RGClass named: #SomeClass.

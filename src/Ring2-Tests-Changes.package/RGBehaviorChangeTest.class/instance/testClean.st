@@ -1,6 +1,8 @@
 tests
 testClean
 
+	"test if the cleaned change loses a reference to the behavior"
+
 	| class change |
 	
 	class := RGClass named: #SomeClass.

@@ -1,6 +1,8 @@
 running
 testFindFirstNewId
 
+	"test if we correctly find new empty IDs"
+
 	| result |
 	
 	result := resolvingContext ensureIdFor: #a proposed: 1.

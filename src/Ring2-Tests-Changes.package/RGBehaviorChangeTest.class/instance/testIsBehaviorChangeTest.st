@@ -1,6 +1,8 @@
 tests
 testIsBehaviorChangeTest
 
+	"test #isBehaviorChange (testing) method"
+
 	| class change |
 	
 	class := RGClass named: #SomeClass.

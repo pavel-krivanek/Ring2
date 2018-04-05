@@ -1,6 +1,8 @@
 tests
 testResolvingReturnsNewChanges
 
+	"check if the resolving returns always a change copy"
+
 	| class change |
 	
 	class := RGClass named: #OldName.

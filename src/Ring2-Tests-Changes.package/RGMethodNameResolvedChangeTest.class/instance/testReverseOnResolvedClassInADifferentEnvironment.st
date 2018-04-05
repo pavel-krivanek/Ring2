@@ -1,5 +1,7 @@
-tests
+tests - revert
 testReverseOnResolvedClassInADifferentEnvironment
+
+	"try to revert the method name resolving in the different environment that contains a corresponding class and method. It should unresolve the method name "
 
 	| class class2 method method2 change |
 	

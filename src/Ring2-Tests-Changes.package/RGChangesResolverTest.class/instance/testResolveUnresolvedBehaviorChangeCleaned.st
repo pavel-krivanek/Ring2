@@ -1,6 +1,8 @@
 tests
 testResolveUnresolvedBehaviorChangeCleaned
 
+	"try to resolve four cleaned method chagnes where the last two have unresolved class origin. All of them should have the same origin id"
+
 	| class method change changeCopy1 changeCopy2  changeCopy3 resolvedChanges | 
 	
 	class := RGClass named: #SomeClass.

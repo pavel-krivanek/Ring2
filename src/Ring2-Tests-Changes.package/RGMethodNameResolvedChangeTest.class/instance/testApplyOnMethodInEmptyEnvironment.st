@@ -1,5 +1,7 @@
-tests
+tests - apply
 testApplyOnMethodInEmptyEnvironment
+
+	"test if we can apply a change on an empty environment. It should raise a resolving error"
 
 	| method emptyEnvironment change |
 	

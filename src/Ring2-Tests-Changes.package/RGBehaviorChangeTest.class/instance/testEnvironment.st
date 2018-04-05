@@ -1,6 +1,8 @@
 tests
 testEnvironment
 
+	"test if we can change the change environment"
+
 	| class change |
 	
 	class := RGBehavior newClass.

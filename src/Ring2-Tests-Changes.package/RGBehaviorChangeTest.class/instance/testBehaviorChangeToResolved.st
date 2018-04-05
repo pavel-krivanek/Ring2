@@ -1,6 +1,8 @@
 tests
 testBehaviorChangeToResolved
 
+	"test if we can assign resolved class to a change that originally used unresolved class"
+
 	| class class2 change |
 	
 	class := RGBehavior newClass.

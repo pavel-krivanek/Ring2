@@ -1,5 +1,7 @@
 tests
 testEnsureOriginId
+
+	"try to generate and assign a new id"
 	
 	| id class |
 	

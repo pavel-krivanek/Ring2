@@ -1,5 +1,7 @@
-testing
+tests - apply
 testApplyOnClassInADifferentEnvironment
+
+	"try to apply a change in a different environment that already contains a class of the same name. It should do nothing fo real"
 
 	| class1 class2 change |
 	

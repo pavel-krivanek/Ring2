@@ -1,6 +1,8 @@
 tests
 testUnresolvedMethodAndClass
 
+	"test if we can create a change on an unresolved method owned by an unresolved class"
+
 	| class method change  |
 	
 	class := RGClass unresolved.

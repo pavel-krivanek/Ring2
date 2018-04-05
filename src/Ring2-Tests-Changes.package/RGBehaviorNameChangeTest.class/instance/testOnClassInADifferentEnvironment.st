@@ -1,5 +1,7 @@
-tests
+tests - revert
 testOnClassInADifferentEnvironment
+
+	"test class renaming applied in a different environment"
 
 	| class class2 change result |
 	

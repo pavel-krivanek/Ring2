@@ -1,6 +1,8 @@
 tests
 testProperties
 
+	"test methods that provide access to change properties"
+
 	| change | 
 	
 	change := RGChange new.

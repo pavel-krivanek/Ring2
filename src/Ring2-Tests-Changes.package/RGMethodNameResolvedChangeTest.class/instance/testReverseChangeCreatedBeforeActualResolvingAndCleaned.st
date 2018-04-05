@@ -1,5 +1,7 @@
-tests
+tests - revert
 testReverseChangeCreatedBeforeActualResolvingAndCleaned
+
+	"test if we can revert a cleaned change created after the actual method name resolving. It should raise a resolving error because we lost a binding to real behavior because we do not know the class name"
 
 	| method change |
 	

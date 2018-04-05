@@ -1,5 +1,7 @@
-tests
+tests - revert
 testReverseOnClassInEmptyEnvironmentCleaned
+
+	"try to revert the class in a empty environment without a binding to a real behavior. It should raise a resolving error"
 
 	| class emptyEnvironment change |
 	

@@ -1,5 +1,7 @@
-tests
+tests - revert
 testReverseOnExistingMethodInTheSameEnvironment
+
+	"test reverting of the method name resolving in the same environment. It should unresolve the method name."
 
 	| method change |
 	

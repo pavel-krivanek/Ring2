@@ -1,5 +1,7 @@
-testing
+tests - apply
 testApplyOnClassInTheSameEnvironment
+
+	"try to apply a change in a the same environment. It should do nothing for real"
 
 	| class change |
 	

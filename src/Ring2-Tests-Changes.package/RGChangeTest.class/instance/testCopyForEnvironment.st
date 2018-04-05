@@ -1,6 +1,8 @@
 tests
 testCopyForEnvironment
 
+	"test a change copy created in a different environment"
+
 	| change changeCopy env | 
 	
 	change := RGChange new.

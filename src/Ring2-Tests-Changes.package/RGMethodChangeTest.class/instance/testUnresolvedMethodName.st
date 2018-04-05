@@ -1,5 +1,7 @@
 tests
-testUnresolvedMethodNameName
+testUnresolvedMethodName
+
+	"test if we can create a change on a method with unresolved name. The method is owned by a class with a resolved name"
 
 	| class method change  |
 	

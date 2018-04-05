@@ -1,6 +1,8 @@
 tests
 testCorrespondingMethodFromNamesInDifferentEnvironment
 
+	"test if the method lookup works a different environment"
+
 	| class method class2 method2 change result |
 	
 	class := RGClass named: #SomeClass.

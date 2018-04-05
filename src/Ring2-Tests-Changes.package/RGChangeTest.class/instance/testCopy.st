@@ -1,6 +1,8 @@
 tests
 testCopy
 
+	"test the change copying"
+	
 	| change changeCopy | 
 	
 	change := RGChange new.

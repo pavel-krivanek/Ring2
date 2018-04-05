@@ -1,5 +1,7 @@
-tests
+tests - revert
 testReverseOnClassInTheDifferentEnvironmentWithCleaned
+
+	"try to revert a clened change on the class in the different environment. It should unresolve the method name"
 
 	| env env2 class class2 change result |
 	
