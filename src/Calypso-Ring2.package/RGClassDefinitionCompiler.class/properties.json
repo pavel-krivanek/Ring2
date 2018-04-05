@@ -1,1 +1,15 @@
-{	"commentStamp" : "",	"super" : "Object",	"category" : "Calypso-Ring2",	"classinstvars" : [ ],	"pools" : [ ],	"classvars" : [ ],	"instvars" : [		"environment",		"definitionString",		"requestor"	],	"name" : "RGClassDefinitionCompiler",	"type" : "normal"}
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Calypso-Ring2",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"environment",
+		"definitionString",
+		"requestor"
+	],
+	"name" : "RGClassDefinitionCompiler",
+	"type" : "normal"
+}

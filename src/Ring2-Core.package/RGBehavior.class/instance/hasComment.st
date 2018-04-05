@@ -1,4 +1,4 @@
-*Calypso-Ring2
+testing
 hasComment
 
 	^ self comment isEmptyOrNil not

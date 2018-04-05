@@ -10,12 +10,14 @@ visitChange: anRGChange of: anRGObject
 				ifFalse: [ lastKnownPaths
 						at: id
 						ifPresent: [ :knownPath | changeCopy setPath: knownPath ] ] ]
-		ifNil: [ changeCopy hasResolvedOriginName
-				ifTrue: [ id := lastKnownPaths
+		ifNil: [ 
+			id := changeCopy hasResolvedOriginName
+				ifTrue: [ lastKnownPaths
 						keyAtValue: changeCopy path
 						ifAbsent: [ | newId |
 							newId := self newID.
 							lastKnownPaths at: newId put: changeCopy path.
-							newId ] ] ].
+							newId ] ]
+				ifFalse: [ self newID ] ].
 	changeCopy originId: id.
 	^ changeCopy
