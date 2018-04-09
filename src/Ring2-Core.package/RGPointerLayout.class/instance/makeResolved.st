@@ -3,4 +3,4 @@ makeResolved
 
 	super makeResolved.
 	
-	slots := self slots.
+	slots := self slots asOrderedCollection.
