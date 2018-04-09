@@ -1,1 +1,1 @@
-SystemOrganization addCategory: #'Ring2-Compatibility'!
+SystemOrganization addCategory: #'Ring2-Compatibility'!
