@@ -6,11 +6,12 @@ browse
 	clyEnv := ClyRing2Environment new.
 	clyEnv environment: self.
 
-	clyNavEnv := (ClySystemNavigationEnvironment over: clyEnv)
-	    attachToSystem.
+	clyNavEnv := (ClyNavigationEnvironment over: clyEnv)
+		addPlugin: ClyDefaultSystemEnvironmentPlugin new;
+	   attachToSystem.
 
-	browser := ClySystemBrowser new 
-	        showEnvironment: clyNavEnv.
+	browser := ClyFullBrowser new 
+		navigationEnvironment: clyNavEnv.
 	browser addPlugin: ClyStandardBrowserPlugin new.
 
 	^ browser open.

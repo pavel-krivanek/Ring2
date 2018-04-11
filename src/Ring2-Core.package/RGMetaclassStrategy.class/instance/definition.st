@@ -11,14 +11,14 @@ definition
 				nextPutAll: 'uses: ';
 				print: self traitComposition ].
 		
-		(self usesSpecialSlot or: [ Slot showSlotClassDefinition ])
+		(self owner usesSpecialSlot or: [ Slot showSlotClassDefinition ])
 			ifFalse: [  
 						strm
 							crtab;
 							nextPutAll: 'instanceVariableNames: ';
-							store: self instanceVariablesString]
+							store: self owner instanceVariablesString]
 			ifTrue: [ 
 						strm
 							crtab;
 							nextPutAll: 'slots: ';
-							nextPutAll: self slotDefinitionString]]
+							nextPutAll: self owner slotDefinitionString]]
