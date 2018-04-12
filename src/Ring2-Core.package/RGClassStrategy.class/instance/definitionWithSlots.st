@@ -15,9 +15,9 @@ definitionWithSlots
 		aStream cr; tab; nextPutAll: 'uses: ';
 			nextPutAll: self owner traitCompositionString].		
 			
-	(self layout isKindOf: FixedLayout) ifFalse: [
+	(self layout layoutName = #FixedLayout) ifFalse: [
 		aStream cr; tab; nextPutAll: 'layout: ';
-			nextPutAll: self layout class name].
+			nextPutAll: self layout layoutName].
 	aStream cr; tab; nextPutAll: 'slots: ';
 			nextPutAll: self owner slotDefinitionString.
 	aStream cr; tab; nextPutAll: 'classVariables: ';
