@@ -1,4 +1,4 @@
-*Ring2-Hermes
+accessing
 layoutName
 
 	^ #PointerLayout
