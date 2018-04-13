@@ -1,4 +1,4 @@
 *Calypso-Ring2
 asText
 
-	^ self content asText
+	^ (self content ifNil: ['']) asText

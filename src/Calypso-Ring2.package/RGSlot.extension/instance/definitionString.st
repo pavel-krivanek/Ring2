@@ -1,4 +1,5 @@
 *Calypso-Ring2
 definitionString
-	"for Slots, the printString is the defintion"
-	^self printString
+
+	^ String streamContents: [ :aStream |
+		aStream nextPutAll: '#'; nextPutAll: self name]
