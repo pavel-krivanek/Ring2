@@ -1,4 +1,4 @@
 testing
 isClassStrategy
 
-	^ true
+	^ false

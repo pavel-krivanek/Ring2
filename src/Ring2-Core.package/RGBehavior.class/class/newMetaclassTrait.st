@@ -1,4 +1,4 @@
 instance creation
 newMetaclassTrait
 
-	^ self unnamedWithBehaviorStrategy: RGMetaclassTraitStrategy basicNew
+	^ self unnamedWithBehaviorStrategy: RGMetaclassTrait newStrategy

@@ -1,4 +1,4 @@
 instance creation
 newTrait
 
-	^ self unnamedWithBehaviorStrategy: RGTraitStrategy basicNew
+	^ self unnamedWithBehaviorStrategy: RGTrait newStrategy
