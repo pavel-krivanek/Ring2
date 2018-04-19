@@ -6,4 +6,4 @@ definition
 			nextPutAll: ' clasTrait';
 			crtab;
 			nextPutAll: 'uses: ';
-			nextPutAll: self traitCompositionString]
+			nextPutAll: self owner traitCompositionString]

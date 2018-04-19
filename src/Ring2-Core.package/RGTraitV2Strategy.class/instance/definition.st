@@ -5,9 +5,9 @@ definition
 	^String streamContents: [:stream |
 		stream nextPutAll: 'Trait'.
 		stream nextPutAll: ' named: ';
-				store: self name.
+				store: self owner name.
 		stream cr; tab; nextPutAll: 'uses: ';
-				nextPutAll: self traitCompositionString.
+				nextPutAll: self owner traitCompositionString.
 		(self owner slots size > 0) ifTrue: [ 
 			(self owner usesSpecialSlot or: [ Slot showSlotClassDefinition ])
 				ifFalse: [  

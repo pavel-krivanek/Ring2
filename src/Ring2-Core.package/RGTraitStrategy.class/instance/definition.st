@@ -5,8 +5,8 @@ definition
 	^String streamContents: [:stream |
 		stream nextPutAll: 'Trait'.
 		stream nextPutAll: ' named: ';
-				store: self name.
+				store: self owner name.
 		stream cr; tab; nextPutAll: 'uses: ';
-				nextPutAll: self traitCompositionString.
+				nextPutAll: self owner traitCompositionString.
 		stream cr; tab; nextPutAll: 'category: ';
-				store: self category asString].
+				store: self owner category asString].
