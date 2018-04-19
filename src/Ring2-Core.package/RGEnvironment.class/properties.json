@@ -11,7 +11,8 @@
 		"packages",
 		"globalVariables",
 		"backend",
-		"queryInterface"
+		"queryInterface",
+		"version"
 	],
 	"name" : "RGEnvironment",
 	"type" : "normal"

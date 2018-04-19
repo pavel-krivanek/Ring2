@@ -7,3 +7,5 @@ initialize
 	packages := self unresolvedValue: self defaultPackages.
 	globalVariables := self unresolvedValue: self defaultGlobalVariables.
 	
+	version := self defaultVersion
+	
