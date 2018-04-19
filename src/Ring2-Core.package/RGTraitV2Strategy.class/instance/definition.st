@@ -9,16 +9,9 @@ definition
 		stream cr; tab; nextPutAll: 'uses: ';
 				nextPutAll: self owner traitCompositionString.
 		(self owner slots size > 0) ifTrue: [ 
-			(self owner usesSpecialSlot or: [ Slot showSlotClassDefinition ])
-				ifFalse: [  
-							stream
-								crtab;
-								nextPutAll: 'instanceVariableNames: ';
-								store: self owner instanceVariablesString]
-				ifTrue: [ 
-							stream
-								crtab;
-								nextPutAll: 'slots: ';
-								nextPutAll: self owner slotDefinitionString]].
+			stream
+				crtab;
+				nextPutAll: 'slots: ';
+				nextPutAll: self owner slotDefinitionString].
 		stream cr; tab; nextPutAll: 'category: ';
 				store: self category asString].
