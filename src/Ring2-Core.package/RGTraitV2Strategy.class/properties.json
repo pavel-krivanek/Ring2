@@ -9,7 +9,8 @@
 		"comment",
 		"classVariables",
 		"package",
-		"sharedPools"
+		"sharedPools",
+		"classTrait"
 	],
 	"name" : "RGTraitV2Strategy",
 	"type" : "normal"
