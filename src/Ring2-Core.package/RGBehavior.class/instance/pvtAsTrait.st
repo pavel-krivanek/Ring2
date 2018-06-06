@@ -5,7 +5,7 @@ pvtAsTrait
 	
 	"TODO: swap strategies"
 	
-	(self resolvedProperties includesAnyOf: #(superclass traitComposition classVariables sharedPools))
+	(self resolvedProperties includesAnyOf: #("superclass" traitComposition classVariables sharedPools))
 		ifTrue: [self error: 'This class cannot be converted to trait'].
 		
 	"TODO: check empty layout"

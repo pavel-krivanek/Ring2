@@ -1,1 +1,13 @@
-{	"classtraitcomposition" : "TRGReadOnlyTest classTrait",	"classvars" : [ ],	"instvars" : [ ],	"name" : "RGReadOnlyJoinBackendTest",	"commentStamp" : "",	"super" : "RGBackendTest",	"traitcomposition" : "TRGReadOnlyTest",	"type" : "normal",	"classinstvars" : [ ],	"pools" : [ ],	"category" : "Ring2-Tests-Core"}
+{
+	"classtraitcomposition" : "TRGReadOnlyTest classTrait",
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RGReadOnlyJoinBackendTest",
+	"commentStamp" : "",
+	"super" : "RGBackendTest",
+	"traitcomposition" : "TRGReadOnlyTest",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "Ring2-Tests-Core"
+}
