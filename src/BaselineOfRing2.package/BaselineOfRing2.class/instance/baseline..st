@@ -16,11 +16,13 @@ baseline: spec
 			package: 'Ring2-RuntimeSupport'.
 			
 		spec for: #'pharo6.x' do: [
-			spec package: 'Ring2-TraitsV1Support'.	].
+			spec package: 'Ring2-TraitsV1Support'.	
+			spec group: 'traitsSupport' with: #('Ring2-TraitsV1Support').].
 		spec for: #'pharo7.x' do: [
-			spec package: 'Ring2-TraitsV2Support'.	].
+			spec package: 'Ring2-TraitsV2Support'.
+			spec group: 'traitsSupport' with: #('Ring2-TraitsV2Support').].
 
-		spec group: 'core' with: #('Ring2-Core' 'Ring2-Monticello' 'Ring2-ChunkImporter').
+		spec group: 'core' with: #('Ring2-Core' 'Ring2-Monticello' 'Ring2-ChunkImporter' 'traitsSupport').
 		spec group: 'tests' with: #('Ring2-Tests-Core' 'Ring2-Tests-Monticello' 'Ring2-Tests-ChunkImporter').
 		spec group: 'default' with: #('core' 'tests').
 		spec group: 'bootstrap' with: #('default' 'Ring2-RuntimeSupport' 'Ring2-Bootstrap' 'Ring2-Hermes').
