@@ -1,4 +1,4 @@
-tests
+*Ring2-Experiments
 testErrorInformation
 
 	| error def1 def2 |

@@ -1,4 +1,4 @@
-tests - new
+*Ring2-Experiments
 testCompatibility
 
 	| package1 package2 |

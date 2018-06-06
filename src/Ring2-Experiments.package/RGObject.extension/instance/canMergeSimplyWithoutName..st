@@ -1,4 +1,4 @@
-merging
+*Ring2-Experiments
 canMergeSimplyWithoutName: anRGObject
 
 	| intersection |
