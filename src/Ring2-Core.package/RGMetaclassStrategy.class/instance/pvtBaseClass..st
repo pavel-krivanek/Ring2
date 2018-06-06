@@ -1,6 +1,6 @@
 private - backend access
 pvtBaseClass: anRGClass
 
-	self environment verifyOwnership: anRGClass.
+	self owner environment verifyOwnership: anRGClass.
 
 	^ baseClass := anRGClass

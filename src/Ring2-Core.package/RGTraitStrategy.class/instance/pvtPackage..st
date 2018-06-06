@@ -1,6 +1,6 @@
 accessing
 pvtPackage: anRGPackageDefinition
 
-	self environment verifyOwnership: anRGPackageDefinition.
+	self owner environment verifyOwnership: anRGPackageDefinition.
 
 	^ package := anRGPackageDefinition

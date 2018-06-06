@@ -3,6 +3,8 @@ testEnsureTraitNamed
 
 	| env definition existing | 
 	
+	self skip.
+	
 	env := RGEnvironment new.
 	definition := env ensureTraitNamed: 'SomeTrait'.
 	self assert: definition isClass not. 

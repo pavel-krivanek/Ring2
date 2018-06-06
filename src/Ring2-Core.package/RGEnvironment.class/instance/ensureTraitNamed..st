@@ -1,7 +1,7 @@
 as yet unclassified
 ensureTraitNamed: aSymbol
 
-	| found newTrait newMetaclassTrait siblingName sibling originalMetaclass |
+	| found siblingName sibling |
 	
 	self assert: (aSymbol endsWith: ' class') not.
 
@@ -34,13 +34,8 @@ ensureTraitNamed: aSymbol
 					newBehavior ] ]
 		ifNotNil: [
 			"some non-trait behavior found. We created this trait before as a class because correct behavior type was not known."
-			newTrait := found pvtAsTrait.
-			originalMetaclass := found metaclass.
-			newMetaclassTrait := originalMetaclass behaviorStrategy pvtAsMetaclassTrait.
-			self ask replaceName: originalMetaclass name with: newMetaclassTrait name.
-			found becomeForward: newTrait.
-			found classTrait becomeForward: newMetaclassTrait.
-			originalMetaclass becomeForward: newMetaclassTrait.
+			found convertToTrait.
+			found metaclass convertToMetaclassTrait.
 			found ].
 	
 	

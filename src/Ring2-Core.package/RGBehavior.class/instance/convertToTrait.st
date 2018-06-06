@@ -1,7 +1,7 @@
-strategy
-pvtAsTrait
+conversion
+convertToTrait
 
-	| traitStrategy |
+	| traitStrategy originalName |
 	
 	(self resolvedProperties includesAnyOf: #("superclass" traitComposition classVariables sharedPools))
 		ifTrue: [self error: 'This class cannot be converted to trait'].
@@ -16,12 +16,16 @@ pvtAsTrait
 	newTrait behaviorStrategy pvtComment: self behaviorStrategy comment.
 	newTrait behaviorStrategy pvtPackage: self behaviorStrategy package."
 
-	traitStrategy := RGTrait newStrategyFor: self environment.
+	originalName := self name.
 
-	traitStrategy pvtComment: self behaviorStrategy comment.
-	traitStrategy pvtPackage: self behaviorStrategy package.
+	traitStrategy := RGTrait newStrategyFor: self environment.
+	traitStrategy owner: self.
+	traitStrategy pvtClassTrait: self pvtMetaclass.
+	traitStrategy pvtPackage: self behaviorStrategy pvtPackage.
+	traitStrategy pvtComment: self behaviorStrategy pvtComment.
 	
 	self behaviorStrategy: traitStrategy.
+
+	self environment ask replaceName: originalName with: self name.
 	
-	^ self	
 	
