@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "PavelKrivanek 10/12/2016 23:28",
 	"super" : "RGReadOnlyImageBackend",
-	"category" : "Ring2-Core-Environment",
+	"category" : "Ring2-Experiments",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

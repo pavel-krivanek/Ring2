@@ -18,6 +18,7 @@ testProperties
 	def propertyNamed: #note2 put: #someNote2.
 	self assert: (def propertyNames asArray includesAll: {#note. #note2}).
 	def removePropertyNamed: #note.
+	self shouldnt: [def removePropertyNamed: #nonexisting] raise: Error.
 	self assert: def propertyNames asArray equals: {#note2}.
 	def removePropertyNamed: #note2.
 	self assert: def hasProperties not.

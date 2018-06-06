@@ -1,4 +1,4 @@
-merging
+*Ring2-Experiments
 canMergeWith: anRGObject visited: visitedDefinitions
 
 	(visitedDefinitions includes: self) ifTrue: [ ^ true ].

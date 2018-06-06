@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
 	"super" : "RGReadOnlyBackend",
-	"category" : "Ring2-Core-Environment",
+	"category" : "Ring2-Experiments",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
