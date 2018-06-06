@@ -1,4 +1,4 @@
-as yet unclassified
+*Ring2-Experiments
 findSuitableParentIn: anRGEnvironment
 
 	^ anRGEnvironment packages detect: [:package |
