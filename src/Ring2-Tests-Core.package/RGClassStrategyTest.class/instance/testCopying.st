@@ -24,6 +24,7 @@ testCopying
 	self assert: (class behaviorStrategy owner == class).
 	self assert: (copy behaviorStrategy owner == copy).
 	self assert: (class classVariables allSatisfy: [ :each | each parent == class]).
+	self assert: class classVariables size equals: copy classVariables size.
 	self deny: ((class classVariables first) == (copy classVariables first)).
 
 	self assert: class behaviorStrategy classVariables size equals: 1.

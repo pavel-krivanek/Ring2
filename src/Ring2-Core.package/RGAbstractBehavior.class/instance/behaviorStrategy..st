@@ -1,7 +1,11 @@
 accessing
 behaviorStrategy: anObject
 
+	| needsInitialization |
+	
+	needsInitialization := behaviorStrategy isNil.
 	behaviorStrategy := anObject.
 	behaviorStrategy owner: self.
-	behaviorStrategy initializeUnresolved.
+	needsInitialization ifTrue: [ 
+		behaviorStrategy initializeUnresolved ].
 	

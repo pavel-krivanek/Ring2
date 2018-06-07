@@ -17,5 +17,3 @@ testIncompatibleBehavior
 		anRGBehavior sharedPoolsDo: [ :sharedPool | ] ].
 	self checkIncompatible: [ 
 		anRGBehavior defaultMetaClass ].
-	self checkIncompatible: [ 
-		anRGBehavior innerBindingOf: #someSymbol ].
