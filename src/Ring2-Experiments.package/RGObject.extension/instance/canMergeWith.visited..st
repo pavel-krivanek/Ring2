@@ -5,4 +5,4 @@ canMergeWith: anRGObject visited: visitedDefinitions
 
 	(self hasResolvedName not or: [ anRGObject hasResolvedName not]) ifTrue: [ ^ true ].
 	
-	^ (self nameOrNil == anRGObject nameOrNil)
+	^ (self resolvedNameOrNil == anRGObject resolvedNameOrNil)
