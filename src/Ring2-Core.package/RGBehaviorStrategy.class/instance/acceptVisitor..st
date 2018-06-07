@@ -1,4 +1,4 @@
-private - backend access
+visiting
 acceptVisitor: aVisitor
 
 	self subclassResponsibility 

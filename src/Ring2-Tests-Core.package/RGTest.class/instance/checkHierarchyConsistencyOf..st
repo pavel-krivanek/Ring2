@@ -1,6 +1,8 @@
 utilities
 checkHierarchyConsistencyOf: anRGClass
 
+	"prove that all relations between class, superclass, metaclass and superclass metaclass are consistent"
+
 	self assert: (anRGClass ~~ anRGClass superclass).
 	self assert: (anRGClass ~~ anRGClass metaclass).
 	self assert: (anRGClass ~~ anRGClass superclass metaclass).
