@@ -1,7 +1,7 @@
 tests
 testResolveability
 
-	"test if we can recolve standard objects"
+	"test if we can resolve standard objects. They should be all resolved"
 	
 	{ Object. 42. 'aString'. #aSymbol } do: [ :each |
 		self deny: each isRGObject.

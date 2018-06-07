@@ -1,6 +1,8 @@
 tests
 testProperties
 
+	"test all method that access properties of Ring objects"
+	
 	| def | 
 	
 	def := RGObject new.
@@ -18,7 +20,7 @@ testProperties
 	def propertyNamed: #note2 put: #someNote2.
 	self assert: (def propertyNames asArray includesAll: {#note. #note2}).
 	def removePropertyNamed: #note.
-	self shouldnt: [def removePropertyNamed: #nonexisting] raise: Error.
+	self shouldnt: [def removePropertyNamed: #nonexisting] raise: KeyNotFound.
 	self assert: def propertyNames asArray equals: {#note2}.
 	def removePropertyNamed: #note2.
 	self assert: def hasProperties not.

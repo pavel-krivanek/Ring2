@@ -1,6 +1,8 @@
 tests
 testTypes
 
+	"check all testing methods"
+
 	| def | 
 	
 	def := RGObject new.

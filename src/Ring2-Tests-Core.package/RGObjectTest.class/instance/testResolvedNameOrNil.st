@@ -1,6 +1,8 @@
 tests
 testResolvedNameOrNil
 
+	"should return nil for unresolved names"
+
 	| def | 
 	
 	def := RGClass unresolved.
