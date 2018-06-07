@@ -1,4 +1,4 @@
 class comment
 classCommentAuthorFor: anRGComment
 
-	^ anRGComment authorForStamp: (self realBehaviorFor: anRGComment parent) organization commentStamp.
+	^ RGStampParser authorForStamp: (self realBehaviorFor: anRGComment parent) organization commentStamp.

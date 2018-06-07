@@ -1,5 +1,5 @@
-as yet unclassified
-testresolvedNameOrNil
+tests
+testResolvedNameOrNil
 
 	| def | 
 	

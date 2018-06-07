@@ -1,4 +1,4 @@
-parsing stamp
+parsing
 parseTimestampFrom: aString default: anObject
 	"Parse a date-time from a timestamp-string that is extracted from a source file. If there is no timestamp, or we cannot make sense of it, we return the default value."
 

@@ -11,5 +11,5 @@ visitMethodChunk: aChunk
 	theProtocol := theClass ensureProtocolNamed: aChunk category asSymbol.
 	theMethod protocol: theProtocol.
 	theMethod sourceCode: aChunk contents.
-	theMethod author: (theMethod authorForStamp: aChunk stamp).
+	theMethod author: (RGStampParser authorForStamp: aChunk stamp).
 	theMethod time: (theMethod timeForStamp: aChunk stamp).

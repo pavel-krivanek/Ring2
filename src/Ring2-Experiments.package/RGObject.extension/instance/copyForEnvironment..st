@@ -1,4 +1,4 @@
-as yet unclassified
+*Ring2-Experiments
 copyForEnvironment: anRGEnvironment
 
 	| newDefinition |

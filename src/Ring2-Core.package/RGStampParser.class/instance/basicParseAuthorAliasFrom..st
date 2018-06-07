@@ -12,6 +12,9 @@ basicParseAuthorAliasFrom: aString
 		<historical>
 	All fields can be separated by spaces or line ends but a separator between author alias/name and date can be missing as well"
 	"unknown:= 'unknown'."
+	
+	aString = '<historical>' ifTrue: [ ^ aString ].
+	
 	unknown := nil.
 	aString isEmptyOrNil
 		ifTrue: [ ^ unknown ].
