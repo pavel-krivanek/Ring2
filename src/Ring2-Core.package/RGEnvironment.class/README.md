@@ -1,18 +1,5 @@
-repository := MCFileTreeRepository new
-	directory: './mini2' asFileReference;
-	yourself.
-	
-environment := repository asRing2Environment.		
+I'm a representation of a Pharo environment that contains behaviors, packages and global variables. I have my own announcer for processing of events inside of the environment. 
 
-environment removeAllButBehaviorsNamed: usedClasses.
-environment removeAllButMethodsNamed: calledMethods.
+I'm connected to a data source - backend, that provides me real data I'm working with. 
 
-environment removeEmptyMethodTags.
-environment fixProtoObjectClassSuperclass.
-environment addGlobalsNamed: #(#Smalltalk #SourceFiles #Transcript #Undeclared #Display #TextConstants  #Sensor #Processor #SystemOrganization).
-environment clean.
-	
-environment bootstrap.
-
-
-
+In most cases, you should communicate with me using my query interface. You will get it by sending me a message #ask.

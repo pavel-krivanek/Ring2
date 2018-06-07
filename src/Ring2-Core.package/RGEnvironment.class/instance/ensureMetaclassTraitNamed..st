@@ -45,16 +45,15 @@ ensureMetaclassTraitNamed: aSymbol
 							"environment already contains metaclass of the similar name. It was probably 
 							created because correct type was not known. Convert it to classTrait"
 							| similarClass |
-							newMetaclassTrait := similarMetaclass behaviorStrategy pvtAsMetaclassTrait.
 							similarClass := similarMetaclass baseClass.
+							newMetaclassTrait := similarMetaclass behaviorStrategy pvtAsMetaclassTrait.
 							newTrait := similarClass convertToTrait.
-							self ask replaceName: similarMetaclass name with: newMetaclassTrait name.
 							"similarMetaclass becomeForward: newMetaclassTrait.
 							similarClass becomeForward: newTrait."
-							similarClass classTrait: similarMetaclass.
-							similarClass name: (aSymbol withoutSuffix: ' classTrait') asSymbol.
-							similarMetaclass baseTrait: similarClass.
-							similarMetaclass ]
+							newTrait classTrait: newMetaclassTrait.
+							newMetaclassTrait baseTrait: newTrait.
+							newTrait name: siblingName asSymbol.
+							newMetaclassTrait ]
 						ifNil: [ 
 							"we need to create new behavior"
 							| newBehavior |
