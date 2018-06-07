@@ -1,4 +1,4 @@
 instance creation
 newStrategyFor: anRGEnvironment
 
-	^ (self strategyClassForVersion: anRGEnvironment version) basicNew
+	^ (self strategyClassForVersion: anRGEnvironment version) unresolved
