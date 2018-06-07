@@ -1,4 +1,4 @@
-as yet unclassified
+parsing stamp
 timeForStamp: stamp
 
 	^ stamp

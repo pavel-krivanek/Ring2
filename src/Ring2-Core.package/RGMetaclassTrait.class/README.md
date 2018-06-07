@@ -1,1 +1,1 @@
-A factory that produces instances of RG2Behavior composed with RG2MetaclassTraitStrategy
+A factory that produces instances of RG2Behavior composed with RGMetaclassTraitStrategy

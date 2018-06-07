@@ -1,1 +1,1 @@
-RG2Comment is a first-class representation of class's comments
+RGComment is a first-class representation of class's comments

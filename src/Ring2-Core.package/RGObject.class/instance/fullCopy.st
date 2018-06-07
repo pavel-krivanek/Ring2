@@ -1,4 +1,4 @@
-as yet unclassified
+copying
 fullCopy
 
 	^ self copy.

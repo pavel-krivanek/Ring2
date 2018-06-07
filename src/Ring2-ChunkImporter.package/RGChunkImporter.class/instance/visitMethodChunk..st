@@ -12,4 +12,4 @@ visitMethodChunk: aChunk
 	theMethod protocol: theProtocol.
 	theMethod sourceCode: aChunk contents.
 	theMethod author: (RGStampParser authorForStamp: aChunk stamp).
-	theMethod time: (theMethod timeForStamp: aChunk stamp).
+	theMethod time: (RGStampParser timeForStamp: aChunk stamp).

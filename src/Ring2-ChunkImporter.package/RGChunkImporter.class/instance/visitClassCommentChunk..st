@@ -7,6 +7,6 @@ visitClassCommentChunk: aChunk
 	comment := RGComment parent: class.
 	comment content: aChunk contents.
 	comment author: (RGStampParser authorForStamp: aChunk stamp).
-	comment time: (comment timeForStamp: aChunk stamp).
+	comment time: (RGStampParser timeForStamp: aChunk stamp).
 	class comment: comment.
 	

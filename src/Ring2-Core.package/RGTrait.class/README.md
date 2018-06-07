@@ -1,1 +1,1 @@
-A factory that produces instances of RG2Behavior composed with RG2TraitStrategy
+A factory that produces instances of RGBehavior composed with RGTraitStrategy

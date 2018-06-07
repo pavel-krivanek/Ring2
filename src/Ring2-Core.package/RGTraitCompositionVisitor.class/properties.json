@@ -1,5 +1,5 @@
 {
-	"commentStamp" : "PavelKrivanek 3/16/2018 16:31",
+	"commentStamp" : "PavelKrivanek 6/7/2018 10:48",
 	"super" : "RBProgramNodeVisitor",
 	"category" : "Ring2-Core-Parsing",
 	"classinstvars" : [ ],
