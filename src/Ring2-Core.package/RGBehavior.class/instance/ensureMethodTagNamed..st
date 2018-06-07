@@ -1,4 +1,4 @@
-as yet unclassified
+queries - tags
 ensureMethodTagNamed: aSymbol
 
 	^ self tagsForMethods detect: [ :each | each asSymbol = aSymbol ] ifNone: [ 

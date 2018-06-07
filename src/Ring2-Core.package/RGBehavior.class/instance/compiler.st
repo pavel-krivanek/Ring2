@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 compiler
 
 	^ self class compiler

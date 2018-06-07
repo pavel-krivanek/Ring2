@@ -1,4 +1,4 @@
-as yet unclassified
+queries - behaviors
 definedClassesOnly
 
 	^ self definedBehaviors select: #isClass

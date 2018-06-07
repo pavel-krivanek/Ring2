@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "PavelKrivanek 6/7/2018 10:47",
-	"super" : "RGAbstractBehavior",
+	"super" : "RGBehaviorStrategyUser",
 	"category" : "Ring2-Core-Kernel",
 	"classinstvars" : [ ],
 	"pools" : [ ],

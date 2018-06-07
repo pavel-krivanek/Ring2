@@ -1,4 +1,4 @@
-as yet unclassified
+accessing - definition
 sharedPoolsString
 	"Answer a string of my class variable names separated by spaces."
 

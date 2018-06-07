@@ -1,4 +1,4 @@
-accessing
+accessing - definition
 definitionForNautilus
 
 	^ self definition

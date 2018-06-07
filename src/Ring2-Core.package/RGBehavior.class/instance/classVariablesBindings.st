@@ -1,4 +1,4 @@
-as yet unclassified
+accessing - definition
 classVariablesBindings
 
 	^ self propertyNamed: #classVariablesBindings ifAbsentPut: [ IdentityDictionary new.]
