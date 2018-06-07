@@ -1,4 +1,4 @@
-tests
+*Ring2-Experiments
 testCorrespondingObjectForTrait
 
 	| def1 def2 def3 |

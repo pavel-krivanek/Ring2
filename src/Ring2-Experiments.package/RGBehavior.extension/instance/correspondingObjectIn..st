@@ -1,4 +1,4 @@
-as yet unclassified
+*Ring2-Experiments
 correspondingObjectIn: anRGEnvironment
 
 	(self isRingResolved not and: ((self hasPropertyNamed: #creator) and: [ self hasPropertyNamed: #role])) ifTrue: [ 

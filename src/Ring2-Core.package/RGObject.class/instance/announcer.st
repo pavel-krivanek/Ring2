@@ -1,4 +1,4 @@
-as yet unclassified
+announcements
 announcer
 
 	^ self environment announcer

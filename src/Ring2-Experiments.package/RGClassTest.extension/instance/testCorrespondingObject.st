@@ -1,4 +1,4 @@
-tests
+*Ring2-Experiments
 testCorrespondingObject
 
 	| def1 def2 def3 |
