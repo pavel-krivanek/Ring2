@@ -1,4 +1,4 @@
 instance creation
 newStrategy
 
-	^ RGMetaclassTraitStrategy basicNew
+	^ RGMetaclassTraitStrategy unresolved
