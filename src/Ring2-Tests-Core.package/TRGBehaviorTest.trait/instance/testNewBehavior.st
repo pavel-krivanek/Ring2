@@ -15,7 +15,7 @@ testNewBehavior
 		ifFalse: [ self assert: newBehavior superclass isRingResolved not ].
 	"	self assert: (newBehavior superclass environment == newBehavior environment).
 "
-	newSuperclass := RGBehavior
+	newSuperclass := RGClass
 		named: #MySuperclass
 		parent: newBehavior environment.
 	self assert: newSuperclass environment == newBehavior environment.
