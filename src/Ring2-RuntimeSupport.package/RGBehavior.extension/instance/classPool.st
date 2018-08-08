@@ -1,4 +1,4 @@
-*Calypso-Ring2
+*Ring2-RuntimeSupport
 classPool
 
 	^ Dictionary new.
