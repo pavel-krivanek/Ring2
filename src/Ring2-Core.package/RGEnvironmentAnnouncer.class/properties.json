@@ -1,5 +1,5 @@
 {
-	"commentStamp" : "<historical>",
+	"commentStamp" : "",
 	"super" : "Announcer",
 	"category" : "Ring2-Core-Announcements",
 	"classinstvars" : [

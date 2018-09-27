@@ -1,7 +1,7 @@
 tests
 testImplicitEnvironmentContentForMetaclassDefinition
 	
-	| def def2 env baseClass|
+	| def env baseClass|
 
 	def := RGMetaclass named: #'SomeClass class'.
 	env := def environment.

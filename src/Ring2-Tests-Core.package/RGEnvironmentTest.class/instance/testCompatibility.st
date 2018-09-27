@@ -1,8 +1,6 @@
 tests
 testCompatibility
 
-	| env1 env2 |
-	
 	"TODO: needs rewriting"
 	
 "	env1 := RGEnvironment named: 'env1'.

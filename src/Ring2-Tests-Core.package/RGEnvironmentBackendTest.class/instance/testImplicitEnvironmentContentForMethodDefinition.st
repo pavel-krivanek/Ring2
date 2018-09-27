@@ -1,7 +1,7 @@
 tests
 testImplicitEnvironmentContentForMethodDefinition
 	
-	| def def2 env |
+	| def env |
 
 	def := RGMethod named: #someMethod.
 	env := def environment.

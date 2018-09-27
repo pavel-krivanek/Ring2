@@ -1,7 +1,7 @@
 tests
 testTypes
 
-	| newBehavior newSuperclass |
+	| newBehavior |
 	newBehavior := self behaviorClass unnamed.
 	
 	self deny: newBehavior isBytes.

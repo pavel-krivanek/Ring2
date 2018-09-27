@@ -1,7 +1,7 @@
 as yet unclassified
 testEnsureProtocol
 
-	| behavior protocol |
+	| behavior |
 	
 	behavior := self behaviorClass named: #SomeClass.
 	behavior ensureProtocolNamed: #SomeProtocol.
