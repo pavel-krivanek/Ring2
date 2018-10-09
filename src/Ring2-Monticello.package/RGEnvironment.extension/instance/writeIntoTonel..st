@@ -1,5 +1,5 @@
 *Ring2-Monticello
-writeIntoFileTree: aMCFileTreeRepository
+writeIntoTonel: aFileReference
 
 	(self ask packages select: #isRingResolved) do: [ :aPackage |
 		| aSnapshot info aVersion |
@@ -8,7 +8,6 @@ writeIntoFileTree: aMCFileTreeRepository
 		info := MCVersionInfo new.
 		info instVarNamed: #name put: aPackage name, '-author'.
 		aVersion := MCVersion package: (MCPackage new name: aPackage name) info: info snapshot: aSnapshot dependencies: #().
-		IceMetadatalessFileTreeWriter
+		TonelWriter 
 			fileOut: (aVersion)
-			on: (aMCFileTreeRepository) ].
-		
+			on: aFileReference ]		
