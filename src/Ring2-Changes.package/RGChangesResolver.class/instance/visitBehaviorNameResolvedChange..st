@@ -1,4 +1,0 @@
-visiting
-visitBehaviorNameResolvedChange: anRGBehaviorNameResolvedChange
-
-	^ self visitBehaviorChange: anRGBehaviorNameResolvedChange

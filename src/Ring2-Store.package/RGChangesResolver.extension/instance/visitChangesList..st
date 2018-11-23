@@ -1,2 +1,0 @@
-*Ring2-Store
-visitChangesList: anRGBehaviorAddition

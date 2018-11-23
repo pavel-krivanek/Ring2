@@ -1,4 +1,0 @@
-accessing
-hasKnownMethod
-
-	^ method notNil

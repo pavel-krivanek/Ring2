@@ -1,5 +1,0 @@
-accessing
-behaviorName
-
-	^ behaviorName
-	
