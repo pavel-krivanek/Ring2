@@ -31,9 +31,10 @@ BaselineOfRing2 >> baseline: spec [
 		spec group: 'core' with: #('Ring2-Core' 'Ring2-Monticello' 'Ring2-ChunkImporter' 'traitsSupport').
 		spec group: 'tests' with: #('Ring2-Tests-Core' 'Ring2-Tests-Monticello' 'Ring2-Tests-ChunkImporter').
 		spec group: 'default' with: #('core' 'tests').
-		spec group: 'bootstrap' with: #('default' 'Ring2-RuntimeSupport' 'Ring2-Bootstrap' 'Ring2-Hermes').
-		spec group: 'calypso' with: #('default' 'Ring2-RuntimeSupport' 'Calypso-Ring2').
-		spec group: 'all' with: #('bootstrap' 'Ring2-RuntimeSupport' 'Ring2-Bootstrap' 'Calypso-Ring2').
+		spec group: 'runtimeSupport' with: #('default' 'Ring2-RuntimeSupport').
+		spec group: 'bootstrap' with: #('runtimeSupport' 'Ring2-Bootstrap' 'Ring2-Hermes').
+		spec group: 'calypso' with: #('runtimeSupport' 'Calypso-Ring2').
+		spec group: 'all' with: #('bootstrap' 'Ring2-Bootstrap' 'Calypso-Ring2').
 	].		
 
 ]
