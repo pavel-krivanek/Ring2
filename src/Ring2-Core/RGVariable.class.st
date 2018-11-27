@@ -11,7 +11,8 @@ Class {
 RGVariable >> definitionString [
 	"non special globals are defined by the symbol"
 	^self isSpecial
-		ifTrue: [super definitionString]
+		ifTrue: [ String streamContents: [ :aStream |
+			aStream nextPutAll: '#'; nextPutAll: self name]]
 		ifFalse: [self name printString]
 
 ]
