@@ -14,7 +14,7 @@ Class {
 	#classInstVars : [
 		'announcer'
 	],
-	#category : 'Ring2-Core-Announcements'
+	#category : #'Ring2-Core-Announcements'
 }
 
 { #category : #announce }

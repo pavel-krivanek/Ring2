@@ -1,7 +1,7 @@
 Class {
 	#name : #RGMetaclassTraitStrategy,
 	#superclass : #RGTraitDescriptionStrategy,
-	#category : 'Ring2-Core-Kernel'
+	#category : #'Ring2-Core-Kernel'
 }
 
 { #category : #visiting }

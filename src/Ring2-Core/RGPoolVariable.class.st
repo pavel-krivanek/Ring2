@@ -4,7 +4,7 @@ A pool variable definition
 Class {
 	#name : #RGPoolVariable,
 	#superclass : #RGVariable,
-	#category : 'Ring2-Core-Kernel'
+	#category : #'Ring2-Core-Kernel'
 }
 
 { #category : #'managing container' }

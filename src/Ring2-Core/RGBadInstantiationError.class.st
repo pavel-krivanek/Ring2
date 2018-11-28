@@ -4,5 +4,5 @@ I'm a specialized error exception used for cases where you want to work directly
 Class {
 	#name : #RGBadInstantiationError,
 	#superclass : #Error,
-	#category : 'Ring2-Core-Kernel'
+	#category : #'Ring2-Core-Kernel'
 }

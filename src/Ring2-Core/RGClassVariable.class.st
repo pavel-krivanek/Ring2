@@ -4,7 +4,7 @@ A class variable definition
 Class {
 	#name : #RGClassVariable,
 	#superclass : #RGVariable,
-	#category : 'Ring2-Core-Kernel'
+	#category : #'Ring2-Core-Kernel'
 }
 
 { #category : #'managing container' }

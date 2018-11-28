@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'baseClass'
 	],
-	#category : 'Ring2-Core-Kernel'
+	#category : #'Ring2-Core-Kernel'
 }
 
 { #category : #visiting }
@@ -108,6 +108,12 @@ RGMetaclassStrategy >> initialize [
 	super initialize.
 	
 	
+]
+
+{ #category : #'private - backend access' }
+RGMetaclassStrategy >> innerBindingOf: varName [
+
+	^self instanceSide innerBindingOf: varName
 ]
 
 { #category : #'private - backend access' }

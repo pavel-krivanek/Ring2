@@ -1,7 +1,7 @@
 Class {
 	#name : #RGReadOnlyImageBackend,
 	#superclass : #RGReadOnlyBackend,
-	#category : 'Ring2-Core-Environment'
+	#category : #'Ring2-Core-Environment'
 }
 
 { #category : #'as yet unclassified' }

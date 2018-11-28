@@ -1,7 +1,7 @@
 Class {
 	#name : #RGObjectLayout,
 	#superclass : #RGLayout,
-	#category : 'Ring2-Core-Kernel'
+	#category : #'Ring2-Core-Kernel'
 }
 
 { #category : #'testing types' }

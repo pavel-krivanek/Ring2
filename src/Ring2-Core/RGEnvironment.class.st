@@ -18,7 +18,7 @@ Class {
 		'queryInterface',
 		'version'
 	],
-	#category : 'Ring2-Core-Environment'
+	#category : #'Ring2-Core-Environment'
 }
 
 { #category : #'accessing - backend' }

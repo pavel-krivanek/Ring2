@@ -6,5 +6,5 @@ I'm a specialized error exception used mainly during failures in applying of cha
 Class {
 	#name : #RGResolvingError,
 	#superclass : #Error,
-	#category : 'Ring2-Core-Kernel'
+	#category : #'Ring2-Core-Kernel'
 }

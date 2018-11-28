@@ -5,10 +5,12 @@ Class {
 }
 
 { #category : #compiling }
-HERing2ToHermesBuilder >> compileMethod: aRFiMethod [
+HERing2ToHermesBuilder >> compileMethod: aRGMethod [
+	
 	^ OpalCompiler new
-		class: aRFiMethod parent;
-		source: aRFiMethod sourceCode;
+		class: aRGMethod parent;
+		source: aRGMethod sourceCode;
+		environment: aRGMethod environment;		
 		compile
 ]
 

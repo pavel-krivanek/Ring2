@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'expression'
 	],
-	#category : 'Ring2-Core-Kernel'
+	#category : #'Ring2-Core-Kernel'
 }
 
 { #category : #'default model values' }

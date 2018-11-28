@@ -10,7 +10,7 @@ Class {
 		'name',
 		'parent'
 	],
-	#category : 'Ring2-Core-Kernel'
+	#category : #'Ring2-Core-Kernel'
 }
 
 { #category : #'instance creation' }

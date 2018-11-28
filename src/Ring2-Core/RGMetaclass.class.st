@@ -4,7 +4,7 @@ A factory that produces instances of RG2Behavior composed with RGMetaclassStrate
 Class {
 	#name : #RGMetaclass,
 	#superclass : #RGBehaviorFactory,
-	#category : 'Ring2-Core-Kernel'
+	#category : #'Ring2-Core-Kernel'
 }
 
 { #category : #'instance creation' }

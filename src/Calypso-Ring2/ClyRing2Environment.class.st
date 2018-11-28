@@ -31,7 +31,7 @@ Class {
 		'environment',
 		'name'
 	],
-	#category : 'Calypso-Ring2'
+	#category : #'Calypso-Ring2'
 }
 
 { #category : #'instance creation' }
@@ -122,6 +122,12 @@ ClyRing2Environment >> name: anObject [
 ClyRing2Environment >> packages [
 
 	^ environment ask packages
+]
+
+{ #category : #projects }
+ClyRing2Environment >> projectManager [
+	
+	^ ClyProjectManager new
 ]
 
 { #category : #initialization }

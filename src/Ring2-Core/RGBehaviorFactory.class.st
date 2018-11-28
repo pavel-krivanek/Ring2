@@ -6,7 +6,7 @@ The behaviors are composition of a RGBehavior instances and a strategy that desc
 Class {
 	#name : #RGBehaviorFactory,
 	#superclass : #Object,
-	#category : 'Ring2-Core-Kernel'
+	#category : #'Ring2-Core-Kernel'
 }
 
 { #category : #'instance creation' }

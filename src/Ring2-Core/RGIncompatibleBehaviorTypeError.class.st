@@ -1,7 +1,7 @@
 Class {
 	#name : #RGIncompatibleBehaviorTypeError,
 	#superclass : #Error,
-	#category : 'Ring2-Core-Kernel'
+	#category : #'Ring2-Core-Kernel'
 }
 
 { #category : #accessing }

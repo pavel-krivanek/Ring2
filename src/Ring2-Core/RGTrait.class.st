@@ -4,7 +4,7 @@ A factory that produces instances of RGBehavior composed with RGTraitStrategy
 Class {
 	#name : #RGTrait,
 	#superclass : #RGBehaviorFactory,
-	#category : 'Ring2-Core-Kernel'
+	#category : #'Ring2-Core-Kernel'
 }
 
 { #category : #'instance creation' }

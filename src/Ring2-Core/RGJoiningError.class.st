@@ -1,5 +1,5 @@
 Class {
 	#name : #RGJoiningError,
 	#superclass : #Error,
-	#category : 'Ring2-Core-Kernel'
+	#category : #'Ring2-Core-Kernel'
 }

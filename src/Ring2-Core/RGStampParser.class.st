@@ -1,7 +1,7 @@
 Class {
 	#name : #RGStampParser,
 	#superclass : #Object,
-	#category : 'Ring2-Core-Parsing'
+	#category : #'Ring2-Core-Parsing'
 }
 
 { #category : #parsing }

@@ -22,7 +22,7 @@ Class {
 	#instVars : [
 		'traitComposition'
 	],
-	#category : 'Ring2-Core-Parsing'
+	#category : #'Ring2-Core-Parsing'
 }
 
 { #category : #parsing }

@@ -18,7 +18,7 @@ Class {
 		'tagsForMethods',
 		'tags'
 	],
-	#category : 'Ring2-Core-Kernel'
+	#category : #'Ring2-Core-Kernel'
 }
 
 { #category : #'as yet unclassified' }

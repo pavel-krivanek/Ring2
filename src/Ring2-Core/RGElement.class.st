@@ -78,7 +78,7 @@ Example:
 Class {
 	#name : #RGElement,
 	#superclass : #RGObject,
-	#category : 'Ring2-Core-Kernel'
+	#category : #'Ring2-Core-Kernel'
 }
 
 { #category : #accessing }

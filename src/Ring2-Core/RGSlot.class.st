@@ -1,7 +1,7 @@
 Class {
 	#name : #RGSlot,
 	#superclass : #RGElement,
-	#category : 'Ring2-Core-Kernel'
+	#category : #'Ring2-Core-Kernel'
 }
 
 { #category : #bootstrap }

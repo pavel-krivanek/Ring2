@@ -6,7 +6,7 @@ Class {
 		'definitionString',
 		'requestor'
 	],
-	#category : 'Calypso-Ring2'
+	#category : #'Calypso-Ring2'
 }
 
 { #category : #'instance creation' }
