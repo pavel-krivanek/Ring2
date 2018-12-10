@@ -332,8 +332,11 @@ RGBehavior >> convertToMetaclassTrait [
 "	newMetaclassTrait := RGMetaclassTrait unresolvedWithParent: self parent.
 	newMetaclassTrait copyPropertiesFrom: self.
 "
-	metaclassTraitStrategy := RGTrait newStrategyFor: self environment.
+	metaclassTraitStrategy := RGMetaclassTrait newStrategyFor: self environment.
 	metaclassTraitStrategy owner: self.
+	metaclassTraitStrategy pvtBaseTrait: self behaviorStrategy pvtBaseClass.
+
+	self behaviorStrategy: metaclassTraitStrategy.
 
 	originalName := self name.
 	
