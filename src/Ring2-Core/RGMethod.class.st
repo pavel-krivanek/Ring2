@@ -254,12 +254,12 @@ RGMethod >> makeResolved [
 
 	super makeResolved.
 	
-	protocol := self protocol.
-	sourceCode := self sourceCode.
-	package := self package.	
-	author := self author.	
-	time := self time.	
-	tags := self tags.
+	protocol := self protocol markAsRingResolved.
+	sourceCode := self sourceCode markAsRingResolved.
+	package := self package markAsRingResolved.	
+	author := self author markAsRingResolved.	
+	time := self time markAsRingResolved.	
+	tags := self tags markAsRingResolved.
 ]
 
 { #category : #'queries - class' }

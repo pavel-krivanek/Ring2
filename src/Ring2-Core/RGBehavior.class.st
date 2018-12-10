@@ -674,6 +674,20 @@ RGBehavior >> localSelectors [
 	^ self localMethods collect: #name
 ]
 
+{ #category : #resolving }
+RGBehavior >> makeResolved [
+
+	superclass := self superclass markAsRingResolved.
+	localMethods := self localMethods asIdentitySet markAsRingResolved.
+	protocols := self protocols markAsRingResolved.
+	traitComposition := self traitComposition markAsRingResolved.
+	metaclass := self metaclass markAsRingResolved.
+	tagsForMethods := self tagsForMethods asIdentitySet markAsRingResolved.
+	tags := self tags markAsRingResolved.
+	
+	super makeResolved.
+]
+
 { #category : #'accessing - backend' }
 RGBehavior >> metaclass [
 
@@ -1103,7 +1117,6 @@ RGBehavior >> tagsForMethods [
 	allTags := IdentitySet new.
 	self tagsForMethodsDo: [ :each | allTags add: each].
 	^ allTags asArray
-
 ]
 
 { #category : #'accessing - backend' }

@@ -49,7 +49,7 @@ RGUnknownSlot >> makeResolved [
 
 	super makeResolved.
 	
-	expression := self expression.
+	expression := self expression markAsRingResolved.
 
 ]
 

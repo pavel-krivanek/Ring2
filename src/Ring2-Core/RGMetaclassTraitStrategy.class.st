@@ -86,7 +86,7 @@ RGMetaclassTraitStrategy >> makeResolved [
 
 	super makeResolved.
 	
-	baseTrait := self baseTrait.
+	baseTrait := self baseTrait markAsRingResolved.
 ]
 
 { #category : #'private - backend access' }
