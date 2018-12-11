@@ -136,14 +136,21 @@ RGMethod >> category [
 	^ self protocol
 ]
 
-{ #category : #'accessing - backend' }
-RGMethod >> cleanTags [
+{ #category : #private }
+RGMethod >> changeProtocolDuring: aBlock [
 
 	| oldProtocol |
 	
 	oldProtocol := self protocol.
-	self cleanTagsWithoutAnnouncemnt.
+	aBlock value.
 	self announce: (MethodRecategorized method: self oldProtocol: oldProtocol)
+]
+
+{ #category : #'accessing - backend' }
+RGMethod >> cleanTags [
+
+	self changeProtocolDuring: [ 
+		self cleanTagsWithoutAnnouncemnt ]
 ]
 
 { #category : #'accessing - backend' }
@@ -328,9 +335,7 @@ RGMethod >> protocol [
 { #category : #'accessing - backend' }
 RGMethod >> protocol: aSymbol [
 
-	"for compatiblity with the old protocols"
-
-	self cleanTags.
+	self cleanTagsWithoutAnnouncemnt.
 	self tagWith: aSymbol.
 	
 	
@@ -493,11 +498,11 @@ RGMethod >> sourceCodeForNoSource [
 { #category : #'accessing - backend' }
 RGMethod >> tagWith: aSymbol [ 
 
-	self backend forMethod tagMethod: self with: aSymbol.
-	
-	self parent addMethodTag: aSymbol.
-	
-	"todo:announce"
+	self changeProtocolDuring: [ 
+		self backend forMethod tagMethod: self with: aSymbol.
+		self parent addMethodTag: aSymbol.
+	]
+
 ]
 
 { #category : #'accessing - model' }
