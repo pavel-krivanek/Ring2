@@ -139,9 +139,17 @@ RGMethod >> category [
 { #category : #'accessing - backend' }
 RGMethod >> cleanTags [
 
-	self backend forMethod cleanMethodTagsFor: self.
+	| oldProtocol |
 	
-	"todo: announce"
+	oldProtocol := self protocol.
+	self cleanTagsWithoutAnnouncemnt.
+	self announce: (MethodRecategorized method: self oldProtocol: oldProtocol)
+]
+
+{ #category : #'accessing - backend' }
+RGMethod >> cleanTagsWithoutAnnouncemnt [ 
+
+	self backend forMethod cleanMethodTagsFor: self.
 ]
 
 { #category : #accessing }
