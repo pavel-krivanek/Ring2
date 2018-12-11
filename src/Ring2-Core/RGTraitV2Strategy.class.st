@@ -356,6 +356,7 @@ RGTraitV2Strategy >> makeResolved [
 	
 	super makeResolved.
 	
+	classTrait := self classTrait markAsRingResolved.
 	comment := self comment markAsRingResolved.
 	classVariables := self classVariables markAsRingResolved.
 	package := self package markAsRingResolved.

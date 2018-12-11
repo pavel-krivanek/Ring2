@@ -12,13 +12,12 @@ Class {
 	#instVars : [
 		'superclass',
 		'localMethods',
-		'protocols',
 		'traitComposition',
 		'metaclass',
 		'tagsForMethods',
 		'tags'
 	],
-	#category : 'Ring2-Core-Kernel'
+	#category : #'Ring2-Core-Kernel'
 }
 
 { #category : #'as yet unclassified' }
@@ -416,12 +415,6 @@ RGBehavior >> defaultParentStub [
 ]
 
 { #category : #'default model values' }
-RGBehavior >> defaultProtocols [
-
-	^ Set new
-]
-
-{ #category : #'default model values' }
 RGBehavior >> defaultTags [
 
 	^ Set new
@@ -536,8 +529,8 @@ RGBehavior >> initialize [
 	
 	"use unresolved value for superclass to avoid infinite recursion. It needs to be set later"
 	superclass := RGUnresolvedValue recursive.
+	metaclass := RGUnresolvedValue recursive.
 	localMethods := self unresolvedValue: self defaultLocalMethods.
-	protocols := self unresolvedValue: self defaultProtocols.
 	traitComposition := self unresolvedValue: self defaultTraitComposition.
 	tagsForMethods := self unresolvedValue: self defaultTagsForMethods.	
 	tags := self unresolvedValue: self defaultTags.	
@@ -550,8 +543,8 @@ RGBehavior >> initializeUnresolved [
 	super initializeUnresolved.
 
 	superclass := self. "will be set later"
+	metaclass := self. "will be set later"
 	localMethods := self unresolvedValue: self defaultLocalMethods.
-	protocols := self unresolvedValue: self defaultProtocols.
 	traitComposition := self unresolvedValue: self defaultTraitComposition.
 	tagsForMethods := self unresolvedValue: self defaultTagsForMethods.	
 	tags := self unresolvedValue: self defaultTags.	
@@ -655,17 +648,23 @@ RGBehavior >> localMethodNamed: aSymbol ifAbsent: aBlock [
 { #category : #'queries - methods' }
 RGBehavior >> localMethods [
 
-	| methods |
-	
-	methods := IdentitySet new.
-	self localMethodsDo: [ :each | methods add: each ].
-	^ methods asArray
+	^ self localMethodsSet asArray
 ]
 
 { #category : #'accessing - backend' }
 RGBehavior >> localMethodsDo: aBlock [
 
 	self backend forBehavior localMethodsFor: self do: aBlock
+]
+
+{ #category : #'queries - methods' }
+RGBehavior >> localMethodsSet [
+
+	| methods |
+	
+	methods := self defaultLocalMethods.
+	self localMethodsDo: [ :each | methods add: each ].
+	^ methods
 ]
 
 { #category : #'queries - methods' }
@@ -678,12 +677,11 @@ RGBehavior >> localSelectors [
 RGBehavior >> makeResolved [
 
 	superclass := self superclass markAsRingResolved.
-	localMethods := self localMethods asIdentitySet markAsRingResolved.
-	protocols := self protocols markAsRingResolved.
+	localMethods := self localMethodsSet markAsRingResolved.
 	traitComposition := self traitComposition markAsRingResolved.
 	metaclass := self metaclass markAsRingResolved.
-	tagsForMethods := self tagsForMethods asIdentitySet markAsRingResolved.
-	tags := self tags markAsRingResolved.
+	tagsForMethods := self tagsForMethodsSet markAsRingResolved.
+	tags := self tagsSet markAsRingResolved.
 	
 	super makeResolved.
 ]
@@ -912,7 +910,6 @@ RGBehavior >> pvtResolvableProperties [
 	^ super pvtResolvableProperties, { 
 		#superclass -> superclass. 
 		#localMethods -> localMethods. 
-		#protocols -> protocols. 
 		#traitComposition -> traitComposition.  
 		#metaclass -> metaclass.  
 		#tagsForMethods -> tagsForMethods. 
@@ -1096,10 +1093,7 @@ RGBehavior >> tagWith: aSymbol [
 { #category : #'accessing - model' }
 RGBehavior >> tags [
 
-	| allTags |
-	allTags := IdentitySet new.
-	self tagsDo: [ :each | allTags add: each].
-	^ allTags asArray 
+	^ self tagsSet asArray 
 
 ]
 
@@ -1114,7 +1108,7 @@ RGBehavior >> tagsForMethods [
 	"Retrieves the traits defined in the receiver"
 
 	| allTags |
-	allTags := IdentitySet new.
+	allTags := self defaultTagsForMethods.
 	self tagsForMethodsDo: [ :each | allTags add: each].
 	^ allTags asArray
 ]
@@ -1123,6 +1117,26 @@ RGBehavior >> tagsForMethods [
 RGBehavior >> tagsForMethodsDo: aBlock [
 
 	self backend forBehavior tagsForMethodsFor: self do: aBlock
+]
+
+{ #category : #'accessing - model' }
+RGBehavior >> tagsForMethodsSet [
+	"Retrieves the traits defined in the receiver"
+
+	| allTags |
+	allTags := self defaultTagsForMethods.
+	self tagsForMethodsDo: [ :each | allTags add: each].
+	^ allTags
+]
+
+{ #category : #'accessing - model' }
+RGBehavior >> tagsSet [
+
+	| allTags |
+	allTags := self defaultTags.
+	self tagsDo: [ :each | allTags add: each].
+	^ allTags 
+
 ]
 
 { #category : #'accessing - backend' }

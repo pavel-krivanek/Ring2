@@ -77,14 +77,13 @@ Class {
 	#name : #RGMethod,
 	#superclass : #RGElement,
 	#instVars : [
-		'protocol',
 		'sourceCode',
 		'package',
 		'author',
 		'time',
 		'tags'
 	],
-	#category : 'Ring2-Core-Kernel'
+	#category : #'Ring2-Core-Kernel'
 }
 
 { #category : #'managing container' }
@@ -254,7 +253,6 @@ RGMethod >> makeResolved [
 
 	super makeResolved.
 	
-	protocol := self protocol markAsRingResolved.
 	sourceCode := self sourceCode markAsRingResolved.
 	package := self package markAsRingResolved.	
 	author := self author markAsRingResolved.	
@@ -370,7 +368,6 @@ RGMethod >> pvtPackage: anRGPackageDefinition [
 RGMethod >> pvtResolvableProperties [
 
 	^ super pvtResolvableProperties, { 
-		#protocol -> protocol. 
 		#sourceCode -> sourceCode. 
 		#package -> package. 
 		#author -> author. 

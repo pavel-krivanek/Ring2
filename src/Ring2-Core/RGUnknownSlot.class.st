@@ -44,6 +44,14 @@ RGUnknownSlot >> initialize [
 
 ]
 
+{ #category : #initialization }
+RGUnknownSlot >> initializeUnresolved [
+
+	super initializeUnresolved.
+	
+	expression := self unresolvedValue: self defaultExpression.
+]
+
 { #category : #resolving }
 RGUnknownSlot >> makeResolved [
 
