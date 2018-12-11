@@ -145,5 +145,5 @@ RGMetaclassTraitStrategy >> theNonMetaClass [
 { #category : #'private - backend access' }
 RGMetaclassTraitStrategy >> traitTransformationString [		
 		
-	^ self name 
+	^ self owner name 
 ]

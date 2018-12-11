@@ -22,10 +22,10 @@ HERing2ToHermesBuilder >> visitClass: aClass [
 	self visitMethodContainer: aClass using: aHEClass.
 
 	aHEClass className: aClass name.
-	aHEClass superclass: aClass superclass name.
+	aHEClass superclass: (aClass superclass ifNil: '' ifNotNil:#name).
 	aHEClass instanceVariables: ((aClass slots collect: #name) joinUsing: ' ').
 	aHEClass classInstancevariables: ((aClass metaclass slots collect: #name) joinUsing: ' ').
-	aHEClass classVariables: (aClass classPool keys joinUsing: ' ').
+	aHEClass classVariables: (aClass classVarNames joinUsing: ' ').
 	aHEClass sharedPools: ((aClass sharedPools collect: #name) joinUsing: ' ').
 	aHEClass layoutClass: aClass layout layoutName.
 
