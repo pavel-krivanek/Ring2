@@ -1,7 +1,10 @@
 Class {
 	#name : #RGMetaclassTraitStrategy,
 	#superclass : #RGTraitDescriptionStrategy,
-	#category : 'Ring2-Core-Kernel'
+	#instVars : [
+		'baseTrait'
+	],
+	#category : #'Ring2-Core-Kernel'
 }
 
 { #category : #visiting }
@@ -86,7 +89,7 @@ RGMetaclassTraitStrategy >> makeResolved [
 
 	super makeResolved.
 	
-	baseTrait := self baseTrait.
+	baseTrait := self baseTrait markAsRingResolved.
 ]
 
 { #category : #'private - backend access' }
