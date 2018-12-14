@@ -632,6 +632,18 @@ RGEnvironment >> isEnvironment [
 	^ true
 ]
 
+{ #category : #resolving }
+RGEnvironment >> makeResolved [
+
+	super makeResolved.
+	
+	behaviors := self ask behaviors markAsRingResolved.
+	packages := self ask packages markAsRingResolved.
+	globalVariables := self ask globalVariables markAsRingResolved.
+	
+
+]
+
 { #category : #accessing }
 RGEnvironment >> package [
 

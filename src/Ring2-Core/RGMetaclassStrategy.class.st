@@ -147,7 +147,7 @@ RGMetaclassStrategy >> makeResolved [
 		self owner pvtName: (self baseClass name, ' class') asSymbol.
 		 ].
 	
-	super makeResolved.
+	super makeResolved markAsRingResolved.
 	
 	baseClass := self baseClass.
 ]
