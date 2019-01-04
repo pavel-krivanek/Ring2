@@ -154,7 +154,9 @@ RGEnvironment >> cleanSuperclassesOfMetaclasses [
 	 
 	self ask behaviorsDo: [ :each | 
 		(each isMetaclass and: [ each superclass isRingResolved not ])
-			ifTrue: [ each superclass: each baseClass superclass metaclass] ].
+			ifTrue: [ 
+				each baseClass superclass ifNotNil: [ 
+					each superclass: each baseClass superclass metaclass] ] ].
 
 ]
 
