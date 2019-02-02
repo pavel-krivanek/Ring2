@@ -27,6 +27,9 @@ BaselineOfRing2 >> baseline: spec [
 		spec for: #'pharo7.x' do: [
 			spec package: 'Ring2-TraitsV2Support'.
 			spec group: 'traitsSupport' with: #('Ring2-TraitsV2Support').].
+		spec for: #'pharo8.x' do: [
+			spec package: 'Ring2-TraitsV2Support'.
+			spec group: 'traitsSupport' with: #('Ring2-TraitsV2Support').].
 
 		spec group: 'core' with: #('Ring2-Core' 'Ring2-Monticello' 'Ring2-ChunkImporter' 'traitsSupport').
 		spec group: 'tests' with: #('Ring2-Tests-Core' 'Ring2-Tests-Monticello' 'Ring2-Tests-ChunkImporter').
