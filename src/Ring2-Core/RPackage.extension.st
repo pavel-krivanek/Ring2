@@ -4,5 +4,5 @@ Extension { #name : #RPackage }
 RPackage >> asRingMinimalDefinitionIn: anRGEnvironment [
 
 	^ anRGEnvironment backend definitionFor: self ifAbsentRegister: [
-		RGPackageDefinition named: self name asSymbol parent: anRGEnvironment ]
+		RGPackage named: self name asSymbol parent: anRGEnvironment ]
 ]

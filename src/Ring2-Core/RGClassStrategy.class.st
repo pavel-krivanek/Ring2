@@ -395,22 +395,22 @@ RGClassStrategy >> package [
 ]
 
 { #category : #'accessing - backend' }
-RGClassStrategy >> package: anRGPackageDefinition [
+RGClassStrategy >> package: anRGPackage [
 
 	| oldPackage |
 	oldPackage := self package.
 
 	self owner announceDefinitionChangeDuring: [ 
-		self owner backend forBehavior setPackageFor: self owner to: anRGPackageDefinition.
-		self owner environment addPackage: anRGPackageDefinition.
+		self owner backend forBehavior setPackageFor: self owner to: anRGPackage.
+		self owner environment addPackage: anRGPackage.
 		(oldPackage hasResolved: #definedBehaviors)
 			ifTrue: [ oldPackage removeDefinedBehavior: self owner ].
-		anRGPackageDefinition addDefinedBehavior: self owner. ].
+		anRGPackage addDefinedBehavior: self owner. ].
 	
 	self owner announce: (ClassRepackaged 
 		classRepackaged: self owner
 		oldPackage: oldPackage
-		newPackage: anRGPackageDefinition)
+		newPackage: anRGPackage)
 ]
 
 { #category : #'private - backend access' }
@@ -487,11 +487,11 @@ RGClassStrategy >> pvtPackage [
 ]
 
 { #category : #testing }
-RGClassStrategy >> pvtPackage: anRGPackageDefinition [
+RGClassStrategy >> pvtPackage: anRGPackage [
 
-	self owner environment verifyOwnership: anRGPackageDefinition.
+	self owner environment verifyOwnership: anRGPackage.
 
-	^ package := anRGPackageDefinition
+	^ package := anRGPackage
 ]
 
 { #category : #'private - backend access' }

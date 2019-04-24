@@ -48,12 +48,12 @@ MCClassDefinition >> ensureRingDefinitionIn: anRGEnvironment [
 ]
 
 { #category : #'*Ring2-Monticello' }
-MCClassDefinition >> ensureRingDefinitionIn: anRGEnvironment package: anRGPackageDefinition [
+MCClassDefinition >> ensureRingDefinitionIn: anRGEnvironment package: anRGPackage [
 	
 	| def |
 	
 	def := self ensureRingDefinitionIn: anRGEnvironment.
-	def package: anRGPackageDefinition.
+	def package: anRGPackage.
 	def category: def tags first. "fix tags to do not contain package names"
 	^ def
 ]

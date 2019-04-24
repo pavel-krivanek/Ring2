@@ -37,7 +37,7 @@ RGReadOnlyBackend >> addClassVariable: anRGInstanceVariableDefinition to: anRGBe
 ]
 
 { #category : #package }
-RGReadOnlyBackend >> addDefinedBehavior: anRGBehavior to: anRGPackageDefinition [
+RGReadOnlyBackend >> addDefinedBehavior: anRGBehavior to: anRGPackage [
 
 	self readOnlyError.
 ]
@@ -133,7 +133,7 @@ RGReadOnlyBackend >> cleanClassVariablesFor: anRGBehavior [
 ]
 
 { #category : #package }
-RGReadOnlyBackend >> cleanDefinedBehaviorsFor: anRGPackageDefinition [
+RGReadOnlyBackend >> cleanDefinedBehaviorsFor: anRGPackage [
 
 	self readOnlyError.
 ]
@@ -145,7 +145,7 @@ RGReadOnlyBackend >> cleanExclusionsFor: anRGTraitExclusion [
 ]
 
 { #category : #package }
-RGReadOnlyBackend >> cleanExtensionMethodsFor: anRGPackageDefinition [
+RGReadOnlyBackend >> cleanExtensionMethodsFor: anRGPackage [
 
 	self readOnlyError.
 ]
@@ -199,7 +199,7 @@ RGReadOnlyBackend >> cleanSlotsFor: anRGLayout [
 ]
 
 { #category : #package }
-RGReadOnlyBackend >> cleanTagsForClassesFor: anRGPackageDefinition [
+RGReadOnlyBackend >> cleanTagsForClassesFor: anRGPackage [
 
 	self readOnlyError.
 ]
@@ -277,7 +277,7 @@ RGReadOnlyBackend >> removeClassVariable: anRGInstanceVariableDefinition from: a
 ]
 
 { #category : #package }
-RGReadOnlyBackend >> removeDefinedBehavior: anRGBehavior from: anRGPackageDefinition [
+RGReadOnlyBackend >> removeDefinedBehavior: anRGBehavior from: anRGPackage [
 
 	self readOnlyError.
 ]
@@ -289,7 +289,7 @@ RGReadOnlyBackend >> removeExclusion: aSymbol from: anRGTraitExclusion [
 ]
 
 { #category : #package }
-RGReadOnlyBackend >> removeExtensionMethod: anRGMethod from: anRGPackageDefinition [
+RGReadOnlyBackend >> removeExtensionMethod: anRGMethod from: anRGPackage [
 
 	self readOnlyError.
 ]

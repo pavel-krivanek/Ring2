@@ -201,7 +201,7 @@ RGObject >> defaultFixedLayoutStubIn: anRGBehavior [
 RGObject >> defaultPackageStubIn: anRGEnvironment [
 
 	<ignoreForMutations>
-	^ RGPackageDefinition unresolved
+	^ RGPackage unresolved
 		parent: anRGEnvironment;
 		yourself.
 ]

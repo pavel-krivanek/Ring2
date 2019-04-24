@@ -2,17 +2,17 @@
 SUnit tests for packages
 "
 Class {
-	#name : #RGPackageDefinitionTest,
+	#name : #RGPackageTest,
 	#superclass : #RGTest,
-	#category : 'Ring2-Tests-Core'
+	#category : #'Ring2-Tests-Core'
 }
 
 { #category : #testing }
-RGPackageDefinitionTest >> testAddingClass [
+RGPackageTest >> testAddingClass [
 
 	| newPackage newClass env |
 	
-	newPackage := RGPackageDefinition named: 'Collections-Sequenceable'.
+	newPackage := RGPackage named: 'Collections-Sequenceable'.
 	env := newPackage environment.
 	newClass:= RGClass named: #OrderedCollection parent: env.
 	
@@ -23,10 +23,10 @@ RGPackageDefinitionTest >> testAddingClass [
 ]
 
 { #category : #testing }
-RGPackageDefinitionTest >> testAddingPackage [
+RGPackageTest >> testAddingPackage [
 "	| newPackage childPackage |
 	
-	newPackage:= RGPackageDefinition named: #'Collections'.
+	newPackage:= RGPackage named: #'Collections'.
 	newPackage addPackageNamed: #'Collections-Sequenceable'.
 		
 	self assert: (newPackage includesPackageNamed: #'Collections-Sequenceable').
@@ -38,11 +38,11 @@ RGPackageDefinitionTest >> testAddingPackage [
 ]
 
 { #category : #testing }
-RGPackageDefinitionTest >> testCategories [
+RGPackageTest >> testCategories [
 	
 	| package env class1 class2 |
 
-	package := RGPackageDefinition named: 'SomePackage'.
+	package := RGPackage named: 'SomePackage'.
 	env := package environment.
 		
 	class1 := env ensureClassNamed: #Class1.
@@ -66,11 +66,11 @@ RGPackageDefinitionTest >> testCategories [
 ]
 
 { #category : #testing }
-RGPackageDefinitionTest >> testClasses [
+RGPackageTest >> testClasses [
 	
 	| package env class1 class2 trait1 |
 
-	package := RGPackageDefinition named: 'SomePackage'.
+	package := RGPackage named: 'SomePackage'.
 	env := package environment.
 	
 	self assert: package classes isEmpty.
@@ -113,11 +113,11 @@ RGPackageDefinitionTest >> testClasses [
 ]
 
 { #category : #testing }
-RGPackageDefinitionTest >> testDefinedBehaviorsCollection [
+RGPackageTest >> testDefinedBehaviorsCollection [
 	
 	| package env behavior1 behavior2 behavior3 |
 
-	package := RGPackageDefinition unnamed.
+	package := RGPackage unnamed.
 	env := package environment.
 
 	self assert: package definedBehaviors isEmpty.
@@ -147,7 +147,7 @@ RGPackageDefinitionTest >> testDefinedBehaviorsCollection [
 ]
 
 { #category : #testing }
-RGPackageDefinitionTest >> testDefinedBehaviorsOfUnresolvedPackages [
+RGPackageTest >> testDefinedBehaviorsOfUnresolvedPackages [
 
 	| env class |
 	
@@ -159,10 +159,10 @@ RGPackageDefinitionTest >> testDefinedBehaviorsOfUnresolvedPackages [
 ]
 
 { #category : #'tests - new' }
-RGPackageDefinitionTest >> testNewPackage [
+RGPackageTest >> testNewPackage [
 	| newPackage |
 	
-	newPackage := RGPackageDefinition named: 'Collections-Sequenceable'.
+	newPackage := RGPackage named: 'Collections-Sequenceable'.
 	
 	self assert: (newPackage isRingResolved).
 	
@@ -201,35 +201,35 @@ RGPackageDefinitionTest >> testNewPackage [
 ]
 
 { #category : #'tests - new' }
-RGPackageDefinitionTest >> testPrinting [
+RGPackageTest >> testPrinting [
 	| newPackage |
 	
-	newPackage := RGPackageDefinition named: 'Collections-Sequenceable'.
+	newPackage := RGPackage named: 'Collections-Sequenceable'.
 	
-	self assert: newPackage printString equals: ('RGPackageDefinition(Collections-Sequenceable)').
+	self assert: newPackage printString equals: ('RGPackage(Collections-Sequenceable)').
 	
 ]
 
 { #category : #testing }
-RGPackageDefinitionTest >> testResolvingConsistency [
+RGPackageTest >> testResolvingConsistency [
 
 	| anObject |
-	anObject := RGPackageDefinition unnamed.
+	anObject := RGPackage unnamed.
 	self checkClassesConsistency: anObject and: anObject makeResolved
 ]
 
 { #category : #'tests - new' }
-RGPackageDefinitionTest >> testStubPackage [
+RGPackageTest >> testStubPackage [
 	| env package package2 |
 	
 	env := RGEnvironment new.
 	self assert: (env ask packages size = 0). 
 	
-	package := RGPackageDefinition named: 'Collections-Sequenceable'.
+	package := RGPackage named: 'Collections-Sequenceable'.
 	env := package environment.
 	self assert: (env ask packages size = 1).
 	
-	package2 := RGPackageDefinition named: 'Collections-Sequenceable' parent: env.
+	package2 := RGPackage named: 'Collections-Sequenceable' parent: env.
 	"self assert: (env ask packages size = 2).
 	env addPackage: package2.
 	self assert: (env ask packages size = 3)."
@@ -238,11 +238,11 @@ RGPackageDefinitionTest >> testStubPackage [
 ]
 
 { #category : #testing }
-RGPackageDefinitionTest >> testTagsForClasses [
+RGPackageTest >> testTagsForClasses [
 	
 	| package env class1 class2 |
 
-	package := RGPackageDefinition unnamed.
+	package := RGPackage unnamed.
 	env := package environment.
 	
 	self assert: package tagsForClasses isEmpty.
@@ -294,11 +294,11 @@ RGPackageDefinitionTest >> testTagsForClasses [
 ]
 
 { #category : #testing }
-RGPackageDefinitionTest >> testTagsForClassesCollection [
+RGPackageTest >> testTagsForClassesCollection [
 	
 	| package env tag1 tag2 tag3 |
 
-	package := RGPackageDefinition unnamed.
+	package := RGPackage unnamed.
 	env := package environment.
 
 	self assert: package tagsForClasses isEmpty.

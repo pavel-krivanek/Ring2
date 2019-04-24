@@ -1,18 +1,18 @@
-Extension { #name : #RGPackageDefinition }
+Extension { #name : #RGPackage }
 
 { #category : #'*Calypso-Ring2' }
-RGPackageDefinition >> asPackageName [
+RGPackage >> asPackageName [
 
 	^ self name
 ]
 
 { #category : #'*Calypso-Ring2' }
-RGPackageDefinition >> calypsoEnvironmentType [
+RGPackage >> calypsoEnvironmentType [
 	^RPackage
 ]
 
 { #category : #'*Calypso-Ring2' }
-RGPackageDefinition >> classTags [
+RGPackage >> classTags [
 
 	self isRingResolved not ifTrue: [ ^ '' ].
 	
@@ -20,74 +20,74 @@ RGPackageDefinition >> classTags [
 ]
 
 { #category : #'*Calypso-Ring2' }
-RGPackageDefinition >> classesForClassTag: aTag [
+RGPackage >> classesForClassTag: aTag [
 
 	^ self classes select: [ :each | each category  = aTag or: [ each category = (self packageName, '-', aTag) ] ]
 ]
 
 { #category : #'*Calypso-Ring2' }
-RGPackageDefinition >> extendedClassNames [
+RGPackage >> extendedClassNames [
 
 	^ self extendedClasses collect: #name
 ]
 
 { #category : #'*Calypso-Ring2' }
-RGPackageDefinition >> extendsClass: aClass [
+RGPackage >> extendsClass: aClass [
 
 	^ self extendedClasses includes: aClass.
 ]
 
 { #category : #'*Calypso-Ring2' }
-RGPackageDefinition >> extensionSelectorsForClass: aClass [
+RGPackage >> extensionSelectorsForClass: aClass [
 
 	^ (self extensionMethods select: [ :each | each parent = aClass ]) collect: #name
 ]
 
 { #category : #'*Calypso-Ring2' }
-RGPackageDefinition >> importClasses: classCollection [
+RGPackage >> importClasses: classCollection [
 	classCollection do: [ :each | 
 		each package: self. ]
 ]
 
 { #category : #'*Calypso-Ring2' }
-RGPackageDefinition >> includesClassesAffectedBy: aSystemAnnouncement [
+RGPackage >> includesClassesAffectedBy: aSystemAnnouncement [
 
 	^(aSystemAnnouncement affectsClassesDefinedInPackage: self)
 		or: [ aSystemAnnouncement affectsClassesExtendedInPackage: self ]
 ]
 
 { #category : #'*Calypso-Ring2' }
-RGPackageDefinition >> isAboutPackage: aPackage [
+RGPackage >> isAboutPackage: aPackage [
 
 	^self == aPackage
 ]
 
 { #category : #'*Calypso-Ring2' }
-RGPackageDefinition >> isEmpty [
+RGPackage >> isEmpty [
 
 	^ self definedClasses isEmpty and: [ self extensionMethods isEmpty ]
 ]
 
 { #category : #'*Calypso-Ring2' }
-RGPackageDefinition >> packageManifestOrNil [
+RGPackage >> packageManifestOrNil [
 
 	^ nil "TODO"
 ]
 
 { #category : #'*Calypso-Ring2' }
-RGPackageDefinition >> packageName [
+RGPackage >> packageName [
 
 	^ self name
 ]
 
 { #category : #'*Calypso-Ring2' }
-RGPackageDefinition >> removeFromSystem [
+RGPackage >> removeFromSystem [
 
 	self environment removePackage: self.
 ]
 
 { #category : #'*Calypso-Ring2' }
-RGPackageDefinition >> renameTo: aString [
+RGPackage >> renameTo: aString [
 
 	self name: aString
 ]

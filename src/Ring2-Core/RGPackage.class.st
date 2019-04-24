@@ -1,11 +1,11 @@
 "
-RGPackageDefinition is the representation for packages.
+RGPackage is the representation for packages.
 A package manages classes, methods and children packages as elements.
 A package can also know in which package is defined
 
 "
 Class {
-	#name : #RGPackageDefinition,
+	#name : #RGPackage,
 	#superclass : #RGObject,
 	#instVars : [
 		'definedBehaviors',
@@ -16,25 +16,25 @@ Class {
 }
 
 { #category : #'accessing - backend' }
-RGPackageDefinition >> addClassTag: sSymbol [
+RGPackage >> addClassTag: sSymbol [
 
 	self backend forPackage addClassTag: sSymbol to: self
 ]
 
 { #category : #'accessing - backend' }
-RGPackageDefinition >> addDefinedBehavior: anRGBehavior [
+RGPackage >> addDefinedBehavior: anRGBehavior [
 
 	self backend forPackage addDefinedBehavior: anRGBehavior to: self
 ]
 
 { #category : #'accessing - backend' }
-RGPackageDefinition >> addExtensionMethod: anRGMethod [ 
+RGPackage >> addExtensionMethod: anRGMethod [ 
 
 	self backend forPackage addExtensionMethod: anRGMethod to: self
 ]
 
 { #category : #'managing container' }
-RGPackageDefinition >> addoptToParentStub [
+RGPackage >> addoptToParentStub [
 
 	self isRingResolved ifFalse: [ ^ self ].
 	
@@ -44,82 +44,82 @@ RGPackageDefinition >> addoptToParentStub [
 ]
 
 { #category : #accessing }
-RGPackageDefinition >> categories [
+RGPackage >> categories [
 	
 	^ self definedBehaviors collect: #category as: Set
 
 ]
 
 { #category : #accessing }
-RGPackageDefinition >> categoryName [
+RGPackage >> categoryName [
 
 	^ self name 
 ]
 
 { #category : #accessing }
-RGPackageDefinition >> classNames [
+RGPackage >> classNames [
 
 	^ self classes collect: #name
 ]
 
 { #category : #accessing }
-RGPackageDefinition >> classes [
+RGPackage >> classes [
 	"Retrieves a collection of classes defined in the receiver and classes holding extension methods"
 		
 	^self definedClassesOnly, self extendedClasses 
 ]
 
 { #category : #'accessing - model' }
-RGPackageDefinition >> classesTaggedWith: aSymbol [
+RGPackage >> classesTaggedWith: aSymbol [
 
 	^ self definedBehaviors select: [ :each | each isTaggedWith: aSymbol ]
 ]
 
 { #category : #'accessing - backend' }
-RGPackageDefinition >> cleanDefinedBehaviors [
+RGPackage >> cleanDefinedBehaviors [
 
 	self backend forPackage cleanDefinedBehaviorsFor: self
 ]
 
 { #category : #'accessing - backend' }
-RGPackageDefinition >> cleanExtensionMethods [
+RGPackage >> cleanExtensionMethods [
 
 	self backend forPackage cleanExtensionMethodsFor: self
 ]
 
 { #category : #'accessing - backend' }
-RGPackageDefinition >> cleanTagsForClasses [
+RGPackage >> cleanTagsForClasses [
 
 	self backend forPackage cleanTagsForClassesFor: self
 ]
 
 { #category : #'default model values' }
-RGPackageDefinition >> defaultDefinedBehaviors [
+RGPackage >> defaultDefinedBehaviors [
 
 	^ Set new
 ]
 
 { #category : #'default model values' }
-RGPackageDefinition >> defaultExtensionMethods [
+RGPackage >> defaultExtensionMethods [
 
 	^ Set new
 ]
 
 { #category : #'managing container' }
-RGPackageDefinition >> defaultParentStub [
+RGPackage >> defaultParentStub [
 
 	^ RGEnvironment new
 		yourself.
 ]
 
 { #category : #'default model values' }
-RGPackageDefinition >> defaultTagsForClasses [
+RGPackage >> defaultTagsForClasses [
 
 	^ Set new
 ]
 
 { #category : #'queries - behaviors' }
-RGPackageDefinition >> definedBehaviors [
+RGPackage >> definedBehaviors [
 
 	| allDefinedBehaviors |
 	allDefinedBehaviors := IdentitySet new.
@@ -129,38 +129,38 @@ RGPackageDefinition >> definedBehaviors [
 ]
 
 { #category : #'accessing - backend' }
-RGPackageDefinition >> definedBehaviorsDo: aBlock [
+RGPackage >> definedBehaviorsDo: aBlock [
 
 	self backend forPackage definedBehaviorsFor: self do: aBlock
 ]
 
 { #category : #accessing }
-RGPackageDefinition >> definedClassNames [
+RGPackage >> definedClassNames [
 
 	^ self definedClassesOnly collect: #name 
 ]
 
 { #category : #accessing }
-RGPackageDefinition >> definedClasses [
+RGPackage >> definedClasses [
 
 	^ self definedBehaviors
 ]
 
 { #category : #'queries - behaviors' }
-RGPackageDefinition >> definedClassesOnly [
+RGPackage >> definedClassesOnly [
 
 	^ self definedBehaviors select: #isClass
 ]
 
 { #category : #accessing }
-RGPackageDefinition >> definedTraits [
+RGPackage >> definedTraits [
 	"Retrieves the traits defined in the receiver"
 
 	^self definedBehaviors select: #isTrait
 ]
 
 { #category : #accessing }
-RGPackageDefinition >> extendedBehaviors [
+RGPackage >> extendedBehaviors [
 	
 	^ ((self extensionMethods collect: #parent) collect: [:behavior |
 		behavior isClass 
@@ -169,32 +169,32 @@ RGPackageDefinition >> extendedBehaviors [
 ]
 
 { #category : #accessing }
-RGPackageDefinition >> extendedClasses [
+RGPackage >> extendedClasses [
 	
 	^ self extendedBehaviors
 ]
 
 { #category : #accessing }
-RGPackageDefinition >> extendedClassesAndTraits [
+RGPackage >> extendedClassesAndTraits [
 	
 	^ self extendedBehaviors
 ]
 
 { #category : #accessing }
-RGPackageDefinition >> extendedSelectors [
+RGPackage >> extendedSelectors [
 	"Retrieves the names of the methods"
 	
 	^ self extensionMethods collect: #selector
 ]
 
 { #category : #accessing }
-RGPackageDefinition >> extendedTraits [
+RGPackage >> extendedTraits [
 	
 	^ (self extensionMethods collect: #parent) select: #isTrait
 ]
 
 { #category : #accessing }
-RGPackageDefinition >> extensionMethods [
+RGPackage >> extensionMethods [
 
 	| allMethods |
 	allMethods := IdentitySet new.
@@ -204,13 +204,13 @@ RGPackageDefinition >> extensionMethods [
 ]
 
 { #category : #'accessing - backend' }
-RGPackageDefinition >> extensionMethodsDo: aBlock [
+RGPackage >> extensionMethodsDo: aBlock [
 
 	self backend forPackage extensionMethodsFor: self do: aBlock
 ]
 
 { #category : #initialization }
-RGPackageDefinition >> initialize [
+RGPackage >> initialize [
 
 	super initialize.
 
@@ -221,7 +221,7 @@ RGPackageDefinition >> initialize [
 ]
 
 { #category : #initialization }
-RGPackageDefinition >> initializeUnresolved [
+RGPackage >> initializeUnresolved [
 
 	super initializeUnresolved.
 
@@ -232,13 +232,13 @@ RGPackageDefinition >> initializeUnresolved [
 ]
 
 { #category : #testing }
-RGPackageDefinition >> isPackage [
+RGPackage >> isPackage [
 
 	^true
 ]
 
 { #category : #resolving }
-RGPackageDefinition >> makeResolved [
+RGPackage >> makeResolved [
 
 	super makeResolved.
 	
@@ -249,7 +249,7 @@ RGPackageDefinition >> makeResolved [
 ]
 
 { #category : #accessing }
-RGPackageDefinition >> methods [
+RGPackage >> methods [
 	"Retrieves all the methods defined in the receiver. 
 	#methods holds the methods of defined classes"
 	
@@ -257,7 +257,7 @@ RGPackageDefinition >> methods [
 ]
 
 { #category : #accessing }
-RGPackageDefinition >> name: aString [
+RGPackage >> name: aString [
 
 	| oldName |
 	
@@ -271,13 +271,13 @@ RGPackageDefinition >> name: aString [
 ]
 
 { #category : #accessing }
-RGPackageDefinition >> package [
+RGPackage >> package [
 
 	^ self
 ]
 
 { #category : #printing }
-RGPackageDefinition >> printOn: aStream [
+RGPackage >> printOn: aStream [
 	aStream
 		nextPutAll: self class name;
 		nextPutAll: '(';
@@ -286,7 +286,7 @@ RGPackageDefinition >> printOn: aStream [
 ]
 
 { #category : #'private - backend interface' }
-RGPackageDefinition >> pvtAddClassTag: aSymbol [
+RGPackage >> pvtAddClassTag: aSymbol [
 	
 	tagsForClasses isRingResolved ifFalse: [ 
 		self pvtCleanTagsForClasses  ].
@@ -296,7 +296,7 @@ RGPackageDefinition >> pvtAddClassTag: aSymbol [
 ]
 
 { #category : #'private - backend interface' }
-RGPackageDefinition >> pvtAddDefinedBehavior: anRGBehavior [
+RGPackage >> pvtAddDefinedBehavior: anRGBehavior [
 
 	self environment verifyOwnership: anRGBehavior.
 	
@@ -308,7 +308,7 @@ RGPackageDefinition >> pvtAddDefinedBehavior: anRGBehavior [
 ]
 
 { #category : #'private - backend interface' }
-RGPackageDefinition >> pvtAddExtensionMethod: aMethodDefinition [
+RGPackage >> pvtAddExtensionMethod: aMethodDefinition [
 
 	self environment verifyOwnership: aMethodDefinition.
 	
@@ -323,7 +323,7 @@ RGPackageDefinition >> pvtAddExtensionMethod: aMethodDefinition [
 ]
 
 { #category : #'private - backend interface' }
-RGPackageDefinition >> pvtCleanDefinedBehaviors [
+RGPackage >> pvtCleanDefinedBehaviors [
 
 	definedBehaviors := self defaultDefinedBehaviors.
 		
@@ -333,7 +333,7 @@ RGPackageDefinition >> pvtCleanDefinedBehaviors [
 ]
 
 { #category : #'private - backend interface' }
-RGPackageDefinition >> pvtCleanExtensionMethods [
+RGPackage >> pvtCleanExtensionMethods [
 
 	extensionMethods := self defaultExtensionMethods.
 		
@@ -343,7 +343,7 @@ RGPackageDefinition >> pvtCleanExtensionMethods [
 ]
 
 { #category : #'private - backend interface' }
-RGPackageDefinition >> pvtCleanTagsForClasses [
+RGPackage >> pvtCleanTagsForClasses [
 
 	tagsForClasses := self defaultTagsForClasses.
 		
@@ -353,19 +353,19 @@ RGPackageDefinition >> pvtCleanTagsForClasses [
 ]
 
 { #category : #'private - backend interface' }
-RGPackageDefinition >> pvtDefinedBehaviorsDo: aBlock [
+RGPackage >> pvtDefinedBehaviorsDo: aBlock [
 
 	^ definedBehaviors value do: aBlock
 ]
 
 { #category : #'private - backend interface' }
-RGPackageDefinition >> pvtExtensionMethodsDo: aBlock [
+RGPackage >> pvtExtensionMethodsDo: aBlock [
 
 	^ extensionMethods value do: aBlock
 ]
 
 { #category : #'private - backend interface' }
-RGPackageDefinition >> pvtRemoveClassTag: aSymbol [
+RGPackage >> pvtRemoveClassTag: aSymbol [
 	
 	tagsForClasses remove: aSymbol.
 	
@@ -375,7 +375,7 @@ RGPackageDefinition >> pvtRemoveClassTag: aSymbol [
 ]
 
 { #category : #'private - backend interface' }
-RGPackageDefinition >> pvtRemoveDefinedBehavior: anRGBehavior [
+RGPackage >> pvtRemoveDefinedBehavior: anRGBehavior [
 
 	self environment verifyOwnership: anRGBehavior.
 	
@@ -387,7 +387,7 @@ RGPackageDefinition >> pvtRemoveDefinedBehavior: anRGBehavior [
 ]
 
 { #category : #'private - backend interface' }
-RGPackageDefinition >> pvtRemoveExtensionMethod: anRGMethod [
+RGPackage >> pvtRemoveExtensionMethod: anRGMethod [
 
 	self environment verifyOwnership: anRGMethod.
 	
@@ -399,7 +399,7 @@ RGPackageDefinition >> pvtRemoveExtensionMethod: anRGMethod [
 ]
 
 { #category : #'private - backend interface' }
-RGPackageDefinition >> pvtResolvableProperties [
+RGPackage >> pvtResolvableProperties [
 
 	^ super pvtResolvableProperties, { 
 		#definedBehaviors -> definedBehaviors. 
@@ -411,31 +411,31 @@ RGPackageDefinition >> pvtResolvableProperties [
 ]
 
 { #category : #'private - backend interface' }
-RGPackageDefinition >> pvtTagsForClassesDo: aBlock [
+RGPackage >> pvtTagsForClassesDo: aBlock [
 
 	^ tagsForClasses value do: aBlock
 ]
 
 { #category : #'accessing - backend' }
-RGPackageDefinition >> removeClassTag: aSymbol [
+RGPackage >> removeClassTag: aSymbol [
 
 	self backend forPackage removeClassTag: aSymbol from: self
 ]
 
 { #category : #'accessing - backend' }
-RGPackageDefinition >> removeDefinedBehavior: anRGBehavior [
+RGPackage >> removeDefinedBehavior: anRGBehavior [
 
 	self backend forPackage removeDefinedBehavior: anRGBehavior from: self
 ]
 
 { #category : #'accessing - backend' }
-RGPackageDefinition >> removeExtensionMethod: anRGMethod [ 
+RGPackage >> removeExtensionMethod: anRGMethod [ 
 
 	self backend forPackage removeExtensionMethod: anRGMethod from: self
 ]
 
 { #category : #'accessing - model' }
-RGPackageDefinition >> tagsForClasses [
+RGPackage >> tagsForClasses [
 	"Retrieves the traits defined in the receiver"
 
 	| allTags |
@@ -446,13 +446,13 @@ RGPackageDefinition >> tagsForClasses [
 ]
 
 { #category : #'accessing - backend' }
-RGPackageDefinition >> tagsForClassesDo: aBlock [
+RGPackage >> tagsForClassesDo: aBlock [
 
 	self backend forPackage tagsForClassesFor: self do: aBlock
 ]
 
 { #category : #accessing }
-RGPackageDefinition >> traits [
+RGPackage >> traits [
 	"Retrieves a collection of classes defined in the receiver and classes holding extension methods"
 		
 	^self definedTraits, self extendedTraits

@@ -264,7 +264,7 @@ RGChunkImporter >> fileInFrom: aStream [
 { #category : #reading }
 RGChunkImporter >> fromFileNamed: aName [
 	
-	package := RGPackage named: aName.
+	package := RGPackageDefinition named: aName.
 	self fileInFrom: aName asFileReference readStream.
 ]
 
@@ -281,7 +281,7 @@ RGChunkImporter >> if: selectorParts in: ast includes: aSymbol do: aBlock [
 RGChunkImporter >> initialize [
 	super initialize.
 	environment := RGEnvironment new.
-	package := RGPackage named: 'ChangeSet'.
+	package := RGPackageDefinition named: 'ChangeSet'.
 	doIts := Set new.
 ]
 

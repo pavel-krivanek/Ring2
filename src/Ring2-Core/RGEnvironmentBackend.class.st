@@ -29,9 +29,9 @@ RGEnvironmentBackend >> addBehavior: anRGBehavior to: anRGEnvironment [
 ]
 
 { #category : #package }
-RGEnvironmentBackend >> addClassTag: aSymbol to: anRGPackageDefinition [
+RGEnvironmentBackend >> addClassTag: aSymbol to: anRGPackage [
 
-	^ anRGPackageDefinition pvtAddClassTag: aSymbol
+	^ anRGPackage pvtAddClassTag: aSymbol
 ]
 
 { #category : #class }
@@ -41,9 +41,9 @@ RGEnvironmentBackend >> addClassVariable: anRGInstanceVariableDefinition to: anR
 ]
 
 { #category : #package }
-RGEnvironmentBackend >> addDefinedBehavior: anRGBehavior to: anRGPackageDefinition [
+RGEnvironmentBackend >> addDefinedBehavior: anRGBehavior to: anRGPackage [
 
-	^ anRGPackageDefinition pvtAddDefinedBehavior: anRGBehavior
+	^ anRGPackage pvtAddDefinedBehavior: anRGBehavior
 ]
 
 { #category : #'trait exclusion' }
@@ -53,9 +53,9 @@ RGEnvironmentBackend >> addExclusion: aSymbol to: anRGTraitExclusion [
 ]
 
 { #category : #package }
-RGEnvironmentBackend >> addExtensionMethod: anRGMethod to: anRGPackageDefinition [
+RGEnvironmentBackend >> addExtensionMethod: anRGMethod to: anRGPackage [
 
-	^ anRGPackageDefinition pvtAddExtensionMethod: anRGMethod
+	^ anRGPackage pvtAddExtensionMethod: anRGMethod
 ]
 
 { #category : #environment }
@@ -77,9 +77,9 @@ RGEnvironmentBackend >> addMethodTag: aSymbol to: anRGBehavior [
 ]
 
 { #category : #environment }
-RGEnvironmentBackend >> addPackage: anRGPackageDefinition to: anRGEnvironment [
+RGEnvironmentBackend >> addPackage: anRGPackage to: anRGEnvironment [
 
-	^ anRGEnvironment pvtAddPackage: anRGPackageDefinition
+	^ anRGEnvironment pvtAddPackage: anRGPackage
 ]
 
 { #category : #class }
@@ -186,9 +186,9 @@ RGEnvironmentBackend >> cleanClassVariablesFor: anRGBehavior [
 ]
 
 { #category : #package }
-RGEnvironmentBackend >> cleanDefinedBehaviorsFor: anRGPackageDefinition [
+RGEnvironmentBackend >> cleanDefinedBehaviorsFor: anRGPackage [
 
-	anRGPackageDefinition pvtCleanDefinedBehaviors.
+	anRGPackage pvtCleanDefinedBehaviors.
 ]
 
 { #category : #'trait exclusion' }
@@ -198,9 +198,9 @@ RGEnvironmentBackend >> cleanExclusionsFor: anRGTraitExclusion [
 ]
 
 { #category : #package }
-RGEnvironmentBackend >> cleanExtensionMethodsFor: anRGPackageDefinition [
+RGEnvironmentBackend >> cleanExtensionMethodsFor: anRGPackage [
 
-	anRGPackageDefinition pvtCleanExtensionMethods
+	anRGPackage pvtCleanExtensionMethods
 ]
 
 { #category : #environment }
@@ -240,9 +240,9 @@ RGEnvironmentBackend >> cleanSlotsFor: anRGLayout [
 ]
 
 { #category : #package }
-RGEnvironmentBackend >> cleanTagsForClassesFor: anRGPackageDefinition [
+RGEnvironmentBackend >> cleanTagsForClassesFor: anRGPackage [
 
-	anRGPackageDefinition pvtCleanTagsForClasses.
+	anRGPackage pvtCleanTagsForClasses.
 ]
 
 { #category : #class }
@@ -269,7 +269,7 @@ RGEnvironmentBackend >> createNewUnresolvedClass [
 	| classStub metaclassStub packageStub |
 	
 	classStub := RGClass unresolvedWithParent: self environment.
-	packageStub := RGPackageDefinition unresolvedWithParent: self environment.
+	packageStub := RGPackage unresolvedWithParent: self environment.
 	classStub behaviorStrategy pvtPackage: packageStub.
 	packageStub pvtAddDefinedBehavior: classStub.
 	metaclassStub := self createNewUnresolvedMetaclassFor: classStub.
@@ -333,14 +333,14 @@ RGEnvironmentBackend >> createUnresolvedClassGroupFor: anRGBehavior [
 	superclassMetaclassStub propertyNamed: #creator put: anRGBehavior.
 	superclassMetaclassStub propertyNamed: #role put: #superclassMetaclass.
 	
-	packageStub1 := RGPackageDefinition unresolvedWithParent: self environment.
+	packageStub1 := RGPackage unresolvedWithParent: self environment.
 	classStub behaviorStrategy pvtPackage: packageStub1.
 	self environment pvtAddPackage: packageStub1.
 	packageStub1 pvtAddDefinedBehavior: classStub.
 	packageStub1 propertyNamed: #creator put: anRGBehavior.
 	packageStub1 propertyNamed: #role put: #package.
 	
-	packageStub2 := RGPackageDefinition unresolvedWithParent: self environment.
+	packageStub2 := RGPackage unresolvedWithParent: self environment.
 	superclassStub behaviorStrategy pvtPackage: packageStub2.
 	self environment pvtAddPackage: packageStub2.
 	packageStub2 pvtAddDefinedBehavior: superclassStub.
@@ -402,7 +402,7 @@ RGEnvironmentBackend >> createUnresolvedTraitGroupFor: anRGBehavior [
 	classTraitMetaclassStub propertyNamed: #creator put: anRGBehavior.
 	classTraitMetaclassStub propertyNamed: #role put: #classTraitMetaclass.
 
-	packageStub1 := RGPackageDefinition unresolvedWithParent: self environment.
+	packageStub1 := RGPackage unresolvedWithParent: self environment.
 	packageStub1 propertyNamed: #creator put: anRGBehavior.
 	packageStub1 propertyNamed: #role put: #traitMetaclassPackage.
 
@@ -429,9 +429,9 @@ RGEnvironmentBackend >> createUnresolvedTraitGroupFor: anRGBehavior [
 ]
 
 { #category : #package }
-RGEnvironmentBackend >> definedBehaviorsFor: anRGPackageDefinition do: aBlock [
+RGEnvironmentBackend >> definedBehaviorsFor: anRGPackage do: aBlock [
 
-	^  anRGPackageDefinition pvtDefinedBehaviorsDo: aBlock
+	^  anRGPackage pvtDefinedBehaviorsDo: aBlock
 ]
 
 { #category : #accesing }
@@ -474,9 +474,9 @@ RGEnvironmentBackend >> expressionFor: anRGUnknownSlot [
 ]
 
 { #category : #package }
-RGEnvironmentBackend >> extensionMethodsFor: anRGPackageDefinition do: aBlock [
+RGEnvironmentBackend >> extensionMethodsFor: anRGPackage do: aBlock [
 
-	^ anRGPackageDefinition pvtExtensionMethodsDo: aBlock
+	^ anRGPackage pvtExtensionMethodsDo: aBlock
 ]
 
 { #category : #subbackends }
@@ -599,9 +599,9 @@ RGEnvironmentBackend >> removeBehavior: anRGBehavior from: anRGEnvironment [
 ]
 
 { #category : #package }
-RGEnvironmentBackend >> removeClassTag: aSymbol from: anRGPackageDefinition [
+RGEnvironmentBackend >> removeClassTag: aSymbol from: anRGPackage [
 
-	^ anRGPackageDefinition pvtRemoveClassTag: aSymbol
+	^ anRGPackage pvtRemoveClassTag: aSymbol
 ]
 
 { #category : #class }
@@ -611,9 +611,9 @@ RGEnvironmentBackend >> removeClassVariable: anRGInstanceVariableDefinition from
 ]
 
 { #category : #package }
-RGEnvironmentBackend >> removeDefinedBehavior: anRGBehavior from: anRGPackageDefinition [
+RGEnvironmentBackend >> removeDefinedBehavior: anRGBehavior from: anRGPackage [
 
-	^ anRGPackageDefinition pvtRemoveDefinedBehavior: anRGBehavior
+	^ anRGPackage pvtRemoveDefinedBehavior: anRGBehavior
 ]
 
 { #category : #'trait exclusion' }
@@ -623,9 +623,9 @@ RGEnvironmentBackend >> removeExclusion: aSymbol from: anRGTraitExclusion [
 ]
 
 { #category : #package }
-RGEnvironmentBackend >> removeExtensionMethod: anRGMethod from: anRGPackageDefinition [
+RGEnvironmentBackend >> removeExtensionMethod: anRGMethod from: anRGPackage [
 
-	^ anRGPackageDefinition pvtRemoveExtensionMethod: anRGMethod
+	^ anRGPackage pvtRemoveExtensionMethod: anRGMethod
 ]
 
 { #category : #environment }
@@ -647,9 +647,9 @@ RGEnvironmentBackend >> removeMethodTag: aSymbol from: anRGBehavior [
 ]
 
 { #category : #environment }
-RGEnvironmentBackend >> removePackage: anRGPackageDefinition from: anRGEnvironment [
+RGEnvironmentBackend >> removePackage: anRGPackage from: anRGEnvironment [
 
-	^ anRGEnvironment pvtRemovePackage: anRGPackageDefinition
+	^ anRGEnvironment pvtRemovePackage: anRGPackage
 ]
 
 { #category : #class }
@@ -744,9 +744,9 @@ RGEnvironmentBackend >> setMetaclassTraitBaseTraitFor: anRGMetaclassTrait to: an
 ]
 
 { #category : #method }
-RGEnvironmentBackend >> setMethodPackageFor: anRGMethod to: anRGPackageDefinition [
+RGEnvironmentBackend >> setMethodPackageFor: anRGMethod to: anRGPackage [
 
-	^  anRGMethod pvtPackage: anRGPackageDefinition
+	^  anRGMethod pvtPackage: anRGPackage
 ]
 
 { #category : #general }
@@ -756,9 +756,9 @@ RGEnvironmentBackend >> setNameFor: anRGObject to: aString [
 ]
 
 { #category : #class }
-RGEnvironmentBackend >> setPackageFor: anRGBehavior to: anRGPackageDefinition [
+RGEnvironmentBackend >> setPackageFor: anRGBehavior to: anRGPackage [
 
-	^  anRGBehavior behaviorStrategy pvtPackage: anRGPackageDefinition
+	^  anRGBehavior behaviorStrategy pvtPackage: anRGPackage
 ]
 
 { #category : #method }
@@ -798,9 +798,9 @@ RGEnvironmentBackend >> setTraitCompositionFor: anRGBehavior to: anRGTraitCompos
 ]
 
 { #category : #trait }
-RGEnvironmentBackend >> setTraitPackageFor: anRGBehavior to: anRGPackageDefinition [
+RGEnvironmentBackend >> setTraitPackageFor: anRGBehavior to: anRGPackage [
 
-	^  anRGBehavior pvtPackage: anRGPackageDefinition
+	^  anRGBehavior pvtPackage: anRGPackage
 ]
 
 { #category : #class }
@@ -853,9 +853,9 @@ RGEnvironmentBackend >> tagsForClass: anRGBehavior do: aBlock [
 ]
 
 { #category : #package }
-RGEnvironmentBackend >> tagsForClassesFor: anRGPackageDefinition do: aBlock [
+RGEnvironmentBackend >> tagsForClassesFor: anRGPackage do: aBlock [
 
-	^  anRGPackageDefinition pvtTagsForClassesDo: aBlock
+	^  anRGPackage pvtTagsForClassesDo: aBlock
 ]
 
 { #category : #method }

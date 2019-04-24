@@ -49,11 +49,11 @@ RGEnvironment >> addGlobalVariable: anRGGlobalVariable [
 ]
 
 { #category : #'accessing - backend' }
-RGEnvironment >> addPackage: anRGPackageDefinition [
+RGEnvironment >> addPackage: anRGPackage [
 
-	self backend forPackage addPackage: anRGPackageDefinition to: self.
+	self backend forPackage addPackage: anRGPackage to: self.
 	
-	self announce: (RPackageRegistered to: anRGPackageDefinition).
+	self announce: (RPackageRegistered to: anRGPackage).
 
 ]
 
@@ -234,7 +234,7 @@ RGEnvironment >> createDefaultEnvironment [
 	behaviorClass := RGMetaclass unresolvedNamed: #'Behavior class' withParent: self.
 	metaclass := RGClass unresolvedNamed: #'Metaclass' withParent: self.
 	metaclassClass := RGMetaclass unresolvedNamed: #'Metaclass class' withParent: self.
-	kernelPackage := RGPackageDefinition unresolvedNamed: #'Kernel' withParent: self.
+	kernelPackage := RGPackage unresolvedNamed: #'Kernel' withParent: self.
 	
 	{ protoobject. protoobjectClass. object. objectClass. class. classClass. classDescription. classDescriptionClass. behavior. behaviorClass. metaclass. metaclassClass } do: [ :each |
 		kernelPackage pvtAddDefinedBehavior: each.
@@ -486,7 +486,7 @@ RGEnvironment >> ensurePackageNamed: aSymbol [
 	^ self ask packages 
 		detect: [:each | each name = aSymbol] 
 		ifNone: [ | newPackage |
-				newPackage := RGPackageDefinition named: aSymbol parent: self.
+				newPackage := RGPackage named: aSymbol parent: self.
 				self addPackage: newPackage.
 				newPackage ].
 			
@@ -561,7 +561,7 @@ RGEnvironment >> ensureUnpackagedPackage [
 	^ self unpackagedPackageOrNil
 		ifNotNil: [ :found | found ]
 		ifNil: [ | newPackage |
-			newPackage := RGPackageDefinition unresolvedWithParent: self.
+			newPackage := RGPackage unresolvedWithParent: self.
 			newPackage pvtName: self unpackagedPackageName.
 			self pvtAddPackage: newPackage.
 			^ newPackage ]
@@ -687,14 +687,14 @@ RGEnvironment >> pvtAddGlobalVariable: anRGGlobalVariable [
 ]
 
 { #category : #'private - backend interface' }
-RGEnvironment >> pvtAddPackage: anRGPackageDefinition [
+RGEnvironment >> pvtAddPackage: anRGPackage [
 
-	self environment verifyOwnership: anRGPackageDefinition.
+	self environment verifyOwnership: anRGPackage.
 	
 	packages isRingResolved ifFalse: [ 
 		self pvtCleanPackages ].
 	
-	packages add: anRGPackageDefinition.	
+	packages add: anRGPackage.	
 		
 ]
 
@@ -763,11 +763,11 @@ RGEnvironment >> pvtRemoveGlobalVariable: anRGGlobalVariable [
 ]
 
 { #category : #'private - backend interface' }
-RGEnvironment >> pvtRemovePackage: anRGPackageDefinition [
+RGEnvironment >> pvtRemovePackage: anRGPackage [
 
-	self verifyOwnership: anRGPackageDefinition.
+	self verifyOwnership: anRGPackage.
 	
-	packages remove: anRGPackageDefinition.
+	packages remove: anRGPackage.
 	
 	"TODO:Announce"
 	
@@ -819,11 +819,11 @@ RGEnvironment >> removeGlobalVariable: anRGGlobalVariable [
 ]
 
 { #category : #'accessing - backend' }
-RGEnvironment >> removePackage: anRGPackageDefinition [
+RGEnvironment >> removePackage: anRGPackage [
 
-	self backend forPackage removePackage: anRGPackageDefinition from: self.
+	self backend forPackage removePackage: anRGPackage from: self.
 	
-	self announce: (RPackageUnregistered to: anRGPackageDefinition).
+	self announce: (RPackageUnregistered to: anRGPackage).
 
 ]
 
@@ -915,7 +915,7 @@ RGEnvironment >> unifyTrait [
 RGEnvironment >> unpackagedPackage [
 
 	| aProtocol |
-	aProtocol := RGPackageDefinition unresolvedWithParent: self.
+	aProtocol := RGPackage unresolvedWithParent: self.
 	aProtocol pvtName: self unpackagedPackageName.
 	
 	^ aProtocol

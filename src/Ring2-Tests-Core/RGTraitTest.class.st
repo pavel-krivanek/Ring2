@@ -65,7 +65,7 @@ RGTraitTest >> testNewTrait [
 	self assert: (trait hasResolved: #tags).
 	self assert: (trait category == category).
 
-	package  := RGPackageDefinition parent: trait environment.
+	package  := RGPackage parent: trait environment.
 	trait package:  package.
 	self assert: (trait hasResolved: #package).
 	self assert: (trait package == package).

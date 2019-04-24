@@ -293,11 +293,11 @@ RGMethod >> package [
 ]
 
 { #category : #'accessing - backend' }
-RGMethod >> package: anRGPackageDefinition [
+RGMethod >> package: anRGPackage [
 
-	self backend forMethod setMethodPackageFor: self to: anRGPackageDefinition.
-	self environment addPackage: anRGPackageDefinition.
-	(self parent package = anRGPackageDefinition)
+	self backend forMethod setMethodPackageFor: self to: anRGPackage.
+	self environment addPackage: anRGPackage.
+	(self parent package = anRGPackage)
 		ifFalse: [ self package addExtensionMethod: self ].
 
 ]

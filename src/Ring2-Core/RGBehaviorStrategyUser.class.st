@@ -296,9 +296,9 @@ RGBehaviorStrategyUser >> package [
 ]
 
 { #category : #strategy }
-RGBehaviorStrategyUser >> package: anRGPackageDefinition [
+RGBehaviorStrategyUser >> package: anRGPackage [
 
-	^ self behaviorStrategy package: anRGPackageDefinition
+	^ self behaviorStrategy package: anRGPackage
 
 ]
 

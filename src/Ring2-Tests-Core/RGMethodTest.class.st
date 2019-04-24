@@ -156,7 +156,7 @@ RGMethodTest >> testPackages [
 	class := RGClass unnamed.
 	method := RGMethod parent: class.
 	class addLocalMethod: method.
-	method package: (RGPackageDefinition named: 'SomePackage' parent: method environment).
+	method package: (RGPackage named: 'SomePackage' parent: method environment).
 	
 	self assert: (method parent package ~~ method package).
 	self assert: method environment ask packages size equals: 3.
@@ -172,7 +172,7 @@ RGMethodTest >> testRemovePackage [
 	method := RGMethod unnamed.
 	class := method parent.
 	
-	method package: (RGPackageDefinition named: 'SomePackage' parent: method environment).
+	method package: (RGPackage named: 'SomePackage' parent: method environment).
 	
 	self assert: (method parent package ~~ method package).
 	self assert: method environment ask packages size equals: 3.

@@ -182,12 +182,12 @@ RGTraitStrategy >> package [
 ]
 
 { #category : #accessing }
-RGTraitStrategy >> package: anRGPackageDefinition [
+RGTraitStrategy >> package: anRGPackage [
 
 	self announceDefinitionChangeDuring: [ 
-		self backend forBehavior setTraitPackageFor: self to: anRGPackageDefinition.
-		self environment addPackage: anRGPackageDefinition.
-		anRGPackageDefinition addDefinedBehavior: self owner. ].
+		self backend forBehavior setTraitPackageFor: self to: anRGPackage.
+		self environment addPackage: anRGPackage.
+		anRGPackage addDefinedBehavior: self owner. ].
 ]
 
 { #category : #accessing }
@@ -225,11 +225,11 @@ RGTraitStrategy >> pvtPackage [
 ]
 
 { #category : #accessing }
-RGTraitStrategy >> pvtPackage: anRGPackageDefinition [
+RGTraitStrategy >> pvtPackage: anRGPackage [
 
-	self owner environment verifyOwnership: anRGPackageDefinition.
+	self owner environment verifyOwnership: anRGPackage.
 
-	^ package := anRGPackageDefinition
+	^ package := anRGPackage
 ]
 
 { #category : #accessing }

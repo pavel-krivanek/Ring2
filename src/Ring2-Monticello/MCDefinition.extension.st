@@ -15,7 +15,7 @@ MCDefinition >> ensureRingDefinitionIn: anRGEnvironment [
 ]
 
 { #category : #'*Ring2-Monticello' }
-MCDefinition >> ensureRingDefinitionIn: anRGEnvironment package: anRGPackageDefinition [
+MCDefinition >> ensureRingDefinitionIn: anRGEnvironment package: anRGPackage [
 	
 	"by default do not set the package"
 

@@ -51,12 +51,12 @@ MCMethodDefinition >> ensureRingDefinitionIn: anRGEnvironment [
 ]
 
 { #category : #'*Ring2-Monticello' }
-MCMethodDefinition >> ensureRingDefinitionIn: anRGEnvironment package: anRGPackageDefinition [
+MCMethodDefinition >> ensureRingDefinitionIn: anRGEnvironment package: anRGPackage [
 	
 	| def  |
 	
 	def := self ensureRingDefinitionIn: anRGEnvironment.
-	def package: anRGPackageDefinition.
+	def package: anRGPackage.
 
 	^ def
 

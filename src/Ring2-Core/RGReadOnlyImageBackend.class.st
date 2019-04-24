@@ -105,16 +105,16 @@ RGReadOnlyImageBackend >> createUnresolvedClassGroupFor: anRGBehavior [
 ]
 
 { #category : #package }
-RGReadOnlyImageBackend >> definedBehaviorsFor: anRGPackageDefinition do: aBlock [
+RGReadOnlyImageBackend >> definedBehaviorsFor: anRGPackage do: aBlock [
 
 	| realPackage |
 	
-	realPackage := self realPackageFor: anRGPackageDefinition.
+	realPackage := self realPackageFor: anRGPackage.
 	realPackage ifNotNil: [ 
 		realPackage definedClassesDo: [:behaviorName |
 			| def cls | 
 			cls := Smalltalk classOrTraitNamed: behaviorName.
-			def := self definitionFor: cls ifAbsentRegister: [cls asRingMinimalDefinitionIn: anRGPackageDefinition environment].
+			def := self definitionFor: cls ifAbsentRegister: [cls asRingMinimalDefinitionIn: anRGPackage environment].
 			aBlock value: def.]]
 ]
 
@@ -143,15 +143,15 @@ RGReadOnlyImageBackend >> expressionFor: anRGUnknownSlot [
 ]
 
 { #category : #package }
-RGReadOnlyImageBackend >> extensionMethodsFor: anRGPackageDefinition do: aBlock [
+RGReadOnlyImageBackend >> extensionMethodsFor: anRGPackage do: aBlock [
 
 	| realPackage |
 	
-	realPackage := self realPackageFor: anRGPackageDefinition.
+	realPackage := self realPackageFor: anRGPackage.
 	realPackage ifNotNil: [ 
 		realPackage extensionMethods do: [:aCompiledMethod |
 			| def | 
-			def := self definitionFor: aCompiledMethod ifAbsentRegister: [aCompiledMethod asRingMinimalDefinitionIn: anRGPackageDefinition environment].
+			def := self definitionFor: aCompiledMethod ifAbsentRegister: [aCompiledMethod asRingMinimalDefinitionIn: anRGPackage environment].
 			aBlock value: def.]]
 ]
 
@@ -298,9 +298,9 @@ RGReadOnlyImageBackend >> realMethodFor: anRGMethod [
 ]
 
 { #category : #'as yet unclassified' }
-RGReadOnlyImageBackend >> realPackageFor: anRGPackageDefinition [
+RGReadOnlyImageBackend >> realPackageFor: anRGPackage [
 
-	^ RPackageOrganizer default packageNamed: anRGPackageDefinition name ifAbsent: [nil].
+	^ RPackageOrganizer default packageNamed: anRGPackage name ifAbsent: [nil].
 ]
 
 { #category : #resolving }

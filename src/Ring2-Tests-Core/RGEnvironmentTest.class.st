@@ -199,7 +199,7 @@ RGEnvironmentTest >> testEnvironmentWithNamespace [
 	
 	self assert: (newEnvironment isRingResolved).
 	
-	newPackage := RGPackageDefinition named: 'Collections-Sequenceable'.
+	newPackage := RGPackage named: 'Collections-Sequenceable'.
 	
 	self assert: (newPackage isRingResolved).
 	self deny: (newPackage isRingFullyResolved).

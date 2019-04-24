@@ -1,7 +1,7 @@
-Extension { #name : #RGPackageDefinition }
+Extension { #name : #RGPackage }
 
 { #category : #'*Ring2-Monticello' }
-RGPackageDefinition >> asMCSnapshot [
+RGPackage >> asMCSnapshot [
 
 	| definitions | 
 	
