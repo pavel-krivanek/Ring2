@@ -80,12 +80,12 @@ RGMetaclassStrategy >> definition [
 
 	^ String streamContents: 
 		[:strm |
-		strm print: self.
+		strm nextPutAll: self owner name.
 		self owner hasTraitComposition ifTrue: [
 			strm
 				crtab;
 				nextPutAll: 'uses: ';
-				print: self traitComposition ].
+				nextPutAll: self owner traitCompositionString ].
 		
 		(self owner usesSpecialSlot or: [ Slot showSlotClassDefinition ])
 			ifFalse: [  
