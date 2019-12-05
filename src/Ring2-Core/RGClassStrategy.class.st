@@ -309,8 +309,11 @@ RGClassStrategy >> definitionWithSlots [
 	poolString = '' ifFalse: [
 		aStream cr; tab; nextPutAll: 'poolDictionaries: ';
 			store: poolString].
-	aStream cr; tab; nextPutAll: 'category: ';
-			store: self category asString.
+	aStream
+		cr;
+		tab;
+		nextPutAll: 'package: ';
+		store: self owner category asString.
 
 	self owner superclass ifNil: [ 
 		aStream nextPutAll: '.'; cr.

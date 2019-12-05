@@ -15,6 +15,26 @@ RGMetaclassStrategyTest >> testCreationByMethod [
 ]
 
 { #category : #tests }
+RGMetaclassStrategyTest >> testDefinition [
+
+	| anRGBehavior |
+	
+	anRGBehavior := RGMetaclass named: #'SomeMetaClass class'.
+	self assert: anRGBehavior definition equals: 'SomeMetaClass class
+	instanceVariableNames: '''''.	
+]
+
+{ #category : #tests }
+RGMetaclassStrategyTest >> testDefinitionForNautilus [
+
+	| anRGBehavior |
+	
+	anRGBehavior := RGMetaclass named: #'SomeMetaClass class'.
+	self assert: anRGBehavior definitionForNautilus equals: 'SomeMetaClass class
+	instanceVariableNames: '''''.	
+]
+
+{ #category : #tests }
 RGMetaclassStrategyTest >> testIncompatibleBehavior [
 
 	| anRGBehavior aTrait |
