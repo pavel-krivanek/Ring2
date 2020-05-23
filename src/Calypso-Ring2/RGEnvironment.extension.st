@@ -49,7 +49,7 @@ RGEnvironment >> browse [
 RGEnvironment >> classNames [
 
 	"TODO:"
-	^ self allClasses collect: #name.
+	^ behaviors collect: #name.
 ]
 
 { #category : #'*Calypso-Ring2' }
